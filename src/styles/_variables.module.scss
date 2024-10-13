@@ -1,0 +1,35 @@
+@use 'styles/functions.module' as *;
+
+// colors
+$black: #4e2c14;
+$white: #ffffff;
+$accent: #6faf64;
+$primary: #2b4f81;
+$secondary: #ffd966;
+
+//Text fonts
+$large: rem(20);
+$medium: rem(18);
+$regular: rem(16);
+$small: rem(14);
+$tiny: rem(12);
+
+// Title Fonts
+$h1: rem(56);
+$h2: rem(48);
+$h3: rem(40);
+$h4: rem(32);
+$h5: rem(24);
+$h6: rem(20);
+
+// font weights
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// font families
+$heading-font: 'Montserrat', sans-serif;
+$primary-font: 'Poppins', sans-serif;
