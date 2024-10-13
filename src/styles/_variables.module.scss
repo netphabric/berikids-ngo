@@ -1,4 +1,4 @@
-@use 'styles/functions.module' as *;
+@use "styles/functions.module" as *;
 
 // colors
 $black: #4e2c14;
@@ -31,5 +31,5 @@ $bold: 700;
 $extra-bold: 800;
 
 // font families
-$heading-font: 'Montserrat', sans-serif;
-$primary-font: 'Poppins', sans-serif;
+$heading-font: "Montserrat", sans-serif;
+$primary-font: "Poppins", sans-serif;

@@ -1,19 +1,20 @@
-@use './variables.module' as *;
+@use "styles/variables.module" as *;
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  font-family: $primary-font;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -21,15 +22,15 @@ picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 p,
@@ -39,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 h1,
@@ -48,10 +49,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $heading-font;
+  font-family: $heading-font;
 }
 
 #root,
 #__next {
-	isolation: isolate;
+  isolation: isolate;
 }
