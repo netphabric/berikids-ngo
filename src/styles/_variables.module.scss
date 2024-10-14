@@ -13,6 +13,7 @@ $medium: rem(18);
 $regular: rem(16);
 $small: rem(14);
 $tiny: rem(12);
+$icon: rem(32);
 
 // Title Fonts
 $h1: rem(56);
@@ -31,5 +32,6 @@ $bold: 700;
 $extra-bold: 800;
 
 // font families
-$heading-font: "Montserrat", sans-serif;
 $primary-font: "Poppins", sans-serif;
+$heading-font: "Montserrat", sans-serif;
+$icon-font: "Material Symbols Outlined", sans-serif;

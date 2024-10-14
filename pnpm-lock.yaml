@@ -14,6 +14,9 @@ importers:
       '@fontsource/poppins':
         specifier: ^5.1.0
         version: 5.1.0
+      material-symbols:
+        specifier: ^0.25.0
+        version: 0.25.0
     devDependencies:
       '@playwright/test':
         specifier: ^1.28.1
@@ -842,6 +845,9 @@ packages:
 
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
+
+  material-symbols@0.25.0:
+    resolution: {integrity: sha512-YYT13NN+EO3UUVMnSnzdVTwonNa1OvohavS6rUQ/Bk8ShWjlZEL0HekCd11aWW1n6bI+r4Q+po3Ti+9gmkpinw==}
 
   mdn-data@2.0.30:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
@@ -2015,6 +2021,8 @@ snapshots:
   magic-string@0.30.12:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  material-symbols@0.25.0: {}
 
   mdn-data@2.0.30: {}
 
