@@ -1,18 +1,27 @@
 @use "styles/variables.module" as *;
 @use "styles/functions.module" as *;
+@use "styles/mixins.module" as *;
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: rem(30);
+  justify-content: center;
   padding: 20px 40px;
   background-color: $accent;
 
+  @include minWidth('tablet') {
+    justify-content: space-between;
+    gap: rem(30);
+  }
+
   .navRight {
-    display: flex;
-    align-items: center;
-    gap: rem(16);
+    display: none;
+
+    @include minWidth('tablet') {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+    }
 
     nav {
       ul {
@@ -20,8 +29,8 @@ header {
         gap: rem(16);
 
         li {
-          font-size: $regular;
-          font-weight: $normal;
+          font-size: $medium;
+          font-weight: $semiBold;
         }
       }
     }
@@ -30,23 +39,5 @@ header {
   .ctaBtns {
     display: flex;
     gap: rem(12);
-  }
-
-  .menu {
-    display: none;
-  }
-
-  @media (width < rem(768)) {
-    padding: 20px;
-
-    .navRight {
-      nav {
-        display: none;
-      }
-    }
-
-    .menu {
-      display: unset;
-    }
   }
 }

@@ -1,0 +1,84 @@
+@use "styles/variables.module" as *;
+@use "styles/functions.module" as *;
+@use "styles/mixins.module" as *;
+
+.heroSection {
+  margin-block: 40px;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+
+  @include minWidth('tablet') {
+    align-items: center;
+    margin-block: 80px;
+    gap: rem(32);
+  }
+
+  .heroTitle {
+    @include minWidth('mobile') {
+      font-size: $h4;
+      line-height: rem(45);
+    }
+
+    @include minWidth('tablet') {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: rem(16);
+      flex-direction: column;
+      font-size: $h3;
+      line-height: rem(55);
+      text-align: center;
+    }
+
+    @include minWidth('desktop') {
+      font-size: $h1;
+      line-height: rem(65);
+    }
+
+    span {
+      word-wrap: break-word;
+    }
+  }
+
+  .heroDescription {
+    word-wrap: break-word;
+    font-size: $small;
+
+    @include minWidth('tablet') {
+      max-width: 65%;
+      text-align: center;
+      font-size: $regular;
+    }
+
+    @include minWidth('tablet') {
+      font-size: $medium;
+    }
+  }
+
+  .ctaBtns {
+    display: flex;
+    gap: rem(8);
+
+    @include minWidth('tablet') {
+      gap: rem(16)
+    }
+  }
+}
+
+.heroImageContainer {
+  max-width: 1440px;
+  margin-inline: auto;
+  margin-block-end: 40px;
+  padding-inline: 20px;
+
+  @include minWidth('tablet') {
+    margin-block-end: 80px;
+  }
+
+  .heroImg {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}

@@ -1,30 +1,35 @@
 <script lang="ts">
-	import Button from "$lib/button/button.svelte"
+	import DonateBtn from "$lib/button/donateBtn.svelte"
+	import SupportBtn from "$lib/button/supportBtn.svelte"
 	import LogoYellow from "$lib/logo/logoYellow.svelte"
 	import style from "./header.module.scss"
 
 	const navLinks = [
-		{ label: "About us", url: "/about-us" },
-		{ label: "Get Involved", url: "/get-involved" },
-		{ label: "Our Impact", url: "/our-impact" }
+		{ label: "about us", url: "/about-us" },
+		{ label: "get involved", url: "/get-involved" },
+		{ label: "our impact", url: "/our-impact" }
 	]
 </script>
 
 <header>
 	<div class={style.navRight}>
-		<LogoYellow />
+		<a href="/">
+			<LogoYellow />
+		</a>
 
 		<nav>
 			<ul>
 				{#each navLinks as { label, url }}
-					<li><a href={url}>{label}</a></li>
+					<li>
+						<a href={url}>{label}</a>
+					</li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
 
 	<div class={style.ctaBtns}>
-		<Button primary>Join</Button>
-		<Button>Donate</Button>
+		<SupportBtn />
+		<DonateBtn />
 	</div>
 </header>

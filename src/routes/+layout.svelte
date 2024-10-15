@@ -13,6 +13,9 @@
 
 	// global style
 	import "styles/global.scss"
+
+	import Header from "$lib/header/header.svelte"
 </script>
 
+<Header />
 <slot />

@@ -1,17 +1,22 @@
 @use "styles/variables.module" as *;
 @use "styles/functions.module" as *;
+@use "styles/mixins.module" as *;
 
 button {
   min-width: fit-content;
   background-color: $secondary;
   border: 1px solid $secondary;
   padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: rem(8);
 
-  color: inherit;
+  color: $black;
+  cursor: pointer;
+  font-size: $small;
   font-family: $heading-font;
   font-weight: $semiBold;
-  cursor: pointer;
-
+  text-transform: capitalize;
 
   &.primary {
     border: 1px solid $black;
@@ -24,9 +29,11 @@ button {
     border: 1px solid $secondary;
   }
 
-  @media (width <rem(620)) {
-    button {
-      font-size: $tiny;
-    }
+  @include minWidth('tablet') {
+    font-size: $regular;
+  }
+
+  @include minWidth('desktop') {
+    font-size: $medium;
   }
 }

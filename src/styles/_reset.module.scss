@@ -1,4 +1,5 @@
 @use "styles/variables.module" as *;
+@use "styles/mixins.module" as *;
 
 * {
   padding: 0;
@@ -13,9 +14,11 @@
 
 body {
   line-height: 1.5;
+  text-transform: capitalize;
+  font-family: $primary-font;
+
   color: $black;
   background-color: $white;
-  font-family: $primary-font;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,12 +74,12 @@ h6 {
 
 .material-symbols-sharp {
   font-variation-settings:
-    'FILL' 1,
-    'wght' 200,
+    'FILL' 0,
+    'wght' 400,
     'GRAD' 0,
     'opsz' 48;
 
-  font-size: $icon;
+  font-size: $medium ;
   font-style: normal;
   font-weight: $normal;
 
@@ -87,4 +90,12 @@ h6 {
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+
+  @include minWidth('mobile') {
+    font-size: $large;
+  }
+
+  @include minWidth('mobile') {
+    font-size: $icon;
+  }
 }
