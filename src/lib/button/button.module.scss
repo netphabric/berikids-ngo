@@ -1,0 +1,32 @@
+@use "styles/variables.module" as *;
+@use "styles/functions.module" as *;
+
+button {
+  min-width: fit-content;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+  padding: 5px 10px;
+
+  color: inherit;
+  font-family: $heading-font;
+  font-weight: $semiBold;
+  cursor: pointer;
+
+
+  &.primary {
+    border: 1px solid $black;
+    background-color: transparent;
+  }
+
+  &:hover {
+    color: $secondary;
+    background-color: transparent;
+    border: 1px solid $secondary;
+  }
+
+  @media (width <rem(620)) {
+    button {
+      font-size: $tiny;
+    }
+  }
+}

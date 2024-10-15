@@ -1,0 +1,52 @@
+@use "styles/variables.module" as *;
+@use "styles/functions.module" as *;
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(30);
+  padding: 20px 40px;
+  background-color: $accent;
+
+  .navRight {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+
+    nav {
+      ul {
+        display: flex;
+        gap: rem(16);
+
+        li {
+          font-size: $regular;
+          font-weight: $normal;
+        }
+      }
+    }
+  }
+
+  .ctaBtns {
+    display: flex;
+    gap: rem(12);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  @media (width < rem(768)) {
+    padding: 20px;
+
+    .navRight {
+      nav {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: unset;
+    }
+  }
+}
