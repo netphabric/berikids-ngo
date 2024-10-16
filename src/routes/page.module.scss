@@ -1,0 +1,17 @@
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.homeRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: rem(80);
+
+  @include minWidth ('tablet') {
+    gap: rem(160);
+  }
+
+  @include minWidth ('desktop') {
+    gap: rem(180);
+  }
+}

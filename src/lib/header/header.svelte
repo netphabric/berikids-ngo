@@ -1,6 +1,5 @@
 <script lang="ts">
-	import DonateBtn from "$lib/button/donateBtn.svelte"
-	import SupportBtn from "$lib/button/supportBtn.svelte"
+	import Button from "$lib/button/button.svelte"
 	import LogoYellow from "$lib/logo/logoYellow.svelte"
 	import style from "./header.module.scss"
 
@@ -29,7 +28,14 @@
 	</div>
 
 	<div class={style.ctaBtns}>
-		<SupportBtn />
-		<DonateBtn />
+		<Button primary>
+			<span>join</span>
+			<span class="material-symbols-sharp">handshake</span>
+		</Button>
+
+		<Button>
+			<span>donate</span>
+			<span class="material-symbols-sharp">compost</span>
+		</Button>
 	</div>
 </header>

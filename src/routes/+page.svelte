@@ -1,5 +1,10 @@
-<script>
+<script lang="ts">
 	import Hero from "$lib/hero/hero.svelte"
+	import HomeSection1 from "$lib/homeSection1/homeSection1.svelte"
+	import styles from "./page.module.scss"
 </script>
 
-<Hero />
+<main class={styles.homeRoot}>
+	<Hero />
+	<HomeSection1 />
+</main>

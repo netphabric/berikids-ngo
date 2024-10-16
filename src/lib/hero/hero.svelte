@@ -18,14 +18,14 @@
 	</p>
 
 	<div class={styles.ctaBtns}>
-		<Button primary>
+		<Button primary onWhite>
 			<span>learn more</span>
-			<span class="material-symbols-sharp">voice_chat</span>
+			<span class="material-symbols-sharp">video_chat</span>
 		</Button>
 
-		<Button>
+		<Button onWhite>
 			<span>get involved</span>
-			<span class="material-symbols-sharp">handshake</span>
+			<span class="material-symbols-sharp">agriculture</span>
 		</Button>
 	</div>
 </section>

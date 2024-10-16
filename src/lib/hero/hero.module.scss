@@ -4,9 +4,9 @@
 
 .heroSection {
   margin-block: 40px;
-  padding-inline: 20px;
   display: flex;
   flex-direction: column;
+  padding-inline: 20px;
   gap: rem(16);
 
   @include minWidth('tablet') {
@@ -69,12 +69,7 @@
 .heroImageContainer {
   max-width: 1440px;
   margin-inline: auto;
-  margin-block-end: 40px;
   padding-inline: 20px;
-
-  @include minWidth('tablet') {
-    margin-block-end: 80px;
-  }
 
   .heroImg {
     width: 100%;
