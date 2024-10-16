@@ -31,6 +31,10 @@ header {
         li {
           font-size: $medium;
           font-weight: $semiBold;
+
+          a {
+            @include underlineOnHover
+          }
         }
       }
     }

@@ -32,6 +32,7 @@
 
     .contentTitle {
       font-size: $h6;
+      @include highlight;
 
       @include minWidth('tablet') {
         font-size: $h5;
@@ -41,6 +42,7 @@
         font-size: $h3;
       }
     }
+
 
     .contentDesc {
       font-size: $small;
@@ -56,7 +58,7 @@
 
     .ctaBtns {
       display: flex;
-      gap: rem(16)
+      gap: rem(16);
     }
   }
 

@@ -7,8 +7,8 @@
 <section class={styles.heroSection}>
 	<h1 class={styles.heroTitle}>
 		<span>empowering lives</span>
-		<span>through sustainable</span>
-		<span>development initiatives</span>
+		<span>through <span class={styles.highlight}>sustainable</span></span>
+		<span><span class={styles.highlight}>development</span> initiatives</span>
 	</h1>
 
 	<p class={styles.heroDescription}>
@@ -28,8 +28,8 @@
 			<span class="material-symbols-sharp">agriculture</span>
 		</Button>
 	</div>
-</section>
 
-<div class={styles.heroImageContainer}>
-	<img src={heroImg} alt="berikids" class={styles.heroImg} />
-</div>
+	<div class={styles.heroImageContainer}>
+		<img src={heroImg} alt="berikids" class={styles.heroImg} />
+	</div>
+</section>

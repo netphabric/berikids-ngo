@@ -16,6 +16,8 @@
   }
 
   .heroTitle {
+    @include highlight;
+
     @include minWidth('mobile') {
       font-size: $h4;
       line-height: rem(45);
@@ -51,7 +53,8 @@
       font-size: $regular;
     }
 
-    @include minWidth('tablet') {
+    @include minWidth('desktop') {
+      max-width: 40%;
       font-size: $medium;
     }
   }
@@ -64,16 +67,17 @@
       gap: rem(16)
     }
   }
-}
 
-.heroImageContainer {
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: 20px;
-
-  .heroImg {
-    width: 100%;
-    object-fit: cover;
+  .heroImageContainer {
+    max-width: 1440px;
+    margin-inline: auto;
     border-radius: 20px;
+    overflow: hidden;
+
+    .heroImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

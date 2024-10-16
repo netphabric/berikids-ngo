@@ -12,7 +12,11 @@
 			<span>empower</span>
 		</h4>
 
-		<h3 class={styles.contentTitle}>transforming lives through compassionate action</h3>
+		<h3 class={styles.contentTitle}>
+			transforming
+			<span class={styles.highlight}>lives</span> through
+			<span class={styles.highlight}>compassionate</span> action
+		</h3>
 
 		<div class={styles.contentDesc}>
 			Our NGO is dedicated to uplifting orphans and vulnerable children in Cameroon by enhancing

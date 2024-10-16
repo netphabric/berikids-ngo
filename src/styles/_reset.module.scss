@@ -20,6 +20,7 @@ body {
   color: $black;
   background-color: $white;
   -webkit-font-smoothing: antialiased;
+  @include gridBackground;
 }
 
 img,

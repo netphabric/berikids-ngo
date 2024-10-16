@@ -17,6 +17,7 @@ button {
   font-family: $heading-font;
   font-weight: $semiBold;
   text-transform: capitalize;
+  transition: all 0.3s ease-in-out;
 
   &.primary {
     border: 1px solid $black;

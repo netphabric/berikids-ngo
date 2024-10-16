@@ -1,4 +1,5 @@
 @use "styles/functions.module.scss" as *;
+@use "styles/variables.module" as *;
 
 // breakpoints
 $mobile: rem(480);
@@ -29,6 +30,53 @@ $large-desktop: rem(1280);
   @else if $breakpoint =='large-desktop' {
     @media (min-width: #{$large-desktop}) {
       @content;
+    }
+  }
+}
+
+@mixin underlineOnHover() {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 0;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    background: linear-gradient(to right, $secondary 0%, $secondary 100%);
+    transition: width 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@mixin gridBackground() {
+  background-size: 30px 30px;
+  background-image:
+    linear-gradient(to right, lighten($secondary, 25) 1px, transparent 1px),
+    linear-gradient(to bottom, lighten($secondary, 25) 1px, transparent 1px);
+}
+
+@mixin highlight() {
+  .highlight {
+    color: $accent;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 75%;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
     }
   }
 }
