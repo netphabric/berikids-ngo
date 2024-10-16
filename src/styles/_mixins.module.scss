@@ -40,7 +40,7 @@ $large-desktop: rem(1280);
   &::after {
     content: '';
     width: 0;
-    height: 2px;
+    height: 5px;
 
     position: absolute;
     left: 0;
@@ -59,8 +59,8 @@ $large-desktop: rem(1280);
 @mixin gridBackground() {
   background-size: 30px 30px;
   background-image:
-    linear-gradient(to right, lighten($secondary, 25) 1px, transparent 1px),
-    linear-gradient(to bottom, lighten($secondary, 25) 1px, transparent 1px);
+    linear-gradient(to right, lighten($accent, 35) 1px, transparent 1px),
+    linear-gradient(to bottom, lighten($accent, 35) 1px, transparent 1px);
 }
 
 @mixin highlight() {

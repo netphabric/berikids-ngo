@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from "$lib/button/button.svelte"
-	import LogoYellow from "$lib/logo/logoYellow.svelte"
+	import Logo from "$lib/logo/logo.svelte"
 	import style from "./header.module.scss"
 
 	const navLinks = [
@@ -12,9 +12,7 @@
 
 <header>
 	<div class={style.navRight}>
-		<a href="/">
-			<LogoYellow />
-		</a>
+		<Logo />
 
 		<nav>
 			<ul>

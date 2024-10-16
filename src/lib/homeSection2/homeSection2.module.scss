@@ -50,8 +50,11 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: rem(62);
+      gap: rem(32);
 
+      @include minWidth('tablet') {
+        gap: rem(62);
+      }
 
       article {
         width: 280px;

@@ -26,8 +26,8 @@
 	<div class={styles.sectionWrapper}>
 		<h2 class={styles.contentTitle}>
 			empowering
-			<span class={styles.highlight}>orphans</span> and vulnerable communities
-			<span class={styles.highlight}>for a brighter future</span>
+			<span class={styles.highlight}>orphans</span> and vulnerable communities for a
+			<span class={styles.highlight}>brighter future</span>
 		</h2>
 
 		<div class={styles.sectionContent}>
