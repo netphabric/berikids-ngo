@@ -1,0 +1,99 @@
+@use "styles/variables.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+
+.homeSection2 {
+  padding-inline: 20px;
+  padding-block: 50px;
+  color: $white;
+  background-color: $primary;
+  background-size: 30px;
+  background-image:
+    linear-gradient(to right, lighten(#2b4f81, 2) 1px, transparent 1px);
+
+  @include minWidth('tablet') {
+    padding-block: 100px;
+  }
+
+  .sectionWrapper {
+    max-width: 1440px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+
+    @include minWidth('tablet') {
+      gap: rem(64);
+    }
+
+    @include minWidth('desktop') {
+      gap: rem(80);
+    }
+
+    .contentTitle {
+      font-size: $h6;
+      text-align: center;
+      @include highlight;
+
+      @include minWidth('tablet') {
+        font-size: $h5;
+        max-width: 70%;
+        margin-inline: auto;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $h3;
+      }
+    }
+
+    .sectionContent {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: rem(62);
+
+
+      article {
+        width: 280px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+        border: 2px solid $accent;
+        padding: 16px;
+
+        @include minWidth('tablet') {
+          width: 300px;
+          padding: 35px;
+          align-items: center;
+          text-align: center;
+        }
+
+        span {
+          color: $secondary;
+        }
+
+        p {
+          font-size: $small;
+
+          @include minWidth('tablet') {
+            font-size: $regular;
+          }
+        }
+
+        h4 {
+          font-size: $regular;
+
+          @include minWidth('tablet') {
+            font-size: $medium;
+          }
+
+
+          @include minWidth('desktop') {
+            font-size: $large;
+          }
+        }
+      }
+    }
+  }
+}
