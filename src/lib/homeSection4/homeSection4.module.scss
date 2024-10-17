@@ -7,7 +7,7 @@
   color: $white;
   padding-inline: 20px;
   padding-block: 50px;
-  background-color: color.adjust($accent, $hue: 3%);
+  background-color: color.adjust($accent, $hue: 3deg);
   @include gridBackground($accent, 3%, "vertical");
 
   @include minWidth('tablet') {
