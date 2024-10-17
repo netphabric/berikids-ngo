@@ -6,7 +6,8 @@
 	const navLinks = [
 		{ label: "about us", url: "/about-us" },
 		{ label: "get involved", url: "/get-involved" },
-		{ label: "our impact", url: "/our-impact" }
+		{ label: "our impact", url: "/our-impact" },
+		{ label: "gallery", url: "/gallery" }
 	]
 </script>
 
