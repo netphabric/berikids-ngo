@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "styles/functions.module.scss" as *;
 @use "styles/variables.module" as *;
 
@@ -56,11 +57,24 @@ $large-desktop: rem(1280);
   }
 }
 
-@mixin gridBackground() {
+@mixin gridBackground($color, $lightenPercentage, $type: "grid") {
   background-size: 30px 30px;
-  background-image:
-    linear-gradient(to right, lighten($accent, 35) 1px, transparent 1px),
-    linear-gradient(to bottom, lighten($accent, 35) 1px, transparent 1px);
+
+  @if $type =="horizontal" {
+    background-image:
+      linear-gradient(to bottom, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px);
+  }
+
+  @else if $type =="vertical" {
+    background-image:
+      linear-gradient(to right, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px),
+  }
+
+  @else if $type =="grid" {
+    background-image:
+      linear-gradient(to right, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px),
+      linear-gradient(to bottom, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px);
+  }
 }
 
 @mixin highlight() {
@@ -79,4 +93,26 @@ $large-desktop: rem(1280);
       background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
     }
   }
+}
+
+
+@mixin borderGradient($duration: 10000ms) {
+  $color1: rgba(168, 239, 255, 1);
+  $color2: rgba(168, 239, 255, 0.1);
+
+  border: 1px solid transparent;
+  border-image: conic-gradient(from var(--angle), $color2, $color1 0.1turn, $color1 0.15turn, $color2 0.25turn) 30;
+  animation: borderRotate $duration cubic-bezier(.78, -0.02, .11, 1.04) infinite;
+
+  @keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
 }

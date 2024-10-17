@@ -20,7 +20,7 @@ body {
   color: $black;
   background-color: $white;
   -webkit-font-smoothing: antialiased;
-  @include gridBackground;
+  @include gridBackground($accent, 35%);
 }
 
 img,

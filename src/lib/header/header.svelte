@@ -26,12 +26,12 @@
 	</div>
 
 	<div class={style.ctaBtns}>
-		<Button primary>
+		<Button primary onWhite>
 			<span>join</span>
 			<span class="material-symbols-sharp">handshake</span>
 		</Button>
 
-		<Button>
+		<Button onWhite>
 			<span>donate</span>
 			<span class="material-symbols-sharp">compost</span>
 		</Button>

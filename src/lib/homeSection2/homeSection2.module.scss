@@ -7,9 +7,8 @@
   padding-block: 50px;
   color: $white;
   background-color: $primary;
-  background-size: 30px;
-  background-image:
-    linear-gradient(to right, lighten(#2b4f81, 2) 1px, transparent 1px);
+  @include gridBackground(#2b4f81, 2%, "vertical");
+
 
   @include minWidth('tablet') {
     padding-block: 100px;
@@ -62,8 +61,17 @@
         display: flex;
         flex-direction: column;
         gap: rem(16);
-        border: 2px solid $accent;
         padding: 16px;
+
+        @include borderGradient;
+
+        &:first-child {
+          @include borderGradient(25000ms);
+        }
+
+        &:last-child {
+          @include borderGradient(15000ms);
+        }
 
         @include minWidth('tablet') {
           width: 300px;
