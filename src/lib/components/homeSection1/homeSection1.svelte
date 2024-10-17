@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$lib/button/button.svelte"
-	import SectionWrapper from "$lib/sectionWrapper/sectionWrapper.svelte"
+	import Button from "$lib/components/button/button.svelte"
+	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
 	import Hs1Img from "assets/photos/Hs1-img.webp"
 	import styles from "./homeSection1.module.scss"
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$lib/button/button.svelte"
-	import SectionWrapper from "$lib/sectionWrapper/sectionWrapper.svelte"
+	import Button from "../button/button.svelte"
+	import SectionWrapper from "../sectionWrapper/sectionWrapper.svelte"
 	import styles from "./homeSection4.module.scss"
 </script>
 

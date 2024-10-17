@@ -14,7 +14,7 @@
 	// global style
 	import "styles/global.scss"
 
-	import Header from "$lib/header/header.svelte"
+	import Header from "$lib/components/header/header.svelte"
 </script>
 
 <Header />

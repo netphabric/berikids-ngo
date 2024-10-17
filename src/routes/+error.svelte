@@ -1,5 +1,5 @@
 <script>
-	import Wip from "$lib/wip/wip.svelte"
+	import Wip from "$lib/components/wip/wip.svelte"
 </script>
 
 <Wip />

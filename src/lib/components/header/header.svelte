@@ -1,13 +1,12 @@
 <script lang="ts">
-	import Button from "$lib/button/button.svelte"
-	import Logo from "$lib/logo/logo.svelte"
+	import Button from "$lib/components/button/button.svelte"
+	import Logo from "$lib/components/logo/logo.svelte"
 	import style from "./header.module.scss"
 
 	const navLinks = [
 		{ label: "about us", url: "/about-us" },
 		{ label: "get involved", url: "/get-involved" },
-		{ label: "our impact", url: "/our-impact" },
-		{ label: "gallery", url: "/gallery" }
+		{ label: "our impact", url: "/our-impact" }
 	]
 </script>
 

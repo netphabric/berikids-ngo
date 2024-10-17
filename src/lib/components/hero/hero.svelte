@@ -1,5 +1,5 @@
 <script>
-	import Button from "$lib/button/button.svelte"
+	import Button from "../button/button.svelte"
 	import heroImg from "assets/photos/heroImg.webp"
 	import styles from "./hero.module.scss"
 </script>
