@@ -77,9 +77,9 @@ $large-desktop: rem(1280);
   }
 }
 
-@mixin highlight() {
+@mixin highlight($color: $accent) {
   .highlight {
-    color: $accent;
+    color: $color;
     position: relative;
 
     &::before,
@@ -115,4 +115,19 @@ $large-desktop: rem(1280);
   syntax: '<angle>';
   initial-value: 90deg;
   inherits: true;
+}
+
+@mixin ctaBtn() {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(16);
+
+  button {
+    flex-grow: 1;
+    justify-content: center;
+
+    @include minWidth('mobile') {
+      flex-grow: unset;
+    }
+  }
 }

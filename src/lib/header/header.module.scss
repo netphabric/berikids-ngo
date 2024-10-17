@@ -40,7 +40,6 @@ header {
   }
 
   .ctaBtns {
-    display: flex;
-    gap: rem(12);
+    @include ctaBtn
   }
 }

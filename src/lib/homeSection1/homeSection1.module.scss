@@ -57,8 +57,7 @@
     }
 
     .ctaBtns {
-      display: flex;
-      gap: rem(16);
+      @include ctaBtn
     }
   }
 

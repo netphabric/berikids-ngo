@@ -57,7 +57,7 @@
         border-radius: 50%;
         z-index: -1;
         border: 3px dashed $accent;
-        animation: spin 100s linear infinite;
+        animation: spin 20s linear infinite;
 
         @keyframes spin {
           100% {
