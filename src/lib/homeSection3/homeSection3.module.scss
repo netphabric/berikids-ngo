@@ -1,0 +1,101 @@
+@use "styles/variables.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.homeSection3 {
+  flex-wrap: wrap;
+
+  @include minWidth('desktop') {
+    flex-wrap: nowrap;
+  }
+
+  .sectionContent {
+    min-width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: rem(18);
+
+    @include minWidth('tablet') {
+      gap: rem(24);
+    }
+
+    @include minWidth('desktop') {
+      gap: rem(32);
+    }
+
+    .contentChip {
+      font-size: $small;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 102%;
+      left: 0;
+      gap: rem(8)
+    }
+
+    .contentTitle {
+      font-size: $h6;
+      @include highlight;
+
+      @include minWidth('tablet') {
+        font-size: $h5;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $h3;
+        line-height: rem(45);
+      }
+    }
+
+    .contentDesc {
+      max-width: 80%;
+
+      @include minWidth('desktop') {
+        max-width: unset;
+      }
+    }
+
+    .contentDesc,
+    .statDesc {
+      font-size: $small;
+
+      @include minWidth('tablet') {
+        font-size: $regular;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $medium;
+      }
+    }
+
+    .statsContainer {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      @include minWidth('tablet') {
+        flex-direction: row;
+      }
+
+      .statPercent {
+        font-size: $medium;
+
+        @include minWidth('tablet') {
+          font-size: $large;
+        }
+      }
+    }
+
+    .ctaBtns {
+      display: flex;
+      gap: rem(26)
+    }
+  }
+
+  .sectionMediaContainer {
+    padding: 2px;
+    background-color: $secondary;
+  }
+}

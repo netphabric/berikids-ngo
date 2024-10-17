@@ -2,6 +2,7 @@
 	import Hero from "$lib/hero/hero.svelte"
 	import HomeSection1 from "$lib/homeSection1/homeSection1.svelte"
 	import HomeSection2 from "$lib/homeSection2/homeSection2.svelte"
+	import HomeSection3 from "$lib/homeSection3/homeSection3.svelte"
 	import styles from "./page.module.scss"
 </script>
 
@@ -9,4 +10,5 @@
 	<Hero />
 	<HomeSection1 />
 	<HomeSection2 />
+	<HomeSection3 />
 </main>
