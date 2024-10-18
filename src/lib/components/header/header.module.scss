@@ -43,6 +43,9 @@ header {
 
   .ctaBtns {
     @include ctaBtn;
-    flex-wrap: nowrap !important;
+
+    & {
+      flex-wrap: nowrap !important;
+    }
   }
 }
