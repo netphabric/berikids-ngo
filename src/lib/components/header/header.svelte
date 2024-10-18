@@ -1,31 +1,55 @@
 <script lang="ts">
+	import { navOpen } from "stores/nav"
+	import { slide } from "svelte/transition"
+	import { cubicOut } from "svelte/easing"
 	import Button from "$lib/components/button/button.svelte"
 	import Logo from "$lib/components/logo/logo.svelte"
-	import style from "./header.module.scss"
+	import styles from "./header.module.scss"
 
 	const navLinks = [
 		{ label: "about us", url: "/about-us" },
 		{ label: "get involved", url: "/get-involved" },
 		{ label: "our impact", url: "/our-impact" }
 	]
+
+	const toggleNav = () => ($navOpen = !$navOpen)
 </script>
 
 <header>
-	<div class={style.navRight}>
+	<span
+		role="button"
+		tabindex="0"
+		on:keypress={toggleNav}
+		on:click={toggleNav}
+		class={`material-symbols-sharp ${styles.menu}`}>widgets</span
+	>
+
+	{#if $navOpen}
+		<nav
+			transition:slide={{ duration: 100, easing: cubicOut }}
+			class={`${styles.mobileNav} ${$navOpen && styles.open}`}
+		>
+			<ul>
+				{#each navLinks as { label, url }}
+					<li><a href={url} on:click={toggleNav}>{label}</a></li>
+				{/each}
+			</ul>
+		</nav>
+	{/if}
+
+	<div class={styles.navRight}>
 		<Logo />
 
 		<nav>
 			<ul>
 				{#each navLinks as { label, url }}
-					<li>
-						<a href={url}>{label}</a>
-					</li>
+					<li><a href={url}>{label}</a></li>
 				{/each}
 			</ul>
 		</nav>
 	</div>
 
-	<div class={style.ctaBtns}>
+	<div class={styles.ctaBtns}>
 		<Button primary onWhite>
 			<span>join</span>
 			<span class="material-symbols-sharp">handshake</span>
