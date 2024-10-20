@@ -1,0 +1,61 @@
+@use "styles/variables.module" as *;
+@use "styles/functions.module" as *;
+@use "styles/mixins.module" as *;
+
+.contactDetails {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: rem(16);
+
+  @include minWidth('mobile') {
+    gap: rem(24);
+  }
+
+  @include minWidth('tablet') {
+    gap: rem(32);
+  }
+
+  article {
+    width: 180px;
+    flex-grow: 1;
+    display: flex;
+    padding-block: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(8);
+
+    .label {
+      font-size: $regular;
+
+      @include minWidth('tablet') {
+        font-size: $medium;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $large;
+      }
+    }
+
+    .text,
+    .contact {
+      font-size: $tiny;
+
+      @include minWidth('tablet') {
+        font-size: $small;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $regular;
+      }
+    }
+
+    .contact {
+      text-decoration: underline;
+    }
+  }
+}
