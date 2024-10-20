@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { navOpen } from "stores/nav"
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
 	import Button from "$lib/components/button/button.svelte"
@@ -12,7 +11,8 @@
 		{ label: "our impact", url: "/our-impact" }
 	]
 
-	const toggleNav = () => ($navOpen = !$navOpen)
+	let navOpen = false
+	const toggleNav = () => (navOpen = !navOpen)
 </script>
 
 <header>
@@ -24,10 +24,10 @@
 		class={`material-symbols-sharp ${styles.menu}`}>widgets</span
 	>
 
-	{#if $navOpen}
+	{#if navOpen}
 		<nav
 			transition:slide={{ duration: 100, easing: cubicOut }}
-			class={`${styles.mobileNav} ${$navOpen && styles.open}`}
+			class={`${styles.mobileNav} ${navOpen && styles.open}`}
 		>
 			<ul>
 				{#each navLinks as { label, url }}

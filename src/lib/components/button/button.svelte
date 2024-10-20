@@ -2,9 +2,16 @@
 	import styles from "./button.module.scss"
 
 	export let primary = false
+	export let secondary = false
 	export let onWhite = false
 </script>
 
-<button class={`${primary && styles.primary} ${onWhite && styles.onWhite}`}>
+<button
+	class={`
+    ${primary && styles.primary} 
+    ${onWhite && styles.onWhite} 
+    ${secondary && styles.secondary}
+  `}
+>
 	<slot />
 </button>

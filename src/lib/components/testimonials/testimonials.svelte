@@ -14,7 +14,7 @@
 			<img src="https://i.pravatar.cc/300?img=11" alt="testimonial avatar" />
 		</div>
 
-		<h6 class={styles.authorsName}>John Doe</h6>
+		<h5 class={styles.authorsName}>John Doe</h5>
 		<p class={styles.authorsRole}>volunteer, NGO partner</p>
 	</article>
 </section>
