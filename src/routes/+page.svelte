@@ -5,6 +5,7 @@
 	import HomeSection3 from "$lib/components/homeSection3/homeSection3.svelte"
 	import HomeSection4 from "$lib/components/homeSection4/homeSection4.svelte"
 	import Testimonials from "$lib/components/testimonials/testimonials.svelte"
+	import Faq from "$lib/components/faq/faq.svelte"
 	import styles from "./page.module.scss"
 </script>
 
@@ -15,4 +16,5 @@
 	<HomeSection3 />
 	<Testimonials />
 	<HomeSection4 />
+	<Faq />
 </main>

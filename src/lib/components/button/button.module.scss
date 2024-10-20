@@ -24,6 +24,12 @@ button {
     background-color: transparent;
   }
 
+  &.secondary {
+    color: $white;
+    border: 1px solid $accent;
+    background-color: $accent;
+  }
+
 
   &.onWhite {
     &:hover {
