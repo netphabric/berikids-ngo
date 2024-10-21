@@ -10,6 +10,7 @@
 	import "material-symbols/sharp.scss"
 	import "styles/global.scss"
 	import Header from "$lib/components/header/header.svelte"
+	import Footer from "$lib/components/footer/footer.svelte"
 </script>
 
 <svelte:head>
@@ -41,3 +42,4 @@
 
 <Header />
 <slot />
+<Footer />
