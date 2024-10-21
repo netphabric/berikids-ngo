@@ -35,7 +35,7 @@ $large-desktop: rem(1280);
   }
 }
 
-@mixin underlineOnHover() {
+@mixin underlineOnHover($color: $secondary) {
   position: relative;
 
   &::after {
@@ -47,7 +47,7 @@ $large-desktop: rem(1280);
     left: 0;
     top: 100%;
 
-    background: linear-gradient(to right, $secondary 0%, $secondary 100%);
+    background: linear-gradient(to right, $color 0%, $color 100%);
     transition: width 0.3s ease-in-out;
     pointer-events: none;
   }
