@@ -46,7 +46,7 @@
 
 				<div class={styles.inputContainer}>
 					<input placeholder="Your Email Here" />
-					<Button secondary>subscribe</Button>
+					<Button secondary onWhite>subscribe</Button>
 				</div>
 
 				<span>
