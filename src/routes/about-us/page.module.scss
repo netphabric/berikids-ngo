@@ -1,0 +1,401 @@
+@use "styles/variables.module" as *;
+@use "styles/mixins.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+
+.aboutRoot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: rem(80);
+
+  @include minWidth ('tablet') {
+    gap: rem(160);
+  }
+
+  @include minWidth ('desktop') {
+    gap: rem(180);
+  }
+
+  .hero {
+    max-width: 1440px;
+    margin-inline: auto;
+    margin-block: 40px;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    gap: rem(18);
+
+    @include minWidth('tablet') {
+      align-items: center;
+      margin-block: 80px;
+    }
+
+    .chip {
+      font-size: $small;
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 102%;
+      gap: rem(8)
+    }
+
+    .title {
+      @include highlight;
+
+      @include minWidth('mobile') {
+        font-size: $h4;
+        line-height: rem(45);
+      }
+
+      @include minWidth('tablet') {
+        font-size: $h3;
+        line-height: rem(55);
+        text-align: center;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $h1;
+        line-height: rem(65);
+      }
+    }
+
+    .desc {
+      word-wrap: break-word;
+      font-size: $small;
+
+
+      @include minWidth('tablet') {
+        font-size: $regular;
+        text-align: center;
+      }
+
+      @include minWidth('desktop') {
+        font-size: $medium;
+      }
+    }
+
+    .ctaBtns {
+      @include ctaBtn;
+    }
+  }
+
+  .section {
+    &:nth-child(even) {
+      @include minWidth('tablet') {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .sectionContent {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: rem(18);
+
+      .sectionChip {
+        display: flex;
+        align-items: flex-end;
+        gap: rem(8);
+
+        font-size: $small;
+        position: absolute;
+        bottom: 105%;
+        left: 0;
+      }
+
+      .sectionTitle {
+        font-size: $h6;
+        @include highlight;
+
+        @include minWidth('tablet') {
+          font-size: $h5;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h3;
+        }
+      }
+
+      .sectionDesc {
+        font-size: $small;
+
+        @include minWidth('tablet') {
+          font-size: $regular;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $medium;
+        }
+      }
+    }
+
+    .sectionImage {
+      width: 100%;
+      min-width: 50%;
+      height: calc(60vh - rem(20));
+      max-height: 300px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+
+      @include minWidth('tablet') {
+        max-height: 500px;
+      }
+
+      @include minWidth('desktop') {
+        max-height: 600px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .ctaBtns {
+      @include ctaBtn;
+    }
+  }
+
+  .sectorSection {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    @include minWidth('tablet') {
+      gap: rem(48);
+    }
+
+    .sectorHeader {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-block: 40px;
+      position: relative;
+      gap: rem(18);
+
+      @include minWidth('tablet') {
+        max-width: 60%;
+        align-items: center;
+        margin-block: 80px;
+      }
+
+      .chip {
+        font-size: $small;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 102%;
+        gap: rem(8)
+      }
+
+      .title {
+        @include highlight;
+
+        @include minWidth('mobile') {
+          font-size: $h4;
+          line-height: rem(45);
+        }
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          line-height: rem(55);
+          text-align: center;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h1;
+          line-height: rem(65);
+        }
+      }
+
+      .desc {
+        word-wrap: break-word;
+        font-size: $small;
+
+
+        @include minWidth('tablet') {
+          font-size: $regular;
+          text-align: center;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $medium;
+        }
+      }
+    }
+
+    .sectors {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: rem(18);
+
+      .sectorCard {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: rem(8);
+
+        &:last-child {
+          @include minWidth('mobile') {
+            grid-column: span 2;
+          }
+
+          @include minWidth('tablet') {
+            grid-column: unset;
+          }
+        }
+
+        .sectorImage {
+          width: 100%;
+          height: 170px;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        .sectorTitle {
+          font-size: $small;
+
+          @include minWidth('tablet') {
+            font-size: $regular;
+            text-align: center;
+          }
+        }
+
+        .sectorDesc {
+          font-size: $tiny;
+
+          @include minWidth('tablet') {
+            font-size: $small;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .ctaBtns {
+      @include ctaBtn;
+    }
+  }
+
+  .ourTeam {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    gap: rem(18);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-block: 40px;
+      position: relative;
+      gap: rem(18);
+
+      .chip {
+        font-size: $small;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 102%;
+        gap: rem(8)
+      }
+
+      .title {
+        font-size: $h4;
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          line-height: rem(55);
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h1;
+        }
+      }
+
+      .desc {
+        font-size: $small;
+
+        @include minWidth('tablet') {
+          font-size: $regular;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $medium;
+        }
+      }
+    }
+
+    .teams {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: rem(18);
+
+      @include minWidth('tablet') {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      @include minWidth('desktop') {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .memberCard {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        gap: rem(12);
+
+        .memberImage {
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .memberName {
+          font-size: $small;
+
+          @include minWidth('tablet') {
+            font-size: $regular;
+          }
+        }
+
+        .memberDesc,
+        .memberRole {
+          font-size: $tiny;
+
+          @include minWidth('tablet') {
+            font-size: $small;
+          }
+        }
+      }
+    }
+  }
+}
