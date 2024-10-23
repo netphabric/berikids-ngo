@@ -245,4 +245,29 @@
 			{/each}
 		</div>
 	</section>
+
+	<section class={styles.makeADiff}>
+		<div class={styles.wrapper}>
+			<h2 class={styles.title}>
+				Join us in making a <span class={styles.highlight}>difference</span>
+			</h2>
+
+			<p class={styles.desc}>
+				your support can transform lives. help us empower orphans and vulnerable communities in
+				cameroon today.
+			</p>
+
+			<div class={styles.ctaBtns}>
+				<Button>
+					<span>donate</span>
+					<span class="material-symbols-sharp">compost</span>
+				</Button>
+
+				<Button secondary>
+					<span>volunteer</span>
+					<span class="material-symbols-sharp">volunteer_activism</span>
+				</Button>
+			</div>
+		</div>
+	</section>
 </main>
