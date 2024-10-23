@@ -7,8 +7,8 @@
 <main class={styles.aboutRoot}>
 	<section class={styles.hero}>
 		<h4 class={styles.chip}>
-			<span>empowerment</span>
 			<span class="material-symbols-sharp">person_raised_hand</span>
+			<span>empowerment</span>
 		</h4>
 		<h1 class={styles.title}>
 			<span class={styles.highlight}>transforming</span>
@@ -35,7 +35,7 @@
 	<SectionWrapper className={styles.section}>
 		<div class={styles.sectionContent}>
 			<h4 class={styles.sectionChip}>
-				<span class="material-symbols-sharp">component_exchange</span>
+				<span class="material-symbols-sharp">person_play</span>
 				<span>community</span>
 			</h4>
 
@@ -55,6 +55,43 @@
 
 		<div class={styles.sectionImage}>
 			<img src="/images/as1.webp" alt="about-us" />
+		</div>
+	</SectionWrapper>
+
+	<SectionWrapper className={styles.section}>
+		<div class={styles.sectionContent}>
+			<h4 class={styles.sectionChip}>
+				<span class="material-symbols-sharp">format_paint</span>
+				<span>committment</span>
+			</h4>
+
+			<h2 class={styles.sectionTitle}>
+				our <span class={styles.highlight}>committment</span>
+				to transform lives in cameroon
+			</h2>
+
+			<p class={styles.sectionDesc}>
+				We are dedicated to improving the socio-economic conditions of orphans, providing them with
+				essential skills and resources. Our initiatives also focus on advancing IT education,
+				ensuring access to potable water, and offering Christian counseling to foster holistic
+				development.
+			</p>
+
+			<div class={styles.ctaBtns}>
+				<Button onWhite primary>
+					<span>learn more</span>
+					<span class="material-symbols-sharp">expand_content</span>
+				</Button>
+
+				<Button onWhite>
+					<span>join us</span>
+					<span class="material-symbols-sharp">handshake</span>
+				</Button>
+			</div>
+		</div>
+
+		<div class={styles.sectionImage}>
+			<img src="/images/as2.webp" alt="about-us" />
 		</div>
 	</SectionWrapper>
 </main>

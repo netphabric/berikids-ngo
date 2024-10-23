@@ -81,6 +81,12 @@
   }
 
   .section {
+    &:nth-child(even) {
+      @include minWidth('tablet') {
+        flex-direction: row-reverse;
+      }
+    }
+
     .sectionContent {
       position: relative;
       display: flex;
@@ -148,6 +154,10 @@
         object-fit: cover;
         object-position: top;
       }
+    }
+
+    .ctaBtns {
+      @include ctaBtn;
     }
   }
 }

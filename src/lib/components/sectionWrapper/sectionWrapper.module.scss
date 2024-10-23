@@ -14,7 +14,6 @@
   @include minWidth("tablet") {
     flex-direction: row;
     gap: rem(40);
-
   }
 
   @include minWidth("desktop") {
@@ -23,6 +22,7 @@
 
   &.isFlipped {
     flex-direction: column-reverse;
+    gap: rem(80);
 
     @include minWidth("tablet") {
       flex-direction: row-reverse;
