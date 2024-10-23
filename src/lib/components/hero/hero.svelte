@@ -1,6 +1,5 @@
 <script>
 	import Button from "../button/button.svelte"
-	import heroImg from "assets/photos/heroImg.webp"
 	import styles from "./hero.module.scss"
 </script>
 
@@ -30,6 +29,6 @@
 	</div>
 
 	<div class={styles.heroImageContainer}>
-		<img src={heroImg} alt="berikids" class={styles.heroImg} />
+		<img src="/images/heroImg.webp" alt="berikids" class={styles.heroImg} />
 	</div>
 </section>

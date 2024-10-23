@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
-	import Hs1Img from "assets/photos/Hs1-img.webp"
 	import styles from "./homeSection1.module.scss"
 </script>
 
@@ -39,6 +38,6 @@
 	</div>
 
 	<div class={styles.sectionImage}>
-		<img src={Hs1Img} alt="berkids" />
+		<img src="/images/Hs1-img.webp" alt="berkids" />
 	</div>
 </SectionWrapper>
