@@ -398,4 +398,57 @@
       }
     }
   }
+
+  .makeADiff {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/images/as1.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    margin-bottom: -80px;
+    padding-block: 120px;
+    padding-inline: 20px;
+
+    .wrapper {
+      max-width: 1440px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: rem(18);
+      color: $white;
+
+      .title {
+        @include highlight();
+
+        @include minWidth('mobile') {
+          font-size: $h4;
+          line-height: rem(45);
+        }
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          line-height: rem(55);
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h1;
+          line-height: rem(65);
+        }
+      }
+
+      .desc {
+        font-size: $regular;
+
+        @include minWidth('tablet') {
+          font-size: $medium;
+          max-width: 60%;
+        }
+      }
+
+      .ctaBtns {
+        @include ctaBtn;
+      }
+    }
+  }
 }
