@@ -1,5 +1,6 @@
 <script>
 	import Button from "$lib/components/button/button.svelte"
+	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
 	import styles from "./page.module.scss"
 </script>
 
@@ -30,4 +31,30 @@
 			</Button>
 		</div>
 	</section>
+
+	<SectionWrapper className={styles.section}>
+		<div class={styles.sectionContent}>
+			<h4 class={styles.sectionChip}>
+				<span class="material-symbols-sharp">component_exchange</span>
+				<span>community</span>
+			</h4>
+
+			<h2 class={styles.sectionTitle}>
+				<span class={styles.highlight}>empowering</span>
+				orphans and vulnerable <span class={styles.highlight}>communities</span>
+				through education and sustainable development
+			</h2>
+
+			<p class={styles.sectionDesc}>
+				Founded with a vision to uplift the socio-economic conditions of orphans in Cameroon, our
+				NGO has grown significantly since its inception. Key milestones include the launch of
+				vocational training programs and successful partnerships with local and international
+				organizations to enhance community development.
+			</p>
+		</div>
+
+		<div class={styles.sectionImage}>
+			<img src="/images/as1.webp" alt="about-us" />
+		</div>
+	</SectionWrapper>
 </main>
