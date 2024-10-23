@@ -1,7 +1,6 @@
 <script>
 	import Button from "../button/button.svelte"
 	import Logo from "../logo/logo.svelte"
-	import SectionWrapper from "../sectionWrapper/sectionWrapper.svelte"
 	import styles from "./footer.module.scss"
 	import { stringify } from "utils/stringify"
 
