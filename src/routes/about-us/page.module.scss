@@ -16,6 +16,7 @@
     gap: rem(180);
   }
 
+
   .hero {
     display: flex;
     flex-direction: column;
@@ -72,7 +73,6 @@
       @include minWidth('desktop') {
         font-size: $medium;
       }
-
     }
 
     .ctaBtns {
@@ -117,7 +117,7 @@
         }
       }
 
-      .desc {
+      .sectionDesc {
         font-size: $small;
 
         @include minWidth('tablet') {
@@ -153,6 +153,139 @@
         height: 100%;
         object-fit: cover;
         object-position: top;
+      }
+    }
+
+    .ctaBtns {
+      @include ctaBtn;
+    }
+  }
+
+  .sectorSection {
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    @include minWidth('tablet') {
+      gap: rem(48);
+    }
+
+    .sectorHeader {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-block: 40px;
+      position: relative;
+      gap: rem(18);
+
+      @include minWidth('tablet') {
+        max-width: 60%;
+        align-items: center;
+        margin-block: 80px;
+      }
+
+      .chip {
+        font-size: $small;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 102%;
+        gap: rem(8)
+      }
+
+      .title {
+        @include highlight;
+
+        @include minWidth('mobile') {
+          font-size: $h4;
+          line-height: rem(45);
+        }
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          line-height: rem(55);
+          text-align: center;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h1;
+          line-height: rem(65);
+        }
+      }
+
+      .desc {
+        word-wrap: break-word;
+        font-size: $small;
+
+
+        @include minWidth('tablet') {
+          font-size: $regular;
+          text-align: center;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $medium;
+        }
+      }
+    }
+
+    .sectors {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: rem(18);
+
+      .sectorCard {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: rem(8);
+
+        &:last-child {
+          @include minWidth('mobile') {
+            grid-column: span 2;
+          }
+
+          @include minWidth('tablet') {
+            grid-column: unset;
+          }
+        }
+
+        .sectorImage {
+          width: 100%;
+          height: 170px;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+
+        .sectorTitle {
+          font-size: $small;
+
+          @include minWidth('tablet') {
+            font-size: $regular;
+            text-align: center;
+          }
+        }
+
+        .sectorDesc {
+          font-size: $tiny;
+
+          @include minWidth('tablet') {
+            font-size: $small;
+            text-align: center;
+          }
+        }
       }
     }
 
