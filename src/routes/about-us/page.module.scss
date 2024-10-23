@@ -16,13 +16,14 @@
     gap: rem(180);
   }
 
-
   .hero {
+    max-width: 1440px;
+    margin-inline: auto;
+    margin-block: 40px;
+    padding-inline: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-inline: 20px;
-    margin-block: 40px;
     position: relative;
     gap: rem(18);
 
@@ -291,6 +292,110 @@
 
     .ctaBtns {
       @include ctaBtn;
+    }
+  }
+
+  .ourTeam {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 20px;
+    gap: rem(18);
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      margin-block: 40px;
+      position: relative;
+      gap: rem(18);
+
+      .chip {
+        font-size: $small;
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 102%;
+        gap: rem(8)
+      }
+
+      .title {
+        font-size: $h4;
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          line-height: rem(55);
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h1;
+        }
+      }
+
+      .desc {
+        font-size: $small;
+
+        @include minWidth('tablet') {
+          font-size: $regular;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $medium;
+        }
+      }
+    }
+
+    .teams {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: rem(18);
+
+      @include minWidth('tablet') {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      @include minWidth('desktop') {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .memberCard {
+        display: flex;
+        padding: 10px;
+        flex-direction: column;
+        gap: rem(12);
+
+        .memberImage {
+          width: 100%;
+          border-radius: 10px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .memberName {
+          font-size: $small;
+
+          @include minWidth('tablet') {
+            font-size: $regular;
+          }
+        }
+
+        .memberDesc,
+        .memberRole {
+          font-size: $tiny;
+
+          @include minWidth('tablet') {
+            font-size: $small;
+          }
+        }
+      }
     }
   }
 }

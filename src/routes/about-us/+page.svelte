@@ -20,6 +20,64 @@
 			desc: "We ensure access to potable water for underserved populations."
 		}
 	]
+	const teams = [
+		{
+			profile: "/dp/dp2.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp3.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp4.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp5.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp6.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp7.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp8.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		},
+		{
+			profile: "/dp/dp2.webp",
+			name: "alice johnson",
+			role: "program director",
+			desc: "passionate about empowering orphans through education and vocational training",
+			socials: []
+		}
+	]
 </script>
 
 <main class={styles.aboutRoot}>
@@ -155,6 +213,36 @@
 				<span>join us</span>
 				<span class="material-symbols-sharp">handshake</span>
 			</Button>
+		</div>
+	</section>
+
+	<section class={styles.ourTeam}>
+		<div class={styles.header}>
+			<h4 class={styles.chip}>
+				<span class="material-symbols-sharp">social_leaderboard</span>
+				<span>together</span>
+			</h4>
+
+			<h2 class={styles.title}>our team</h2>
+			<p class={styles.desc}>dedicated professionals committed to making a difference.</p>
+		</div>
+
+		<div class={styles.teams}>
+			{#each teams as team}
+				<article class={styles.memberCard}>
+					<div class={styles.memberImage}>
+						<img src={team.profile} alt="profile" />
+					</div>
+
+					<div class={styles.memberDetails}>
+						<h3 class={styles.memberName}>{team.name}</h3>
+						<p class={styles.memberRole}>{team.role}</p>
+					</div>
+
+					<p class={styles.memberDesc}>{team.desc}</p>
+					<div class={styles.memberSocials}></div>
+				</article>
+			{/each}
 		</div>
 	</section>
 </main>
