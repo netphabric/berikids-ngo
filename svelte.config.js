@@ -13,7 +13,6 @@ const config = {
 		alias: {
 			"styles/*": "./src/styles/*",
 			"utils/*": "./src/utils/*",
-			"assets/*": "./src/assets/*",
 			"stores/*": "./src/stores/*"
 		}
 	}
