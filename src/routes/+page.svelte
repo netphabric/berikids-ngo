@@ -10,7 +10,7 @@
 	import styles from "./page.module.scss"
 </script>
 
-<main class={styles.homeRoot}>
+<main class={styles.root}>
 	<Hero />
 
 	<SectionWrapper className={styles.section}>

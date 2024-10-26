@@ -2,6 +2,7 @@
 @use "styles/functions.module.scss" as *;
 
 .sectionWrapper {
+  width: 100%;
   max-width: 1440px;
   margin-inline: auto;
   display: flex;

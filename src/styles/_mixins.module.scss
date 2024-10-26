@@ -265,6 +265,8 @@ $large-desktop: rem(1280);
 
 /*works with the sectionWrapper component*/
 @mixin sectionTemplate() {
+  width: 100%;
+
   &:nth-child(odd) {
     @include minWidth('tablet') {
       flex-direction: row-reverse;
@@ -272,6 +274,7 @@ $large-desktop: rem(1280);
   }
 
   .sectionContent {
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -330,6 +333,7 @@ $large-desktop: rem(1280);
   padding-inline: 20px;
 
   .sectionWrapper {
+    width: 100%;
     max-width: 1440px;
     margin-inline: auto;
     display: flex;

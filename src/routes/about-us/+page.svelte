@@ -5,7 +5,7 @@
 	import styles from "./page.module.scss"
 </script>
 
-<main class={styles.aboutRoot}>
+<main class={styles.root}>
 	<section class={styles.hero}>
 		<h4 class={styles.chip}>
 			<span class="material-symbols-sharp">person_raised_hand</span>

@@ -2,7 +2,7 @@
 @use "styles/mixins.module.scss" as *;
 @use "styles/functions.module.scss" as *;
 
-.aboutRoot {
+.root {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
