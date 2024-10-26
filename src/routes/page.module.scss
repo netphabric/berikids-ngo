@@ -1,7 +1,9 @@
+@use "sass:color";
+@use "styles/variables.module.scss" as *;
 @use "styles/functions.module.scss" as *;
 @use "styles/mixins.module.scss" as *;
 
-.homeRoot {
+.root {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -13,5 +15,132 @@
 
   @include minWidth ('desktop') {
     gap: rem(180);
+  }
+
+  .section {
+    @include sectionTemplate;
+
+    .statsContainer {
+      @include gridLayout(150px);
+
+      .statItem {
+        @include nestedSectionSizing;
+      }
+    }
+  }
+
+  .aidOptionsSection {
+    color: $white;
+    padding-inline: 20px;
+    padding-block: 50px;
+    background-color: $primary;
+    @include gridBackground(#2b4f81, 2%, "vertical");
+
+    @include minWidth('tablet') {
+      padding-block: 100px;
+    }
+
+    .sectionWrapper {
+      max-width: 1440px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      @include contentSizing;
+
+      @include minWidth('tablet') {
+        gap: rem(64);
+      }
+
+      .sectionContent {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: rem(32);
+
+        @include minWidth('tablet') {
+          gap: rem(62);
+        }
+
+        article {
+          flex-grow: 1;
+          @include cardBlock;
+          @include borderGradient;
+
+          &:first-child {
+            @include borderGradient(25000ms);
+          }
+
+          &:last-child {
+            @include borderGradient(15000ms);
+          }
+
+          @include minWidth('tablet') {
+            width: 300px;
+            padding: 35px;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .supportSection {
+    color: $white;
+    padding-inline: 20px;
+    padding-block: 50px;
+    @include gridbgColor;
+
+    @include minWidth('tablet') {
+      padding-block: 80px;
+    }
+
+    @include minWidth('desktop') {
+      padding-block: 150px;
+    }
+
+    .sectionWrapper {
+      padding: 0;
+
+      .contentTitle {
+        width: 100%;
+        font-size: $h5;
+        @include highlight($secondary);
+
+        @include minWidth('tablet') {
+          font-size: $h3;
+          text-align: center;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h2;
+          min-width: 50%;
+        }
+      }
+
+      .sectionContent {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
+
+        .desc {
+          font-size: $regular;
+          font-weight: $semiBold;
+
+          @include minWidth('tablet') {
+            font-size: $medium;
+          }
+
+          @include minWidth('desktop') {
+            font-size: $large;
+          }
+        }
+
+        .ctaBtns {
+          @include ctaBtn
+        }
+      }
+    }
   }
 }

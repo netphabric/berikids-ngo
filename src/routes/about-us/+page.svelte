@@ -1,95 +1,22 @@
 <script>
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
+	import { sectors, teams } from "./store"
 	import styles from "./page.module.scss"
-
-	const sectors = [
-		{
-			image: "/images/s1.webp",
-			title: "Enhancing Socio-Economic Conditions for Orphans",
-			desc: "We provide vocational training to empower orphans with essential life skills."
-		},
-		{
-			image: "/images/s2.webp",
-			title: "Advancing Education and Technology in Cameroon",
-			desc: "Our programs promote digital literacy as a key to development."
-		},
-		{
-			image: "/images/s3.webp",
-			title: "Providing Clean Water to Communities in Need",
-			desc: "We ensure access to potable water for underserved populations."
-		}
-	]
-	const teams = [
-		{
-			profile: "/dp/dp2.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp3.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp4.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp5.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp6.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp7.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp8.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp2.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		}
-	]
 </script>
 
-<main class={styles.aboutRoot}>
+<main class={styles.root}>
 	<section class={styles.hero}>
 		<h4 class={styles.chip}>
 			<span class="material-symbols-sharp">person_raised_hand</span>
 			<span>empowerment</span>
 		</h4>
+
 		<h1 class={styles.title}>
 			<span class={styles.highlight}>transforming</span>
 			lives together
 		</h1>
+
 		<p class={styles.desc}>
 			dedicated to uplifting orphans and vulnerable communites throught education, support and
 			sustainable development
@@ -110,18 +37,18 @@
 
 	<SectionWrapper className={styles.section}>
 		<div class={styles.sectionContent}>
-			<h4 class={styles.sectionChip}>
+			<h4 class={styles.chip}>
 				<span class="material-symbols-sharp">person_play</span>
 				<span>community</span>
 			</h4>
 
-			<h2 class={styles.sectionTitle}>
+			<h2 class={styles.title}>
 				<span class={styles.highlight}>empowering</span>
 				orphans and vulnerable <span class={styles.highlight}>communities</span>
 				through education and sustainable development
 			</h2>
 
-			<p class={styles.sectionDesc}>
+			<p class={styles.desc}>
 				Founded with a vision to uplift the socio-economic conditions of orphans in Cameroon, our
 				NGO has grown significantly since its inception. Key milestones include the launch of
 				vocational training programs and successful partnerships with local and international
@@ -136,17 +63,17 @@
 
 	<SectionWrapper className={styles.section}>
 		<div class={styles.sectionContent}>
-			<h4 class={styles.sectionChip}>
+			<h4 class={styles.chip}>
 				<span class="material-symbols-sharp">format_paint</span>
 				<span>committment</span>
 			</h4>
 
-			<h2 class={styles.sectionTitle}>
+			<h2 class={styles.title}>
 				our <span class={styles.highlight}>committment</span>
 				to transform lives in cameroon
 			</h2>
 
-			<p class={styles.sectionDesc}>
+			<p class={styles.desc}>
 				We are dedicated to improving the socio-economic conditions of orphans, providing them with
 				essential skills and resources. Our initiatives also focus on advancing IT education,
 				ensuring access to potable water, and offering Christian counseling to foster holistic
@@ -191,14 +118,16 @@
 		</div>
 
 		<div class={styles.sectors}>
-			{#each sectors as sector}
+			{#each $sectors as sector}
 				<article class={styles.sectorCard}>
-					<div class={styles.sectorImage}>
+					<div class={styles.imageContainer}>
 						<img src={sector.image} alt="sector" />
 					</div>
 
-					<h3 class={styles.sectorTitle}>{sector.title}</h3>
-					<p class={styles.sectorDesc}>{sector.desc}</p>
+					<div class={styles.content}>
+						<h3 class={styles.title}>{sector.title}</h3>
+						<p class={styles.text}>{sector.desc}</p>
+					</div>
 				</article>
 			{/each}
 		</div>
@@ -228,26 +157,28 @@
 		</div>
 
 		<div class={styles.teams}>
-			{#each teams as team}
+			{#each $teams as team}
 				<article class={styles.memberCard}>
-					<div class={styles.memberImage}>
+					<div class={styles.imageContainer}>
 						<img src={team.profile} alt="profile" />
 					</div>
 
-					<div class={styles.memberDetails}>
-						<h3 class={styles.memberName}>{team.name}</h3>
-						<p class={styles.memberRole}>{team.role}</p>
-					</div>
+					<div class={styles.content}>
+						<div class={styles.memberDetails}>
+							<h3 class={styles.title}>{team.name}</h3>
+							<p class={styles.subTitle}>{team.role}</p>
+						</div>
 
-					<p class={styles.memberDesc}>{team.desc}</p>
-					<div class={styles.memberSocials}></div>
+						<p class={styles.text}>{team.desc}</p>
+						<div class={styles.memberSocials}></div>
+					</div>
 				</article>
 			{/each}
 		</div>
 	</section>
 
 	<section class={styles.makeADiff}>
-		<div class={styles.wrapper}>
+		<div class={styles.sectionWrapper}>
 			<h2 class={styles.title}>
 				Join us in making a <span class={styles.highlight}>difference</span>
 			</h2>
