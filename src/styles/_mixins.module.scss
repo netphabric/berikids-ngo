@@ -35,6 +35,11 @@ $large-desktop: rem(1280);
   }
 }
 
+@mixin gridbgColor($color: $accent) {
+  background-color: color.adjust($color, $hue: 3deg);
+  @include gridBackground($color, 3%, "vertical");
+}
+
 @mixin underlineOnHover($color: $secondary) {
   position: relative;
 
@@ -191,7 +196,7 @@ $large-desktop: rem(1280);
 
     font-size: $small;
     position: absolute;
-    bottom: 105%;
+    bottom: 101%;
     left: 0;
   }
 
@@ -260,7 +265,7 @@ $large-desktop: rem(1280);
 
 /*works with the sectionWrapper component*/
 @mixin sectionTemplate() {
-  &:nth-child(even) {
+  &:nth-child(odd) {
     @include minWidth('tablet') {
       flex-direction: row-reverse;
     }
@@ -271,6 +276,17 @@ $large-desktop: rem(1280);
     display: flex;
     flex-direction: column;
     gap: rem(18);
+
+    .chip {
+      display: flex;
+      align-items: flex-end;
+      gap: rem(8);
+
+      font-size: $small;
+      position: absolute;
+      bottom: 101%;
+      left: 0;
+    }
 
     .title {
       @include highlight;
@@ -336,6 +352,10 @@ $large-desktop: rem(1280);
   flex-direction: column;
   gap: rem(12);
 
+  .cardIcon {
+    color: $secondary;
+  }
+
   .imageContainer {
     width: 100%;
     border-radius: 10px;
@@ -365,10 +385,33 @@ $large-desktop: rem(1280);
     .title,
     .subTitle {
       font-size: $small;
+      line-height: 24px;
 
       @include minWidth('tablet') {
         font-size: $regular;
       }
+    }
+  }
+}
+
+@mixin nestedSectionSizing {
+  .text {
+    font-size: $tiny;
+
+    @include minWidth('tablet') {
+      font-size: $small;
+    }
+
+    @include minWidth('desktop') {
+      font-size: $regular;
+    }
+  }
+
+  .title {
+    font-size: $medium;
+
+    @include minWidth('tablet') {
+      font-size: $large;
     }
   }
 }

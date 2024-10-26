@@ -1,83 +1,8 @@
 <script>
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
+	import { sectors, teams } from "./store"
 	import styles from "./page.module.scss"
-
-	const sectors = [
-		{
-			image: "/images/s1.webp",
-			title: "Enhancing Socio-Economic Conditions for Orphans",
-			desc: "We provide vocational training to empower orphans with essential life skills."
-		},
-		{
-			image: "/images/s2.webp",
-			title: "Advancing Education and Technology in Cameroon",
-			desc: "Our programs promote digital literacy as a key to development."
-		},
-		{
-			image: "/images/s3.webp",
-			title: "Providing Clean Water to Communities in Need",
-			desc: "We ensure access to potable water for underserved populations."
-		}
-	]
-	const teams = [
-		{
-			profile: "/dp/dp2.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp3.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp4.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp5.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp6.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp7.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp8.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		},
-		{
-			profile: "/dp/dp2.webp",
-			name: "alice johnson",
-			role: "program director",
-			desc: "passionate about empowering orphans through education and vocational training",
-			socials: []
-		}
-	]
 </script>
 
 <main class={styles.aboutRoot}>
@@ -193,7 +118,7 @@
 		</div>
 
 		<div class={styles.sectors}>
-			{#each sectors as sector}
+			{#each $sectors as sector}
 				<article class={styles.sectorCard}>
 					<div class={styles.imageContainer}>
 						<img src={sector.image} alt="sector" />
@@ -232,7 +157,7 @@
 		</div>
 
 		<div class={styles.teams}>
-			{#each teams as team}
+			{#each $teams as team}
 				<article class={styles.memberCard}>
 					<div class={styles.imageContainer}>
 						<img src={team.profile} alt="profile" />
