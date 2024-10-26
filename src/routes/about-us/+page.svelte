@@ -86,10 +86,12 @@
 			<span class="material-symbols-sharp">person_raised_hand</span>
 			<span>empowerment</span>
 		</h4>
+
 		<h1 class={styles.title}>
 			<span class={styles.highlight}>transforming</span>
 			lives together
 		</h1>
+
 		<p class={styles.desc}>
 			dedicated to uplifting orphans and vulnerable communites throught education, support and
 			sustainable development
@@ -110,18 +112,18 @@
 
 	<SectionWrapper className={styles.section}>
 		<div class={styles.sectionContent}>
-			<h4 class={styles.sectionChip}>
+			<h4 class={styles.chip}>
 				<span class="material-symbols-sharp">person_play</span>
 				<span>community</span>
 			</h4>
 
-			<h2 class={styles.sectionTitle}>
+			<h2 class={styles.title}>
 				<span class={styles.highlight}>empowering</span>
 				orphans and vulnerable <span class={styles.highlight}>communities</span>
 				through education and sustainable development
 			</h2>
 
-			<p class={styles.sectionDesc}>
+			<p class={styles.desc}>
 				Founded with a vision to uplift the socio-economic conditions of orphans in Cameroon, our
 				NGO has grown significantly since its inception. Key milestones include the launch of
 				vocational training programs and successful partnerships with local and international
@@ -136,17 +138,17 @@
 
 	<SectionWrapper className={styles.section}>
 		<div class={styles.sectionContent}>
-			<h4 class={styles.sectionChip}>
+			<h4 class={styles.chip}>
 				<span class="material-symbols-sharp">format_paint</span>
 				<span>committment</span>
 			</h4>
 
-			<h2 class={styles.sectionTitle}>
+			<h2 class={styles.title}>
 				our <span class={styles.highlight}>committment</span>
 				to transform lives in cameroon
 			</h2>
 
-			<p class={styles.sectionDesc}>
+			<p class={styles.desc}>
 				We are dedicated to improving the socio-economic conditions of orphans, providing them with
 				essential skills and resources. Our initiatives also focus on advancing IT education,
 				ensuring access to potable water, and offering Christian counseling to foster holistic
@@ -193,12 +195,14 @@
 		<div class={styles.sectors}>
 			{#each sectors as sector}
 				<article class={styles.sectorCard}>
-					<div class={styles.sectorImage}>
+					<div class={styles.imageContainer}>
 						<img src={sector.image} alt="sector" />
 					</div>
 
-					<h3 class={styles.sectorTitle}>{sector.title}</h3>
-					<p class={styles.sectorDesc}>{sector.desc}</p>
+					<div class={styles.content}>
+						<h3 class={styles.title}>{sector.title}</h3>
+						<p class={styles.text}>{sector.desc}</p>
+					</div>
 				</article>
 			{/each}
 		</div>
@@ -230,24 +234,26 @@
 		<div class={styles.teams}>
 			{#each teams as team}
 				<article class={styles.memberCard}>
-					<div class={styles.memberImage}>
+					<div class={styles.imageContainer}>
 						<img src={team.profile} alt="profile" />
 					</div>
 
-					<div class={styles.memberDetails}>
-						<h3 class={styles.memberName}>{team.name}</h3>
-						<p class={styles.memberRole}>{team.role}</p>
-					</div>
+					<div class={styles.content}>
+						<div class={styles.memberDetails}>
+							<h3 class={styles.title}>{team.name}</h3>
+							<p class={styles.subTitle}>{team.role}</p>
+						</div>
 
-					<p class={styles.memberDesc}>{team.desc}</p>
-					<div class={styles.memberSocials}></div>
+						<p class={styles.text}>{team.desc}</p>
+						<div class={styles.memberSocials}></div>
+					</div>
 				</article>
 			{/each}
 		</div>
 	</section>
 
 	<section class={styles.makeADiff}>
-		<div class={styles.wrapper}>
+		<div class={styles.sectionWrapper}>
 			<h2 class={styles.title}>
 				Join us in making a <span class={styles.highlight}>difference</span>
 			</h2>
