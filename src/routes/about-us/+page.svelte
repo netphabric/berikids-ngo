@@ -1,7 +1,7 @@
 <script>
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
-	import { sectors, teams } from "./store"
+	import { sectors, teams, partners } from "./store"
 	import styles from "./page.module.scss"
 </script>
 
@@ -12,22 +12,28 @@
 			<span>empowerment</span>
 		</h4>
 
-		<h1 class={styles.title}>
-			<span class={styles.highlight}>transforming</span>
-			lives together
-		</h1>
+		<h1 class={styles.title}>bio</h1>
 
 		<p class={styles.desc}>
-			dedicated to uplifting orphans and vulnerable communites throught education, support and
-			sustainable development
+			Berikids is a non-governmental organization (NGO) operating in Cameroon. Founded in 2004 and
+			officially registered in 2005, it serves as a charitable and developmental group focused on
+			improving the welfare of underprivileged individuals and children in the country.
 		</p>
 
-		<div class={styles.ctaBtns}>
-			<Button onWhite primary>
-				<span>learn more</span>
-				<span class="material-symbols-sharp">expand_content</span>
-			</Button>
+		<p class={styles.desc}>
+			Headquartered in Njavnyuy-Kumbo, Bui Division, North West Region, Berikids aims to support
+			vulnerable children and orphans of both genders. Since its inception, the organization has
+			made significant positive impacts in the community, but there remains much work to be done.
+		</p>
 
+		<div class={styles.desc}>
+			Currently, Berikids is developing critical interventions to address the challenges posed by
+			armed conflict in Cameroon's North West and South West regions. The organization invites
+			individuals and groups to join them in their mission to create lasting change in the lives of
+			those who need it most.
+		</div>
+
+		<div class={styles.ctaBtns}>
 			<Button onWhite>
 				<span>join us</span>
 				<span class="material-symbols-sharp">handshake</span>
@@ -82,8 +88,8 @@
 
 			<div class={styles.ctaBtns}>
 				<Button onWhite primary>
-					<span>learn more</span>
-					<span class="material-symbols-sharp">expand_content</span>
+					<span>support us</span>
+					<span class="material-symbols-sharp">donut_large</span>
 				</Button>
 
 				<Button onWhite>
@@ -172,6 +178,30 @@
 						<p class={styles.text}>{team.desc}</p>
 						<div class={styles.memberSocials}></div>
 					</div>
+				</article>
+			{/each}
+		</div>
+	</section>
+
+	<section class={styles.partners}>
+		<div class={styles.sectionContent}>
+			<h4 class={styles.chip}>
+				<span class="material-symbols-sharp">handshake</span>
+				<span>partners</span>
+			</h4>
+			<h2 class={styles.title}>Our partners</h2>
+		</div>
+
+		<div class={styles.partnersWrapper}>
+			{#each $partners as partner}
+				<article class={styles.partnerCard}>
+					<span class={`material-symbols-sharp ${styles.cardIcon}`}>temp_preferences_eco</span>
+					<h4 class={styles.title}>{partner.name}</h4>
+
+					<partner class={styles.text}>
+						<span class="material-symbols-sharp">share_location</span>
+						{partner.location}</partner
+					>
 				</article>
 			{/each}
 		</div>

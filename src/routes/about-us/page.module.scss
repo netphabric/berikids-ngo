@@ -34,6 +34,40 @@
     @include sectionTemplate;
   }
 
+  .partners {
+    @include blockLayout;
+    margin-block: 0 !important;
+    align-items: flex-start !important;
+
+    .sectionContent {
+      @include blockLayoutStart;
+      @include contentSizing;
+    }
+
+    .partnersWrapper {
+      width: 100%;
+      @include gridLayout(200px);
+
+      .partnerCard {
+        @include cardBlock;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: rem(8);
+        background-color: $accent;
+        @include gridBackground($accent, 4%, "vertical");
+
+        .text {
+          color: $white ;
+          font-size: $small;
+          display: flex;
+          align-items: center;
+          gap: rem(8)
+        }
+      }
+    }
+  }
+
   .sectorSection {
     @include blockLayout;
 

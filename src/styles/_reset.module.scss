@@ -47,6 +47,11 @@ ol {
 a {
   color: inherit;
   text-decoration: none;
+  font-size: $small;
+
+  @include minWidth('desktop') {
+    font-size: $regular;
+  }
 }
 
 p,
