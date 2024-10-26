@@ -16,6 +16,17 @@
     gap: rem(180);
   }
 
+  .section {
+    @include sectionTemplate;
+
+    .subContainer {
+      @include gridLayout(150px);
+
+      .itemCard {
+        @include nestedSectionSizing;
+      }
+    }
+  }
 
   .hero {
     @include blockLayout;
@@ -88,5 +99,10 @@
     .ctaBtns {
       @include ctaBtn;
     }
+  }
+
+  .supportBlock {
+    @include blockLayout;
+    @include contentSizing;
   }
 }

@@ -240,7 +240,7 @@ $large-desktop: rem(1280);
 @mixin sectionImage () {
   width: 100%;
   min-width: 50%;
-  height: calc(60vh - rem(20));
+  height: calc(55vh - rem(20));
   max-height: 300px;
   display: grid;
   place-items: center;
@@ -259,7 +259,7 @@ $large-desktop: rem(1280);
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
   }
 }
 
@@ -413,6 +413,10 @@ $large-desktop: rem(1280);
 
   .title {
     font-size: $medium;
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
 
     @include minWidth('tablet') {
       font-size: $large;
