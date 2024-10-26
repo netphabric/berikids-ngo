@@ -6,9 +6,11 @@
 	import styles from "./header.module.scss"
 
 	const navLinks = [
+		{ label: "home", url: "/" },
 		{ label: "about us", url: "/about-us" },
 		{ label: "get involved", url: "/get-involved" },
-		{ label: "our impact", url: "/our-impact" }
+		{ label: "our impact", url: "/our-impact" },
+		{ label: "contact", url: "contact" }
 	]
 
 	let navOpen = false

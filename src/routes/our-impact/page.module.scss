@@ -1,0 +1,46 @@
+@use "styles/variables.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: rem(80);
+
+  @include minWidth ('tablet') {
+    gap: rem(160);
+  }
+
+  @include minWidth ('desktop') {
+    gap: rem(180);
+  }
+
+  .hero {
+    @include darkBgImg;
+    @include contentSizing;
+
+    .sectionContent {
+      display: flex;
+      margin-right: auto;
+      flex-direction: column;
+      justify-content: center;
+      gap: rem(16);
+      height: calc(60vh - rem(30));
+
+      @include minWidth ('tablet') {
+        max-width: 60%;
+      }
+
+      @include minWidth ('desktop') {
+        max-width: 40%;
+      }
+
+      .title,
+      .desc {
+        text-align: start;
+
+      }
+    }
+  }
+}

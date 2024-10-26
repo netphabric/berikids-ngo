@@ -4,7 +4,7 @@
 
 	const pathname = $page.url.pathname
 
-	const navlinks = ["/about-us", "/get-involved", "/our-impact"]
+	const navlinks = ["/about-us", "/get-involved", "/our-impact", "/contact"]
 	const matchesNavlinks = navlinks.includes(pathname)
 </script>
 

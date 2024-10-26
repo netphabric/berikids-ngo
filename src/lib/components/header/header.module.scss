@@ -14,7 +14,7 @@ header {
     justify-content: center;
   }
 
-  @include minWidth('tablet') {
+  @include minWidth('desktop') {
     padding-inline: 40px;
     justify-content: space-between;
     gap: rem(30);
@@ -40,7 +40,7 @@ header {
       top: unset;
     }
 
-    @include minWidth('tablet') {
+    @include minWidth('desktop') {
       display: none;
     }
   }
@@ -73,7 +73,7 @@ header {
 
     @include gridBackground($accent, 3%);
 
-    @include minWidth('tablet') {
+    @include minWidth('desktop') {
       display: none;
     }
   }
@@ -82,7 +82,7 @@ header {
     display: none;
     gap: rem(10);
 
-    @include minWidth('tablet') {
+    @include minWidth('desktop') {
       display: flex;
       align-items: center;
       gap: rem(16);

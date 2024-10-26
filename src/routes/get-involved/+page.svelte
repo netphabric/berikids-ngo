@@ -19,11 +19,6 @@
 			</p>
 
 			<div class={styles.ctaBtns}>
-				<Button primary onWhite>
-					<span>learn more</span>
-					<span class="material-symbols-sharp">tools_installation_kit</span>
-				</Button>
-
 				<Button onWhite>
 					<span>get involved</span>
 					<span class="material-symbols-sharp">tools_power_drill</span>
