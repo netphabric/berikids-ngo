@@ -1,0 +1,96 @@
+@use "sass:color";
+@use "styles/variables.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: rem(80);
+
+  @include minWidth("tablet") {
+    gap: rem(160);
+  }
+
+  @include minWidth("desktop") {
+    gap: rem(180);
+  }
+
+  .hero {
+    @include blockLayout;
+    @include contentSizing;
+
+    .chip {
+      left: unset;
+    }
+  }
+
+  .section {
+    @include sectionTemplate;
+
+    .formGroup {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8);
+      }
+
+      label,
+      textarea,
+      input {
+        font-size: $tiny;
+
+        @include minWidth("tablet") {
+          font-size: $small;
+        }
+
+        @include minWidth("desktop") {
+          font-size: $normal;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: rem(8) rem(16);
+        background-color: transparent;
+        border: 1px solid $black;
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-color: $accent;
+        }
+
+        &::placeholder {
+          color: $black;
+          opacity: 0.2;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: rem(200);
+        padding: rem(8) rem(16);
+        background-color: transparent;
+        border: 1px solid $black;
+        resize: none;
+        transition: all 0.2s ease-in-out;
+
+        &:focus {
+          outline: none;
+          border-color: $accent;
+        }
+
+        &::placeholder {
+          color: $black;
+          opacity: 0.2;
+        }
+      }
+    }
+  }
+}
