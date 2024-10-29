@@ -11,6 +11,7 @@
 	import "styles/global.scss"
 	import Header from "$lib/components/header/header.svelte"
 	import Footer from "$lib/components/footer/footer.svelte"
+	import Toast from "$lib/components/toast/toast.svelte"
 </script>
 
 <svelte:head>
@@ -41,5 +42,6 @@
 </svelte:head>
 
 <Header />
+<Toast />
 <slot />
 <Footer />

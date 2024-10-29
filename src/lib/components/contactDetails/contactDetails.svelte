@@ -1,5 +1,6 @@
 <script lang="ts">
 	import styles from "./contactDetails.module.scss"
+	export let isCentered = false
 
 	const details = [
 		{
@@ -27,7 +28,7 @@
 
 <section class={styles.contactDetails}>
 	{#each details as d}
-		<article>
+		<article class={` ${isCentered && styles.centered}`}>
 			<span class={`material-symbols-sharp ${styles.icon}`}>{d.icon}</span>
 			<h4 class={styles.label}>{d.label}</h4>
 			<p class={styles.text}>{d.text}</p>

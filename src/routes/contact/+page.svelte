@@ -2,15 +2,20 @@
 	import Button from "$lib/components/button/button.svelte"
 	import ContactDetails from "$lib/components/contactDetails/contactDetails.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
+	import { addToast } from "$lib/stores/toastStore"
 	import styles from "./page.module.scss"
 
 	let name = ""
 	let email = ""
 	let message = ""
-	let formStatus = ""
 
 	const handleSubmit = async () => {
 		const formData = { email, name, message }
+		if (!name || !email || !message) {
+			addToast("error", "Please fill in all fields")
+			return
+		}
+
 		const res = await fetch("/api/contact", {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
@@ -18,10 +23,10 @@
 		})
 
 		if (res.ok) {
-			formStatus = "success"
 			name = email = message = ""
+			addToast("success", "Message sent successfully")
 		} else {
-			formStatus = "error"
+			addToast("success", "Message sent successfully")
 		}
 	}
 </script>
@@ -39,7 +44,7 @@
 		</p>
 	</section>
 
-	<ContactDetails />
+	<ContactDetails isCentered />
 
 	<SectionWrapper className={styles.section}>
 		<form class={styles.sectionContent} on:submit|preventDefault={handleSubmit}>
@@ -66,8 +71,6 @@
 					Message:
 					<textarea id="message" placeholder="send us a message" bind:value={message} />
 				</label>
-
-				<p class={styles.formStatus}>{formStatus}</p>
 			</div>
 
 			<div class={styles.ctaBtns}>

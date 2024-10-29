@@ -16,7 +16,7 @@ export async function POST({ request }: RequestEvent) {
 		from: email,
 		to: "abansekasly98@gmail.com",
 		subject: `Website Contact From ${name}`,
-		text: `mail from berikids contact form:\n\nName: ${name}\nEmail (${email}):\n\n. ${message}`
+		text: `mail from berikids contact form:\n\nName: ${name}\nEmail (${email}):\n\n${message}`
 	}
 
 	try {
