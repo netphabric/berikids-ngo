@@ -183,7 +183,7 @@
 		</div>
 	</section>
 
-	<section class={styles.partners}>
+	<section class={styles.partners} id="partners">
 		<div class={styles.sectionContent}>
 			<h4 class={styles.chip}>
 				<span class="material-symbols-sharp">handshake</span>

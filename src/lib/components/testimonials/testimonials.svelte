@@ -2,7 +2,7 @@
 	import styles from "./testimonials.module.scss"
 </script>
 
-<section class={styles.testimonialsSection}>
+<section class={styles.testimonialsSection} id="testimony">
 	<h2 class={styles.testimony}>
 		"This organization has transformed my life and the lives of many others. Their support has given
 		us hope and a brighter future."

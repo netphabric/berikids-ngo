@@ -15,7 +15,7 @@
 	}
 </script>
 
-<section class={styles.faqRoot} id="faq">
+<section class={styles.faqRoot} id="faqs">
 	<div class={styles.faqHeader}>
 		<h2 class={styles.faqTitle}>FAQs</h2>
 
