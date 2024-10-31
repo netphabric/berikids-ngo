@@ -9,18 +9,18 @@
 
 <main class={styles.root}>
 	<HeroLayoutleft
-		titleHighlight="transform"
-		title="transform lives today"
-		desc="Join us in providing essential life skills and vocational training"
-		sectionImage="ithero.webp"
+		titleHighlight="potential"
+		title="Unlocking Potential Through Vocational Training"
+		desc="Unlocking new opportunities and equipping vulnerable individuals with practical skills to build self-reliant futures"
+		sectionImage="vt1.webp"
 	/>
 
 	<PageSection
 		chip="skills"
 		chipIcon="baby_changing_station"
 		desc="Our Life Skills Vocational Training Programs equip participants with essential skills in areas such as tailoring, carpentry, and computer literacy. By focusing on practical knowledge and hands-on experience, we aim to enhance employability and foster self-sufficiency. Participants not only gain technical skills but also build confidence and resilience, paving the way for a brighter future."
-		title="Empowering Futures through Vocational Training"
-		titleHighlight="training"
+		title="Holistic Personal and Professional Growth Initiative"
+		titleHighlight="professional"
 		sectionImage="vt1.webp"
 		sectionImageAlt="berkids"
 	/>

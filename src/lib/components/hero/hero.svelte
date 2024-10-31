@@ -1,9 +1,10 @@
 <script>
+	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import Button from "../button/button.svelte"
 	import styles from "./hero.module.scss"
 </script>
 
-<section class={styles.heroSection}>
+<section class={styles.heroSection} class:reveal={true} use:scrollReveal>
 	<h1 class={styles.heroTitle}>
 		<span>empowering lives</span>
 		<span>through <span class={styles.highlight}>sustainable</span></span>

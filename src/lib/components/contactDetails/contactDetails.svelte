@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import styles from "./contactDetails.module.scss"
 	export let isCentered = false
 
@@ -26,7 +27,7 @@
 	]
 </script>
 
-<section class={styles.contactDetails}>
+<section class={styles.contactDetails} class:reveal={true} use:scrollReveal>
 	{#each details as d}
 		<article class={` ${isCentered && styles.centered}`}>
 			<span class={`material-symbols-sharp ${styles.icon}`}>{d.icon}</span>

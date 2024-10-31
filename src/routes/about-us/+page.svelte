@@ -2,11 +2,12 @@
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
 	import { sectors, teams, partners } from "./store"
+	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import styles from "./page.module.scss"
 </script>
 
 <main class={styles.root}>
-	<section class={styles.hero}>
+	<section class={styles.hero} class:reveal={true} use:scrollReveal>
 		<h4 class={styles.chip}>
 			<span class="material-symbols-sharp">person_raised_hand</span>
 			<span>empowerment</span>

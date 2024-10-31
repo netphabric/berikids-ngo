@@ -20,7 +20,6 @@
 	export let isBlockLayout = false
 	export let isTitleMain = false
 	export let hasSubContainer = false
-	export let bottomImg = ""
 </script>
 
 <SectionWrapper className={styles.section}>

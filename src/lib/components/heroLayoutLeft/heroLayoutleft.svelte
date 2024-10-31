@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { highlightText } from "utils/textHightlight"
+	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import styles from "./heroLayoutleft.module.scss"
 
 	export let title = ""
@@ -20,7 +21,7 @@
 		</video>
 	{/if}
 
-	<div class={styles.sectionContent}>
+	<div class={styles.sectionContent} class:reveal={true} use:scrollReveal>
 		<h1 class={styles.title}>
 			{#each highlightText(title, titleHighlight) as word}
 				{#if word.isHighlighted}
