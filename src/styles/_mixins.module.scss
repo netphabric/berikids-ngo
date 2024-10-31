@@ -374,7 +374,7 @@ $large-desktop: rem(1280);
   .content {
     display: flex;
     flex-direction: column;
-    text-align: start;
+    text-align: center;
     gap: rem(8);
 
     .text {
@@ -385,28 +385,24 @@ $large-desktop: rem(1280);
       }
     }
 
-    .title {
-      &.largeTitles {
-        font-size: $regular;
-
-        @include minWidth('tablet') {
-          font-size: $medium;
-        }
-
-        @include minWidth('desktop') {
-          font-size: $large;
-        }
-      }
-    }
-
-
     .title,
     .subTitle {
       font-size: $small;
-      line-height: 24px;
 
       @include minWidth('tablet') {
         font-size: $regular;
+      }
+
+      &.largeTitles {
+        font-size: $large;
+
+        @include minWidth('tablet') {
+          font-size: $h6;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $h5;
+        }
       }
     }
   }

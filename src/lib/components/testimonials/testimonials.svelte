@@ -1,5 +1,6 @@
 <script lang="ts">
 	import styles from "./testimonials.module.scss"
+	export let dp = 11
 </script>
 
 <section class={styles.testimonialsSection} id="testimony">
@@ -11,7 +12,7 @@
 	<article class={styles.testimonyAuthor}>
 		<div class={styles.authorDP}>
 			<div class={styles.circle}></div>
-			<img src="https://i.pravatar.cc/300?img=11" alt="testimonial avatar" />
+			<img src="https://i.pravatar.cc/300?img={dp}" alt="testimonial avatar" />
 		</div>
 
 		<h4 class={styles.authorsName}>John Doe</h4>

@@ -40,10 +40,7 @@
 
       .listItem {
         @include cardBlock;
-
-        @include minWidth('tablet') {
-          text-align: center;
-        }
+        text-align: center;
       }
     }
 
