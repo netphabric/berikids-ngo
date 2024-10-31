@@ -100,7 +100,6 @@ $large-desktop: rem(1280);
   }
 }
 
-
 @mixin borderGradient($duration: 10000ms) {
   $color1: rgba(168, 239, 255, 1);
   $color2: rgba(168, 239, 255, 0.1);

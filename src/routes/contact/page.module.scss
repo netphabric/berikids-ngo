@@ -13,19 +13,6 @@
     gap: rem(160);
   }
 
-  @include minWidth("desktop") {
-    gap: rem(180);
-  }
-
-  .hero {
-    @include blockLayout;
-    @include contentSizing;
-
-    .chip {
-      left: unset;
-    }
-  }
-
   .section {
     @include sectionTemplate;
 
@@ -90,6 +77,23 @@
           color: $black;
           opacity: 0.2;
         }
+      }
+    }
+  }
+
+  .newsletter {
+    @include sectionTemplate;
+    padding: rem(20);
+    box-shadow: 0px 0px 60px 10px color.adjust($accent, $alpha: -0.5);
+
+    @include minWidth("desktop") {}
+
+    .sectionImage {
+      max-height: 200px;
+
+      @include minWidth("tablet") {
+        max-width: 40%;
+        max-height: 400px;
       }
     }
   }

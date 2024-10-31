@@ -1,6 +1,7 @@
 <script>
 	import Button from "../button/button.svelte"
 	import Logo from "../logo/logo.svelte"
+	import NewsletterForm from "../newsletterForm/newsletterForm.svelte"
 	import styles from "./footer.module.scss"
 	import { stringify } from "utils/stringify"
 
@@ -57,19 +58,12 @@
 				</div>
 			{/each}
 
-			<form class={styles.footerForm}>
-				<h6>Subscribe!</h6>
-				<p>Join our newletter to stay informed about our initiatives and updates</p>
-
-				<div class={styles.inputContainer}>
-					<input placeholder="Your Email Here" />
-					<Button secondary onWhite>subscribe</Button>
-				</div>
-
-				<span>
-					By subscribing, you agree to our Privacy Policy and consent to receive updates.
-				</span>
-			</form>
+			<NewsletterForm
+				title="Subscribe"
+				desc="Join our newletter to stay informed about our initiatives and updates"
+				noticeText="By subscribing, you agree to our Privacy Policy and consent to receive updates."
+				btnText="subscribe"
+			/>
 		</nav>
 
 		<div class={styles.footerBase}>

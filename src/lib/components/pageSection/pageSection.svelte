@@ -13,7 +13,7 @@
 	export let sectionImageAlt = ""
 	export let items: { title: string; icon?: string; desc: string }[] = []
 
-	export let blockListItems: { title: string; desc: string; icon?: string }[] = []
+	export let blockListItems: { title: string; desc: string; icon?: string; img?: string }[] = []
 	export let blockListCta: { text: string; icon?: string }[] = []
 	export let blockHeaderCta: { text: string; icon?: string }[] = []
 
@@ -125,7 +125,15 @@
 			<div class={styles.blockList}>
 				{#each blockListItems as item}
 					<article class={styles.listItem}>
-						<span class="material-symbols-sharp">{item.icon}</span>
+						{#if item.icon}
+							<span class="material-symbols-sharp">{item.icon}</span>
+						{/if}
+
+						{#if item.img}
+							<div class={styles.imageContainer}>
+								<img src={item.img} alt="sector" />
+							</div>
+						{/if}
 
 						<div class={styles.content}>
 							<h3 class={`${styles.title} ${styles.largeTitles}`}>{item.title}</h3>
