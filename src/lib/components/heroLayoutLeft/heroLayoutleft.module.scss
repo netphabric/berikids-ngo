@@ -17,6 +17,7 @@
 
     @include minWidth ('tablet') {
       max-width: 60%;
+      margin-left: 16%;
     }
 
     @include minWidth ('desktop') {
