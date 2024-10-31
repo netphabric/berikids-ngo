@@ -12,7 +12,7 @@
 		titleHighlight="Foundations"
 		title="Building Digital Foundations for a Brighter Future"
 		desc=" The IT Education Initiative is a cornerstone of our mission to uplift communities in Cameroon. By advancing technology education, we empower orphans and vulnerable groups with essential skills for a brighter future. "
-		sectionImage="ithero.webp"
+		sectionImage="vt1.webp"
 	/>
 
 	<PageSection
