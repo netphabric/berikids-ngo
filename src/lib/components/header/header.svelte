@@ -10,6 +10,7 @@
 		{ label: "impact", url: "/get-involved" },
 		{ label: "Vocation", url: "/vocational-training" },
 		{ label: "Education", url: "/it-education" },
+		{ label: "gallery", url: "/gallery" },
 		{ label: "contact", url: "contact" }
 	]
 
