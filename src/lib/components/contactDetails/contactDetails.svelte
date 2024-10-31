@@ -7,7 +7,7 @@
 			icon: "attach_email",
 			label: "contact",
 			text: "We'd love to hear from you! Reach out anytime.",
-			contact: "originalberikids@outlook.com"
+			contact: "Berikidsngo@gmx.de"
 		},
 
 		{

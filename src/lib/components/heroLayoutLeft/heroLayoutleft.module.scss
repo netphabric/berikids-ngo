@@ -1,0 +1,31 @@
+@use "styles/variables.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.hero {
+  @include darkBgImg;
+  @include contentSizing;
+  margin-bottom: unset;
+
+  .sectionContent {
+    height: calc(50vh - rem(20));
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: rem(16);
+
+    @include minWidth ('tablet') {
+      max-width: 60%;
+    }
+
+    @include minWidth ('desktop') {
+      max-width: 40%;
+    }
+
+    .title,
+    .desc {
+      text-align: start;
+    }
+  }
+}

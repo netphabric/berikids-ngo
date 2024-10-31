@@ -375,16 +375,31 @@ $large-desktop: rem(1280);
   .content {
     display: flex;
     flex-direction: column;
+    text-align: start;
     gap: rem(8);
 
     .text {
       font-size: $tiny;
-      word-break: break-all;
 
       @include minWidth('tablet') {
         font-size: $small;
       }
     }
+
+    .title {
+      &.largeTitles {
+        font-size: $regular;
+
+        @include minWidth('tablet') {
+          font-size: $medium;
+        }
+
+        @include minWidth('desktop') {
+          font-size: $large;
+        }
+      }
+    }
+
 
     .title,
     .subTitle {
