@@ -1,7 +1,9 @@
 <script lang="ts">
 	import ContactDetails from "$lib/components/contactDetails/contactDetails.svelte"
+	import Faq from "$lib/components/faq/faq.svelte"
 	import HeroLayoutleft from "$lib/components/heroLayoutLeft/heroLayoutleft.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
+	import { trainingFaqs } from "$lib/stores/faqStore"
 	import styles from "./page.module.scss"
 </script>
 
@@ -99,4 +101,9 @@
 	/>
 
 	<ContactDetails />
+
+	<Faq
+		desc="Find answers to your questions about our training programs and how to get involved."
+		faqs={$trainingFaqs}
+	/>
 </main>

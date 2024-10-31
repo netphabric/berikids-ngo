@@ -1,7 +1,9 @@
 <script lang>
 	import Button from "$lib/components/button/button.svelte"
 	import ContactDetails from "$lib/components/contactDetails/contactDetails.svelte"
+	import Faq from "$lib/components/faq/faq.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
+	import { contactFaqs } from "$lib/stores/faqStore"
 	import { addToast } from "$lib/stores/toastStore"
 	import styles from "./page.module.scss"
 
@@ -85,4 +87,9 @@
 			<img src="/images/cS1.webp" alt="berkids" />
 		</div>
 	</SectionWrapper>
+
+	<Faq
+		desc="Have questions about our NGO? Here are some common inquiries and their answers."
+		faqs={$contactFaqs}
+	/>
 </main>

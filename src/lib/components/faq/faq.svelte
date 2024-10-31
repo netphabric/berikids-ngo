@@ -1,17 +1,24 @@
 <script lang="ts">
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
-	import { faqs } from "./faqStore"
 	import styles from "./faq.module.scss"
 	import Button from "../button/button.svelte"
 
+	export let desc = ""
+	export let faqs: {
+		id: number
+		question: string
+		ans: string
+		isOpen: boolean
+	}[] = []
+
 	const handleShowFaqAns = (id: number) => {
-		$faqs.forEach((faq) => {
+		faqs.forEach((faq) => {
 			if (faq.id !== id) faq.isOpen = false
 		})
 
-		const faq = $faqs.findIndex((faq) => faq.id === id)
-		$faqs[faq].isOpen = !$faqs[faq].isOpen
+		const faq = faqs.findIndex((faq) => faq.id === id)
+		faqs[faq].isOpen = !faqs[faq].isOpen
 	}
 </script>
 
@@ -20,12 +27,12 @@
 		<h2 class={styles.faqTitle}>FAQs</h2>
 
 		<p class={styles.faqDescription}>
-			discover how our NGO is making a difference and how you can help
+			{desc}
 		</p>
 	</div>
 
 	<div class={styles.faqContainer}>
-		{#each $faqs as faq}
+		{#each faqs as faq}
 			<article class={styles.faq}>
 				<button class={styles.question} on:click={() => handleShowFaqAns(faq.id)}>
 					<span>{faq.question} </span>

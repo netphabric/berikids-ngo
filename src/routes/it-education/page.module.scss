@@ -15,16 +15,4 @@
   @include minWidth ('desktop') {
     gap: rem(180);
   }
-
-  .section {
-    @include sectionTemplate;
-
-    .subContainer {
-      @include gridLayout(150px);
-
-      .itemCard {
-        @include nestedSectionSizing;
-      }
-    }
-  }
 }
