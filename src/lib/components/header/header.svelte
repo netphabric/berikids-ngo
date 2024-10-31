@@ -6,10 +6,11 @@
 	import styles from "./header.module.scss"
 
 	const navLinks = [
-		{ label: "home", url: "/" },
-		{ label: "about us", url: "/about-us" },
-		{ label: "get involved", url: "/get-involved" },
-		{ label: "our impact", url: "/our-impact" },
+		{ label: "about", url: "/about-us" },
+		{ label: "impact", url: "/get-involved" },
+		{ label: "Vocation", url: "/vocational-training" },
+		{ label: "Education", url: "/it-education" },
+		{ label: "gallery", url: "/gallery" },
 		{ label: "contact", url: "contact" }
 	]
 

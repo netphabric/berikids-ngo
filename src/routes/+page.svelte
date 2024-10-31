@@ -5,9 +5,9 @@
 	import Faq from "$lib/components/faq/faq.svelte"
 	import ContactDetails from "$lib/components/contactDetails/contactDetails.svelte"
 	import Button from "$lib/components/button/button.svelte"
-
-	import { communityOpts } from "./store"
 	import styles from "./page.module.scss"
+	import { homeFaqs } from "$lib/stores/faqStore"
+	import { communityOpts } from "$lib/stores/communityOpts"
 </script>
 
 <main class={styles.root}>
@@ -153,7 +153,7 @@
 		</SectionWrapper>
 	</section>
 
-	<Faq />
+	<Faq desc="discover how our NGO is making a difference and how you can help" faqs={$homeFaqs} />
 
 	<ContactDetails />
 </main>

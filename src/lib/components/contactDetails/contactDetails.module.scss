@@ -25,6 +25,17 @@
     justify-content: space-between;
     gap: rem(8);
 
+    &.centered {
+      align-items: center;
+
+      .icon {
+        font-size: $h5;
+
+        @include minWidth('tablet') {
+          font-size: $h2;
+        }
+      }
+    }
 
     .label {
       font-size: $regular;

@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   line-height: 1.5;
   text-transform: capitalize;
@@ -103,5 +107,25 @@ h6 {
 
   @include minWidth('mobile') {
     font-size: $icon;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+  &:nth-child(even) {
+    transform: translateX(50px);
+  }
+
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+
+  &:nth-child(even) {
+    transform: translateX(0);
   }
 }
