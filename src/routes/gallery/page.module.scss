@@ -3,9 +3,13 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
-  columns: 2;
+  columns: 1;
   padding: 20px;
   break-inside: avoid;
+
+  @include minWidth("mobile") {
+    columns: 2;
+  }
 
   @include minWidth("tablet") {
     columns: 3;
@@ -21,8 +25,7 @@
     display: grid;
     place-items: center;
     cursor: pointer;
-    border: 3px solid $black;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
 
     img {
