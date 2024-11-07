@@ -7,7 +7,7 @@
   @include highlight;
 
   .subContainer {
-    @include gridLayout(150px);
+    @include gridLayout(180px);
 
     .itemCard {
       @include nestedSectionSizing;

@@ -16,18 +16,6 @@
     gap: rem(180);
   }
 
-  .section {
-    @include sectionTemplate;
-
-    .subContainer {
-      @include gridLayout(150px);
-
-      .itemCard {
-        @include nestedSectionSizing;
-      }
-    }
-  }
-
   .hero {
     @include blockLayout;
     @include contentSizing;
@@ -59,45 +47,6 @@
         max-width: unset;
         text-align: start;
       }
-    }
-  }
-
-
-  .projectSection {
-    @include blockLayout;
-    margin-block: 0 !important;
-
-    .projectHeader {
-      @include blockLayout;
-      @include contentSizing;
-      padding: 0;
-
-      @include minWidth("desktop") {
-        .title {
-          max-width: 60%;
-        }
-      }
-
-      .chip {
-        left: unset
-      }
-    }
-
-    .projects {
-      @include gridLayout(200px);
-
-
-      .projectCard {
-        @include cardBlock;
-
-        @include minWidth('tablet') {
-          text-align: center;
-        }
-      }
-    }
-
-    .ctaBtns {
-      @include ctaBtn;
     }
   }
 
