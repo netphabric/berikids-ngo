@@ -14,9 +14,9 @@
 
   .title,
   .highlight {
+    font-size: $h4;
     @include contentSizing;
     @include highlight;
-    font-size: $h4;
 
     @include minWidth('mobile') {
       font-size: $h4;

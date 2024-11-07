@@ -3,10 +3,10 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
+  gap: rem(80);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  gap: rem(80);
 
   @include minWidth ('tablet') {
     gap: rem(160);
