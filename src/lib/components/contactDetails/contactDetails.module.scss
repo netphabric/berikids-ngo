@@ -12,7 +12,7 @@
   justify-content: space-between;
   gap: rem(24);
 
-  @include minWidth('tablet') {
+  @include minWidth("tablet") {
     gap: rem(32);
   }
 
@@ -31,7 +31,7 @@
       .icon {
         font-size: $h5;
 
-        @include minWidth('tablet') {
+        @include minWidth("tablet") {
           font-size: $h2;
         }
       }
@@ -40,11 +40,11 @@
     .label {
       font-size: $regular;
 
-      @include minWidth('tablet') {
+      @include minWidth("tablet") {
         font-size: $medium;
       }
 
-      @include minWidth('desktop') {
+      @include minWidth("desktop") {
         font-size: $large;
       }
     }
@@ -53,7 +53,7 @@
     .contact {
       font-size: $tiny;
 
-      @include minWidth('tablet') {
+      @include minWidth("tablet") {
         font-size: $small;
       }
     }

@@ -8,27 +8,26 @@ $tablet: rem(768);
 $desktop: rem(1024);
 $large-desktop: rem(1280);
 
-
 @mixin minWidth($breakpoint) {
-  @if $breakpoint =='mobile' {
+  @if $breakpoint =="mobile" {
     @media (min-width: #{$mobile}) {
       @content;
     }
   }
 
-  @else if $breakpoint =='tablet' {
+  @else if $breakpoint =="tablet" {
     @media (min-width: #{$tablet}) {
       @content;
     }
   }
 
-  @else if $breakpoint =='desktop' {
+  @else if $breakpoint =="desktop" {
     @media (min-width: #{$desktop}) {
       @content;
     }
   }
 
-  @else if $breakpoint =='large-desktop' {
+  @else if $breakpoint =="large-desktop" {
     @media (min-width: #{$large-desktop}) {
       @content;
     }
@@ -44,7 +43,7 @@ $large-desktop: rem(1280);
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     width: 0;
     height: 5px;
 
@@ -66,19 +65,24 @@ $large-desktop: rem(1280);
   background-size: 30px 30px;
 
   @if $type =="horizontal" {
-    background-image:
-      linear-gradient(to bottom, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px);
+    background-image: linear-gradient(to bottom,
+        color.adjust($color, $lightness: $lightenPercentage) 1px,
+        transparent 1px);
   }
 
   @else if $type =="vertical" {
-    background-image:
-      linear-gradient(to right, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px),
+    background-image: linear-gradient(to right,
+        color.adjust($color, $lightness: $lightenPercentage) 1px,
+        transparent 1px);
   }
 
   @else if $type =="grid" {
-    background-image:
-      linear-gradient(to right, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px),
-      linear-gradient(to bottom, color.adjust($color, $lightness: $lightenPercentage) 1px, transparent 1px);
+    background-image: linear-gradient(to right,
+        color.adjust($color, $lightness: $lightenPercentage) 1px,
+        transparent 1px),
+      linear-gradient(to bottom,
+        color.adjust($color, $lightness: $lightenPercentage) 1px,
+        transparent 1px);
   }
 }
 
@@ -89,7 +93,7 @@ $large-desktop: rem(1280);
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 75%;
       left: 0;
@@ -105,8 +109,12 @@ $large-desktop: rem(1280);
   $color2: rgba(168, 239, 255, 0.1);
 
   border: 1px solid transparent;
-  border-image: conic-gradient(from var(--angle), $color2, $color1 0.1turn, $color1 0.15turn, $color2 0.25turn) 30;
-  animation: borderRotate $duration cubic-bezier(.78, -0.02, .11, 1.04) infinite;
+  border-image: conic-gradient(from var(--angle),
+      $color2,
+      $color1 0.1turn,
+      $color1 0.15turn,
+      $color2 0.25turn) 30;
+  animation: borderRotate $duration cubic-bezier(0.78, -0.02, 0.11, 1.04) infinite;
 
   @keyframes borderRotate {
     100% {
@@ -116,7 +124,7 @@ $large-desktop: rem(1280);
 }
 
 @property --angle {
-  syntax: '<angle>';
+  syntax: "<angle>";
   initial-value: 90deg;
   inherits: true;
 }
@@ -130,7 +138,7 @@ $large-desktop: rem(1280);
     flex-grow: 1;
     justify-content: center;
 
-    @include minWidth('mobile') {
+    @include minWidth("mobile") {
       flex-grow: unset;
     }
   }
@@ -150,11 +158,11 @@ $large-desktop: rem(1280);
   grid-template-columns: repeat(auto-fit, minmax($mobile, 1fr));
   gap: rem(18);
 
-  @include minWidth('tablet') {
+  @include minWidth("tablet") {
     grid-template-columns: repeat(auto-fit, minmax($tablet, 1fr));
   }
 
-  @include minWidth('desktop') {
+  @include minWidth("desktop") {
     grid-template-columns: repeat(auto-fit, minmax($desktop, 1fr));
   }
 }
@@ -171,12 +179,12 @@ $large-desktop: rem(1280);
   position: relative;
   gap: rem(18);
 
-  @include minWidth('tablet') {
+  @include minWidth("tablet") {
     align-items: center;
     margin-block: 80px;
   }
 
-  @include minWidth('desktop') {
+  @include minWidth("desktop") {
     .desc {
       max-width: 60%;
     }
@@ -202,18 +210,18 @@ $large-desktop: rem(1280);
   .title {
     @include highlight;
 
-    @include minWidth('mobile') {
+    @include minWidth("mobile") {
       font-size: $h4;
       line-height: rem(45);
     }
 
-    @include minWidth('tablet') {
+    @include minWidth("tablet") {
       font-size: $h3;
       line-height: rem(55);
       text-align: center;
     }
 
-    @include minWidth('desktop') {
+    @include minWidth("desktop") {
       font-size: $h1;
       line-height: rem(65);
     }
@@ -223,20 +231,18 @@ $large-desktop: rem(1280);
     word-wrap: break-word;
     font-size: $small;
 
-
-    @include minWidth('tablet') {
+    @include minWidth("tablet") {
       font-size: $regular;
       text-align: center;
     }
 
-    @include minWidth('desktop') {
+    @include minWidth("desktop") {
       font-size: $medium;
     }
   }
 }
 
-
-@mixin sectionImage () {
+@mixin sectionImage() {
   width: 100%;
   min-width: 50%;
   height: calc(55vh - rem(20));
@@ -246,11 +252,11 @@ $large-desktop: rem(1280);
   border-radius: 10px;
   overflow: hidden;
 
-  @include minWidth('tablet') {
+  @include minWidth("tablet") {
     max-height: 500px;
   }
 
-  @include minWidth('desktop') {
+  @include minWidth("desktop") {
     max-height: 600px;
   }
 
@@ -267,7 +273,7 @@ $large-desktop: rem(1280);
   width: 100%;
 
   &:nth-child(odd) {
-    @include minWidth('tablet') {
+    @include minWidth("tablet") {
       flex-direction: row-reverse;
     }
   }
@@ -293,11 +299,11 @@ $large-desktop: rem(1280);
     .title {
       @include highlight;
 
-      @include minWidth('mobile') {
+      @include minWidth("mobile") {
         font-size: $h5;
       }
 
-      @include minWidth('desktop') {
+      @include minWidth("desktop") {
         font-size: $h4;
       }
     }
@@ -305,7 +311,7 @@ $large-desktop: rem(1280);
     .desc {
       font-size: $small;
 
-      @include minWidth('tablet') {
+      @include minWidth("tablet") {
         font-size: $regular;
       }
     }
@@ -316,11 +322,11 @@ $large-desktop: rem(1280);
   }
 
   .sectionImage {
-    @include sectionImage
+    @include sectionImage;
   }
 }
 
-@mixin darkBgImg($bgImg: '/images/as1.webp') {
+@mixin darkBgImg($bgImg: "/images/as1.webp") {
   color: $white;
   background-image: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)), url($bgImg);
   background-repeat: no-repeat;
@@ -380,7 +386,7 @@ $large-desktop: rem(1280);
     .text {
       font-size: $tiny;
 
-      @include minWidth('tablet') {
+      @include minWidth("tablet") {
         font-size: $small;
       }
     }
@@ -389,18 +395,18 @@ $large-desktop: rem(1280);
     .subTitle {
       font-size: $small;
 
-      @include minWidth('tablet') {
+      @include minWidth("tablet") {
         font-size: $regular;
       }
 
       &.largeTitles {
         font-size: $large;
 
-        @include minWidth('tablet') {
+        @include minWidth("tablet") {
           font-size: $h6;
         }
 
-        @include minWidth('desktop') {
+        @include minWidth("desktop") {
           font-size: $h5;
         }
       }
@@ -412,11 +418,11 @@ $large-desktop: rem(1280);
   .text {
     font-size: $tiny;
 
-    @include minWidth('tablet') {
+    @include minWidth("tablet") {
       font-size: $small;
     }
 
-    @include minWidth('desktop') {
+    @include minWidth("desktop") {
       font-size: $regular;
     }
   }
@@ -427,8 +433,7 @@ $large-desktop: rem(1280);
     flex-direction: column;
     gap: rem(8);
 
-
-    @include minWidth('tablet') {
+    @include minWidth("tablet") {
       font-size: $large;
     }
   }

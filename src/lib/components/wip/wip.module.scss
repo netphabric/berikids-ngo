@@ -3,68 +3,67 @@
 @use "styles/mixins.module" as *;
 
 .wipRoot {
-  display: grid;
-  place-items: center;
-  padding-inline: 20px;
-  margin-top: rem(100);
+	display: grid;
+	place-items: center;
+	padding-inline: 20px;
+	margin-top: rem(100);
 
-  .contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: rem(10);
+	.contentWrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: rem(10);
 
-    span {
-      color: $accent;
-      font-size: rem(40);
+		span {
+			color: $accent;
+			font-size: rem(40);
 
-      @include minWidth("mobile") {
-        font-size: rem(80);
-      }
+			@include minWidth("mobile") {
+				font-size: rem(80);
+			}
 
-      @include minWidth("tablet") {
-        font-size: rem(120);
-      }
+			@include minWidth("tablet") {
+				font-size: rem(120);
+			}
 
-      @include minWidth("desktop") {
-        font-size: rem(150);
-      }
-    }
+			@include minWidth("desktop") {
+				font-size: rem(150);
+			}
+		}
 
-    h1 {
-      color: $primary;
-      font-size: $regular;
-      text-transform: uppercase;
+		h1 {
+			color: $primary;
+			font-size: $regular;
+			text-transform: uppercase;
 
-      @include minWidth("mobile") {
-        font-size: $medium;
-      }
+			@include minWidth("mobile") {
+				font-size: $medium;
+			}
 
-      @include minWidth("tablet") {
-        font-size: $large;
-      }
-    }
+			@include minWidth("tablet") {
+				font-size: $large;
+			}
+		}
 
-    a {
-      display: flex;
-      align-items: center;
-      gap: rem(10);
-      @include underlineOnHover;
+		a {
+			display: flex;
+			align-items: center;
+			gap: rem(10);
+			@include underlineOnHover;
 
-      span {
-        color: $black;
-        font-size: $regular;
+			span {
+				color: $black;
+				font-size: $regular;
 
-        @include minWidth("mobile") {
-          font-size: $medium;
-        }
+				@include minWidth("mobile") {
+					font-size: $medium;
+				}
 
-
-        @include minWidth("desktop") {
-          font-size: $large;
-        }
-      }
-    }
-  }
+				@include minWidth("desktop") {
+					font-size: $large;
+				}
+			}
+		}
+	}
 }

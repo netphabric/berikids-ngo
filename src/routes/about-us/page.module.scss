@@ -3,162 +3,162 @@
 @use "styles/functions.module.scss" as *;
 
 .root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: rem(80);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: rem(80);
 
-  @include minWidth ('tablet') {
-    gap: rem(160);
-  }
+	@include minWidth("tablet") {
+		gap: rem(160);
+	}
 
-  @include minWidth ('desktop') {
-    gap: rem(180);
-  }
+	@include minWidth("desktop") {
+		gap: rem(180);
+	}
 
-  .hero {
-    @include blockLayout;
-    @include contentSizing;
+	.hero {
+		@include blockLayout;
+		@include contentSizing;
 
-    @include minWidth('tablet') {
-      align-items: center;
-      margin-block: 80px;
-    }
+		@include minWidth("tablet") {
+			align-items: center;
+			margin-block: 80px;
+		}
 
-    .chip {
-      left: unset;
-    }
-  }
+		.chip {
+			left: unset;
+		}
+	}
 
-  .section {
-    @include sectionTemplate;
-  }
+	.section {
+		@include sectionTemplate;
+	}
 
-  .partners {
-    @include blockLayout;
-    margin-block: 0 !important;
-    align-items: flex-start !important;
+	.partners {
+		@include blockLayout;
+		margin-block: 0 !important;
+		align-items: flex-start !important;
 
-    .sectionContent {
-      @include blockLayoutStart;
-      @include contentSizing;
-    }
+		.sectionContent {
+			@include blockLayoutStart;
+			@include contentSizing;
+		}
 
-    .partnersWrapper {
-      width: 100%;
-      @include gridLayout(200px);
+		.partnersWrapper {
+			width: 100%;
+			@include gridLayout(200px);
 
-      .partnerCard {
-        @include cardBlock;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        border-radius: rem(8);
-        background-color: $accent;
-        @include gridBackground($accent, 4%, "vertical");
+			.partnerCard {
+				@include cardBlock;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+				border-radius: rem(8);
+				background-color: $accent;
+				@include gridBackground($accent, 4%, "vertical");
 
-        .text {
-          color: $white ;
-          font-size: $small;
-          display: flex;
-          align-items: center;
-          gap: rem(8)
-        }
-      }
-    }
-  }
+				.text {
+					color: $white;
+					font-size: $small;
+					display: flex;
+					align-items: center;
+					gap: rem(8);
+				}
+			}
+		}
+	}
 
-  .sectorSection {
-    @include blockLayout;
+	.sectorSection {
+		@include blockLayout;
 
-    @include minWidth('tablet') {
-      gap: rem(48);
-    }
+		@include minWidth("tablet") {
+			gap: rem(48);
+		}
 
-    .sectorHeader {
-      @include blockLayout;
-      @include contentSizing;
-      padding: 0;
+		.sectorHeader {
+			@include blockLayout;
+			@include contentSizing;
+			padding: 0;
 
-      @include minWidth("desktop") {
-        .title {
-          max-width: 60%;
-        }
-      }
+			@include minWidth("desktop") {
+				.title {
+					max-width: 60%;
+				}
+			}
 
-      .chip {
-        left: unset
-      }
-    }
+			.chip {
+				left: unset;
+			}
+		}
 
-    .sectors {
-      @include gridLayout(200px);
+		.sectors {
+			@include gridLayout(200px);
 
-      @include minWidth('desktop') {
-        max-width: 80%;
-        margin-inline: auto
-      }
+			@include minWidth("desktop") {
+				max-width: 80%;
+				margin-inline: auto;
+			}
 
-      .sectorCard {
-        @include cardBlock;
+			.sectorCard {
+				@include cardBlock;
 
-        @include minWidth('tablet') {
-          text-align: center;
-        }
+				@include minWidth("tablet") {
+					text-align: center;
+				}
 
-        .content {
-          padding: 8px;
-          border-radius: 10px;
-          border: 1px solid $accent;
-        }
+				.content {
+					padding: 8px;
+					border-radius: 10px;
+					border: 1px solid $accent;
+				}
 
-        &:last-child {
-          @include minWidth('tablet') {
-            grid-column: span 2;
-          }
+				&:last-child {
+					@include minWidth("tablet") {
+						grid-column: span 2;
+					}
 
-          @include minWidth('desktop') {
-            grid-column: unset;
-          }
-        }
-      }
-    }
+					@include minWidth("desktop") {
+						grid-column: unset;
+					}
+				}
+			}
+		}
 
-    .ctaBtns {
-      @include ctaBtn;
-    }
-  }
+		.ctaBtns {
+			@include ctaBtn;
+		}
+	}
 
-  .ourTeam {
-    @include blockLayout;
-    align-items: flex-start !important;
-    gap: rem(84);
+	.ourTeam {
+		@include blockLayout;
+		align-items: flex-start !important;
+		gap: rem(84);
 
-    .header {
-      @include blockLayoutStart;
-      @include contentSizing;
+		.header {
+			@include blockLayoutStart;
+			@include contentSizing;
 
-      .title,
-      .desc {
-        text-align: start
-      }
-    }
+			.title,
+			.desc {
+				text-align: start;
+			}
+		}
 
-    .teams {
-      @include gridLayout;
+		.teams {
+			@include gridLayout;
 
-      .memberCard {
-        @include cardBlock;
-      }
-    }
-  }
+			.memberCard {
+				@include cardBlock;
+			}
+		}
+	}
 
-  .makeADiff {
-    @include darkBgImg;
+	.makeADiff {
+		@include darkBgImg;
 
-    .title,
-    .desc {
-      text-align: start !important
-    }
-  }
+		.title,
+		.desc {
+			text-align: start !important;
+		}
+	}
 }

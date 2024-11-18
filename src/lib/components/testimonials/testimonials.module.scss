@@ -4,103 +4,103 @@
 @use "styles/mixins.module" as *;
 
 .testimonialsSection {
-  max-width: 1440px;
-  margin-inline: auto;
-  padding-inline: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: rem(18);
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	gap: rem(18);
 
-  @include minWidth('tablet') {
-    gap: rem(32);
-  }
+	@include minWidth("tablet") {
+		gap: rem(32);
+	}
 
-  .testimony {
-    margin-inline: auto;
-    word-break: break-all;
-    font-size: $small;
+	.testimony {
+		margin-inline: auto;
+		word-break: break-all;
+		font-size: $small;
 
-    @include minWidth('mobile') {
-      word-break: normal;
-      font-size: $regular;
-    }
+		@include minWidth("mobile") {
+			word-break: normal;
+			font-size: $regular;
+		}
 
-    @include minWidth('tablet') {
-      max-width: 80%;
-      font-size: $large;
-    }
+		@include minWidth("tablet") {
+			max-width: 80%;
+			font-size: $large;
+		}
 
-    @include minWidth('desktop') {
-      max-width: 50%;
-    }
-  }
+		@include minWidth("desktop") {
+			max-width: 50%;
+		}
+	}
 
-  .testimonyAuthor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	.testimonyAuthor {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-    .authorDP {
-      width: 50px;
-      height: 50px;
-      position: relative;
-      margin-bottom: 30px;
+		.authorDP {
+			width: 50px;
+			height: 50px;
+			position: relative;
+			margin-bottom: 30px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: -6px;
-        left: -6px;
-        width: calc(100% + 12px);
-        height: calc(100% + 12px);
-        border-radius: 50%;
-        z-index: -1;
-        border: 3px dashed $accent;
-        animation: spin 20s linear infinite;
+			&::after {
+				content: "";
+				position: absolute;
+				top: -6px;
+				left: -6px;
+				width: calc(100% + 12px);
+				height: calc(100% + 12px);
+				border-radius: 50%;
+				z-index: -1;
+				border: 3px dashed $accent;
+				animation: spin 20s linear infinite;
 
-        @keyframes spin {
-          100% {
-            transform: rotateZ(360deg);
-          }
-        }
-      }
+				@keyframes spin {
+					100% {
+						transform: rotateZ(360deg);
+					}
+				}
+			}
 
-      img {
-        border-radius: 50%;
-      }
+			img {
+				border-radius: 50%;
+			}
 
-      @include minWidth('mobile') {
-        width: 80px;
-        height: 80px;
-      }
+			@include minWidth("mobile") {
+				width: 80px;
+				height: 80px;
+			}
 
-      @include minWidth('tablet') {
-        width: 100px;
-        height: 100px;
-      }
+			@include minWidth("tablet") {
+				width: 100px;
+				height: 100px;
+			}
 
-      @include minWidth('desktop') {
-        width: 150px;
-        height: 150px;
-      }
-    }
+			@include minWidth("desktop") {
+				width: 150px;
+				height: 150px;
+			}
+		}
 
-    .authorsName,
-    .authorsRole {
-      font-size: $small;
+		.authorsName,
+		.authorsRole {
+			font-size: $small;
 
-      @include minWidth('mobile') {
-        font-size: $regular;
-      }
+			@include minWidth("mobile") {
+				font-size: $regular;
+			}
 
-      @include minWidth('tablet') {
-        font-size: $medium;
-      }
+			@include minWidth("tablet") {
+				font-size: $medium;
+			}
 
-      @include minWidth('desktop') {
-        font-size: $large;
-      }
-    }
-  }
+			@include minWidth("desktop") {
+				font-size: $large;
+			}
+		}
+	}
 }

@@ -3,49 +3,49 @@
 @use "styles/mixins.module.scss" as *;
 
 .section {
-  @include sectionTemplate;
-  @include highlight;
+	@include sectionTemplate;
+	@include highlight;
 
-  .subContainer {
-    @include gridLayout(180px);
+	.subContainer {
+		@include gridLayout(180px);
 
-    .itemCard {
-      @include nestedSectionSizing;
-    }
-  }
+		.itemCard {
+			@include nestedSectionSizing;
+		}
+	}
 
-  .block {
-    @include blockLayout;
-    margin-block: 0 !important;
-    padding: 0;
+	.block {
+		@include blockLayout;
+		margin-block: 0 !important;
+		padding: 0;
 
-    .blockHeader {
-      @include blockLayout;
-      @include contentSizing;
-      padding: 0;
+		.blockHeader {
+			@include blockLayout;
+			@include contentSizing;
+			padding: 0;
 
-      @include minWidth("desktop") {
-        .title {
-          max-width: 60%;
-        }
-      }
+			@include minWidth("desktop") {
+				.title {
+					max-width: 60%;
+				}
+			}
 
-      .chip {
-        left: unset
-      }
-    }
+			.chip {
+				left: unset;
+			}
+		}
 
-    .blockList {
-      @include gridLayout(200px);
+		.blockList {
+			@include gridLayout(200px);
 
-      .listItem {
-        @include cardBlock;
-        text-align: center;
-      }
-    }
+			.listItem {
+				@include cardBlock;
+				text-align: center;
+			}
+		}
 
-    .ctaBtns {
-      @include ctaBtn;
-    }
-  }
+		.ctaBtns {
+			@include ctaBtn;
+		}
+	}
 }

@@ -3,87 +3,84 @@
 @use "styles/functions.module" as *;
 @use "styles/mixins.module" as *;
 
-
 .footerRoot {
-  padding-inline: 20px;
-  padding-block-end: 20px;
-  padding-block-start: 80px;
-  margin-block-start: 80px;
-  background-color: $secondary;
-  @include gridBackground($secondary, 5%);
+	padding-inline: 20px;
+	padding-block-end: 20px;
+	padding-block-start: 80px;
+	margin-block-start: 80px;
+	background-color: $secondary;
+	@include gridBackground($secondary, 5%);
 
-  .footerWrapper {
-    max-width: 1440px;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
+	.footerWrapper {
+		max-width: 1440px;
+		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
 
-    .logo {
-      width: 100px;
-      margin-block-end: 30px;
-    }
+		.logo {
+			width: 100px;
+			margin-block-end: 30px;
+		}
 
+		.footerContent {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: rem(32);
 
-    .footerContent {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: rem(32);
+			@include minWidth("mobile") {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+				gap: rem(32);
+			}
 
-      @include minWidth('mobile') {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: rem(32);
-      }
+			@include minWidth("tablet") {
+				gap: rem(64);
+				grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+			}
 
-      @include minWidth('tablet') {
-        gap: rem(64);
-        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      }
+			.navContainer {
+				display: flex;
+				flex-direction: column;
+				gap: rem(16);
 
+				.navHeading {
+					font-size: $small;
 
-      .navContainer {
-        display: flex;
-        flex-direction: column;
-        gap: rem(16);
+					@include minWidth("tablet") {
+						font-size: $regular;
+					}
+				}
 
-        .navHeading {
-          font-size: $small;
+				.navLinks {
+					display: flex;
+					flex-direction: column;
+					gap: rem(8);
 
-          @include minWidth('tablet') {
-            font-size: $regular;
-          }
-        }
+					@include minWidth("tablet") {
+						gap: rem(16);
+					}
 
-        .navLinks {
-          display: flex;
-          flex-direction: column;
-          gap: rem(8);
+					li {
+						font-size: $tiny;
 
-          @include minWidth('tablet') {
-            gap: rem(16);
-          }
+						@include minWidth("tablet") {
+							font-size: $small;
+						}
 
-          li {
-            font-size: $tiny;
+						a {
+							@include underlineOnHover($accent);
+						}
+					}
+				}
+			}
+		}
 
-            @include minWidth('tablet') {
-              font-size: $small;
-            }
-
-            a {
-              @include underlineOnHover($accent)
-            }
-          }
-        }
-      }
-    }
-
-    .footerBase {
-      margin-top: 60px;
-      padding-block-start: 30px;
-      border-top: 1px solid $black;
-      font-size: $tiny;
-    }
-  }
+		.footerBase {
+			margin-top: 60px;
+			padding-block-start: 30px;
+			border-top: 1px solid $black;
+			font-size: $tiny;
+		}
+	}
 }
