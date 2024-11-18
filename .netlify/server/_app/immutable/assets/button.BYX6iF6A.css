@@ -1,1 +1,45 @@
-@property --angle{syntax: "<angle>"; initial-value: 90deg; inherits: true;}button{min-width:fit-content;background-color:#ffd966;border:1px solid #ffd966;padding:5px 10px;display:flex;align-items:center;gap:.5rem;color:#4e2c14;cursor:pointer;font-size:.875rem;font-family:Montserrat,sans-serif;font-weight:600;text-transform:capitalize;transition:all .3s ease-in-out}button._primary_utzgt_22{border:1px solid #4e2c14;background-color:transparent}button._onWhite_utzgt_26:hover{color:#6faf64;background-color:transparent;border:1px solid #6faf64}button:hover{color:#ffd966;background-color:transparent;border:1px solid #ffd966}@media (min-width: 48rem){button{font-size:1rem}}@media (min-width: 64rem){button{font-size:500}}
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 90deg;
+	inherits: true;
+}
+button {
+	min-width: fit-content;
+	background-color: #ffd966;
+	border: 1px solid #ffd966;
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: #4e2c14;
+	cursor: pointer;
+	font-size: 0.875rem;
+	font-family: Montserrat, sans-serif;
+	font-weight: 600;
+	text-transform: capitalize;
+	transition: all 0.3s ease-in-out;
+}
+button._primary_utzgt_22 {
+	border: 1px solid #4e2c14;
+	background-color: transparent;
+}
+button._onWhite_utzgt_26:hover {
+	color: #6faf64;
+	background-color: transparent;
+	border: 1px solid #6faf64;
+}
+button:hover {
+	color: #ffd966;
+	background-color: transparent;
+	border: 1px solid #ffd966;
+}
+@media (min-width: 48rem) {
+	button {
+		font-size: 1rem;
+	}
+}
+@media (min-width: 64rem) {
+	button {
+		font-size: 500;
+	}
+}

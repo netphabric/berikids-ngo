@@ -1,5 +1,4 @@
 <script>
-	import Button from "../button/button.svelte"
 	import Logo from "../logo/logo.svelte"
 	import NewsletterForm from "../newsletterForm/newsletterForm.svelte"
 	import styles from "./footer.module.scss"

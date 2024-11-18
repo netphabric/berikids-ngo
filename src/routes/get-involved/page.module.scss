@@ -3,106 +3,55 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: rem(80);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: rem(80);
 
-  @include minWidth ('tablet') {
-    gap: rem(160);
-  }
+	@include minWidth("tablet") {
+		gap: rem(160);
+	}
 
-  @include minWidth ('desktop') {
-    gap: rem(180);
-  }
+	@include minWidth("desktop") {
+		gap: rem(180);
+	}
 
-  .section {
-    @include sectionTemplate;
+	.hero {
+		@include blockLayout;
+		@include contentSizing;
+		align-items: flex-start !important;
 
-    .subContainer {
-      @include gridLayout(150px);
+		@include minWidth("tablet") {
+			align-items: unset;
+		}
 
-      .itemCard {
-        @include nestedSectionSizing;
-      }
-    }
-  }
+		@include minWidth("desktop") {
+			width: 100%;
+			flex-direction: row;
 
-  .hero {
-    @include blockLayout;
-    @include contentSizing;
-    align-items: flex-start !important;
+			.title {
+				text-align: start;
+			}
+		}
 
-    @include minWidth("tablet") {
-      align-items: unset
-    }
+		.heroRight {
+			display: flex;
+			flex-direction: column;
+			gap: rem(16);
 
-    @include minWidth("desktop") {
-      width: 100%;
-      flex-direction: row;
+			@include minWidth("desktop") {
+				max-width: 50%;
+			}
 
-      .title {
-        text-align: start;
-      }
-    }
+			.desc {
+				max-width: unset;
+				text-align: start;
+			}
+		}
+	}
 
-    .heroRight {
-      display: flex;
-      flex-direction: column;
-      gap: rem(16);
-
-      @include minWidth("desktop") {
-        max-width: 50%;
-      }
-
-      .desc {
-        max-width: unset;
-        text-align: start;
-      }
-    }
-  }
-
-
-  .projectSection {
-    @include blockLayout;
-    margin-block: 0 !important;
-
-    .projectHeader {
-      @include blockLayout;
-      @include contentSizing;
-      padding: 0;
-
-      @include minWidth("desktop") {
-        .title {
-          max-width: 60%;
-        }
-      }
-
-      .chip {
-        left: unset
-      }
-    }
-
-    .projects {
-      @include gridLayout(200px);
-
-
-      .projectCard {
-        @include cardBlock;
-
-        @include minWidth('tablet') {
-          text-align: center;
-        }
-      }
-    }
-
-    .ctaBtns {
-      @include ctaBtn;
-    }
-  }
-
-  .supportBlock {
-    @include blockLayout;
-    @include contentSizing;
-  }
+	.supportBlock {
+		@include blockLayout;
+		@include contentSizing;
+	}
 }

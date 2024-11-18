@@ -78,11 +78,19 @@ export const teams = writable([
 ])
 
 export const partners = writable([
-	{ name: "mary alphonse bradly fund", location: "kumbo,cameroon" },
-	{ name: "freinds of cameroon", location: "germany" },
-	{ name: "the capuchin friary - shisong,cameroon", location: "kumbo,cameroon" },
-	{ name: "pecten company,cameroon", location: "kumbo,cameroon" },
-	{ name: "navti foundation -cameroon", location: "kumbo,cameroon" },
-	{ name: "strategic humanitarian services,(SHUMAS)", location: "Nkwen, Bamenda" },
-	{ name: "st.josephs children and adult home (SAJOCAH)", location: "bafut" }
+	{ name: "Mary alphonse bradly fund", location: "kumbo,cameroon" },
+	{ name: "Freinds of cameroon", location: "frankfurt,germany" },
+	{ name: "The capuchin friary - shisong,cameroon", location: "kumbo,cameroon" },
+	{ name: "Pecten company,cameroon", location: "kumbo,cameroon" },
+	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, Bamenda" },
+	{ name: "St.josephs children and adult home (SAJOCAH)", location: "bafut" },
+	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
+	{ name: "Arch Diocese of Berlin", location: "germany" },
+	{ name: "Divine center of Berline", location: "germany" },
+	{ name: "Vicarate of the Archdiocese of Berlin", location: "germany" },
+	{ name: "St.Johannes Nepomuk Chemnitz/Saxony", location: "germany" },
+	{ name: "Achorhof retreat center", location: "germany" },
+	{ name: "Eye Square GMbH", location: "berlin,germany" },
+	{ name: "Tertiary sisters of shisong", location: "shisong,cameroon" },
+	{ name: "Afoni children of hope foundation", location: "cameroon" }
 ])

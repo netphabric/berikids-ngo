@@ -1,4 +1,5 @@
 import type { RequestEvent } from "@sveltejs/kit"
+import { CONTACT_EMAIL_PASSWORD } from "$env/static/private"
 import nodemailer from "nodemailer"
 
 export async function POST({ request }: RequestEvent) {
@@ -8,7 +9,7 @@ export async function POST({ request }: RequestEvent) {
 		service: "gmail",
 		auth: {
 			user: "abanyseka98@gmail.com",
-			pass: "xtkp bhdd suqv xtrh"
+			pass: CONTACT_EMAIL_PASSWORD
 		}
 	})
 

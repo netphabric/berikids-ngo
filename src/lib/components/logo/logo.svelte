@@ -4,6 +4,7 @@
 
 <style lang="scss">
 	a {
-		width: 120px;
+		width: 50px;
+		height: 45px;
 	}
 </style>

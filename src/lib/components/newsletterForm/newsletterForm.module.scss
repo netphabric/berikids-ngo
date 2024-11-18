@@ -4,105 +4,105 @@
 @use "styles/mixins.module" as *;
 
 .newsLetterForm {
-  display: flex;
-  flex-direction: column;
-  gap: rem(18);
+	display: flex;
+	flex-direction: column;
+	gap: rem(18);
 
-  @include minWidth('mobile') {
-    grid-column: span 2;
-  }
+	@include minWidth("mobile") {
+		grid-column: span 2;
+	}
 
-  .title,
-  .highlight {
-    @include contentSizing;
-    @include highlight;
+	.title,
+	.highlight {
+		font-size: $h4;
+		@include contentSizing;
+		@include highlight;
 
-    @include minWidth('mobile') {
-      font-size: $h4;
-      line-height: rem(45);
-    }
+		@include minWidth("mobile") {
+			font-size: $h4;
+			line-height: rem(45);
+		}
 
-    @include minWidth('tablet') {
-      font-size: $h3;
-      line-height: rem(55);
-    }
+		@include minWidth("tablet") {
+			font-size: $h3;
+			line-height: rem(55);
+		}
 
-    @include minWidth('desktop') {
-      font-size: $h1;
-      line-height: rem(65);
-    }
-  }
+		@include minWidth("desktop") {
+			font-size: $h1;
+			line-height: rem(65);
+		}
+	}
 
+	h6 {
+		font-size: $small;
 
-  h6 {
-    font-size: $small;
+		@include minWidth("tablet") {
+			font-size: $regular;
+		}
+	}
 
-    @include minWidth('tablet') {
-      font-size: $regular;
-    }
-  }
+	p {
+		font-size: $tiny;
 
-  p {
-    font-size: $tiny;
+		@include minWidth("mobile") {
+			max-width: 70%;
+		}
 
-    @include minWidth('mobile') {
-      max-width: 70%;
-    }
+		@include minWidth("tablet") {
+			max-width: unset;
+		}
+	}
 
-    @include minWidth('tablet') {
-      max-width: unset;
-    }
-  }
+	span {
+		margin-top: -5px;
+		font-size: rem(10);
+		line-height: rem(18);
 
-  span {
-    margin-top: -5px;
-    font-size: rem(10);
-    line-height: rem(18);
+		@include minWidth("mobile") {
+			max-width: 50%;
+		}
 
-    @include minWidth('mobile') {
-      max-width: 50%;
-    }
+		@include minWidth("tablet") {
+			max-width: unset;
+		}
+	}
 
-    @include minWidth('tablet') {
-      max-width: unset;
-    }
-  }
+	.inputContainer {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+		flex-wrap: wrap;
 
-  .inputContainer {
-    display: flex;
-    align-items: center;
-    gap: rem(16);
-    flex-wrap: wrap;
+		@include minWidth("mobile") {
+			flex-wrap: unset;
+		}
 
-    @include minWidth('mobile') {
-      flex-wrap: unset;
-    }
+		input {
+			width: 100%;
+			height: 34px;
+			padding-inline: 10px;
+			color: $black;
+			font-size: $tiny;
+			background-color: transparent;
+			border: 1px solid $black;
 
-    input {
-      width: 100%;
-      height: 34px;
-      padding-inline: 10px;
-      color: $black;
-      font-size: $tiny;
-      background-color: transparent;
-      border: 1px solid $black;
+			@include minWidth("mobile") {
+				width: 55%;
+			}
 
-      @include minWidth('mobile') {
-        width: 55%;
-      }
+			@include minWidth("tablet") {
+				font-size: $small;
+			}
 
-      @include minWidth('tablet') {
-        font-size: $small;
-      }
+			&:focus {
+				outline: none;
+				border-color: $accent;
+			}
 
-      &:focus {
-        outline: none;
-        border-color: $accent;
-      }
-
-      &::placeholder {
-        opacity: 0.3;
-      }
-    }
-  }
+			&::placeholder {
+				opacity: 0.3;
+			}
+		}
+	}
 }

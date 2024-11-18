@@ -3,35 +3,38 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
-  columns: 2;
-  padding: 20px;
-  break-inside: avoid;
+	columns: 1;
+	padding: 20px;
+	break-inside: avoid;
 
-  @include minWidth("tablet") {
-    columns: 3;
-  }
+	@include minWidth("mobile") {
+		columns: 2;
+	}
 
-  @include minWidth("desktop") {
-    columns: 6;
-  }
+	@include minWidth("tablet") {
+		columns: 3;
+	}
 
-  .masonItem {
-    width: 100%;
-    margin: 16px 0;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    border: 3px solid $black;
-    border-radius: 8px;
-    overflow: hidden;
+	@include minWidth("desktop") {
+		columns: 6;
+	}
 
-    img {
-      width: 100%;
-      transition: transform 0.3s ease;
-    }
+	.masonItem {
+		width: 100%;
+		margin: 16px 0;
+		display: grid;
+		place-items: center;
+		cursor: pointer;
+		border-radius: 4px;
+		overflow: hidden;
 
-    &:hover img {
-      transform: scale(1.2);
-    }
-  }
+		img {
+			width: 100%;
+			transition: transform 0.3s ease;
+		}
+
+		&:hover img {
+			transform: scale(1.2);
+		}
+	}
 }

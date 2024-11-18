@@ -4,33 +4,31 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  gap: rem(80);
+	gap: rem(80);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 
-  @include minWidth("tablet") {
-    gap: rem(160);
-  }
+	@include minWidth("tablet") {
+		gap: rem(160);
+	}
 
-  .section {
-    @include sectionTemplate;
-  }
+	.section {
+		@include sectionTemplate;
+	}
 
-  .newsletter {
-    @include sectionTemplate;
-    padding: rem(20);
-    box-shadow: 0px 0px 60px 10px color.adjust($accent, $alpha: -0.5);
+	.newsletter {
+		box-shadow: 0px 0px 60px 10px color.adjust($accent, $alpha: -0.5);
+		padding: rem(20);
+		@include sectionTemplate;
 
-    @include minWidth("desktop") {}
+		.sectionImage {
+			max-height: 200px;
 
-    .sectionImage {
-      max-height: 200px;
-
-      @include minWidth("tablet") {
-        max-width: 40%;
-        max-height: 400px;
-      }
-    }
-  }
+			@include minWidth("tablet") {
+				max-width: 40%;
+				max-height: 400px;
+			}
+		}
+	}
 }
