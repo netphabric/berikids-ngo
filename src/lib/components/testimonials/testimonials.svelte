@@ -2,9 +2,10 @@
 	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import styles from "./testimonials.module.scss"
 	export let dp = 11
+	export let scrollToID = "vacation-testimony"
 </script>
 
-<section class={styles.testimonialsSection} id="testimony" class:reveal={true} use:scrollReveal>
+<section class={styles.testimonialsSection} id={scrollToID} class:reveal={true} use:scrollReveal>
 	<h2 class={styles.testimony}>
 		"This organization has transformed my life and the lives of many others. Their support has given
 		us hope and a brighter future."
