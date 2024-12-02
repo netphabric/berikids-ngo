@@ -237,7 +237,7 @@ $large-desktop: rem(1280);
     }
 
     @include minWidth("desktop") {
-      font-size: $medium;
+      font-size: $large;
     }
   }
 }

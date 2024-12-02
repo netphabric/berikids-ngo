@@ -9,10 +9,10 @@
 			heading: "get involved",
 			links: [
 				{ link: "donate", label: "Donate Now" },
-				{ link: "volunteer", label: "Volunteer Today" },
-				{ link: "our-impact", label: "Our Projects" },
-				{ link: "/#testimony", label: "Success Stories" },
-				{ link: "contact", label: "Contact Us" }
+				{ link: "/contact#contact-form", label: "Volunteer Today" },
+				{ link: "get-involved", label: "Our Projects" },
+				{ link: "/vocational-training#vacation-testimony", label: "Success Stories" },
+				{ link: "/contact#contact-form", label: "Contact Us" }
 			]
 		},
 		{
@@ -22,17 +22,17 @@
 				{ link: "/#faqs", label: "FAQs" },
 				{ link: "reports", label: "Annual Reports" },
 				{ link: "events", label: "Community Events" },
-				{ link: "/#partners", label: "Partnerships" }
+				{ link: "/about-us#partners", label: "Partnerships" }
 			]
 		},
 		{
 			heading: "stay updated",
 			links: [
-				{ label: "newsletter", link: "newsletter" },
+				{ label: "newsletter", link: "/contact#newsletter" },
 				{ label: "social", link: "social media" },
 				{ label: "events", link: "events calendar" },
 				{ label: "support", link: "support us" },
-				{ label: "help", link: "get help" }
+				{ label: "help", link: "/contact#contact-form" }
 			]
 		}
 	]

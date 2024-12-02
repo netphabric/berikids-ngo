@@ -29,7 +29,7 @@
 	}
 </script>
 
-<form class={styles.contactForm} on:submit|preventDefault={handleSubmit}>
+<form id="contact-form" class={styles.contactForm} on:submit|preventDefault={handleSubmit}>
 	<div class={styles.formHeader}>
 		<h4 class={styles.chip}>
 			<span class="material-symbols-sharp">outgoing_mail</span>

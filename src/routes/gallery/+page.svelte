@@ -3,7 +3,7 @@
 </script>
 
 <section class={styles.root}>
-	{#each Array.from({ length: 18 }, (_, i) => i + 1) as i}
+	{#each Array.from({ length: 28 }, (_, i) => i + 1) as i}
 		<div class={styles.masonItem}>
 			<img src="/gallery/gi{i}.jpg" alt="memo" />
 		</div>

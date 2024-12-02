@@ -12,7 +12,7 @@
 	export let largeTitle = false
 </script>
 
-<form class={styles.newsLetterForm}>
+<form class={styles.newsLetterForm} id="newsletter">
 	{#if largeTitle}
 		<h2 class={styles.title}>
 			{#each highlightText(title, titleHighlight) as word}
