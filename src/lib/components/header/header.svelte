@@ -2,7 +2,6 @@
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
 	import Button from "$lib/components/button/button.svelte"
-	import Logo from "$lib/components/logo/logo.svelte"
 	import styles from "./header.module.scss"
 
 	const navLinks = [
@@ -42,8 +41,6 @@
 	{/if}
 
 	<div class={styles.navRight}>
-		<Logo />
-
 		<nav>
 			<ul>
 				{#each navLinks as { label, url }}
