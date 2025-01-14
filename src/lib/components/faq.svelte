@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
-	import Chip from "../chip.svelte"
+	import Chip from "$lib/components/chip.svelte"
 
 	export let desc = ""
 	export let faqs: {

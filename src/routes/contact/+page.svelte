@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ContactForm from "$lib/components/contactForm/contactForm.svelte"
-	import Faq from "$lib/components/faq/faq.svelte"
+	import Faq from "$lib/components/faq.svelte"
 	import NewsletterForm from "$lib/components/newsletterForm/newsletterForm.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"

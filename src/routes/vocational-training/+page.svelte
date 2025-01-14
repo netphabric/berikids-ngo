@@ -1,5 +1,5 @@
 <script>
-	import Faq from "$lib/components/faq/faq.svelte"
+	import Faq from "$lib/components/faq.svelte"
 	import HeroLayoutleft from "$lib/components/heroLayoutLeft/heroLayoutleft.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
 	import Testimonials from "$lib/components/testimonials.svelte"
@@ -73,7 +73,7 @@
 		sectionImageAlt="berkids"
 	/>
 
-	<Testimonials dp={30} />
+	<Testimonials />
 
 	<PageSection
 		isBlockLayout

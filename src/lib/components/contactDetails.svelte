@@ -1,24 +1,24 @@
 <script lang="ts">
 	const details = [
 		{
+			icon: "alternate_email",
 			label: "Mail",
 			text: "Reach out anytime.",
-			contact: "Berikidsngo@gmx.de",
-			icon: "icons/alternate_email_30dp_434343_FILL0_wght300_GRAD0_opsz24.svg"
+			contact: "Berikidsngo@gmx.de"
 		},
 
 		{
+			icon: "add_call",
 			label: "Phone",
 			text: "call us for inquiries or support",
-			contact: "+237 653 176 545",
-			icon: "icons/add_call_30dp_434343_FILL0_wght300_GRAD0_opsz24.svg"
+			contact: "+237 653 176 545"
 		},
 
 		{
 			label: "Office",
 			text: "visit for more information",
 			contact: "123 office, location",
-			icon: "icons/apartment_30dp_434343_FILL0_wght300_GRAD0_opsz24.svg"
+			icon: "apartment"
 		}
 	]
 </script>
@@ -27,10 +27,7 @@
 	<div class="contact-cards-wrapper">
 		{#each details as detail}
 			<article class="contact-card">
-				<div class="icon-container">
-					<img src={detail.icon} alt="svg" />
-				</div>
-
+				<span class="material-symbols-sharp contact-icon">{detail.icon}</span>
 				<h4 class="contact-title">{detail.label}</h4>
 				<p class="contact-text">{detail.text}</p>
 				<span class="contact">{detail.contact}</span>
@@ -59,21 +56,14 @@
 				padding: 20px;
 				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-				.icon-container {
-					width: 64px;
-					height: 64px;
-					display: grid;
-					place-items: center;
-
-					img {
-						width: 100%;
-						object-fit: cover;
-					}
-				}
-
-				.contact-title {
+				.contact-title,
+				.contact-icon {
 					font-size: 52px;
 					font-weight: 500;
+				}
+
+				.contact-icon {
+					opacity: 0.6;
 				}
 
 				.contact-text,
