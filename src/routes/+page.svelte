@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { homeFaqs } from "$lib/stores/faqStore"
-	import Faq from "$lib/components/faq/faq.svelte"
+	import Faq from "$lib/components/faq.svelte"
 	import Testimonials from "$lib/components/testimonials.svelte"
 	import ContactDetails from "$lib/components/contactDetails.svelte"
 	import ContentBlock from "$lib/components/contentBlock.svelte"
@@ -29,3 +29,11 @@
     desc="discover how our NGO is making a difference and how you can help" 
   />
 </main>
+
+<style lang="scss">
+	main {
+		display: flex;
+		flex-direction: column;
+		gap: 100px;
+	}
+</style>

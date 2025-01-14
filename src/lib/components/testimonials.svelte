@@ -28,7 +28,6 @@
 <style lang="scss">
 	.testimonialsSection {
 		padding-block: 32px;
-		margin-block: 64px;
 
 		.testimony-wrapper {
 			max-width: 1440px;

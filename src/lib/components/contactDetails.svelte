@@ -42,7 +42,6 @@
 <style lang="scss">
 	.contact-details {
 		padding: 32px;
-		margin-block: 64px;
 
 		.contact-cards-wrapper {
 			max-width: 1440px;

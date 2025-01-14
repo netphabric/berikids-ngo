@@ -54,7 +54,6 @@
 <style lang="scss">
 	.content-render {
 		padding: 32px;
-		margin-block: 64px;
 
 		.content-wrapper {
 			display: grid;
