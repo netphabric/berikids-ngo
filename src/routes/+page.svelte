@@ -1,15 +1,16 @@
 <script lang="ts">
 	import { homeFaqs } from "$lib/stores/faqStore"
-	import ContentBlock from "$lib/components/ContentBlock.svelte"
-	import Testimonials from "$lib/components/testimonials/testimonials.svelte"
-	import ContactDetails from "$lib/components/contactDetails.svelte"
 	import Faq from "$lib/components/faq/faq.svelte"
+	import Testimonials from "$lib/components/testimonials.svelte"
+	import ContactDetails from "$lib/components/contactDetails.svelte"
+	import ContentBlock from "$lib/components/contentBlock.svelte"
 </script>
 
 <main>
 	<ContentBlock
-		contentChipText="compassionate"
-		contentChipIcon="/icons/sign_language_30dp_434343_FILL0_wght300_GRAD0_opsz24.svg"
+		contentChipColor="green"
+		contentChipText="misson"
+		contentChipIcon="sign_language"
 		contentTitle="empowering lives through sustainable development initiatives"
 		contentTitleHighlight="sustainable development"
 		contentDescription="Our mission is to uplift orphans and vulnerable communities in Cameroon by enhancing their

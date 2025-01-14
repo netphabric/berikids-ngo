@@ -1,5 +1,4 @@
 <script>
-	import Logo from "../logo/logo.svelte"
 	import NewsletterForm from "../newsletterForm/newsletterForm.svelte"
 	import styles from "./footer.module.scss"
 	import { stringify } from "utils/stringify"
@@ -40,9 +39,7 @@
 
 <footer class={styles.footerRoot}>
 	<div class={styles.footerWrapper}>
-		<div class={styles.logo}>
-			<Logo />
-		</div>
+		<div class={styles.logo}></div>
 
 		<nav class={styles.footerContent}>
 			{#each invoLinks as nav}

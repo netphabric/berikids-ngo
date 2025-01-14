@@ -56,9 +56,9 @@
 				flex-direction: column;
 				align-items: center;
 				gap: 16px;
-				padding: 32px;
 				border-radius: 16px;
-				border: 1px solid #434343;
+				padding: 20px;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 				.icon-container {
 					width: 64px;
@@ -73,7 +73,8 @@
 				}
 
 				.contact-title {
-					font-size: 64px;
+					font-size: 52px;
+					font-weight: 500;
 				}
 
 				.contact-text,

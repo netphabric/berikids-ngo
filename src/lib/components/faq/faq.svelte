@@ -7,9 +7,9 @@
 	export let desc = ""
 	export let faqs: {
 		id: number
-		question: string
 		ans: string
 		isOpen: boolean
+		question: string
 	}[] = []
 
 	const handleShowFaqAns = (id: number) => {

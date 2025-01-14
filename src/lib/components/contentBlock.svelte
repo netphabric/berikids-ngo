@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { highlightText } from "utils/textHightlight"
+	import Chip from "./chip.svelte"
 
 	export let blockLayout = false
 	export let contentChipIcon: string
 	export let contentChipText: string
+	export let contentChipColor: "red" | "blue" | "green"
 	export let contentTitle: string
 	export let contentTitleHighlight: string
 	export let contentDescription: string
@@ -18,10 +20,7 @@
 <section class="content-render">
 	<div class="content-wrapper" class:blockLayout>
 		<div class="block-content">
-			<h4 class="content-chip">
-				<img src={contentChipIcon} alt="icon" />
-				<span class="chip-text">{contentChipText}</span>
-			</h4>
+			<Chip chipIcon={contentChipIcon} chipText={contentChipText} chipColor={contentChipColor} />
 
 			<h2 class="content-title">
 				{#each highlightText(contentTitle, contentTitleHighlight) as word}
@@ -62,7 +61,7 @@
 			grid-template-columns: 1fr 1fr;
 			max-width: 1440px;
 			margin-inline: auto;
-			gap: 32px;
+			gap: 64px;
 
 			&.blockLayout {
 				display: flex;
@@ -70,7 +69,6 @@
 				align-items: center;
 
 				.block-content,
-				.content-chip,
 				.content-cta-container {
 					max-width: 70%;
 					margin-inline: auto;
@@ -86,19 +84,8 @@
 				align-items: flex-start;
 				gap: 16px;
 
-				.content-chip {
-					display: flex;
-					align-items: center;
-					gap: 8px;
-
-					img {
-						width: 20px;
-						height: 20px;
-					}
-				}
-
 				.content-title {
-					font-size: 64px;
+					font-size: 52px;
 					font-weight: 700;
 					line-height: 1.2;
 
@@ -113,6 +100,7 @@
 					font-size: 18px;
 					font-weight: 400;
 					line-height: 1.5;
+					opacity: 0.8;
 				}
 			}
 
