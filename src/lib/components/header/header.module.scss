@@ -3,6 +3,8 @@
 @use "styles/mixins.module" as *;
 
 header {
+  max-width: 1440px;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -15,7 +17,7 @@ header {
   }
 
   @include minWidth("desktop") {
-    padding-inline: 40px;
+    padding-inline: 0;
     justify-content: space-between;
     gap: rem(30);
   }

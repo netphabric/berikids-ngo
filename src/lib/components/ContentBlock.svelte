@@ -8,9 +8,7 @@
 	export let contentTitleHighlight: string
 	export let contentDescription: string
 	export let contentMedia: string
-	export let ctaButtons: {
-		label: string
-	}[]
+	export let ctaButtons: { label: string }[] = []
 
 	function parseContentMediaType(mediaURL: string) {
 		return mediaURL.endsWith(".mp4") ? { type: "video" } : { type: "image" }
@@ -84,6 +82,8 @@
 			.block-content {
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start;
 				gap: 16px;
 
 				.content-chip {
@@ -98,7 +98,7 @@
 				}
 
 				.content-title {
-					font-size: 56px;
+					font-size: 64px;
 					font-weight: 700;
 					line-height: 1.2;
 
@@ -131,7 +131,6 @@
 
 			.content-cta-container {
 				display: flex;
-				margin-top: 16px;
 				gap: 16px;
 			}
 		}
