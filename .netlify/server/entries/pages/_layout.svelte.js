@@ -1,63 +1,81 @@
-import {
-	c as create_ssr_component,
-	b as add_attribute,
-	v as validate_component,
-	e as each,
-	d as escape
-} from "../../chunks/ssr.js"
-import { B as Button } from "../../chunks/button.js"
-const css = {
-	code: "a.svelte-1an5rw0{width:120px}",
-	map: '{"version":3,"file":"logo.svelte","sources":["logo.svelte"],"sourcesContent":["<a href=\\"/\\">\\n\\t<img src=\\"/logo.png\\" alt=\\"logo\\" />\\n</a>\\n\\n<style lang=\\"scss\\">a {\\n  width: 120px;\\n}</style>\\n"],"names":[],"mappings":"AAImB,gBAAE,CACnB,KAAK,CAAE,KACT"}'
-}
-const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	$$result.css.add(css)
-	return `<a href="/" class="svelte-1an5rw0" data-svelte-h="svelte-sfa9rn"><img src="/logo.png" alt="logo"> </a>`
-})
-const navRight = "_navRight_rf326_18"
-const ctaBtns = "_ctaBtns_rf326_55"
-const style = {
-	navRight,
-	ctaBtns
-}
+import { c as create_ssr_component, e as each, v as validate_component, a as add_attribute, b as escape, d as subscribe, f as set_store_value } from "../../chunks/ssr.js";
+import { B as Button } from "../../chunks/button.js";
+import { w as writable } from "../../chunks/index.js";
+const css$2 = {
+  code: '@property --angle{syntax:"<angle>";initial-value:90deg;inherits:true}.header.svelte-m1vyli.svelte-m1vyli{padding:32px;backdrop-filter:blur(20px);background-color:rgba(242, 242, 242, 0);position:sticky;z-index:100;top:0}@media(min-width: 48rem){.header.svelte-m1vyli.svelte-m1vyli{margin-block-end:64px}}.header.svelte-m1vyli .logo.svelte-m1vyli{color:#2b4f81;display:flex;align-items:center;gap:0.25rem}.header.svelte-m1vyli .logo a.svelte-m1vyli{font-size:1.25rem;font-weight:300;font-family:"Aldrich", serif}.header.svelte-m1vyli .nav-wrapper.svelte-m1vyli{max-width:1440px;margin-inline:auto;display:flex;justify-content:space-between;align-items:center}.header.svelte-m1vyli .nav-wrapper .menu.svelte-m1vyli{font-size:2.5rem;cursor:pointer}@media(min-width: 48rem){.header.svelte-m1vyli .nav-wrapper .menu.svelte-m1vyli{display:none}}.header.svelte-m1vyli .nav-wrapper .nav-right.svelte-m1vyli{display:none}@media(min-width: 48rem){.header.svelte-m1vyli .nav-wrapper .nav-right.svelte-m1vyli{display:block}}.header.svelte-m1vyli .nav-wrapper .mobileNav.svelte-m1vyli{width:100%;height:100dvh;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;top:0;right:0;position:fixed;padding:2rem 1rem;background-color:#f2f2f2}.header.svelte-m1vyli .nav-wrapper .mobileNav .navLinks.svelte-m1vyli{display:flex;flex-direction:column;align-items:unset;gap:1rem}.header.svelte-m1vyli .nav-wrapper .mobileNav .navLinks .navLink a.svelte-m1vyli{font-size:1.25rem;font-weight:600}.header.svelte-m1vyli .nav-wrapper .navLinks.svelte-m1vyli{display:flex;align-items:center;list-style:none;gap:2rem}.header.svelte-m1vyli .nav-wrapper .navLinks .navLink.svelte-m1vyli{position:relative}.header.svelte-m1vyli .nav-wrapper .navLinks .navLink.svelte-m1vyli::after{content:"";width:0;height:5px;position:absolute;left:0;top:100%;background:linear-gradient(to right, #ffd966 0%, #ffd966 100%);transition:width 0.3s ease-in-out;pointer-events:none}.header.svelte-m1vyli .nav-wrapper .navLinks .navLink.svelte-m1vyli:hover::after{width:100%}.header.svelte-m1vyli .nav-wrapper .navLinks .navLink a.svelte-m1vyli{text-decoration:none;text-transform:uppercase;font-weight:400}@media(min-width: 48rem){.header.svelte-m1vyli .nav-wrapper .navLinks .navLink a.svelte-m1vyli{font-size:1rem}}',
+  map: '{"version":3,"file":"header.svelte","sources":["header.svelte"],"sourcesContent":["<script lang=\\"ts\\">import { slide } from \\"svelte/transition\\";\\nimport { cubicOut } from \\"svelte/easing\\";\\nimport Button from \\"./button.svelte\\";\\nconst navLinks = [\\n    { label: \\"about\\", url: \\"/about\\" },\\n    { label: \\"projects\\", url: \\"/projects\\" },\\n    { label: \\"Vocation\\", url: \\"/vocation\\" },\\n    { label: \\"contact\\", url: \\"contact\\" }\\n];\\nlet navOpen = false;\\nconst toggleNav = () => (navOpen = !navOpen);\\n<\/script>\\n\\n<header class=\\"header\\">\\n\\t<div class=\\"nav-wrapper\\">\\n\\t\\t<span\\n\\t\\t\\trole=\\"button\\"\\n\\t\\t\\ttabindex=\\"0\\"\\n\\t\\t\\ton:keypress={toggleNav}\\n\\t\\t\\ton:click={toggleNav}\\n\\t\\t\\tclass:menu={!navOpen}\\n\\t\\t\\tclass=\\"material-symbols-sharp\\">filter_list</span\\n\\t\\t>\\n\\n\\t\\t{#if navOpen}\\n\\t\\t\\t<nav\\n\\t\\t\\t\\tclass=\\"mobileNav\\"\\n\\t\\t\\t\\tclass:open={navOpen}\\n\\t\\t\\t\\ttransition:slide={{ duration: 100, easing: cubicOut }}\\n\\t\\t\\t>\\n\\t\\t\\t\\t<h3 class=\\"logo\\">\\n\\t\\t\\t\\t\\t<a href=\\"/\\" on:click={toggleNav}>\\n\\t\\t\\t\\t\\t\\t<span class=\\"material-symbols-sharp\\">beach_access</span>\\n\\t\\t\\t\\t\\t\\t<span>BERIKIDS</span>\\n\\t\\t\\t\\t\\t</a>\\n\\t\\t\\t\\t</h3>\\n\\n\\t\\t\\t\\t<ul class=\\"navLinks\\">\\n\\t\\t\\t\\t\\t{#each navLinks as { label, url }}\\n\\t\\t\\t\\t\\t\\t<li class=\\"navLink\\"><a class=\\"navHref\\" href={url} on:click={toggleNav}>{label}</a></li>\\n\\t\\t\\t\\t\\t{/each}\\n\\t\\t\\t\\t</ul>\\n\\t\\t\\t</nav>\\n\\t\\t{/if}\\n\\n\\t\\t<div class=\\"nav-right\\">\\n\\t\\t\\t<nav class=\\"desktopNav\\">\\n\\t\\t\\t\\t<ul class=\\"navLinks\\">\\n\\t\\t\\t\\t\\t<h3 class=\\"logo\\">\\n\\t\\t\\t\\t\\t\\t<a href=\\"/\\">\\n\\t\\t\\t\\t\\t\\t\\t<span class=\\"material-symbols-sharp\\">beach_access</span>\\n\\t\\t\\t\\t\\t\\t\\t<span>BERIKIDS</span>\\n\\t\\t\\t\\t\\t\\t</a>\\n\\t\\t\\t\\t\\t</h3>\\n\\n\\t\\t\\t\\t\\t{#each navLinks as { label, url }}\\n\\t\\t\\t\\t\\t\\t<li class=\\"navLink\\"><a class=\\"navHref\\" href={url}>{label}</a></li>\\n\\t\\t\\t\\t\\t{/each}\\n\\t\\t\\t\\t</ul>\\n\\t\\t\\t</nav>\\n\\t\\t</div>\\n\\n\\t\\t<Button>\\n\\t\\t\\t<span class=\\"material-symbols-sharp\\"> account_balance_wallet </span>\\n\\t\\t\\t<span>donate</span>\\n\\t\\t</Button>\\n\\t</div>\\n</header>\\n\\n<style lang=\\"scss\\">@property --angle {\\n  syntax: \\"<angle>\\";\\n  initial-value: 90deg;\\n  inherits: true;\\n}\\n.header {\\n  padding: 32px;\\n  backdrop-filter: blur(20px);\\n  background-color: rgba(242, 242, 242, 0);\\n  position: sticky;\\n  z-index: 100;\\n  top: 0;\\n}\\n@media (min-width: 48rem) {\\n  .header {\\n    margin-block-end: 64px;\\n  }\\n}\\n.header .logo {\\n  color: #2b4f81;\\n  display: flex;\\n  align-items: center;\\n  gap: 0.25rem;\\n}\\n.header .logo a {\\n  font-size: 1.25rem;\\n  font-weight: 300;\\n  font-family: \\"Aldrich\\", serif;\\n}\\n.header .nav-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n.header .nav-wrapper .menu {\\n  font-size: 2.5rem;\\n  cursor: pointer;\\n}\\n@media (min-width: 48rem) {\\n  .header .nav-wrapper .menu {\\n    display: none;\\n  }\\n}\\n.header .nav-wrapper .nav-right {\\n  display: none;\\n}\\n@media (min-width: 48rem) {\\n  .header .nav-wrapper .nav-right {\\n    display: block;\\n  }\\n}\\n.header .nav-wrapper .mobileNav {\\n  width: 100%;\\n  height: 100dvh;\\n  overflow: hidden;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  gap: 1rem;\\n  top: 0;\\n  right: 0;\\n  position: fixed;\\n  padding: 2rem 1rem;\\n  background-color: #f2f2f2;\\n}\\n.header .nav-wrapper .mobileNav .navLinks {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: unset;\\n  gap: 1rem;\\n}\\n.header .nav-wrapper .mobileNav .navLinks .navLink a {\\n  font-size: 1.25rem;\\n  font-weight: 600;\\n}\\n.header .nav-wrapper .navLinks {\\n  display: flex;\\n  align-items: center;\\n  list-style: none;\\n  gap: 2rem;\\n}\\n.header .nav-wrapper .navLinks .navLink {\\n  position: relative;\\n}\\n.header .nav-wrapper .navLinks .navLink::after {\\n  content: \\"\\";\\n  width: 0;\\n  height: 5px;\\n  position: absolute;\\n  left: 0;\\n  top: 100%;\\n  background: linear-gradient(to right, #ffd966 0%, #ffd966 100%);\\n  transition: width 0.3s ease-in-out;\\n  pointer-events: none;\\n}\\n.header .nav-wrapper .navLinks .navLink:hover::after {\\n  width: 100%;\\n}\\n.header .nav-wrapper .navLinks .navLink a {\\n  text-decoration: none;\\n  text-transform: uppercase;\\n  font-weight: 400;\\n}\\n@media (min-width: 48rem) {\\n  .header .nav-wrapper .navLinks .navLink a {\\n    font-size: 1rem;\\n  }\\n}</style>\\n"],"names":[],"mappings":"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"}'
+};
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	const navLinks = [
-		{ label: "about us", url: "/about-us" },
-		{
-			label: "get involved",
-			url: "/get-involved"
-		},
-		{ label: "our impact", url: "/our-impact" }
-	]
-	return `<header><div${add_attribute("class", style.navRight, 0)}>${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} <nav><ul>${each(
-		navLinks,
-		({ label, url }) => {
-			return `<li><a${add_attribute("href", url, 0)}>${escape(label)}</a> </li>`
-		}
-	)}</ul></nav></div> <div${add_attribute("class", style.ctaBtns, 0)}>${validate_component(
-		Button,
-		"Button"
-	).$$render(
-		$$result,
-		{ primary: true, onWhite: true },
-		{},
-		{
-			default: () => {
-				return `<span data-svelte-h="svelte-hkqajq">join</span> <span class="material-symbols-sharp" data-svelte-h="svelte-10wwtzw">handshake</span>`
-			}
-		}
-	)} ${validate_component(Button, "Button").$$render(
-		$$result,
-		{ onWhite: true },
-		{},
-		{
-			default: () => {
-				return `<span data-svelte-h="svelte-1c5bl9">donate</span> <span class="material-symbols-sharp" data-svelte-h="svelte-dko6le">compost</span>`
-			}
-		}
-	)}</div></header>`
-})
+  const navLinks = [
+    { label: "about", url: "/about" },
+    { label: "projects", url: "/projects" },
+    { label: "Vocation", url: "/vocation" },
+    { label: "contact", url: "contact" }
+  ];
+  $$result.css.add(css$2);
+  return `<header class="header svelte-m1vyli"><div class="nav-wrapper svelte-m1vyli"><span role="button" tabindex="0" class="${["material-symbols-sharp svelte-m1vyli", "menu"].join(" ").trim()}" data-svelte-h="svelte-4llqkh">filter_list</span> ${``} <div class="nav-right svelte-m1vyli"><nav class="desktopNav"><ul class="navLinks svelte-m1vyli"><h3 class="logo svelte-m1vyli" data-svelte-h="svelte-i7152f"><a href="/" class="svelte-m1vyli"><span class="material-symbols-sharp">beach_access</span> <span>BERIKIDS</span></a></h3> ${each(navLinks, ({ label, url }) => {
+    return `<li class="navLink svelte-m1vyli"><a class="navHref svelte-m1vyli"${add_attribute("href", url, 0)}>${escape(label)}</a></li>`;
+  })}</ul></nav></div> ${validate_component(Button, "Button").$$render($$result, {}, {}, {
+    default: () => {
+      return `<span class="material-symbols-sharp" data-svelte-h="svelte-14p641t">account_balance_wallet</span> <span data-svelte-h="svelte-1c5bl9">donate</span>`;
+    }
+  })}</div> </header>`;
+});
+const css$1 = {
+  code: '@property --angle{syntax:"<angle>";initial-value:90deg;inherits:true}footer.svelte-11ubzg8.svelte-11ubzg8{padding:4rem 1.25rem;background-color:#ffd966}footer.svelte-11ubzg8 .footer-wrapper.svelte-11ubzg8{max-width:1440px;margin-inline:auto}footer.svelte-11ubzg8 .footer-wrapper .copyright.svelte-11ubzg8{text-align:center;font-size:0.875rem}@media(min-width: 48rem){footer.svelte-11ubzg8 .footer-wrapper .copyright.svelte-11ubzg8{font-size:1rem}}',
+  map: '{"version":3,"file":"footer.svelte","sources":["footer.svelte"],"sourcesContent":["<footer>\\n\\t<div class=\\"footer-wrapper\\">\\n\\t\\t<p class=\\"copyright\\">\\n\\t\\t\\t© {new Date().getFullYear()} berikids. All rights reserved.\\n\\t\\t</p>\\n\\t</div>\\n</footer>\\n\\n<style lang=\\"scss\\">@property --angle {\\n  syntax: \\"<angle>\\";\\n  initial-value: 90deg;\\n  inherits: true;\\n}\\nfooter {\\n  padding: 4rem 1.25rem;\\n  background-color: #ffd966;\\n}\\nfooter .footer-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n}\\nfooter .footer-wrapper .copyright {\\n  text-align: center;\\n  font-size: 0.875rem;\\n}\\n@media (min-width: 48rem) {\\n  footer .footer-wrapper .copyright {\\n    font-size: 1rem;\\n  }\\n}</style>\\n"],"names":[],"mappings":"AAQmB,UAAU,OAAQ,CACnC,MAAM,CAAE,SAAS,CACjB,aAAa,CAAE,KAAK,CACpB,QAAQ,CAAE,IACZ,CACA,oCAAO,CACL,OAAO,CAAE,IAAI,CAAC,OAAO,CACrB,gBAAgB,CAAE,OACpB,CACA,qBAAM,CAAC,8BAAgB,CACrB,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,IACjB,CACA,qBAAM,CAAC,eAAe,CAAC,yBAAW,CAChC,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,QACb,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,qBAAM,CAAC,eAAe,CAAC,yBAAW,CAChC,SAAS,CAAE,IACb,CACF"}'
+};
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$1);
+  return `<footer class="svelte-11ubzg8"><div class="footer-wrapper svelte-11ubzg8"><p class="copyright svelte-11ubzg8">© ${escape((/* @__PURE__ */ new Date()).getFullYear())} berikids. All rights reserved.</p></div> </footer>`;
+});
+const toasts = writable([]);
+const css = {
+  code: '@property --angle{syntax:"<angle>";initial-value:90deg;inherits:true}.toast-container.svelte-a2pvzf.svelte-a2pvzf{display:flex;flex-direction:column;gap:1rem;z-index:1000;position:fixed;bottom:2rem;left:2rem;margin-inline:auto;transition:all 0.3s ease-in-out}.toast-container.svelte-a2pvzf .toast.svelte-a2pvzf{min-height:3.125rem;width:max-content;display:flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border-radius:0.5rem;cursor:pointer;border:none;font-size:0.875rem;text-transform:capitalize;transition:all 0.3s ease-in-out}@media(min-width: 48rem){.toast-container.svelte-a2pvzf .toast.svelte-a2pvzf{font-size:1rem}}.toast-container.svelte-a2pvzf .toast.info.svelte-a2pvzf{color:rgb(36.625, 67.2877906977, 109.875);background-color:rgb(192.75, 210.1220930233, 234.25)}.toast-container.svelte-a2pvzf .toast.success.svelte-a2pvzf{color:rgb(66.9914893617, 114.1063829787, 58.8936170213);background-color:rgb(220.3787234043, 235.7659574468, 217.7340425532)}.toast-container.svelte-a2pvzf .toast.error.svelte-a2pvzf{color:rgb(185.8301886792, 22.1886792453, 10.1698113208);background-color:rgb(253.2617924528, 225.2924528302, 223.2382075472)}',
+  map: '{"version":3,"file":"toast.svelte","sources":["toast.svelte"],"sourcesContent":["<script lang=\\"ts\\">import { toasts } from \\"$lib/stores/toasts\\";\\nimport { fade } from \\"svelte/transition\\";\\nconst removeToast = (id) => {\\n    $toasts = $toasts.filter((toast) => toast.id !== id);\\n};\\n// prettier-ignore\\nconst renderIcon = (type) => {\\n    switch (type) {\\n        case \\"success\\": return \\"check_circle\\";\\n        case \\"error\\": return \\"error\\";\\n        case \\"warning\\": return \\"warning\\";\\n        case \\"info\\": return \\"info\\";\\n    }\\n};\\n$: {\\n    $toasts.forEach(({ id, duration }) => {\\n        setTimeout(() => {\\n            removeToast(id);\\n        }, duration);\\n    });\\n}\\n<\/script>\\n\\n<div class=\\"toast-container\\" transition:fade={{ duration: 500, delay: 300 }}>\\n\\t{#each $toasts as toast}\\n\\t\\t<button\\n\\t\\t\\tclass=\\"toast\\"\\n\\t\\t\\tclass:success={toast.type === \\"success\\"}\\n\\t\\t\\tclass:error={toast.type === \\"error\\"}\\n\\t\\t\\tclass:warning={toast.type === \\"warning\\"}\\n\\t\\t\\tclass:info={toast.type === \\"info\\"}\\n\\t\\t\\ton:click={() => removeToast(toast.id)}\\n\\t\\t>\\n\\t\\t\\t<span class=\\"material-symbols-sharp\\">{renderIcon(toast.type)}</span>\\n\\t\\t\\t<span>{toast.message}</span>\\n\\t\\t</button>\\n\\t{/each}\\n</div>\\n\\n<style lang=\\"scss\\">@property --angle {\\n  syntax: \\"<angle>\\";\\n  initial-value: 90deg;\\n  inherits: true;\\n}\\n.toast-container {\\n  display: flex;\\n  flex-direction: column;\\n  gap: 1rem;\\n  z-index: 1000;\\n  position: fixed;\\n  bottom: 2rem;\\n  left: 2rem;\\n  margin-inline: auto;\\n  transition: all 0.3s ease-in-out;\\n}\\n.toast-container .toast {\\n  min-height: 3.125rem;\\n  width: max-content;\\n  display: flex;\\n  align-items: center;\\n  gap: 0.5rem;\\n  padding: 0.5rem 1rem;\\n  border-radius: 0.5rem;\\n  cursor: pointer;\\n  border: none;\\n  font-size: 0.875rem;\\n  text-transform: capitalize;\\n  transition: all 0.3s ease-in-out;\\n}\\n@media (min-width: 48rem) {\\n  .toast-container .toast {\\n    font-size: 1rem;\\n  }\\n}\\n.toast-container .toast.info {\\n  color: rgb(36.625, 67.2877906977, 109.875);\\n  background-color: rgb(192.75, 210.1220930233, 234.25);\\n}\\n.toast-container .toast.success {\\n  color: rgb(66.9914893617, 114.1063829787, 58.8936170213);\\n  background-color: rgb(220.3787234043, 235.7659574468, 217.7340425532);\\n}\\n.toast-container .toast.error {\\n  color: rgb(185.8301886792, 22.1886792453, 10.1698113208);\\n  background-color: rgb(253.2617924528, 225.2924528302, 223.2382075472);\\n}</style>\\n"],"names":[],"mappings":"AAuCmB,UAAU,OAAQ,CACnC,MAAM,CAAE,SAAS,CACjB,aAAa,CAAE,KAAK,CACpB,QAAQ,CAAE,IACZ,CACA,4CAAiB,CACf,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,GAAG,CAAE,IAAI,CACT,OAAO,CAAE,IAAI,CACb,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,IAAI,CACV,aAAa,CAAE,IAAI,CACnB,UAAU,CAAE,GAAG,CAAC,IAAI,CAAC,WACvB,CACA,8BAAgB,CAAC,oBAAO,CACtB,UAAU,CAAE,QAAQ,CACpB,KAAK,CAAE,WAAW,CAClB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,MAAM,CACX,OAAO,CAAE,MAAM,CAAC,IAAI,CACpB,aAAa,CAAE,MAAM,CACrB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,IAAI,CACZ,SAAS,CAAE,QAAQ,CACnB,cAAc,CAAE,UAAU,CAC1B,UAAU,CAAE,GAAG,CAAC,IAAI,CAAC,WACvB,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,8BAAgB,CAAC,oBAAO,CACtB,SAAS,CAAE,IACb,CACF,CACA,8BAAgB,CAAC,MAAM,mBAAM,CAC3B,KAAK,CAAE,IAAI,MAAM,CAAC,CAAC,aAAa,CAAC,CAAC,OAAO,CAAC,CAC1C,gBAAgB,CAAE,IAAI,MAAM,CAAC,CAAC,cAAc,CAAC,CAAC,MAAM,CACtD,CACA,8BAAgB,CAAC,MAAM,sBAAS,CAC9B,KAAK,CAAE,IAAI,aAAa,CAAC,CAAC,cAAc,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE,CACA,8BAAgB,CAAC,MAAM,oBAAO,CAC5B,KAAK,CAAE,IAAI,cAAc,CAAC,CAAC,aAAa,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE"}'
+};
+const Toast = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $toasts, $$unsubscribe_toasts;
+  $$unsubscribe_toasts = subscribe(toasts, (value) => $toasts = value);
+  const removeToast = (id) => {
+    set_store_value(toasts, $toasts = $toasts.filter((toast) => toast.id !== id), $toasts);
+  };
+  const renderIcon = (type) => {
+    switch (type) {
+      case "success":
+        return "check_circle";
+      case "error":
+        return "error";
+      case "warning":
+        return "warning";
+      case "info":
+        return "info";
+    }
+  };
+  $$result.css.add(css);
+  {
+    {
+      $toasts.forEach(({ id, duration }) => {
+        setTimeout(
+          () => {
+            removeToast(id);
+          },
+          duration
+        );
+      });
+    }
+  }
+  $$unsubscribe_toasts();
+  return `<div class="toast-container svelte-a2pvzf">${each($toasts, (toast) => {
+    return `<button class="${[
+      "toast svelte-a2pvzf",
+      (toast.type === "success" ? "success" : "") + " " + (toast.type === "error" ? "error" : "") + " " + (toast.type === "warning" ? "warning" : "") + " " + (toast.type === "info" ? "info" : "")
+    ].join(" ").trim()}"><span class="material-symbols-sharp">${escape(renderIcon(toast.type))}</span> <span>${escape(toast.message)}</span> </button>`;
+  })} </div>`;
+});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})} ${slots.default ? slots.default({}) : ``}`
-})
-export { Layout as default }
+  return `${$$result.head += `<!-- HEAD_svelte-yaij8p_START -->${$$result.title = `<title>berikids</title>`, ""}<meta name="title" content="berikids"><meta name="description" content="empowering lives through sustainable development initiatives"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="use-credentials"><link href="https://fonts.googleapis.com/css2?family=Aldrich&amp;display=swap" rel="stylesheet"><meta property="og:description" content="empowering lives through sustainable development initiatives"><meta property="og:type" content="website"><meta property="og:title" content="berikids"><meta property="og:url" content="/opengraph.webp"><meta property="og:image" content="/opengraph.webp"><meta property="twitter:description" content="empowering lives through sustainable development initiatives"><meta property="twitter:title" content="berikids"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:image" content="/opengraph.webp"><meta property="twitter:url" content="/opengraph.webp"><!-- HEAD_svelte-yaij8p_END -->`, ""} ${validate_component(Header, "Header").$$render($$result, {}, {}, {})} ${validate_component(Toast, "Toast").$$render($$result, {}, {}, {})} ${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+});
+export {
+  Layout as default
+};
