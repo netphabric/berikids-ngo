@@ -4,143 +4,147 @@
 @use "styles/mixins.module.scss" as *;
 
 .root {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	gap: rem(80);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: rem(80);
 
-	@include minWidth("tablet") {
-		gap: rem(160);
-	}
+  @include minWidth("tablet") {
+    gap: rem(160);
+  }
 
-	@include minWidth("desktop") {
-		gap: rem(180);
-	}
+  @include minWidth("desktop") {
+    gap: rem(180);
+  }
 
-	.section {
-		@include sectionTemplate;
+  .sectionMediaContainer {
+    min-width: 50%;
+  }
 
-		.statsContainer {
-			@include gridLayout(150px);
+  .section {
+    @include sectionTemplate;
 
-			.statItem {
-				@include nestedSectionSizing;
-			}
-		}
-	}
+    .statsContainer {
+      @include gridLayout(150px);
 
-	.aidOptionsSection {
-		color: $white;
-		padding-inline: 20px;
-		padding-block: 50px;
-		background-color: $primary;
-		@include gridBackground(#2b4f81, 2%, "vertical");
+      .statItem {
+        @include nestedSectionSizing;
+      }
+    }
+  }
 
-		@include minWidth("tablet") {
-			padding-block: 100px;
-		}
+  .aidOptionsSection {
+    color: $white;
+    padding-inline: 20px;
+    padding-block: 50px;
+    background-color: $primary;
+    @include gridBackground(#2b4f81, 2%, "vertical");
 
-		.sectionWrapper {
-			max-width: 1440px;
-			margin-inline: auto;
-			display: flex;
-			flex-direction: column;
-			gap: rem(32);
-			@include contentSizing;
+    @include minWidth("tablet") {
+      padding-block: 100px;
+    }
 
-			@include minWidth("tablet") {
-				gap: rem(64);
-			}
+    .sectionWrapper {
+      max-width: 1440px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      @include contentSizing;
 
-			.sectionContent {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				gap: rem(32);
+      @include minWidth("tablet") {
+        gap: rem(64);
+      }
 
-				@include minWidth("tablet") {
-					gap: rem(62);
-				}
+      .sectionContent {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: rem(32);
 
-				article {
-					flex-grow: 1;
-					@include cardBlock;
-					@include borderGradient;
+        @include minWidth("tablet") {
+          gap: rem(62);
+        }
 
-					&:first-child {
-						@include borderGradient(25000ms);
-					}
+        article {
+          flex-grow: 1;
+          @include cardBlock;
+          @include borderGradient;
 
-					&:last-child {
-						@include borderGradient(15000ms);
-					}
+          &:first-child {
+            @include borderGradient(25000ms);
+          }
 
-					@include minWidth("tablet") {
-						width: 300px;
-						padding: 35px;
-						align-items: center;
-						text-align: center;
-					}
-				}
-			}
-		}
-	}
+          &:last-child {
+            @include borderGradient(15000ms);
+          }
 
-	.supportSection {
-		color: $white;
-		padding-inline: 20px;
-		padding-block: 50px;
-		@include gridbgColor;
+          @include minWidth("tablet") {
+            width: 300px;
+            padding: 35px;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 
-		@include minWidth("tablet") {
-			padding-block: 80px;
-		}
+  .supportSection {
+    color: $white;
+    padding-inline: 20px;
+    padding-block: 50px;
+    @include gridbgColor;
 
-		@include minWidth("desktop") {
-			padding-block: 150px;
-		}
+    @include minWidth("tablet") {
+      padding-block: 80px;
+    }
 
-		.sectionWrapper {
-			padding: 0;
+    @include minWidth("desktop") {
+      padding-block: 150px;
+    }
 
-			.contentTitle {
-				width: 100%;
-				font-size: $h5;
-				@include highlight($secondary);
+    .sectionWrapper {
+      padding: 0;
 
-				@include minWidth("tablet") {
-					font-size: $h3;
-					text-align: center;
-				}
+      .contentTitle {
+        width: 100%;
+        font-size: $h5;
+        @include highlight($secondary);
 
-				@include minWidth("desktop") {
-					font-size: $h2;
-					min-width: 50%;
-				}
-			}
+        @include minWidth("tablet") {
+          font-size: $h3;
+          text-align: center;
+        }
 
-			.sectionContent {
-				display: flex;
-				flex-direction: column;
-				gap: rem(32);
+        @include minWidth("desktop") {
+          font-size: $h2;
+          min-width: 50%;
+        }
+      }
 
-				.desc {
-					font-size: $regular;
-					font-weight: $semiBold;
+      .sectionContent {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32);
 
-					@include minWidth("tablet") {
-						font-size: $medium;
-					}
+        .desc {
+          font-size: $regular;
+          font-weight: $semiBold;
 
-					@include minWidth("desktop") {
-						font-size: $large;
-					}
-				}
+          @include minWidth("tablet") {
+            font-size: $medium;
+          }
 
-				.ctaBtns {
-					@include ctaBtn;
-				}
-			}
-		}
-	}
+          @include minWidth("desktop") {
+            font-size: $large;
+          }
+        }
+
+        .ctaBtns {
+          @include ctaBtn;
+        }
+      }
+    }
+  }
 }

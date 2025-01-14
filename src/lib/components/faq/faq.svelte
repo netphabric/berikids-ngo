@@ -58,8 +58,10 @@
 		<p class={styles.help}>we're here to help!</p>
 
 		<Button secondary onWhite>
-			<span>Contact</span>
-			<span class="material-symbols-sharp">connect_without_contact</span>
+			<a href="contact">
+				<span>Contact</span>
+				<span class="material-symbols-sharp">connect_without_contact</span>
+			</a>
 		</Button>
 	</div>
 </section>
