@@ -2,7 +2,7 @@
 	import { page } from "$app/stores"
 
 	const pathname = $page.url.pathname
-	const navlinks = ["/", "/about-us", "/projects", "/vocational-training", "/contact", "/gallery"]
+	const navlinks = ["/about-us", "/projects", "/vocational-training", "/contact", "/gallery"]
 	const matchesNavlinks = navlinks.includes(pathname)
 </script>
 

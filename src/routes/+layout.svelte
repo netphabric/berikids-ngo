@@ -9,7 +9,7 @@
 	import "@fontsource/poppins/800.css"
 	import "material-symbols/sharp.scss"
 	import "styles/global.scss"
-	import Header from "$lib/components/header/header.svelte"
+	import Header from "$lib/components/header.svelte"
 	import Footer from "$lib/components/footer/footer.svelte"
 	import Toast from "$lib/components/toast/toast.svelte"
 </script>

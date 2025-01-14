@@ -90,7 +90,7 @@
 
 					span {
 						&.highlight {
-							color: orangered;
+							color: #6faf64;
 						}
 					}
 				}

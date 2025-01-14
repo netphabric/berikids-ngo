@@ -37,6 +37,7 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				padding-block: 32px;
 				gap: 16px;
 
 				.testimony {
@@ -59,11 +60,29 @@
 					position: relative;
 					display: grid;
 					place-items: center;
-					overflow: hidden;
 
 					img {
 						width: 100%;
 						object-fit: cover;
+						border-radius: inherit;
+					}
+
+					.avatar-border {
+						position: absolute;
+						width: 110%;
+						height: 110%;
+						border-radius: 50%;
+						border: 8px dashed #6faf64;
+						animation: rotate 100s linear infinite;
+
+						@keyframes rotate {
+							from {
+								transform: rotate(0deg);
+							}
+							to {
+								transform: rotate(360deg);
+							}
+						}
 					}
 				}
 
