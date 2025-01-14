@@ -1,0 +1,57 @@
+@use "styles/variables.module.scss" as *;
+@use "styles/functions.module.scss" as *;
+@use "styles/mixins.module.scss" as *;
+
+.root {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	gap: rem(80);
+
+	@include minWidth("tablet") {
+		gap: rem(160);
+	}
+
+	@include minWidth("desktop") {
+		gap: rem(180);
+	}
+
+	.hero {
+		@include blockLayout;
+		@include contentSizing;
+		align-items: flex-start !important;
+
+		@include minWidth("tablet") {
+			align-items: unset;
+		}
+
+		@include minWidth("desktop") {
+			width: 100%;
+			flex-direction: row;
+
+			.title {
+				text-align: start;
+			}
+		}
+
+		.heroRight {
+			display: flex;
+			flex-direction: column;
+			gap: rem(16);
+
+			@include minWidth("desktop") {
+				max-width: 50%;
+			}
+
+			.desc {
+				max-width: unset;
+				text-align: start;
+			}
+		}
+	}
+
+	.supportBlock {
+		@include blockLayout;
+		@include contentSizing;
+	}
+}

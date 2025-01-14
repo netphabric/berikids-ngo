@@ -2,31 +2,31 @@
 @use "styles/functions.module.scss" as *;
 
 .sectionWrapper {
-	width: 100%;
-	max-width: 1440px;
-	margin-inline: auto;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: space-between;
-	padding-inline: 20px;
-	gap: rem(20);
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 20px;
+  gap: rem(20);
 
-	@include minWidth("tablet") {
-		flex-direction: row;
-		gap: rem(40);
-	}
+  @include minWidth("tablet") {
+    flex-direction: row;
+    gap: rem(40);
+  }
 
-	@include minWidth("desktop") {
-		gap: rem(80);
-	}
+  @include minWidth("desktop") {
+    gap: rem(80);
+  }
 
-	&.isFlipped {
-		flex-direction: column-reverse;
-		gap: rem(80);
+  &.isFlipped {
+    flex-direction: column-reverse;
+    gap: rem(80);
 
-		@include minWidth("tablet") {
-			flex-direction: row-reverse;
-		}
-	}
+    @include minWidth("tablet") {
+      flex-direction: row-reverse;
+    }
+  }
 }

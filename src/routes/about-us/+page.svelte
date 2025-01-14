@@ -2,18 +2,26 @@
 	import Button from "$lib/components/button/button.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
 	import { sectors, teams, partners } from "./store"
-	import { scrollReveal } from "$lib/actions/scrollReveal"
+	import { highlightText } from "utils/textHightlight"
 	import styles from "./page.module.scss"
 </script>
 
 <main class={styles.root}>
-	<section class={styles.hero} class:reveal={true} use:scrollReveal>
+	<section class={styles.hero}>
 		<h4 class={styles.chip}>
 			<span class="material-symbols-sharp">person_raised_hand</span>
 			<span>empowerment</span>
 		</h4>
 
-		<h1 class={styles.title}>bio</h1>
+		<h1 class={styles.title}>
+			{#each highlightText("What we are all about.  Goals, Vision and Mission", "Goals, Vision and Mission") as word}
+				{#if word.isHighlighted}
+					<span class={styles.highlight}>{word.text}</span>{" "}
+				{:else}
+					{word.text}{" "}
+				{/if}
+			{/each}
+		</h1>
 
 		<p class={styles.desc}>
 			Berikids is a non-governmental organization (NGO) operating in Cameroon. Founded in 2004 and

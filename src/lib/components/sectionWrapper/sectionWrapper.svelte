@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { scrollReveal } from "$lib/actions/scrollReveal"
 	import styles from "./sectionWrapper.module.scss"
 
 	export let className = ""
@@ -7,8 +6,6 @@
 </script>
 
 <section
-	class:reveal={true}
-	use:scrollReveal
 	class={`${className && className}
     ${styles.sectionWrapper}
     ${isFlipped && styles.isFlipped}`}
