@@ -20,6 +20,10 @@
     @include blockLayout;
     @include contentSizing;
 
+    .title {
+      max-width: 60%;
+    }
+
     @include minWidth("tablet") {
       align-items: center;
       margin-block: 80px;

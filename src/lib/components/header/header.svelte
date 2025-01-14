@@ -7,9 +7,8 @@
 	const navLinks = [
 		{ label: "home", url: "/" },
 		{ label: "about", url: "/about-us" },
-		{ label: "impact", url: "/get-involved" },
+		{ label: "projects", url: "/projects" },
 		{ label: "Vocation", url: "/vocational-training" },
-		{ label: "Education", url: "/it-education" },
 		{ label: "gallery", url: "/gallery" },
 		{ label: "contact", url: "contact" }
 	]
