@@ -1,4 +1,4 @@
-<script lang>
+<script lang="ts">
 	import ContactForm from "$lib/components/contactForm/contactForm.svelte"
 	import Faq from "$lib/components/faq/faq.svelte"
 	import NewsletterForm from "$lib/components/newsletterForm/newsletterForm.svelte"
