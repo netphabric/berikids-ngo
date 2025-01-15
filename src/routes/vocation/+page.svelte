@@ -1,30 +1,11 @@
 <script>
 	import Faq from "$lib/components/faq.svelte"
-	import HeroLayoutleft from "$lib/components/heroLayoutLeft/heroLayoutleft.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
-	import Testimonials from "$lib/components/testimonials.svelte"
 	import { trainingFaqs } from "$lib/stores/faqs"
 	import styles from "./page.module.scss"
 </script>
 
 <main class={styles.root}>
-	<HeroLayoutleft
-		titleHighlight="potential"
-		title="Unlocking Potential Through Vocational Training"
-		desc="Unlocking new opportunities and equipping vulnerable individuals with practical skills to build self-reliant futures"
-		sectionImage="vt1.webp"
-	/>
-
-	<PageSection
-		chip="skills"
-		chipIcon="baby_changing_station"
-		desc="Our Life Skills Vocational Training Programs equip participants with essential skills in areas such as tailoring, carpentry, and computer literacy. By focusing on practical knowledge and hands-on experience, we aim to enhance employability and foster self-sufficiency. Participants not only gain technical skills but also build confidence and resilience, paving the way for a brighter future."
-		title="Holistic Personal and Professional Growth Initiative"
-		titleHighlight="professional"
-		sectionImage="vt1.webp"
-		sectionImageAlt="berkids"
-	/>
-
 	<PageSection
 		isBlockLayout
 		chip="experience"
@@ -73,8 +54,6 @@
 		sectionImageAlt="berkids"
 	/>
 
-	<Testimonials />
-
 	<PageSection
 		isBlockLayout
 		chip="empower"
@@ -82,16 +61,6 @@
 		desc="Join us in transforming lives by supporting our vocational training programs for vulnerable communities."
 		title="Empower Change Through training"
 		titleHighlight="change"
-		blockHeaderCta={[
-			{
-				text: "donate",
-				icon: "compost"
-			},
-			{
-				text: "volunteer",
-				icon: "volunteer_activism"
-			}
-		]}
 	/>
 
 	<Faq

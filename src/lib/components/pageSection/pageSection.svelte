@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { highlightText } from "utils/textHightlight"
-	import SectionWrapper from "../sectionWrapper/sectionWrapper.svelte"
 	import styles from "./pageSection.module.scss"
 	import Button from "../button/button.svelte"
 
@@ -22,7 +21,7 @@
 	export let hasSubContainer = false
 </script>
 
-<SectionWrapper className={styles.section}>
+<section class={styles.section}>
 	{#if isTitleMain}
 		<div class={styles.sectionContent}>
 			<h4 class={styles.chip}>
@@ -155,4 +154,4 @@
 			{/if}
 		</section>
 	{/if}
-</SectionWrapper>
+</section>

@@ -6,8 +6,7 @@
 	const navLinks = [
 		{ label: "about", url: "/about" },
 		{ label: "projects", url: "/projects" },
-		{ label: "Vocation", url: "/vocational-training" },
-		{ label: "gallery", url: "/gallery" },
+		{ label: "Vocation", url: "/vocation" },
 		{ label: "contact", url: "contact" }
 	]
 

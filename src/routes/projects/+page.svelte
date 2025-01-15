@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ContentBlock from "$lib/components/contentBlock.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
+	import Testimonials from "$lib/components/testimonials.svelte"
 </script>
 
 <main>
@@ -38,6 +39,8 @@
 		contentTitleHighlight="exploring technology"
 		contentDescription="We believe that all children should have the opportunity to experience the benefits of technology. This project provides access to digital learning resources for young children in Cameroon, enriching their early education and preparing them for future success."
 	/>
+
+	<Testimonials />
 
 	<PageSection
 		chip="water"
