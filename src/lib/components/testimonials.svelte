@@ -4,8 +4,8 @@
 
 	export let authorName = "Valery Ayuni"
 	export let authorAvatar = "/images/testimony-dp.webp"
-	export let testimonial = " one of the first orphans educated and empowered by Berikids International and its partners. I currently work as the chief of the Berikids International mental health unit in Nkapa Souza, Douala, Cameroon. I am grateful to Berikids International and its partners, "
-	export let authorTitle = "Chief of post @berikids international mental health unit Nkapa Souza Douala Cameroon."
+	export let testimonial = "I'm one of the first orphans to be educated and empowered by Berikids International and its partners. I'm grateful for their support and guidance."
+	export let authorTitle = "Chief of post @berikids intl mental health unit Nkapa Souza Douala Cameroon."
 </script>
 
 <section class="testimonialsSection">
@@ -13,6 +13,8 @@
 		<Chip chipText="Testimony" chipIcon="mic" chipColor="red" />
 
 		<article class="testimony-card">
+			<h2 class="testimony">{testimonial}</h2>
+
 			<div class="avatar">
 				<div class="avatar-border"></div>
 				<img src={authorAvatar} alt="avatar" />
@@ -20,7 +22,6 @@
 
 			<h4 class="author-name">{authorName}</h4>
 			<p class="author-title">{authorTitle}</p>
-			<h2 class="testimony">{testimonial}</h2>
 		</article>
 	</div>
 </section>
@@ -42,7 +43,7 @@
 				gap: 16px;
 
 				.testimony {
-					max-width: 70%;
+					max-width: 50%;
 					margin-inline: auto;
 					text-align: center;
 					font-size: 24px;
@@ -94,10 +95,11 @@
 				}
 
 				.author-title {
+					max-width: 20%;
 					font-size: 18px;
-					font-weight: 500;
 					line-height: 24px;
-					opacity: 0.8;
+					text-align: center;
+					opacity: 0.5;
 				}
 			}
 		}

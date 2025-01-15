@@ -32,22 +32,22 @@
 		gap: 8px;
 
 		&.bgGreen {
-			color: $green;
+			color: color.adjust($green, $lightness: -20%);
 			background-color: color.adjust($green, $lightness: 35%);
 		}
 
 		&.bgBlue {
-			color: $blue;
+			color: color.adjust($blue, $lightness: -5%);
 			background-color: color.adjust($blue, $lightness: 55%);
 		}
 
 		&.bgRed {
-			color: $red;
+			color: color.adjust($red, $lightness: -20%);
 			background-color: color.adjust($red, $lightness: 35%);
 		}
 
 		&.bgYellow {
-			color: color.adjust($yellow, $lightness: -30%);
+			color: color.adjust($yellow, $lightness: -40%);
 			background-color: color.adjust($yellow, $lightness: 20%);
 		}
 	}
