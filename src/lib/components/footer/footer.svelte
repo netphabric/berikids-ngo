@@ -1,5 +1,4 @@
 <script>
-	import NewsletterForm from "../newsletterForm/newsletterForm.svelte"
 	import styles from "./footer.module.scss"
 	import { stringify } from "utils/stringify"
 
@@ -53,13 +52,6 @@
 					</ul>
 				</div>
 			{/each}
-
-			<NewsletterForm
-				title="Subscribe"
-				desc="Join our newletter to stay informed about our initiatives and updates"
-				noticeText="By subscribing, you agree to our Privacy Policy and consent to receive updates."
-				btnText="subscribe"
-			/>
 		</nav>
 
 		<div class={styles.footerBase}>
