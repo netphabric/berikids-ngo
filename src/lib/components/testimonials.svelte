@@ -3,7 +3,7 @@
 	import Chip from "./chip.svelte"
 
 	export let authorName = "Valery Ayuni"
-	export let authorAvatar = "/images/homeTestimonyDP.jpeg"
+	export let authorAvatar = "/images/testimony-dp.webp"
 	export let testimonial = " one of the first orphans educated and empowered by Berikids International and its partners. I currently work as the chief of the Berikids International mental health unit in Nkapa Souza, Douala, Cameroon. I am grateful to Berikids International and its partners, "
 	export let authorTitle = "Chief of post @berikids international mental health unit Nkapa Souza Douala Cameroon."
 </script>
@@ -64,8 +64,9 @@
 
 					img {
 						width: 100%;
-						object-fit: cover;
+						height: 100%;
 						border-radius: inherit;
+						object-fit: cover;
 					}
 
 					.avatar-border {
