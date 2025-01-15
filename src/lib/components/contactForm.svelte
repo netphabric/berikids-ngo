@@ -53,6 +53,7 @@
 <style lang="scss">
 	.contact-Form {
 		padding: 32px;
+		height: calc(100dvh - 335px);
 
 		.form-wrapper {
 			width: 100%;
@@ -85,7 +86,7 @@
 			}
 
 			input {
-				height: 50px;
+				height: 60px;
 			}
 
 			textarea {
@@ -97,7 +98,11 @@
 			textarea {
 				padding: 8px 16px;
 				border-radius: 8px;
-				border: 1px solid #ccc;
+				border: transparent;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 32px;
+				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 				&::placeholder {
 					opacity: 0.5;
