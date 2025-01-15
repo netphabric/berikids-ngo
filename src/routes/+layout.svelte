@@ -11,7 +11,7 @@
 	import "styles/global.scss"
 	import Header from "$lib/components/header.svelte"
 	import Footer from "$lib/components/footer.svelte"
-	import Toast from "$lib/components/toast/toast.svelte"
+	import Toast from "$lib/components/toast.svelte"
 </script>
 
 <svelte:head>
