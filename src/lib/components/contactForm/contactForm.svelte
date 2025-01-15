@@ -1,7 +1,7 @@
 <script>
 	import Button from "../button/button.svelte"
 	import styles from "./contactForm.module.scss"
-	import { addToast } from "$lib/stores/toastStore"
+	import { addToast } from "$lib/stores/toasts"
 
 	let name = ""
 	let email = ""

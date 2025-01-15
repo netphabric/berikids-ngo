@@ -1,23 +1,5 @@
 import { writable } from "svelte/store"
 
-export const sectors = writable([
-	{
-		image: "/images/s1.webp",
-		title: "Enhancing Socio-Economic Conditions for Orphans",
-		desc: "We provide vocational training to empower orphans with essential life skills."
-	},
-	{
-		image: "/images/s2.webp",
-		title: "Advancing Education and Technology in Cameroon",
-		desc: "Our programs promote digital literacy as a key to development."
-	},
-	{
-		image: "/images/s3.webp",
-		title: "Providing Clean Water to Communities in Need",
-		desc: "We ensure access to potable water for underserved populations."
-	}
-])
-
 export const teams = writable([
 	{
 		profile: "/dp/dp2.webp",
@@ -56,8 +38,8 @@ export const teams = writable([
 	},
 	{
 		profile: "/dp/dp7.webp",
-		name: "alice johnson",
-		role: "program director",
+		name: "Valery Ayuni",
+		role: "Nurse",
 		desc: "passionate about empowering orphans through education and vocational training",
 		socials: []
 	},

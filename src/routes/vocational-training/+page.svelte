@@ -3,7 +3,7 @@
 	import HeroLayoutleft from "$lib/components/heroLayoutLeft/heroLayoutleft.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
 	import Testimonials from "$lib/components/testimonials.svelte"
-	import { trainingFaqs } from "$lib/stores/faqStore"
+	import { trainingFaqs } from "$lib/stores/faqs"
 	import styles from "./page.module.scss"
 </script>
 

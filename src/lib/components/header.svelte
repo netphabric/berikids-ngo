@@ -4,7 +4,7 @@
 	import Button from "$lib/components/button/button.svelte"
 
 	const navLinks = [
-		{ label: "about", url: "/about-us" },
+		{ label: "about", url: "/about" },
 		{ label: "projects", url: "/projects" },
 		{ label: "Vocation", url: "/vocational-training" },
 		{ label: "gallery", url: "/gallery" },
@@ -62,9 +62,23 @@
 <style lang="scss">
 	.header {
 		padding: 32px;
+		margin-block-end: 64px;
+		backdrop-filter: blur(20px);
+		background-color: #f2f2f2a2;
+		position: sticky;
+		z-index: 100;
+		top: 0;
 
 		.logo {
 			color: #2b4f81;
+			font-family: "Aldrich", serif;
+			font-style: normal;
+
+			a {
+				font-size: 18px;
+				font-weight: 500;
+				text-decoration: none;
+			}
 		}
 
 		.nav-wrapper {
@@ -81,6 +95,7 @@
 
 			.navLinks {
 				display: flex;
+				align-items: center;
 				list-style: none;
 				gap: 32px;
 

@@ -4,7 +4,7 @@
 	import NewsletterForm from "$lib/components/newsletterForm/newsletterForm.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
 	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
-	import { contactFaqs } from "$lib/stores/faqStore"
+	import { contactFaqs } from "$lib/stores/faqs"
 	import styles from "./page.module.scss"
 </script>
 

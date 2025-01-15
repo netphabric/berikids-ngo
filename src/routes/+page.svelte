@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { homeFaqs } from "$lib/stores/faqStore"
+	import { homeFaqs } from "$lib/stores/faqs"
 	import Faq from "$lib/components/faq.svelte"
 	import Testimonials from "$lib/components/testimonials.svelte"
 	import ContactDetails from "$lib/components/contactDetails.svelte"

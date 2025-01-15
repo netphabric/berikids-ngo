@@ -67,6 +67,7 @@
 			.faq-header {
 				display: flex;
 				flex-direction: column;
+				margin-block-start: 32px;
 				gap: 16px;
 
 				.faq-title {

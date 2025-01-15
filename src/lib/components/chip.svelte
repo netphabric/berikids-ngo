@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let chipText: string
 	export let chipIcon: string
-	export let chipColor: "red" | "blue" | "green"
+	export let chipColor: "red" | "blue" | "green" | "yellow"
 </script>
 
 <h4
@@ -9,6 +9,7 @@
 	class:bgGreen={chipColor === "green"}
 	class:bgBlue={chipColor === "blue"}
 	class:bgRed={chipColor === "red"}
+	class:bgYellow={chipColor === "yellow"}
 >
 	<span class="material-symbols-sharp"> {chipIcon} </span>
 	<span class="chip-text">{chipText}</span>
@@ -16,6 +17,11 @@
 
 <style lang="scss">
 	@use "sass:color";
+
+	$green: #6faf64;
+	$blue: #2b4f81;
+	$yellow: #ffd966;
+	$red: #f44336;
 
 	.content-chip {
 		width: max-content;
@@ -26,23 +32,23 @@
 		gap: 8px;
 
 		&.bgGreen {
-			color: green;
-			background-color: color.adjust(green, $lightness: 65);
+			color: $green;
+			background-color: color.adjust($green, $lightness: 35);
 		}
 
 		&.bgBlue {
-			color: deepskyblue;
-			background-color: color.adjust(lightblue, $lightness: 5);
+			color: $blue;
+			background-color: color.adjust($blue, $lightness: 55);
 		}
 
 		&.bgRed {
-			color: orangered;
-			background-color: color.adjust(orangered, $lightness: 40);
+			color: $red;
+			background-color: color.adjust($red, $lightness: 35);
 		}
 
-		img {
-			width: 20px;
-			height: 20px;
+		&.bgYellow {
+			color: color.adjust($yellow, $lightness: -30);
+			background-color: color.adjust($yellow, $lightness: 20);
 		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { toasts } from "$lib/stores/toastStore"
+	import { toasts } from "$lib/stores/toasts"
 	import { fade } from "svelte/transition"
 	import styles from "./toast.module.scss"
 
