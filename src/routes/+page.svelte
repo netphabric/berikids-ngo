@@ -8,7 +8,7 @@
 
 <main>
 	<ContentBlock
-		contentChipColor="green"
+		contentChipColor="blue"
 		contentChipText="misson"
 		contentChipIcon="sign_language"
 		contentTitle="empowering lives through sustainable development initiatives"

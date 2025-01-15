@@ -12,10 +12,7 @@
 		contentTitle="who we are & what we stand for: Goals, Vision and Mission"
 		contentTitleHighlight="Goals, Vision and Mission"
 		contentMedia="/images/about-hero.webp"
-		contentDescription="
-      Berikids, a Cameroonian NGO founded in 2004, focuses on improving the lives of underprivileged children and orphans. Based in the North West Region, the organization has been working to provide support and resources to vulnerable populations.
-      Currently, Berikids is prioritizing interventions to address the challenges created by the ongoing armed conflict in the North West Region. This work aims to provide critical assistance to those affected by the conflict and contribute to long-term positive change in the region.
-    "
+		contentDescription=" We are a Cameroonian NGO founded in 2004, we focus on improving the lives of underprivileged children and orphans in the North West Region. We're currently prioritizing interventions to address the challenges of the ongoing armed conflict there, providing critical assistance and contributing to long-term positive change. "
 	/>
 
 	<Team />

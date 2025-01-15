@@ -1,87 +1,42 @@
 <script lang="ts">
-	import Button from "$lib/components/button/button.svelte"
-	import SectionWrapper from "$lib/components/sectionWrapper/sectionWrapper.svelte"
+	import ContentBlock from "$lib/components/contentBlock.svelte"
 	import PageSection from "$lib/components/pageSection/pageSection.svelte"
-	import styles from "./page.module.scss"
 </script>
 
-<main class={styles.root}>
-	<SectionWrapper className={styles.hero}>
-		<h2 class={styles.title}>
-			<span class={styles.highlight}>transforming</span> lives together
-		</h2>
+<main>
+	<ContentBlock
+		flexReverse
+		contentChipColor="yellow"
+		contentChipText="How we help"
+		contentChipIcon="beach_access"
+		contentTitle="Impacting lives through our diverse projects"
+		contentTitleHighlight="diverse projects"
+		contentMedia="/images/project-hero.webp"
+		contentDescription="We work in partnership with communities to design and implement projects that address their most pressing needs. Our focus areas include socio-economic improvement through collaborative initiatives, providing access to quality education that empowers individuals and strengthens communities, and ensuring access to essential resources that promote health and well-being"
+	/>
 
-		<div class={`${styles.sectionContent} ${styles.heroRight}`}>
-			<p class={styles.desc}>
-				Our projects are designed to uplift the most vulnerable members of our society, focusing on
-				orphans and those in need. Through education, vocational training, and essential resources,
-				we are making a lasting impact in Cameroon.
-			</p>
-
-			<div class={styles.ctaBtns}>
-				<Button onWhite>
-					<span>get involved</span>
-					<span class="material-symbols-sharp">tools_power_drill</span>
-				</Button>
-			</div>
-		</div>
-	</SectionWrapper>
-
-	<PageSection
-		isBlockLayout
-		chip="projects"
-		chipIcon="tools_phillips"
-		desc=" Our projects are designed to uplift communities by addressing critical needs. We focus on socio-economic improvement, education, and essential resources. "
-		title="Transforming lives through our diverse projects"
-		titleHighlight="diverse projects"
-		blockListItems={[
-			{
-				icon: "nest_eco_leaf",
-				title: "Socio-Economic Improvement Initiatives",
-				desc: "We implement programs that enhance the living conditions of orphans and vulnerable groups."
-			},
-			{
-				icon: "touchpad_mouse",
-				title: "Advancing IT Education for All",
-				desc: "Our IT education initiatives equip individuals with essential digital skills."
-			},
-			{
-				icon: "water_full",
-				title: "Providing Access to Potable Water",
-				desc: "We ensure that communities have access to clean drinking water."
-			}
+	<ContentBlock
+		blockLayout
+		contentChipColor="red"
+		contentChipText="How you can help"
+		contentChipIcon="mountain_flag"
+		contentTitle="Support our diverse projects"
+		contentTitleHighlight="diverse projects"
+		contentDescription=" Join us in making a difference through donations, volunteering, or forming valuable partnerships. "
+		ctaButtons={[
+			{ label: "Volunteer", icon: "handshake" },
+			{ label: "Partnership", icon: "verified" }
 		]}
 	/>
 
-	<PageSection
-		chip="initiatives"
-		chipIcon="person_apron"
-		desc=" Our featured project focuses on enhancing the socio-economic conditions of orphans in Cameroon through targeted vocational training and support programs. By providing essential skills and resources, we aim to empower these vulnerable children to build sustainable futures. "
-		title="Transforming lives through socio-economic development initiatives"
-		titleHighlight="development initiatives"
-		sectionImage="giS1.webp"
-		sectionImageAlt="berikids"
-	/>
-
-	<PageSection
-		chip="Tech"
-		chipIcon="robot_2"
-		desc=" Our featured project focuses on enhancing IT education to uplift communities in Cameroon. By integrating technology into learning, we aim to equip orphans and vulnerable children with essential skills for a brighter future. "
-		title="Empowering Communites through Information Technology Education and Development Initiatives"
-		titleHighlight="technology education"
-		sectionImage="giS5.webp"
-		sectionImageAlt="berikids"
-		hasSubContainer
-		items={[
-			{
-				title: "IT Education",
-				desc: "Transforming lives through technology and education for sustainable community development."
-			},
-			{
-				title: "Community Impact",
-				desc: "Building a future where every child has access to technology and learning opportunities."
-			}
-		]}
+	<ContentBlock
+		contentChipColor="blue"
+		contentChipText="technological exposure"
+		contentChipIcon="extension"
+		contentMedia="/images/tech-project.webp"
+		contentTitle="Exploring Technology in Early Childhood"
+		contentTitleHighlight="exploring technology"
+		contentDescription="We believe that all children should have the opportunity to experience the benefits of technology. This project provides access to digital learning resources for young children in Cameroon, enriching their early education and preparing them for future success."
 	/>
 
 	<PageSection
@@ -160,26 +115,13 @@
 		sectionImage="giS3.webp"
 		sectionImageAlt="berikids"
 	/>
-
-	<section class={styles.supportBlock}>
-		<h2 class={styles.title}>
-			support our <span class={styles.highlight}>life changing</span> projects
-		</h2>
-		<p class={styles.desc}>
-			Join us in making a difference through donations, volunteering, or forming valuable
-			partnerships.
-		</p>
-
-		<div class={styles.ctaBtns}>
-			<Button onWhite secondary>
-				<span>donate</span>
-				<span class="material-symbols-sharp">monetization_on</span>
-			</Button>
-
-			<Button onWhite primary>
-				<span>volunteer</span>
-				<span class="material-symbols-sharp">garden_cart</span>
-			</Button>
-		</div>
-	</section>
 </main>
+
+<style lang="scss">
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		gap: 100px;
+	}
+</style>

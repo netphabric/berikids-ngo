@@ -33,22 +33,22 @@
 
 		&.bgGreen {
 			color: $green;
-			background-color: color.adjust($green, $lightness: 35);
+			background-color: color.adjust($green, $lightness: 35%);
 		}
 
 		&.bgBlue {
 			color: $blue;
-			background-color: color.adjust($blue, $lightness: 55);
+			background-color: color.adjust($blue, $lightness: 55%);
 		}
 
 		&.bgRed {
 			color: $red;
-			background-color: color.adjust($red, $lightness: 35);
+			background-color: color.adjust($red, $lightness: 35%);
 		}
 
 		&.bgYellow {
-			color: color.adjust($yellow, $lightness: -30);
-			background-color: color.adjust($yellow, $lightness: 20);
+			color: color.adjust($yellow, $lightness: -30%);
+			background-color: color.adjust($yellow, $lightness: 20%);
 		}
 	}
 </style>

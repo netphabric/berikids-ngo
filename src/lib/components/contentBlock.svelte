@@ -1,16 +1,17 @@
 <script lang="ts">
 	import { highlightText } from "utils/textHightlight"
 	import Chip from "./chip.svelte"
+	import Button from "$lib/components/button/button.svelte"
 
 	export let blockLayout = false
 	export let flexReverse = false
+	export let contentMedia = ""
 	export let contentChipIcon: string
 	export let contentChipText: string
 	export let contentTitle: string
 	export let contentTitleHighlight: string
 	export let contentDescription: string
-	export let contentMedia: string
-	export let ctaButtons: { label: string }[] = []
+	export let ctaButtons: { label: string; icon?: string; url?: string }[] = []
 	export let contentChipColor: "red" | "blue" | "green" | "yellow"
 
 	function parseContentMediaType(mediaURL: string) {
@@ -34,7 +35,10 @@
 			{#if ctaButtons}
 				<div class="content-cta-container">
 					{#each ctaButtons as cta}
-						<button>{cta.label}</button>
+						<Button primary onWhite>
+							<span class="material-symbols-sharp">{cta.icon ?? ""}</span>
+							<span> {cta.label} </span>
+						</Button>
 					{/each}
 				</div>
 			{/if}
@@ -46,7 +50,7 @@
 					<source src={contentMedia} type="video/mp4" />
 				</video>
 			{:else}
-				<img src={contentMedia} alt="hero" />
+				<img src={contentMedia} alt="" />
 			{/if}
 		</div>
 	</div>
