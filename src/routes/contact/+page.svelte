@@ -5,11 +5,3 @@
 <main>
 	<ContactForm />
 </main>
-
-<style>
-	main {
-		display: flex;
-		flex-direction: column;
-		gap: 100px;
-	}
-</style>

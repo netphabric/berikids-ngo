@@ -1,6 +1,6 @@
 <script>
 	import { addToast } from "$lib/stores/toasts"
-	import Button from "./button/button.svelte"
+	import Button from "./button.svelte"
 	import Chip from "./chip.svelte"
 
 	let name = ""

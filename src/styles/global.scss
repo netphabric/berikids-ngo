@@ -2,3 +2,9 @@
 @use "./reset.module";
 @use "./mixins.module";
 @use "./functions.module.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}

@@ -103,7 +103,7 @@
 						font-size: 18px;
 						color: inherit;
 						line-height: 32px;
-						padding-block: 32px;
+						padding: 32px 20px;
 						border: transparent;
 						background: transparent;
 

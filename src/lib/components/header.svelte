@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
-	import Button from "$lib/components/button/button.svelte"
+	import Button from "./button.svelte"
 
 	const navLinks = [
 		{ label: "about", url: "/about" },
@@ -42,7 +42,12 @@
 		<div class="nav-right">
 			<nav class="desktopNav">
 				<ul class="navLinks">
-					<h3 class="logo"><a href="/">BERIKIDS</a></h3>
+					<h3 class="logo">
+						<a href="/">
+							<span class="material-symbols-sharp">beach_access</span>
+							<span>BERIKIDS</span>
+						</a>
+					</h3>
 
 					{#each navLinks as { label, url }}
 						<li class="navLink"><a class="navHref" href={url}>{label}</a></li>
@@ -70,13 +75,17 @@
 
 		.logo {
 			color: #2b4f81;
-			font-family: "Aldrich", serif;
-			font-style: normal;
 
 			a {
+				font-family: "Aldrich", serif;
+				font-style: normal;
 				font-size: 18px;
 				font-weight: 500;
 				text-decoration: none;
+
+				display: flex;
+				align-items: center;
+				gap: 4px;
 			}
 		}
 

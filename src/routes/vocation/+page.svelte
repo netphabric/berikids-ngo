@@ -23,11 +23,3 @@
 		desc="Find answers to your questions about our training programs and how to get involved."
 	/>
 </main>
-
-<style lang="scss">
-	main {
-		display: flex;
-		flex-direction: column;
-		gap: 100px;
-	}
-</style>

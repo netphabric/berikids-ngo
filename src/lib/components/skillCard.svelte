@@ -2,21 +2,9 @@
 	import Chip from "./chip.svelte"
 
 	const skillCards = [
-		{
-			title: "Agriculture",
-			icon: "grocery",
-			desc: "Our agriculture training empowers individuals to grow crops and improve food availability in their communities."
-		},
-		{
-			title: "Carpentry",
-			icon: "handyman",
-			desc: "In our carpentry program, participants learn woodworking techniques to produce furniture and other products."
-		},
-		{
-			title: "Tailoring",
-			icon: "conveyor_belt",
-			desc: "Our tailoring program teaches participants the art of sewing, enabling them to create garments and generate income."
-		}
+		{ title: "Agriculture", icon: "grocery" },
+		{ title: "Carpentry", icon: "handyman" },
+		{ title: "Tailoring", icon: "conveyor_belt" }
 	]
 </script>
 
@@ -29,7 +17,6 @@
 				<article class="skill-card">
 					<span class="material-symbols-sharp">{skill.icon}</span>
 					<h4 class="title">{skill.title}</h4>
-					<p class="text">{skill.desc}</p>
 				</article>
 			{/each}
 		</div>
@@ -89,14 +76,6 @@
 						font-size: 32px;
 						font-weight: 500;
 						line-height: 64px;
-					}
-
-					.text {
-						font-size: 18px;
-						font-weight: 300;
-						line-height: 32px;
-						text-align: center;
-						opacity: 0.8;
 					}
 				}
 			}

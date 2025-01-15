@@ -29,11 +29,3 @@
     desc="discover how our NGO is making a difference and how you can help" 
   />
 </main>
-
-<style lang="scss">
-	main {
-		display: flex;
-		flex-direction: column;
-		gap: 100px;
-	}
-</style>

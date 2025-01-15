@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { highlightText } from "utils/textHightlight"
+	import Button from "$lib/components/button.svelte"
 	import Chip from "./chip.svelte"
-	import Button from "$lib/components/button/button.svelte"
 
 	export let blockLayout = false
 	export let flexReverse = false
