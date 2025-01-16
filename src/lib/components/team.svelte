@@ -5,7 +5,7 @@
 
 <section class="our-team">
 	<div class="team-wrapper">
-		<Chip chipText="the people behind" chipIcon="diversity_3" chipColor="red" />
+		<Chip chipText="the people behind" chipIcon="group" chipColor="red" />
 
 		<div class="header">
 			<h2 class="title">our team</h2>

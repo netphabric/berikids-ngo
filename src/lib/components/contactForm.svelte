@@ -32,7 +32,11 @@
 <form class="contact-Form" on:submit|preventDefault={handleSubmit}>
 	<div class="form-wrapper">
 		<header class="form-header">
-			<Chip chipText="contact us" chipIcon="emoji_food_beverage" chipColor="green" />
+			<Chip
+				chipText="What can we help you with?"
+				chipIcon="emoji_food_beverage"
+				chipColor="green"
+			/>
 
 			<h2 class="form-title">Reach out to us</h2>
 		</header>

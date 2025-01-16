@@ -1,62 +1,13 @@
 import { writable } from "svelte/store"
 
+// prettier-ignore
 export const teams = writable([
-	{
-		profile: "/dp/dp2.webp",
-		name: "Mme Berinyuy Relindis",
-		role: "CEO & Founder",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp3.webp",
-		name: "Delphine Dusuinyuy",
-		role: "program director",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp4.webp",
-		name: "Dr Eric",
-		role: "Rehabilitation specialist",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp5.webp",
-		name: "Stanley Kuwan Ngalim",
-		role: "project manager",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp6.webp",
-		name: "lena Kloske",
-		role: "German volunteer",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp7.webp",
-		name: "Valery Ayuni",
-		role: "Nurse",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp8.webp",
-		name: "alice johnson",
-		role: "program director",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	},
-	{
-		profile: "/dp/dp2.webp",
-		name: "alice johnson",
-		role: "program director",
-		desc: "passionate about empowering orphans through education and vocational training",
-		socials: []
-	}
+  { name: "Mme Berinyuy Relindis", role: "CEO & Founder", profile: "https://i.pravatar.cc/500?img=10" },
+  { name: "Valery Ayuni", role: "Nurse", profile: "https://i.pravatar.cc/500?img=12" },
+  { name: "Delphine Dusuinyuy", role: "program director", profile: "https://i.pravatar.cc/500?img=20" },
+  { name: "Dr Eric", role: "Rehabilitation specialist", profile: "https://i.pravatar.cc/500?img=13" },
+  { name: "Stanley Kuwan Ngalim", role: "project manager", profile: "https://i.pravatar.cc/500?img=18" },
+  { name: "lena Kloske", role: "German volunteer", profile: "https://i.pravatar.cc/500?img=28" },
 ])
 
 export const partners = writable([
