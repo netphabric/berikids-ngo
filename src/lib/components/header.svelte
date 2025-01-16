@@ -56,7 +56,7 @@
 			</nav>
 		</div>
 
-		<Button onWhite>
+		<Button>
 			<span class="material-symbols-sharp"> account_balance_wallet </span>
 			<span>donate</span>
 		</Button>
@@ -80,7 +80,7 @@
 				font-family: "Aldrich", serif;
 				font-style: normal;
 				font-size: 18px;
-				font-weight: 500;
+				font-weight: 200;
 				text-decoration: none;
 
 				display: flex;

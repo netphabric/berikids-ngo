@@ -46,7 +46,7 @@
 			<input id="email" type="email" placeholder="Your Email" bind:value={email} />
 			<textarea id="message" placeholder="Your Message" bind:value={message} />
 
-			<Button onWhite secondary>
+			<Button>
 				<span>submit</span>
 				<span class="material-symbols-sharp">send</span>
 			</Button>
@@ -57,7 +57,7 @@
 <style lang="scss">
 	.contact-Form {
 		padding: 32px;
-		height: calc(100dvh - 335px);
+		height: calc(100dvh - 325px);
 
 		.form-wrapper {
 			width: 100%;
@@ -79,11 +79,14 @@
 		}
 
 		.form-fields {
-			max-width: 60%;
 			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
 			gap: 20px;
+
+			@media (min-width: 768px) {
+				max-width: 60%;
+			}
 
 			:global(button) {
 				width: fit-content;

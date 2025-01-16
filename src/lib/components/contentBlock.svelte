@@ -71,15 +71,25 @@
 
 		.content-wrapper {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 1fr;
-			grid-template-areas: "a b";
 			max-width: 1440px;
 			margin-inline: auto;
 			gap: 64px;
+			grid-template-areas:
+				"a a ."
+				"b b b";
 
 			&.flexReverse {
-				grid-template-areas: "b a";
+				grid-template-areas:
+					"b b b"
+					"a a .";
+
+				@media (min-width: 840px) {
+					grid-template-areas: "b b b a a";
+				}
+			}
+
+			@media (min-width: 840px) {
+				grid-template-areas: "a a b b b";
 			}
 
 			&.blockLayout {

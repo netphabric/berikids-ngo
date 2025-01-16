@@ -66,11 +66,11 @@
 
 			.teams {
 				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				gap: 32px;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: 20px;
 
 				.member-card {
-					padding: 20px;
+					padding: 10px;
 					display: flex;
 					flex-direction: column;
 					border-radius: 16px;
@@ -79,7 +79,7 @@
 
 					.imageContainer {
 						width: 100%;
-						height: 300px;
+						height: 250px;
 						overflow: hidden;
 						border-radius: 16px;
 
@@ -97,12 +97,12 @@
 							gap: 8px;
 
 							.title {
-								font-size: 24px;
+								font-size: 18px;
 								font-weight: 500;
 							}
 
 							.sub-title {
-								font-size: 18px;
+								font-size: 16px;
 								font-weight: 400;
 								opacity: 0.6;
 							}

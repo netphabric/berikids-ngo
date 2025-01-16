@@ -17,37 +17,34 @@
 
 	button {
 		min-width: fit-content;
-		background-color: $secondary;
-		border: 1px solid $secondary;
+		border: 1px solid transparent;
 		display: flex;
 		align-items: center;
 		border-radius: 8px;
 		padding: 8px 16px;
 		gap: 8px;
 
-		color: $black;
+		color: $white;
 		cursor: pointer;
 		font-weight: 600;
 		text-transform: capitalize;
 		font-family: "Montserrat", sans-serif;
 		transition: all 0.3s ease-in-out;
-		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		transition: all 0.3s;
+		background-color: $accent;
+		box-shadow:
+			6px 6px 12px #c5c5c5,
+			-6px -6px 12px #ffffff;
 
-		&.primary {
-			border: 1px solid $black;
-			background-color: transparent;
-		}
-
-		&.secondary {
-			color: $white;
-			border: 1px solid $accent;
-			background-color: $accent;
+		&:active {
+			box-shadow:
+				inset 4px 4px 12px #c5c5c5,
+				inset -4px -4px 12px #ffffff;
 		}
 
 		&:hover {
 			color: $accent;
 			background-color: transparent;
-			border: 1px solid $accent;
 		}
 	}
 </style>

@@ -37,8 +37,8 @@
 
 		.partner-cards {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
 			margin-block-start: 32px;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 			gap: 32px;
 
 			.partner-card {
@@ -50,6 +50,7 @@
 				gap: 16px;
 				color: white;
 				background-color: #2b4f81;
+				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 				.verified {
 					font-size: 52px;

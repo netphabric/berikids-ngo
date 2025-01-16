@@ -28,7 +28,7 @@
 
 <style lang="scss">
 	.testimonialsSection {
-		padding-block: 32px;
+		padding: 32px 20px;
 
 		.testimony-wrapper {
 			max-width: 1440px;
@@ -43,7 +43,6 @@
 				gap: 16px;
 
 				.testimony {
-					max-width: 50%;
 					margin-inline: auto;
 					text-align: center;
 					font-size: 24px;
@@ -52,15 +51,24 @@
 					opacity: 0.8;
 					padding: 20px;
 					border-radius: 16px;
+
+					@media (min-width: 768px) {
+						max-width: 60%;
+					}
 				}
 
 				.avatar {
-					width: 200px;
-					height: 200px;
+					width: 150px;
+					height: 150px;
 					border-radius: 50%;
 					position: relative;
 					display: grid;
 					place-items: center;
+
+					@media (min-width: 768px) {
+						width: 200px;
+						height: 200px;
+					}
 
 					img {
 						width: 100%;
@@ -74,8 +82,12 @@
 						width: 110%;
 						height: 110%;
 						border-radius: 50%;
-						border: 8px dashed #6faf64;
+						border: 4px dashed #6faf64;
 						animation: rotate 100s linear infinite;
+
+						@media (min-width: 768px) {
+							border: 8px dashed #6faf64;
+						}
 
 						@keyframes rotate {
 							from {
@@ -95,11 +107,14 @@
 				}
 
 				.author-title {
-					max-width: 20%;
 					font-size: 18px;
 					line-height: 24px;
 					text-align: center;
 					opacity: 0.5;
+
+					@media (min-width: 768px) {
+						max-width: 40%;
+					}
 				}
 			}
 		}
