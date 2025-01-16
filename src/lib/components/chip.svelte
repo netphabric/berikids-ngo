@@ -47,8 +47,8 @@
 		}
 
 		&.bgYellow {
-			color: color.adjust($yellow, $lightness: -40%);
-			background-color: color.adjust($yellow, $lightness: 20%);
+			color: color.adjust($yellow, $lightness: -45%);
+			background-color: color.adjust($yellow, $lightness: 16%);
 		}
 	}
 </style>
