@@ -1,7 +1,7 @@
 import { c as create_ssr_component, v as validate_component } from "../../../chunks/ssr.js";
 import { C as ContentBlock } from "../../../chunks/contentBlock.js";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<main>${validate_component(ContentBlock, "ContentBlock").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-5oeyam_START -->${$$result.title = `<title>Projects</title>`, ""}<!-- HEAD_svelte-5oeyam_END -->`, ""} <main>${validate_component(ContentBlock, "ContentBlock").$$render(
     $$result,
     {
       heroBlock: true,
@@ -30,6 +30,19 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         { label: "Volunteer", icon: "handshake" },
         { label: "Partnership", icon: "verified" }
       ]
+    },
+    {},
+    {}
+  )} ${validate_component(ContentBlock, "ContentBlock").$$render(
+    $$result,
+    {
+      contentChipColor: "blue",
+      contentChipText: "psychiatric support",
+      contentChipIcon: "fluid_med",
+      contentMedia: "/images/rehab-project.webp",
+      contentTitleHighlight: "mental health",
+      contentTitle: "the mental health unit in Nkapa Souza Douala Cameroon",
+      contentDescription: "\n      providing accessible mental health care to the community. Services\n      include general consultations and counselling, detoxification/treatment for\n      drug addicts, rehabilitation programs, and treatment for all forms of mental\n      disorders, ensuring comprehensive support for individuals facing mental health challenges.\n    "
     },
     {},
     {}

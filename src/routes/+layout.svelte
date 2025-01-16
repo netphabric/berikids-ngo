@@ -7,8 +7,9 @@
 	import "@fontsource/poppins/600.css"
 	import "@fontsource/poppins/700.css"
 	import "@fontsource/poppins/800.css"
-	import "material-symbols/sharp.scss"
+	import "material-symbols/sharp.css"
 	import "styles/global.scss"
+
 	import Header from "$lib/components/header.svelte"
 	import Footer from "$lib/components/footer.svelte"
 	import Toast from "$lib/components/toast.svelte"

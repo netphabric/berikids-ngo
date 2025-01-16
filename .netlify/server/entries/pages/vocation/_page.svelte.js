@@ -33,7 +33,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $trainingFaqs, $$unsubscribe_trainingFaqs;
   $$unsubscribe_trainingFaqs = subscribe(trainingFaqs, (value) => $trainingFaqs = value);
   $$unsubscribe_trainingFaqs();
-  return `<main>${validate_component(ContentBlock, "ContentBlock").$$render(
+  return `${$$result.head += `<!-- HEAD_svelte-1ulhdv1_START -->${$$result.title = `<title>Vocation</title>`, ""}<!-- HEAD_svelte-1ulhdv1_END -->`, ""} <main>${validate_component(ContentBlock, "ContentBlock").$$render(
     $$result,
     {
       heroBlock: true,
