@@ -9,122 +9,123 @@ $desktop: rem(1024);
 $large-desktop: rem(1280);
 
 @mixin minWidth($breakpoint) {
-  @if $breakpoint =="mobile" {
-    @media (min-width: #{$mobile}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="tablet" {
-    @media (min-width: #{$tablet}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="desktop" {
-    @media (min-width: #{$desktop}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="large-desktop" {
-    @media (min-width: #{$large-desktop}) {
-      @content;
-    }
-  }
+	@if $breakpoint == "mobile" {
+		@media (min-width: #{$mobile}) {
+			@content;
+		}
+	} @else if $breakpoint == "tablet" {
+		@media (min-width: #{$tablet}) {
+			@content;
+		}
+	} @else if $breakpoint == "desktop" {
+		@media (min-width: #{$desktop}) {
+			@content;
+		}
+	} @else if $breakpoint == "large-desktop" {
+		@media (min-width: #{$large-desktop}) {
+			@content;
+		}
+	}
 }
 
 @mixin gridbgColor($color: $accent) {
-  background-color: color.adjust($color, $hue: 3deg);
-  @include gridBackground($color, 3%, "vertical");
+	background-color: color.adjust($color, $hue: 3deg);
+	@include gridBackground($color, 3%, "vertical");
 }
 
 @mixin underlineOnHover($color: $secondary) {
-  position: relative;
+	position: relative;
 
-  &::after {
-    content: "";
-    width: 0;
-    height: 5px;
+	&::after {
+		content: "";
+		width: 0;
+		height: 5px;
 
-    position: absolute;
-    left: 0;
-    top: 100%;
+		position: absolute;
+		left: 0;
+		top: 100%;
 
-    background: linear-gradient(to right, $color 0%, $color 100%);
-    transition: width 0.3s ease-in-out;
-    pointer-events: none;
-  }
+		background: linear-gradient(to right, $color 0%, $color 100%);
+		transition: width 0.3s ease-in-out;
+		pointer-events: none;
+	}
 
-  &:hover::after {
-    width: 100%;
-  }
+	&:hover::after {
+		width: 100%;
+	}
 }
 
 @mixin gridBackground($color, $lightenPercentage, $type: "grid") {
-  background-size: 30px 30px;
+	background-size: 30px 30px;
 
-  @if $type =="horizontal" {
-    background-image: linear-gradient(to bottom,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
-
-  @else if $type =="vertical" {
-    background-image: linear-gradient(to right,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
-
-  @else if $type =="grid" {
-    background-image: linear-gradient(to right,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px),
-      linear-gradient(to bottom,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
+	@if $type == "horizontal" {
+		background-image: linear-gradient(
+			to bottom,
+			color.adjust($color, $lightness: $lightenPercentage) 1px,
+			transparent 1px
+		);
+	} @else if $type == "vertical" {
+		background-image: linear-gradient(
+			to right,
+			color.adjust($color, $lightness: $lightenPercentage) 1px,
+			transparent 1px
+		);
+	} @else if $type == "grid" {
+		background-image: linear-gradient(
+				to right,
+				color.adjust($color, $lightness: $lightenPercentage) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				color.adjust($color, $lightness: $lightenPercentage) 1px,
+				transparent 1px
+			);
+	}
 }
 
 @mixin highlight($color: $accent) {
-  .highlight {
-    color: $color;
-    position: relative;
+	.highlight {
+		color: $color;
+		position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 75%;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
-    }
-  }
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 75%;
+			left: 0;
+			width: 100%;
+			height: 8px;
+			background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
+		}
+	}
 }
 
 @mixin borderGradient($duration: 10000ms) {
-  $color1: rgba(168, 239, 255, 1);
-  $color2: rgba(168, 239, 255, 0.1);
+	$color1: rgba(168, 239, 255, 1);
+	$color2: rgba(168, 239, 255, 0.1);
 
-  border: 1px solid transparent;
-  border-image: conic-gradient(from var(--angle),
-      $color2,
-      $color1 0.1turn,
-      $color1 0.15turn,
-      $color2 0.25turn) 30;
-  animation: borderRotate $duration cubic-bezier(0.78, -0.02, 0.11, 1.04) infinite;
+	border: 1px solid transparent;
+	border-image: conic-gradient(
+			from var(--angle),
+			$color2,
+			$color1 0.1turn,
+			$color1 0.15turn,
+			$color2 0.25turn
+		)
+		30;
+	animation: borderRotate $duration cubic-bezier(0.78, -0.02, 0.11, 1.04) infinite;
 
-  @keyframes borderRotate {
-    100% {
-      --angle: 420deg;
-    }
-  }
+	@keyframes borderRotate {
+		100% {
+			--angle: 420deg;
+		}
+	}
 }
 
 @property --angle {
-  syntax: "<angle>";
-  initial-value: 90deg;
-  inherits: true;
+	syntax: "<angle>";
+	initial-value: 90deg;
+	inherits: true;
 }

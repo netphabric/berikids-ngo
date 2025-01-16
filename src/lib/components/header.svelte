@@ -109,7 +109,7 @@
 
 				.navLink {
 					cursor: pointer;
-					font-weight: 400;
+					font-weight: 500;
 					text-transform: uppercase;
 				}
 			}
