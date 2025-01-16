@@ -6,6 +6,10 @@
 	import ContentBlock from "$lib/components/contentBlock.svelte"
 </script>
 
+<svelte:head>
+	<title>Home</title>
+</svelte:head>
+
 <main>
 	<ContentBlock
 		heroBlock

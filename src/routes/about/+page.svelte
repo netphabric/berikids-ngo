@@ -4,6 +4,10 @@
 	import Team from "$lib/components/team.svelte"
 </script>
 
+<svelte:head>
+	<title>About</title>
+</svelte:head>
+
 <main>
 	<ContentBlock
 		heroBlock

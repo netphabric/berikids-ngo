@@ -5,6 +5,10 @@
 	import Faq from "$lib/components/faq.svelte"
 </script>
 
+<svelte:head>
+	<title>Vocation</title>
+</svelte:head>
+
 <main>
 	<ContentBlock
 		heroBlock

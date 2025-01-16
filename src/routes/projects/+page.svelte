@@ -2,6 +2,10 @@
 	import ContentBlock from "$lib/components/contentBlock.svelte"
 </script>
 
+<svelte:head>
+	<title>Projects</title>
+</svelte:head>
+
 <main>
 	<ContentBlock
 		heroBlock
@@ -36,6 +40,21 @@
 			{ label: "Volunteer", icon: "handshake" },
 			{ label: "Partnership", icon: "verified" }
 		]}
+	/>
+
+	<ContentBlock
+		contentChipColor="red"
+		contentChipText="psychiatric support"
+		contentChipIcon="fluid_med"
+		contentMedia="/images/rehab-project.webp"
+		contentTitleHighlight="mental health"
+		contentTitle="the mental health unit in Nkapa Souza Douala Cameroon"
+		contentDescription="
+      providing accessible mental health care to the community. Services
+      include general consultations and counselling, detoxification/treatment for
+      drug addicts, rehabilitation programs, and treatment for all forms of mental
+      disorders, ensuring comprehensive support for individuals facing mental health challenges.
+    "
 	/>
 
 	<ContentBlock
