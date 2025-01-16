@@ -29,6 +29,7 @@
 		align-items: center;
 		padding: 8px 16px;
 		border-radius: 16px;
+		box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 		gap: 8px;
 
 		&.bgGreen {

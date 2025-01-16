@@ -31,6 +31,7 @@
 		text-transform: capitalize;
 		font-family: "Montserrat", sans-serif;
 		transition: all 0.3s ease-in-out;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 		&.primary {
 			border: 1px solid $black;
@@ -43,23 +44,10 @@
 			background-color: $accent;
 		}
 
-		&.onWhite {
-			&:hover {
-				color: $accent;
-				background-color: transparent;
-				border: 1px solid $accent;
-			}
-
-			&:active {
-				color: $secondary;
-				border: 1px solid $secondary;
-			}
-		}
-
 		&:hover {
-			color: $secondary;
+			color: $accent;
 			background-color: transparent;
-			border: 1px solid $secondary;
+			border: 1px solid $accent;
 		}
 	}
 </style>

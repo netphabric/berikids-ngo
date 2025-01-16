@@ -43,7 +43,7 @@
 	/>
 
 	<ContentBlock
-		contentChipColor="red"
+		contentChipColor="blue"
 		contentChipText="psychiatric support"
 		contentChipIcon="fluid_med"
 		contentMedia="/images/rehab-project.webp"
