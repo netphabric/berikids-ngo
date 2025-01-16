@@ -26,6 +26,7 @@
 
 		color: $white;
 		cursor: pointer;
+		font-size: 14px;
 		font-weight: 600;
 		text-transform: capitalize;
 		font-family: "Montserrat", sans-serif;
@@ -45,6 +46,14 @@
 		&:hover {
 			color: $accent;
 			background-color: transparent;
+		}
+
+		@media (min-width: 768px) {
+			font-size: 18px;
+		}
+
+		@media (min-width: 1024px) {
+			font-size: 22px;
 		}
 	}
 </style>

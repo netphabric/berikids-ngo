@@ -30,7 +30,11 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
+
+  @include minWidth("desktop") {
+    gap: 100px;
+  }
 }
 
 img,
@@ -74,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 h1,
@@ -98,7 +102,7 @@ h6 {
     "GRAD" 0,
     "opsz" 48;
 
-  font-size: $medium;
+  font-size: 24px;
   font-style: normal;
   font-weight: $normal;
 
@@ -110,12 +114,9 @@ h6 {
   white-space: nowrap;
   direction: ltr;
 
-  @include minWidth("mobile") {
-    font-size: $large;
-  }
 
-  @include minWidth("mobile") {
-    font-size: $icon;
+  @media (min-width: 768px) {
+    font-size: 32px;
   }
 }
 

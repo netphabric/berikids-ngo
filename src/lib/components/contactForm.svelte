@@ -56,8 +56,11 @@
 
 <style lang="scss">
 	.contact-Form {
-		padding: 32px;
-		height: calc(100dvh - 325px);
+		padding: 32px 20px;
+
+		@media (min-width: 768px) {
+			height: calc(70dvh - 48px);
+		}
 
 		.form-wrapper {
 			width: 100%;
@@ -69,12 +72,21 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			gap: 10px;
-			margin-bottom: 20px;
+			margin-bottom: 32px;
+			gap: 32px;
 
 			.form-title {
-				font-size: 54px;
+				font-size: 28px;
 				font-weight: 600;
+
+				@media (min-width: 768px) {
+					font-size: 32px;
+					line-height: 40px;
+				}
+
+				@media (min-width: 1024px) {
+					font-size: 52px;
+				}
 			}
 		}
 
@@ -106,10 +118,14 @@
 				padding: 8px 16px;
 				border-radius: 8px;
 				border: transparent;
-				font-size: 18px;
+				font-size: 14px;
 				font-weight: 400;
-				line-height: 32px;
 				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+				@media (min-width: 768px) {
+					font-size: 16px;
+					line-height: 32px;
+				}
 
 				&::placeholder {
 					opacity: 0.5;

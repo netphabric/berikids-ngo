@@ -51,5 +51,18 @@
 			color: color.adjust($yellow, $lightness: -45%);
 			background-color: color.adjust($yellow, $lightness: 16%);
 		}
+
+		.chip-text {
+			font-size: 14px;
+			font-weight: 500;
+
+			@media (min-width: 768px) {
+				font-size: 16px;
+			}
+
+			@media (min-width: 1024px) {
+				font-size: 18px;
+			}
+		}
 	}
 </style>

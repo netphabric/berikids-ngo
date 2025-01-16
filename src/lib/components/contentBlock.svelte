@@ -45,8 +45,15 @@
 				<div class="content-cta-container">
 					{#each ctaButtons as cta}
 						<Button primary onWhite>
-							<span class="material-symbols-sharp">{cta.icon ?? ""}</span>
-							<span> {cta.label} </span>
+							{#if cta.url}
+								<a href={cta.url}>
+									<span class="material-symbols-sharp">{cta.icon ?? ""}</span>
+									<span> {cta.label} </span>
+								</a>
+							{:else}
+								<span class="material-symbols-sharp">{cta.icon ?? ""}</span>
+								<span> {cta.label} </span>
+							{/if}
 						</Button>
 					{/each}
 				</div>
@@ -67,29 +74,31 @@
 
 <style lang="scss">
 	.content-render {
-		padding: 32px;
+		padding: 32px 20px;
 
 		.content-wrapper {
 			display: grid;
 			max-width: 1440px;
 			margin-inline: auto;
-			gap: 64px;
+			gap: 32px;
 			grid-template-areas:
-				"a a ."
-				"b b b";
+				"a a"
+				"b b";
 
 			&.flexReverse {
 				grid-template-areas:
-					"b b b"
-					"a a .";
+					"b b"
+					"a a";
 
 				@media (min-width: 840px) {
+					gap: 64px;
 					grid-template-areas: "b b b a a";
 				}
 			}
 
 			@media (min-width: 840px) {
 				grid-template-areas: "a a b b b";
+				gap: 64px;
 			}
 
 			&.blockLayout {
@@ -123,9 +132,17 @@
 				gap: 16px;
 
 				.content-title {
-					font-size: 52px;
-					font-weight: 700;
+					font-size: 28px;
+					font-weight: 600;
 					line-height: 1.2;
+
+					@media (min-width: 768px) {
+						font-size: 32px;
+					}
+
+					@media (min-width: 1024px) {
+						font-size: 52px;
+					}
 
 					span {
 						&.highlight {
@@ -135,10 +152,18 @@
 				}
 
 				.content-des {
-					font-size: 18px;
-					font-weight: 400;
+					font-size: 16px;
 					line-height: 1.5;
 					opacity: 0.8;
+
+					@media (min-width: 768px) {
+						font-size: 16px;
+						font-weight: 400;
+					}
+
+					@media (min-width: 1024px) {
+						font-size: 18px;
+					}
 				}
 
 				.content-cta-container {

@@ -17,7 +17,11 @@
 
 			.copyright {
 				text-align: center;
-				font-size: 18px;
+				font-size: 14px;
+
+				@media (min-width: 768px) {
+					font-size: 16px;
+				}
 			}
 		}
 	}

@@ -15,8 +15,8 @@
 		contentChipText="berikids"
 		contentChipIcon="child_care"
 		contentMedia="/images/about-hero.webp"
-		contentTitleHighlight="Goals, Vision and Mission."
-		contentTitle="who we are, what we stand for | Goals, Vision and Mission."
+		contentTitleHighlight="vision"
+		contentTitle="Our Goals, Vision and Mission."
 		contentDescription=" 
       We are a Cameroonian NGO founded in 2004,
       we focus on improving the lives of underprivileged children and orphans in the North West Region.

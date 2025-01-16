@@ -37,8 +37,8 @@
       volunteering, or forming valuable partnerships.
     "
 		ctaButtons={[
-			{ label: "Volunteer", icon: "handshake" },
-			{ label: "Partnership", icon: "verified" }
+			{ label: "Volunteer", icon: "handshake", url: "/contact" },
+			{ label: "Partnership", icon: "verified", url: "/contact" }
 		]}
 	/>
 

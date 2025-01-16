@@ -2,11 +2,11 @@ import { writable } from "svelte/store"
 
 // prettier-ignore
 export const teams = writable([
-  { name: "Mme Berinyuy Relindis", role: "CEO & Founder", profile: "https://i.pravatar.cc/500?img=10" },
+  { name: "Mme Relindis", role: "CEO & Founder", profile: "https://i.pravatar.cc/500?img=10" },
   { name: "Valery Ayuni", role: "Nurse", profile: "https://i.pravatar.cc/500?img=12" },
-  { name: "Delphine Dusuinyuy", role: "program director", profile: "https://i.pravatar.cc/500?img=20" },
-  { name: "Dr Eric", role: "Rehabilitation specialist", profile: "https://i.pravatar.cc/500?img=13" },
-  { name: "Stanley Kuwan Ngalim", role: "project manager", profile: "https://i.pravatar.cc/500?img=18" },
+  { name: "Delphine", role: "program director", profile: "https://i.pravatar.cc/500?img=20" },
+  { name: "Dr Eric", role: "rehab specialist", profile: "https://i.pravatar.cc/500?img=13" },
+  { name: "Stanley Kuwan", role: "project manager", profile: "https://i.pravatar.cc/500?img=18" },
   { name: "lena Kloske", role: "German volunteer", profile: "https://i.pravatar.cc/500?img=28" },
 ])
 

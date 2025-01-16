@@ -70,12 +70,25 @@
 
 					.contact-title,
 					.contact-icon {
-						font-size: 52px;
+						font-size: 28px;
 						font-weight: 500;
+
+						@media (min-width: 768px) {
+							font-size: 32px;
+							line-height: 64px;
+						}
+
+						@media (min-width: 1024px) {
+							font-size: 52px;
+						}
 					}
 
 					.contact {
-						font-weight: 600;
+						font-weight: 500;
+
+						@media (min-width: 768px) {
+							font-weight: 600;
+						}
 					}
 				}
 			}

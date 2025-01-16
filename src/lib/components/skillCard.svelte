@@ -31,7 +31,7 @@
 	$red: #f44336;
 
 	.skill-cards {
-		padding: 32px;
+		padding: 32px 20px;
 
 		.section-wrapper {
 			max-width: 1440px;
@@ -39,9 +39,15 @@
 
 			.cards-wrapper {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				margin-block-start: 64px;
-				gap: 32px;
+				margin-block-start: 32px;
+				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+				gap: 16px;
+
+				@media (min-width: 768px) {
+					margin-block-start: 64px;
+					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+					gap: 32px;
+				}
 
 				.skill-card {
 					display: flex;
@@ -73,9 +79,13 @@
 					}
 
 					.title {
-						font-size: 32px;
+						font-size: 24px;
 						font-weight: 500;
-						line-height: 64px;
+
+						@media (min-width: 768px) {
+							font-size: 32px;
+							line-height: 64px;
+						}
 					}
 				}
 			}

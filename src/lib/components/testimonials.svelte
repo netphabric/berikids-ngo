@@ -29,6 +29,8 @@
 <style lang="scss">
 	.testimonialsSection {
 		padding: 32px 20px;
+		background-size: 30px 30px;
+		background-image: linear-gradient(to right, #6faf6420 1px, transparent 1px);
 
 		.testimony-wrapper {
 			max-width: 1440px;
@@ -43,17 +45,44 @@
 				gap: 16px;
 
 				.testimony {
-					margin-inline: auto;
 					text-align: center;
-					font-size: 24px;
-					font-weight: 400;
-					line-height: 32px;
+					font-size: 16px;
+					font-weight: 500;
 					opacity: 0.8;
-					padding: 20px;
-					border-radius: 16px;
+					color: #2b4f81;
+					position: relative;
+
+					&::before,
+					&::after {
+						position: absolute;
+						font-size: 50px;
+						font-weight: 600;
+						line-height: 40px;
+						opacity: 0.2;
+					}
+
+					&::before {
+						content: "“";
+						top: 0;
+						left: 0;
+					}
+
+					&::after {
+						content: "”";
+						bottom: 0;
+						right: 0;
+					}
 
 					@media (min-width: 768px) {
 						max-width: 60%;
+						margin-inline: auto;
+						font-size: 20px;
+						line-height: 32px;
+
+						&::before,
+						&::after {
+							font-size: 70px;
+						}
 					}
 				}
 
@@ -85,10 +114,6 @@
 						border: 4px dashed #6faf64;
 						animation: rotate 100s linear infinite;
 
-						@media (min-width: 768px) {
-							border: 8px dashed #6faf64;
-						}
-
 						@keyframes rotate {
 							from {
 								transform: rotate(0deg);
@@ -101,19 +126,24 @@
 				}
 
 				.author-name {
-					font-size: 24px;
+					font-size: 16px;
 					font-weight: 600;
 					line-height: 32px;
+
+					@media (min-width: 768px) {
+						font-size: 18px;
+					}
 				}
 
 				.author-title {
-					font-size: 18px;
+					font-size: 14px;
 					line-height: 24px;
 					text-align: center;
 					opacity: 0.5;
 
 					@media (min-width: 768px) {
 						max-width: 40%;
+						font-size: 16px;
 					}
 				}
 			}
