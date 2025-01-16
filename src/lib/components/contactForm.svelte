@@ -38,7 +38,7 @@
 				chipColor="green"
 			/>
 
-			<h2 class="form-title">Reach out to us</h2>
+			<h1 class="form-title">Reach out to us</h1>
 		</header>
 
 		<div class="form-fields">

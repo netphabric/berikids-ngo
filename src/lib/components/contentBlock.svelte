@@ -3,6 +3,7 @@
 	import Button from "$lib/components/button.svelte"
 	import Chip from "./chip.svelte"
 
+	export let heroBlock = false
 	export let blockLayout = false
 	export let flexReverse = false
 	export let contentMedia = ""
@@ -24,11 +25,19 @@
 		<div class="block-content">
 			<Chip chipIcon={contentChipIcon} chipText={contentChipText} chipColor={contentChipColor} />
 
-			<h2 class="content-title">
-				{#each highlightText(contentTitle, contentTitleHighlight) as word}
-					<span class:highlight={word.isHighlighted}>{word.text}</span>{" "}
-				{/each}
-			</h2>
+			{#if heroBlock}
+				<h1 class="content-title">
+					{#each highlightText(contentTitle, contentTitleHighlight) as word}
+						<span class:highlight={word.isHighlighted}>{word.text} </span>
+					{/each}
+				</h1>
+			{:else}
+				<h2 class="content-title">
+					{#each highlightText(contentTitle, contentTitleHighlight) as word}
+						<span class:highlight={word.isHighlighted}>{word.text} </span>
+					{/each}
+				</h2>
+			{/if}
 
 			<p class="content-des">{contentDescription}</p>
 

@@ -7,13 +7,18 @@
 
 <main>
 	<ContentBlock
+		heroBlock
 		contentChipColor="red"
 		contentChipText="enabling self-sufficiency"
 		contentChipIcon="garden_cart"
-		contentTitle=" Practical Skills for Independence and Growth "
-		contentTitleHighlight="skills"
 		contentMedia="/images/vocation-hero.webp"
-		contentDescription="Our vocational training programs are designed to equip orphans and vulnerable individuals with essential skills. By focusing on practical education, we aim to enhance their socio-economic conditions and foster independence. "
+		contentTitleHighlight="skills"
+		contentTitle=" Practical Skills for Independence and Growth "
+		contentDescription="
+      Our vocational training programs are designed to equip orphans
+      and vulnerable individuals with essential skills. By focusing on practical education,
+      we aim to enhance their socio-economic conditions and foster independence.
+    "
 	/>
 
 	<SkillCard />

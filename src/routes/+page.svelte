@@ -8,16 +8,18 @@
 
 <main>
 	<ContentBlock
+		heroBlock
 		contentChipColor="blue"
 		contentChipText="misson"
 		contentChipIcon="sign_language"
-		contentTitle="empowering lives through sustainable development initiatives"
-		contentTitleHighlight="sustainable development"
-		contentDescription="Our mission is to uplift orphans and vulnerable communities in Cameroon by enhancing their
-		socio-economic conditions and providing essential resources. We focus on education, access to
-		clean water, and spiritual guidance to foster holistic development.
-  "
 		contentMedia="/images/heroImg.webp"
+		contentTitleHighlight="sustainable development"
+		contentTitle="empowering lives through sustainable development initiatives"
+		contentDescription="
+      Our mission is to uplift orphans and vulnerable communities in Cameroon by enhancing their
+      socio-economic conditions and providing essential resources. We focus on education, access to
+      clean water, and spiritual guidance to foster holistic development.
+    "
 	/>
 
 	<ContactDetails />
