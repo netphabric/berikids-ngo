@@ -7,11 +7,12 @@
 	import "@fontsource/poppins/600.css"
 	import "@fontsource/poppins/700.css"
 	import "@fontsource/poppins/800.css"
-	import "material-symbols/sharp.scss"
+	import "material-symbols/sharp.css"
 	import "styles/global.scss"
-	import Header from "$lib/components/header/header.svelte"
-	import Footer from "$lib/components/footer/footer.svelte"
-	import Toast from "$lib/components/toast/toast.svelte"
+
+	import Header from "$lib/components/header.svelte"
+	import Footer from "$lib/components/footer.svelte"
+	import Toast from "$lib/components/toast.svelte"
 </script>
 
 <svelte:head>
@@ -19,6 +20,11 @@
 	<title>berikids</title>
 	<meta name="title" content="berikids" />
 	<meta name="description" content="empowering lives through sustainable development initiatives" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="use-credentials" />
+	<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
 
 	<!-- Open Graph / Facebook -->
 	<meta

@@ -1,63 +1,81 @@
-import {
-	c as create_ssr_component,
-	b as add_attribute,
-	v as validate_component,
-	e as each,
-	d as escape
-} from "../../chunks/ssr.js"
-import { B as Button } from "../../chunks/button.js"
-const css = {
-	code: "a.svelte-1an5rw0{width:120px}",
-	map: '{"version":3,"file":"logo.svelte","sources":["logo.svelte"],"sourcesContent":["<a href=\\"/\\">\\n\\t<img src=\\"/logo.png\\" alt=\\"logo\\" />\\n</a>\\n\\n<style lang=\\"scss\\">a {\\n  width: 120px;\\n}</style>\\n"],"names":[],"mappings":"AAImB,gBAAE,CACnB,KAAK,CAAE,KACT"}'
-}
-const Logo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	$$result.css.add(css)
-	return `<a href="/" class="svelte-1an5rw0" data-svelte-h="svelte-sfa9rn"><img src="/logo.png" alt="logo"> </a>`
-})
-const navRight = "_navRight_rf326_18"
-const ctaBtns = "_ctaBtns_rf326_55"
-const style = {
-	navRight,
-	ctaBtns
-}
+import { c as create_ssr_component, e as each, v as validate_component, a as add_attribute, b as escape, d as subscribe, f as set_store_value } from "../../chunks/ssr.js";
+import { B as Button } from "../../chunks/button.js";
+import { w as writable } from "../../chunks/index.js";
+const css$2 = {
+  code: '.header.svelte-v2brp2.svelte-v2brp2{padding:32px;backdrop-filter:blur(20px);background-color:rgba(242, 242, 242, 0.6352941176);position:sticky;z-index:100;top:0}@media(min-width: 768px){.header.svelte-v2brp2.svelte-v2brp2{margin-block-end:64px}}.header.svelte-v2brp2 .logo.svelte-v2brp2{color:#2b4f81}.header.svelte-v2brp2 .logo a.svelte-v2brp2{font-family:"Aldrich", serif;font-style:normal;font-size:24px;font-weight:200;text-decoration:none;display:flex;align-items:center;gap:4px}.header.svelte-v2brp2 .nav-wrapper.svelte-v2brp2{max-width:1440px;margin-inline:auto;display:flex;justify-content:space-between;align-items:center}.header.svelte-v2brp2 .nav-wrapper .menu.svelte-v2brp2{font-size:40px;cursor:pointer}@media(min-width: 768px){.header.svelte-v2brp2 .nav-wrapper .menu.svelte-v2brp2{display:none}}.header.svelte-v2brp2 .nav-wrapper .nav-right.svelte-v2brp2{display:none}@media(min-width: 768px){.header.svelte-v2brp2 .nav-wrapper .nav-right.svelte-v2brp2{display:block}}.header.svelte-v2brp2 .nav-wrapper .mobileNav.svelte-v2brp2{position:absolute;top:0;right:0;width:100%;height:100vh;padding:32px 20px;backdrop-filter:blur(100px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}.header.svelte-v2brp2 .nav-wrapper .mobileNav .navLinks.svelte-v2brp2{display:flex;flex-direction:column;align-items:unset;gap:16px}.header.svelte-v2brp2 .nav-wrapper .mobileNav .navLinks .navLink a.svelte-v2brp2{font-size:22px;font-weight:600}.header.svelte-v2brp2 .nav-wrapper .navLinks.svelte-v2brp2{display:flex;align-items:center;list-style:none;gap:32px}.header.svelte-v2brp2 .nav-wrapper .navLinks .navLink.svelte-v2brp2{cursor:pointer}.header.svelte-v2brp2 .nav-wrapper .navLinks .navLink a.svelte-v2brp2{text-decoration:none;text-transform:uppercase;font-weight:400}@media(min-width: 768px){.header.svelte-v2brp2 .nav-wrapper .navLinks .navLink a.svelte-v2brp2{font-size:16px}}@media(min-width: 1024px){.header.svelte-v2brp2 .nav-wrapper .navLinks .navLink a.svelte-v2brp2{font-size:18px}}',
+  map: '{"version":3,"file":"header.svelte","sources":["header.svelte"],"sourcesContent":["<script lang=\\"ts\\">import { slide } from \\"svelte/transition\\";\\nimport { cubicOut } from \\"svelte/easing\\";\\nimport Button from \\"./button.svelte\\";\\nconst navLinks = [\\n    { label: \\"about\\", url: \\"/about\\" },\\n    { label: \\"projects\\", url: \\"/projects\\" },\\n    { label: \\"Vocation\\", url: \\"/vocation\\" },\\n    { label: \\"contact\\", url: \\"contact\\" }\\n];\\nlet navOpen = false;\\nconst toggleNav = () => (navOpen = !navOpen);\\n<\/script>\\n\\n<header class=\\"header\\">\\n\\t<div class=\\"nav-wrapper\\">\\n\\t\\t<span\\n\\t\\t\\trole=\\"button\\"\\n\\t\\t\\ttabindex=\\"0\\"\\n\\t\\t\\ton:keypress={toggleNav}\\n\\t\\t\\ton:click={toggleNav}\\n\\t\\t\\tclass:menu={!navOpen}\\n\\t\\t\\tclass=\\"material-symbols-sharp\\">filter_list</span\\n\\t\\t>\\n\\n\\t\\t{#if navOpen}\\n\\t\\t\\t<nav\\n\\t\\t\\t\\tclass=\\"mobileNav\\"\\n\\t\\t\\t\\tclass:open={navOpen}\\n\\t\\t\\t\\ttransition:slide={{ duration: 100, easing: cubicOut }}\\n\\t\\t\\t>\\n\\t\\t\\t\\t<h3 class=\\"logo\\">\\n\\t\\t\\t\\t\\t<a href=\\"/\\" on:click={toggleNav}>\\n\\t\\t\\t\\t\\t\\t<span class=\\"material-symbols-sharp\\">beach_access</span>\\n\\t\\t\\t\\t\\t\\t<span>BERIKIDS</span>\\n\\t\\t\\t\\t\\t</a>\\n\\t\\t\\t\\t</h3>\\n\\n\\t\\t\\t\\t<ul class=\\"navLinks\\">\\n\\t\\t\\t\\t\\t{#each navLinks as { label, url }}\\n\\t\\t\\t\\t\\t\\t<li class=\\"navLink\\"><a class=\\"navHref\\" href={url} on:click={toggleNav}>{label}</a></li>\\n\\t\\t\\t\\t\\t{/each}\\n\\t\\t\\t\\t</ul>\\n\\t\\t\\t</nav>\\n\\t\\t{/if}\\n\\n\\t\\t<div class=\\"nav-right\\">\\n\\t\\t\\t<nav class=\\"desktopNav\\">\\n\\t\\t\\t\\t<ul class=\\"navLinks\\">\\n\\t\\t\\t\\t\\t<h3 class=\\"logo\\">\\n\\t\\t\\t\\t\\t\\t<a href=\\"/\\">\\n\\t\\t\\t\\t\\t\\t\\t<span class=\\"material-symbols-sharp\\">beach_access</span>\\n\\t\\t\\t\\t\\t\\t\\t<span>BERIKIDS</span>\\n\\t\\t\\t\\t\\t\\t</a>\\n\\t\\t\\t\\t\\t</h3>\\n\\n\\t\\t\\t\\t\\t{#each navLinks as { label, url }}\\n\\t\\t\\t\\t\\t\\t<li class=\\"navLink\\"><a class=\\"navHref\\" href={url}>{label}</a></li>\\n\\t\\t\\t\\t\\t{/each}\\n\\t\\t\\t\\t</ul>\\n\\t\\t\\t</nav>\\n\\t\\t</div>\\n\\n\\t\\t<Button>\\n\\t\\t\\t<span class=\\"material-symbols-sharp\\"> account_balance_wallet </span>\\n\\t\\t\\t<span>donate</span>\\n\\t\\t</Button>\\n\\t</div>\\n</header>\\n\\n<style lang=\\"scss\\">.header {\\n  padding: 32px;\\n  backdrop-filter: blur(20px);\\n  background-color: rgba(242, 242, 242, 0.6352941176);\\n  position: sticky;\\n  z-index: 100;\\n  top: 0;\\n}\\n@media (min-width: 768px) {\\n  .header {\\n    margin-block-end: 64px;\\n  }\\n}\\n.header .logo {\\n  color: #2b4f81;\\n}\\n.header .logo a {\\n  font-family: \\"Aldrich\\", serif;\\n  font-style: normal;\\n  font-size: 24px;\\n  font-weight: 200;\\n  text-decoration: none;\\n  display: flex;\\n  align-items: center;\\n  gap: 4px;\\n}\\n.header .nav-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n.header .nav-wrapper .menu {\\n  font-size: 40px;\\n  cursor: pointer;\\n}\\n@media (min-width: 768px) {\\n  .header .nav-wrapper .menu {\\n    display: none;\\n  }\\n}\\n.header .nav-wrapper .nav-right {\\n  display: none;\\n}\\n@media (min-width: 768px) {\\n  .header .nav-wrapper .nav-right {\\n    display: block;\\n  }\\n}\\n.header .nav-wrapper .mobileNav {\\n  position: absolute;\\n  top: 0;\\n  right: 0;\\n  width: 100%;\\n  height: 100vh;\\n  padding: 32px 20px;\\n  backdrop-filter: blur(100px);\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  justify-content: center;\\n  gap: 16px;\\n}\\n.header .nav-wrapper .mobileNav .navLinks {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: unset;\\n  gap: 16px;\\n}\\n.header .nav-wrapper .mobileNav .navLinks .navLink a {\\n  font-size: 22px;\\n  font-weight: 600;\\n}\\n.header .nav-wrapper .navLinks {\\n  display: flex;\\n  align-items: center;\\n  list-style: none;\\n  gap: 32px;\\n}\\n.header .nav-wrapper .navLinks .navLink {\\n  cursor: pointer;\\n}\\n.header .nav-wrapper .navLinks .navLink a {\\n  text-decoration: none;\\n  text-transform: uppercase;\\n  font-weight: 400;\\n}\\n@media (min-width: 768px) {\\n  .header .nav-wrapper .navLinks .navLink a {\\n    font-size: 16px;\\n  }\\n}\\n@media (min-width: 1024px) {\\n  .header .nav-wrapper .navLinks .navLink a {\\n    font-size: 18px;\\n  }\\n}</style>\\n"],"names":[],"mappings":"AAqEmB,mCAAQ,CACzB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,KAAK,IAAI,CAAC,CAC3B,gBAAgB,CAAE,KAAK,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,YAAY,CAAC,CACnD,QAAQ,CAAE,MAAM,CAChB,OAAO,CAAE,GAAG,CACZ,GAAG,CAAE,CACP,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,mCAAQ,CACN,gBAAgB,CAAE,IACpB,CACF,CACA,qBAAO,CAAC,mBAAM,CACZ,KAAK,CAAE,OACT,CACA,qBAAO,CAAC,KAAK,CAAC,eAAE,CACd,WAAW,CAAE,SAAS,CAAC,CAAC,KAAK,CAC7B,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GAAG,CAChB,eAAe,CAAE,IAAI,CACrB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,GACP,CACA,qBAAO,CAAC,0BAAa,CACnB,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,IAAI,CACnB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,aAAa,CAC9B,WAAW,CAAE,MACf,CACA,qBAAO,CAAC,YAAY,CAAC,mBAAM,CACzB,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,OACV,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,qBAAO,CAAC,YAAY,CAAC,mBAAM,CACzB,OAAO,CAAE,IACX,CACF,CACA,qBAAO,CAAC,YAAY,CAAC,wBAAW,CAC9B,OAAO,CAAE,IACX,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,qBAAO,CAAC,YAAY,CAAC,wBAAW,CAC9B,OAAO,CAAE,KACX,CACF,CACA,qBAAO,CAAC,YAAY,CAAC,wBAAW,CAC9B,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,CAAC,CACN,KAAK,CAAE,CAAC,CACR,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,eAAe,CAAE,KAAK,KAAK,CAAC,CAC5B,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,eAAe,CAAE,MAAM,CACvB,GAAG,CAAE,IACP,CACA,qBAAO,CAAC,YAAY,CAAC,UAAU,CAAC,uBAAU,CACxC,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,KAAK,CAClB,GAAG,CAAE,IACP,CACA,qBAAO,CAAC,YAAY,CAAC,UAAU,CAAC,SAAS,CAAC,QAAQ,CAAC,eAAE,CACnD,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GACf,CACA,qBAAO,CAAC,YAAY,CAAC,uBAAU,CAC7B,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,UAAU,CAAE,IAAI,CAChB,GAAG,CAAE,IACP,CACA,qBAAO,CAAC,YAAY,CAAC,SAAS,CAAC,sBAAS,CACtC,MAAM,CAAE,OACV,CACA,qBAAO,CAAC,YAAY,CAAC,SAAS,CAAC,QAAQ,CAAC,eAAE,CACxC,eAAe,CAAE,IAAI,CACrB,cAAc,CAAE,SAAS,CACzB,WAAW,CAAE,GACf,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,qBAAO,CAAC,YAAY,CAAC,SAAS,CAAC,QAAQ,CAAC,eAAE,CACxC,SAAS,CAAE,IACb,CACF,CACA,MAAO,YAAY,MAAM,CAAE,CACzB,qBAAO,CAAC,YAAY,CAAC,SAAS,CAAC,QAAQ,CAAC,eAAE,CACxC,SAAS,CAAE,IACb,CACF"}'
+};
 const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	const navLinks = [
-		{ label: "about us", url: "/about-us" },
-		{
-			label: "get involved",
-			url: "/get-involved"
-		},
-		{ label: "our impact", url: "/our-impact" }
-	]
-	return `<header><div${add_attribute("class", style.navRight, 0)}>${validate_component(Logo, "Logo").$$render($$result, {}, {}, {})} <nav><ul>${each(
-		navLinks,
-		({ label, url }) => {
-			return `<li><a${add_attribute("href", url, 0)}>${escape(label)}</a> </li>`
-		}
-	)}</ul></nav></div> <div${add_attribute("class", style.ctaBtns, 0)}>${validate_component(
-		Button,
-		"Button"
-	).$$render(
-		$$result,
-		{ primary: true, onWhite: true },
-		{},
-		{
-			default: () => {
-				return `<span data-svelte-h="svelte-hkqajq">join</span> <span class="material-symbols-sharp" data-svelte-h="svelte-10wwtzw">handshake</span>`
-			}
-		}
-	)} ${validate_component(Button, "Button").$$render(
-		$$result,
-		{ onWhite: true },
-		{},
-		{
-			default: () => {
-				return `<span data-svelte-h="svelte-1c5bl9">donate</span> <span class="material-symbols-sharp" data-svelte-h="svelte-dko6le">compost</span>`
-			}
-		}
-	)}</div></header>`
-})
+  const navLinks = [
+    { label: "about", url: "/about" },
+    { label: "projects", url: "/projects" },
+    { label: "Vocation", url: "/vocation" },
+    { label: "contact", url: "contact" }
+  ];
+  $$result.css.add(css$2);
+  return `<header class="header svelte-v2brp2"><div class="nav-wrapper svelte-v2brp2"><span role="button" tabindex="0" class="${["material-symbols-sharp svelte-v2brp2", "menu"].join(" ").trim()}" data-svelte-h="svelte-4llqkh">filter_list</span> ${``} <div class="nav-right svelte-v2brp2"><nav class="desktopNav"><ul class="navLinks svelte-v2brp2"><h3 class="logo svelte-v2brp2" data-svelte-h="svelte-i7152f"><a href="/" class="svelte-v2brp2"><span class="material-symbols-sharp">beach_access</span> <span>BERIKIDS</span></a></h3> ${each(navLinks, ({ label, url }) => {
+    return `<li class="navLink svelte-v2brp2"><a class="navHref svelte-v2brp2"${add_attribute("href", url, 0)}>${escape(label)}</a></li>`;
+  })}</ul></nav></div> ${validate_component(Button, "Button").$$render($$result, {}, {}, {
+    default: () => {
+      return `<span class="material-symbols-sharp" data-svelte-h="svelte-14p641t">account_balance_wallet</span> <span data-svelte-h="svelte-1c5bl9">donate</span>`;
+    }
+  })}</div> </header>`;
+});
+const css$1 = {
+  code: "footer.svelte-w6z96.svelte-w6z96{padding:64px 20px;background-color:#ffd966}footer.svelte-w6z96 .footer-wrapper.svelte-w6z96{max-width:1440px;margin-inline:auto}footer.svelte-w6z96 .footer-wrapper .copyright.svelte-w6z96{text-align:center;font-size:14px}@media(min-width: 768px){footer.svelte-w6z96 .footer-wrapper .copyright.svelte-w6z96{font-size:16px}}",
+  map: '{"version":3,"file":"footer.svelte","sources":["footer.svelte"],"sourcesContent":["<footer>\\n\\t<div class=\\"footer-wrapper\\">\\n\\t\\t<p class=\\"copyright\\">\\n\\t\\t\\t© {new Date().getFullYear()} berikids. All rights reserved.\\n\\t\\t</p>\\n\\t</div>\\n</footer>\\n\\n<style lang=\\"scss\\">footer {\\n  padding: 64px 20px;\\n  background-color: #ffd966;\\n}\\nfooter .footer-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n}\\nfooter .footer-wrapper .copyright {\\n  text-align: center;\\n  font-size: 14px;\\n}\\n@media (min-width: 768px) {\\n  footer .footer-wrapper .copyright {\\n    font-size: 16px;\\n  }\\n}</style>\\n"],"names":[],"mappings":"AAQmB,gCAAO,CACxB,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,gBAAgB,CAAE,OACpB,CACA,mBAAM,CAAC,4BAAgB,CACrB,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,IACjB,CACA,mBAAM,CAAC,eAAe,CAAC,uBAAW,CAChC,UAAU,CAAE,MAAM,CAClB,SAAS,CAAE,IACb,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,mBAAM,CAAC,eAAe,CAAC,uBAAW,CAChC,SAAS,CAAE,IACb,CACF"}'
+};
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  $$result.css.add(css$1);
+  return `<footer class="svelte-w6z96"><div class="footer-wrapper svelte-w6z96"><p class="copyright svelte-w6z96">© ${escape((/* @__PURE__ */ new Date()).getFullYear())} berikids. All rights reserved.</p></div> </footer>`;
+});
+const toasts = writable([]);
+const css = {
+  code: ".toast-container.svelte-ggxik1.svelte-ggxik1{position:fixed;bottom:32px;left:32px;margin-inline:auto;display:flex;flex-direction:column;z-index:1000;gap:16px;transition:all 0.3s ease-in-out}.toast-container.svelte-ggxik1 .toast.svelte-ggxik1{min-height:50px;width:max-content;display:flex;align-items:center;gap:0.5rem;padding:8px 16px;border-radius:16px;cursor:pointer;border:none;font-size:24px;text-transform:capitalize;transition:all 0.3s ease-in-out}.toast-container.svelte-ggxik1 .toast .material-symbols-sharp.svelte-ggxik1{font-size:24px}.toast-container.svelte-ggxik1 .toast.info.svelte-ggxik1{color:rgb(36.625, 67.2877906977, 109.875);background-color:rgb(211.875, 223.9098837209, 240.625)}.toast-container.svelte-ggxik1 .toast.success.svelte-ggxik1{color:rgb(66.9914893617, 114.1063829787, 58.8936170213);background-color:rgb(220.3787234043, 235.7659574468, 217.7340425532)}.toast-container.svelte-ggxik1 .toast.error.svelte-ggxik1{color:rgb(185.8301886792, 22.1886792453, 10.1698113208);background-color:rgb(253.2617924528, 225.2924528302, 223.2382075472)}.toast-container.svelte-ggxik1 .toast span.svelte-ggxik1{font-size:0.9rem}",
+  map: '{"version":3,"file":"toast.svelte","sources":["toast.svelte"],"sourcesContent":["<script lang=\\"ts\\">import { toasts } from \\"$lib/stores/toasts\\";\\nimport { fade } from \\"svelte/transition\\";\\nconst removeToast = (id) => {\\n    $toasts = $toasts.filter((toast) => toast.id !== id);\\n};\\n// prettier-ignore\\nconst renderIcon = (type) => {\\n    switch (type) {\\n        case \\"success\\": return \\"check_circle\\";\\n        case \\"error\\": return \\"error\\";\\n        case \\"warning\\": return \\"warning\\";\\n        case \\"info\\": return \\"info\\";\\n    }\\n};\\n$: {\\n    $toasts.forEach(({ id, duration }) => {\\n        setTimeout(() => {\\n            removeToast(id);\\n        }, duration);\\n    });\\n}\\n<\/script>\\n\\n<div class=\\"toast-container\\" transition:fade={{ duration: 500, delay: 300 }}>\\n\\t{#each $toasts as toast}\\n\\t\\t<button\\n\\t\\t\\tclass=\\"toast\\"\\n\\t\\t\\tclass:success={toast.type === \\"success\\"}\\n\\t\\t\\tclass:error={toast.type === \\"error\\"}\\n\\t\\t\\tclass:warning={toast.type === \\"warning\\"}\\n\\t\\t\\tclass:info={toast.type === \\"info\\"}\\n\\t\\t\\ton:click={() => removeToast(toast.id)}\\n\\t\\t>\\n\\t\\t\\t<span class=\\"material-symbols-sharp\\">{renderIcon(toast.type)}</span>\\n\\t\\t\\t<span>{toast.message}</span>\\n\\t\\t</button>\\n\\t{/each}\\n</div>\\n\\n<style lang=\\"scss\\">.toast-container {\\n  position: fixed;\\n  bottom: 32px;\\n  left: 32px;\\n  margin-inline: auto;\\n  display: flex;\\n  flex-direction: column;\\n  z-index: 1000;\\n  gap: 16px;\\n  transition: all 0.3s ease-in-out;\\n}\\n.toast-container .toast {\\n  min-height: 50px;\\n  width: max-content;\\n  display: flex;\\n  align-items: center;\\n  gap: 0.5rem;\\n  padding: 8px 16px;\\n  border-radius: 16px;\\n  cursor: pointer;\\n  border: none;\\n  font-size: 24px;\\n  text-transform: capitalize;\\n  transition: all 0.3s ease-in-out;\\n}\\n.toast-container .toast .material-symbols-sharp {\\n  font-size: 24px;\\n}\\n.toast-container .toast.info {\\n  color: rgb(36.625, 67.2877906977, 109.875);\\n  background-color: rgb(211.875, 223.9098837209, 240.625);\\n}\\n.toast-container .toast.success {\\n  color: rgb(66.9914893617, 114.1063829787, 58.8936170213);\\n  background-color: rgb(220.3787234043, 235.7659574468, 217.7340425532);\\n}\\n.toast-container .toast.error {\\n  color: rgb(185.8301886792, 22.1886792453, 10.1698113208);\\n  background-color: rgb(253.2617924528, 225.2924528302, 223.2382075472);\\n}\\n.toast-container .toast span {\\n  font-size: 0.9rem;\\n}</style>\\n"],"names":[],"mappings":"AAuCmB,4CAAiB,CAClC,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,IAAI,CACZ,IAAI,CAAE,IAAI,CACV,aAAa,CAAE,IAAI,CACnB,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,OAAO,CAAE,IAAI,CACb,GAAG,CAAE,IAAI,CACT,UAAU,CAAE,GAAG,CAAC,IAAI,CAAC,WACvB,CACA,8BAAgB,CAAC,oBAAO,CACtB,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,WAAW,CAClB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,MAAM,CACX,OAAO,CAAE,GAAG,CAAC,IAAI,CACjB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,IAAI,CACZ,SAAS,CAAE,IAAI,CACf,cAAc,CAAE,UAAU,CAC1B,UAAU,CAAE,GAAG,CAAC,IAAI,CAAC,WACvB,CACA,8BAAgB,CAAC,MAAM,CAAC,qCAAwB,CAC9C,SAAS,CAAE,IACb,CACA,8BAAgB,CAAC,MAAM,mBAAM,CAC3B,KAAK,CAAE,IAAI,MAAM,CAAC,CAAC,aAAa,CAAC,CAAC,OAAO,CAAC,CAC1C,gBAAgB,CAAE,IAAI,OAAO,CAAC,CAAC,cAAc,CAAC,CAAC,OAAO,CACxD,CACA,8BAAgB,CAAC,MAAM,sBAAS,CAC9B,KAAK,CAAE,IAAI,aAAa,CAAC,CAAC,cAAc,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE,CACA,8BAAgB,CAAC,MAAM,oBAAO,CAC5B,KAAK,CAAE,IAAI,cAAc,CAAC,CAAC,aAAa,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE,CACA,8BAAgB,CAAC,MAAM,CAAC,kBAAK,CAC3B,SAAS,CAAE,MACb"}'
+};
+const Toast = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $toasts, $$unsubscribe_toasts;
+  $$unsubscribe_toasts = subscribe(toasts, (value) => $toasts = value);
+  const removeToast = (id) => {
+    set_store_value(toasts, $toasts = $toasts.filter((toast) => toast.id !== id), $toasts);
+  };
+  const renderIcon = (type) => {
+    switch (type) {
+      case "success":
+        return "check_circle";
+      case "error":
+        return "error";
+      case "warning":
+        return "warning";
+      case "info":
+        return "info";
+    }
+  };
+  $$result.css.add(css);
+  {
+    {
+      $toasts.forEach(({ id, duration }) => {
+        setTimeout(
+          () => {
+            removeToast(id);
+          },
+          duration
+        );
+      });
+    }
+  }
+  $$unsubscribe_toasts();
+  return `<div class="toast-container svelte-ggxik1">${each($toasts, (toast) => {
+    return `<button class="${[
+      "toast svelte-ggxik1",
+      (toast.type === "success" ? "success" : "") + " " + (toast.type === "error" ? "error" : "") + " " + (toast.type === "warning" ? "warning" : "") + " " + (toast.type === "info" ? "info" : "")
+    ].join(" ").trim()}"><span class="material-symbols-sharp svelte-ggxik1">${escape(renderIcon(toast.type))}</span> <span class="svelte-ggxik1">${escape(toast.message)}</span> </button>`;
+  })} </div>`;
+});
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `${validate_component(Header, "Header").$$render($$result, {}, {}, {})} ${slots.default ? slots.default({}) : ``}`
-})
-export { Layout as default }
+  return `${$$result.head += `<!-- HEAD_svelte-jfmht1_START -->${$$result.title = `<title>berikids</title>`, ""}<meta name="title" content="berikids"><meta name="description" content="empowering lives through sustainable development initiatives"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="use-credentials"><link href="https://fonts.googleapis.com/css2?family=Aldrich&amp;display=swap" rel="stylesheet"><meta property="og:description" content="empowering lives through sustainable development initiatives"><meta property="og:type" content="website"><meta property="og:title" content="berikids"><meta property="og:url" content="/opengraph.png"><meta property="og:image" content="/opengraph.png"><meta property="twitter:description" content="empowering lives through sustainable development initiatives"><meta property="twitter:title" content="berikids"><meta property="twitter:card" content="summary_large_image"><meta property="twitter:image" content="/opengraph.png"><meta property="twitter:url" content="/opengraph.png"><!-- HEAD_svelte-jfmht1_END -->`, ""} ${validate_component(Header, "Header").$$render($$result, {}, {}, {})} ${validate_component(Toast, "Toast").$$render($$result, {}, {}, {})} ${slots.default ? slots.default({}) : ``} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+});
+export {
+  Layout as default
+};

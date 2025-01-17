@@ -1,313 +1,96 @@
-import {
-	c as create_ssr_component,
-	b as add_attribute,
-	v as validate_component,
-	e as each,
-	d as escape
-} from "../../chunks/ssr.js"
-import { B as Button } from "../../chunks/button.js"
-const heroImg$1 = "/_app/immutable/assets/heroImg.DZpwW_4p.webp"
-const heroSection = "_heroSection_1guod_6"
-const heroTitle = "_heroTitle_1guod_20"
-const highlight$4 = "_highlight_1guod_20"
-const heroDescription = "_heroDescription_1guod_59"
-const ctaBtns$3 = "_ctaBtns_1guod_76"
-const heroImageContainer = "_heroImageContainer_1guod_90"
-const heroImg = "_heroImg_1guod_96"
-const styles$7 = {
-	heroSection,
-	heroTitle,
-	highlight: highlight$4,
-	heroDescription,
-	ctaBtns: ctaBtns$3,
-	heroImageContainer,
-	heroImg
-}
-const Hero = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `<section${add_attribute("class", styles$7.heroSection, 0)}><h1${add_attribute("class", styles$7.heroTitle, 0)} data-svelte-h="svelte-77gq33"><span>empowering lives</span> <span>through <span${add_attribute("class", styles$7.highlight, 0)}>sustainable</span></span> <span><span${add_attribute("class", styles$7.highlight, 0)}>development</span> initiatives</span></h1> <p${add_attribute("class", styles$7.heroDescription, 0)} data-svelte-h="svelte-1icqlfe">Our mission is to uplift orphans and vulnerable communities in Cameroon by enhancing their
-		socio-economic conditions and providing essential resources. We focus on education, access to
-		clean water, and spiritual guidance to foster holistic development.</p> <div${add_attribute("class", styles$7.ctaBtns, 0)}>${validate_component(
-			Button,
-			"Button"
-		).$$render(
-			$$result,
-			{ primary: true, onWhite: true },
-			{},
-			{
-				default: () => {
-					return `<span data-svelte-h="svelte-em924d">learn more</span> <span class="material-symbols-sharp" data-svelte-h="svelte-t96cdn">video_chat</span>`
-				}
-			}
-		)} ${validate_component(Button, "Button").$$render(
-			$$result,
-			{ onWhite: true },
-			{},
-			{
-				default: () => {
-					return `<span data-svelte-h="svelte-1n6wo7t">get involved</span> <span class="material-symbols-sharp" data-svelte-h="svelte-jgo6xk">agriculture</span>`
-				}
-			}
-		)}</div> <div${add_attribute("class", styles$7.heroImageContainer, 0)} data-svelte-h="svelte-1vthdd"><img${add_attribute("src", heroImg$1, 0)} alt="berikids"${add_attribute("class", styles$7.heroImg, 0)}></div></section>`
-})
-const sectionWrapper$2 = "_sectionWrapper_1ivyq_6"
-const isFlipped = "_isFlipped_1ivyq_27"
-const styles$6 = {
-	sectionWrapper: sectionWrapper$2,
-	isFlipped
-}
-const SectionWrapper = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	let { className = "" } = $$props
-	let { isFlipped: isFlipped2 = false } = $$props
-	if ($$props.className === void 0 && $$bindings.className && className !== void 0)
-		$$bindings.className(className)
-	if ($$props.isFlipped === void 0 && $$bindings.isFlipped && isFlipped2 !== void 0)
-		$$bindings.isFlipped(isFlipped2)
-	return `<section${add_attribute(
-		"class",
-		`${className && className}
-    ${styles$6.sectionWrapper}
-    ${isFlipped2 && styles$6.isFlipped}`,
-		0
-	)}>${slots.default ? slots.default({}) : ``}</section>`
-})
-const Hs1Img = "/_app/immutable/assets/Hs1-img.B8VCNwmY.webp"
-const homeSection1 = "_homeSection1_1ku9s_6"
-const sectionContent$3 = "_sectionContent_1ku9s_14"
-const contentChip$1 = "_contentChip_1ku9s_25"
-const contentTitle$3 = "_contentTitle_1ku9s_34"
-const highlight$3 = "_highlight_1ku9s_37"
-const contentDesc$2 = "_contentDesc_1ku9s_60"
-const ctaBtns$2 = "_ctaBtns_1ku9s_73"
-const sectionImage = "_sectionImage_1ku9s_87"
-const styles$5 = {
-	homeSection1,
-	sectionContent: sectionContent$3,
-	contentChip: contentChip$1,
-	contentTitle: contentTitle$3,
-	highlight: highlight$3,
-	contentDesc: contentDesc$2,
-	ctaBtns: ctaBtns$2,
-	sectionImage
-}
-const HomeSection1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `${validate_component(SectionWrapper, "SectionWrapper").$$render(
-		$$result,
-		{ className: styles$5.homeSection1 },
-		{},
-		{
-			default: () => {
-				return `<div${add_attribute("class", styles$5.sectionContent, 0)}><h4${add_attribute("class", styles$5.contentChip, 0)} data-svelte-h="svelte-87c4y4"><span class="material-symbols-sharp">altitude</span> <span>empower</span></h4> <h3${add_attribute("class", styles$5.contentTitle, 0)} data-svelte-h="svelte-121zuat">transforming
-			<span${add_attribute("class", styles$5.highlight, 0)}>lives</span> through
-			<span${add_attribute("class", styles$5.highlight, 0)}>compassionate</span> action</h3> <div${add_attribute("class", styles$5.contentDesc, 0)} data-svelte-h="svelte-s9yd91">Our NGO is dedicated to uplifting orphans and vulnerable children in Cameroon by enhancing
-			their socio-economic conditions and educational opportunities. Through initiatives like
-			vocational training and access to clean water, we strive to create sustainable change in
-			communities.</div> <div${add_attribute("class", styles$5.ctaBtns, 0)}>${validate_component(
-				Button,
-				"Button"
-			).$$render(
-				$$result,
-				{ onWhite: true },
-				{},
-				{
-					default: () => {
-						return `<span data-svelte-h="svelte-1c5bl9">donate</span> <span class="material-symbols-sharp" data-svelte-h="svelte-dko6le">compost</span>`
-					}
-				}
-			)} ${validate_component(Button, "Button").$$render(
-				$$result,
-				{ onWhite: true, primary: true },
-				{},
-				{
-					default: () => {
-						return `<span data-svelte-h="svelte-1n6wo7t">get involved</span> <span class="material-symbols-sharp" data-svelte-h="svelte-ynofb3">thread_unread</span>`
-					}
-				}
-			)}</div></div> <div${add_attribute("class", styles$5.sectionImage, 0)} data-svelte-h="svelte-hvqzgw"><img${add_attribute("src", Hs1Img, 0)} alt="berkids"></div>`
-			}
-		}
-	)}`
-})
-const homeSection2 = "_homeSection2_1cynx_6"
-const sectionWrapper$1 = "_sectionWrapper_1cynx_19"
-const contentTitle$2 = "_contentTitle_1cynx_36"
-const highlight$2 = "_highlight_1cynx_40"
-const sectionContent$2 = "_sectionContent_1cynx_65"
-const borderRotate = "_borderRotate_1cynx_1"
-const styles$4 = {
-	homeSection2,
-	sectionWrapper: sectionWrapper$1,
-	contentTitle: contentTitle$2,
-	highlight: highlight$2,
-	sectionContent: sectionContent$2,
-	borderRotate
-}
-const HomeSection2 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	const options = [
-		{
-			icon: "lightbulb_2",
-			title: "innovative solutions for sustanable development in cameroon",
-			description:
-				"We focus on enhancing the socio-economic conditions of orphans through targeted initiatives."
-		},
-		{
-			icon: "school",
-			title: "Transforming Lives Through Education and Technology",
-			description: "Our IT education programs equip orphans with essential skills for the future."
-		},
-		{
-			icon: "water_bottle",
-			title: "Providing Clean Water for Healthier Communities",
-			description: "We implement potable water projects to ensure access to clean drinking water."
-		}
-	]
-	return `<section${add_attribute("class", styles$4.homeSection2, 0)}><div${add_attribute("class", styles$4.sectionWrapper, 0)}><h2${add_attribute("class", styles$4.contentTitle, 0)} data-svelte-h="svelte-r2hwu3">empowering
-			<span${add_attribute("class", styles$4.highlight, 0)}>orphans</span> and vulnerable communities for a
-			<span${add_attribute("class", styles$4.highlight, 0)}>brighter future</span></h2> <div${add_attribute("class", styles$4.sectionContent, 0)}>${each(
-				options,
-				({ icon, title, description }) => {
-					return `<article><span class="material-symbols-sharp">${escape(icon)}</span> <h4>${escape(title)}</h4> <p>${escape(description)}</p> </article>`
-				}
-			)}</div></div></section>`
-})
-const homeSection3 = "_homeSection3_x4xrf_6"
-const sectionContent$1 = "_sectionContent_x4xrf_14"
-const contentChip = "_contentChip_x4xrf_31"
-const contentTitle$1 = "_contentTitle_x4xrf_40"
-const highlight$1 = "_highlight_x4xrf_43"
-const contentDesc$1 = "_contentDesc_x4xrf_67"
-const statDesc = "_statDesc_x4xrf_76"
-const statsContainer = "_statsContainer_x4xrf_91"
-const statPercent = "_statPercent_x4xrf_102"
-const ctaBtns$1 = "_ctaBtns_x4xrf_110"
-const sectionMediaContainer = "_sectionMediaContainer_x4xrf_124"
-const styles$3 = {
-	homeSection3,
-	sectionContent: sectionContent$1,
-	contentChip,
-	contentTitle: contentTitle$1,
-	highlight: highlight$1,
-	contentDesc: contentDesc$1,
-	statDesc,
-	statsContainer,
-	statPercent,
-	ctaBtns: ctaBtns$1,
-	sectionMediaContainer
-}
-const HomeSection3 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `${validate_component(SectionWrapper, "SectionWrapper").$$render(
-		$$result,
-		{ className: styles$3.homeSection3 },
-		{},
-		{
-			default: () => {
-				return `<div${add_attribute("class", styles$3.sectionContent, 0)}><h4${add_attribute("class", styles$3.contentChip, 0)} data-svelte-h="svelte-18teudt"><span class="material-symbols-sharp">mountain_flag</span> <span>impact</span></h4> <h2${add_attribute("class", styles$3.contentTitle, 0)} data-svelte-h="svelte-pzdfsk">transforming lives through
-			<span${add_attribute("class", styles$3.highlight, 0)}>community support</span></h2> <p${add_attribute("class", styles$3.contentDesc, 0)} data-svelte-h="svelte-uro2ad">Our NGO has positively impacted over 1,000 orphans and vulnerable children. We have
-			successfully implemented 50 community projects across the North West Province</p> <div${add_attribute("class", styles$3.statsContainer, 0)} data-svelte-h="svelte-k0fmt"><article${add_attribute("class", styles$3.statItem, 0)}><h3${add_attribute("class", styles$3.statPercent, 0)}>75%</h3> <p${add_attribute("class", styles$3.statDesc, 0)}>of assisted children have improved their educational outcomes.</p></article> <article${add_attribute("class", styles$3.statItem, 0)}><h3${add_attribute("class", styles$3.statPercent, 0)}>80%</h3> <p${add_attribute("class", styles$3.statDesc, 0)}>of communities now have access to clean water.</p></article></div> <div${add_attribute("class", styles$3.ctaBtns, 0)}>${validate_component(
-				Button,
-				"Button"
-			).$$render(
-				$$result,
-				{ primary: true, onWhite: true },
-				{},
-				{
-					default: () => {
-						return `<span data-svelte-h="svelte-hkqajq">join</span> <span class="material-symbols-sharp" data-svelte-h="svelte-10wwtzw">handshake</span>`
-					}
-				}
-			)} ${validate_component(Button, "Button").$$render(
-				$$result,
-				{ onWhite: true },
-				{},
-				{
-					default: () => {
-						return `<span data-svelte-h="svelte-1c5bl9">donate</span> <span class="material-symbols-sharp" data-svelte-h="svelte-dko6le">compost</span>`
-					}
-				}
-			)}</div></div> <div${add_attribute("class", styles$3.sectionMediaContainer, 0)} data-svelte-h="svelte-zuryn4"><video muted playsinline disablepictureinpicture controls><source src="/video.mp4" type="video/mp4"></video></div>`
-			}
-		}
-	)}`
-})
-const homeSection4 = "_homeSection4_1o6hs_6"
-const sectionWrapper = "_sectionWrapper_1o6hs_24"
-const contentTitle = "_contentTitle_1o6hs_27"
-const highlight = "_highlight_1o6hs_31"
-const sectionContent = "_sectionContent_1o6hs_56"
-const contentDesc = "_contentDesc_1o6hs_61"
-const ctaBtns = "_ctaBtns_1o6hs_75"
-const styles$2 = {
-	homeSection4,
-	sectionWrapper,
-	contentTitle,
-	highlight,
-	sectionContent,
-	contentDesc,
-	ctaBtns
-}
-const HomeSection4 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `<section${add_attribute("class", styles$2.homeSection4, 0)}>${validate_component(
-		SectionWrapper,
-		"SectionWrapper"
-	).$$render(
-		$$result,
-		{ className: styles$2.sectionWrapper },
-		{},
-		{
-			default: () => {
-				return `<h2${add_attribute("class", styles$2.contentTitle, 0)} data-svelte-h="svelte-13xcdj0"><span${add_attribute("class", styles$2.highlight, 0)}>join us</span>
-			in making a difference</h2> <div${add_attribute("class", styles$2.sectionContent, 0)}><p${add_attribute("class", styles$2.contentDesc, 0)} data-svelte-h="svelte-1ekjoe7">your support can transform the lives of orphans and vulnerable communities in cameroon.
-				whether through donations, volunteering, or partnerships, every effort count towards
-				creating a brighter futur.</p> <div${add_attribute("class", styles$2.ctaBtns, 0)}>${validate_component(
-					Button,
-					"Button"
-				).$$render(
-					$$result,
-					{},
-					{},
-					{
-						default: () => {
-							return `<span data-svelte-h="svelte-1c5bl9">donate</span> <span class="material-symbols-sharp" data-svelte-h="svelte-dko6le">compost</span>`
-						}
-					}
-				)} ${validate_component(Button, "Button").$$render(
-					$$result,
-					{ primary: true },
-					{},
-					{
-						default: () => {
-							return `<span data-svelte-h="svelte-10tcr90">volunteer</span> <span class="material-symbols-sharp" data-svelte-h="svelte-15ezy9c">cheer</span>`
-						}
-					}
-				)}</div></div>`
-			}
-		}
-	)}</section>`
-})
-const testimonialsSection = "_testimonialsSection_1n45x_6"
-const testimony = "_testimony_1n45x_20"
-const testimonyAuthor = "_testimonyAuthor_1n45x_42"
-const authorDP = "_authorDP_1n45x_47"
-const spin = "_spin_1n45x_1"
-const authorsName = "_authorsName_1n45x_91"
-const authorsRole = "_authorsRole_1n45x_92"
-const styles$1 = {
-	testimonialsSection,
-	testimony,
-	testimonyAuthor,
-	authorDP,
-	spin,
-	authorsName,
-	authorsRole
-}
+import { c as create_ssr_component, v as validate_component, b as escape, a as add_attribute, e as each, d as subscribe } from "../../chunks/ssr.js";
+import { h as homeFaqs, F as Faq } from "../../chunks/faq.js";
+import { C as Chip } from "../../chunks/chip.js";
+import { C as ContentBlock } from "../../chunks/contentBlock.js";
+const css$1 = {
+  code: '@charset "UTF-8";.testimonialsSection.svelte-16xefhu.svelte-16xefhu{padding:32px 20px;background-size:30px 30px;background-image:linear-gradient(to right, rgba(111, 175, 100, 0.1254901961) 1px, transparent 1px)}.testimonialsSection.svelte-16xefhu .testimony-wrapper.svelte-16xefhu{max-width:1440px;margin-inline:auto}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card.svelte-16xefhu{display:flex;flex-direction:column;align-items:center;margin-block-start:32px;padding-block:32px;gap:16px}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu{text-align:center;font-size:16px;font-weight:500;opacity:0.8;color:#2b4f81;position:relative}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::before,.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::after{position:absolute;font-size:50px;font-weight:600;line-height:40px;opacity:0.2}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::before{content:"“";top:0;left:0}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::after{content:"”";bottom:0;right:0}@media(min-width: 768px){.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu{max-width:60%;margin-inline:auto;font-size:20px;line-height:32px}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::before,.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .testimony.svelte-16xefhu::after{font-size:70px}}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .avatar.svelte-16xefhu{width:150px;height:150px;border-radius:50%;position:relative;display:grid;place-items:center}@media(min-width: 768px){.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .avatar.svelte-16xefhu{width:200px;height:200px}}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .avatar img.svelte-16xefhu{width:100%;height:100%;border-radius:inherit;object-fit:cover}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .avatar .avatar-border.svelte-16xefhu{position:absolute;width:110%;height:110%;border-radius:50%;border:4px dashed #6faf64;animation:svelte-16xefhu-rotate 100s linear infinite}@keyframes svelte-16xefhu-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .author-name.svelte-16xefhu{font-size:16px;font-weight:600;line-height:32px}@media(min-width: 768px){.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .author-name.svelte-16xefhu{font-size:18px}}.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .author-title.svelte-16xefhu{font-size:14px;line-height:24px;text-align:center;opacity:0.5}@media(min-width: 768px){.testimonialsSection.svelte-16xefhu .testimony-wrapper .testimony-card .author-title.svelte-16xefhu{max-width:40%;font-size:16px}}',
+  map: `{"version":3,"file":"testimonials.svelte","sources":["testimonials.svelte"],"sourcesContent":["<!-- prettier-ignore -->\\n<script lang=\\"ts\\">import Chip from \\"./chip.svelte\\";\\nexport let authorName = \\"Valery Ayuni\\";\\nexport let authorAvatar = \\"/images/testimony-dp.webp\\";\\nexport let testimonial = \\"I'm one of the first orphans to be educated and empowered by Berikids International and its partners. I'm grateful for their support and guidance.\\";\\nexport let authorTitle = \\"Chief of post @berikids intl mental health unit Nkapa Souza Douala Cameroon.\\";\\n<\/script>\\n\\n<section class=\\"testimonialsSection\\">\\n\\t<div class=\\"testimony-wrapper\\">\\n\\t\\t<Chip chipText=\\"Testimony\\" chipIcon=\\"mic\\" chipColor=\\"red\\" />\\n\\n\\t\\t<article class=\\"testimony-card\\">\\n\\t\\t\\t<h2 class=\\"testimony\\">{testimonial}</h2>\\n\\n\\t\\t\\t<div class=\\"avatar\\">\\n\\t\\t\\t\\t<div class=\\"avatar-border\\"></div>\\n\\t\\t\\t\\t<img src={authorAvatar} alt=\\"avatar\\" />\\n\\t\\t\\t</div>\\n\\n\\t\\t\\t<h4 class=\\"author-name\\">{authorName}</h4>\\n\\t\\t\\t<p class=\\"author-title\\">{authorTitle}</p>\\n\\t\\t</article>\\n\\t</div>\\n</section>\\n\\n<style lang=\\"scss\\">@charset \\"UTF-8\\";\\n.testimonialsSection {\\n  padding: 32px 20px;\\n  background-size: 30px 30px;\\n  background-image: linear-gradient(to right, rgba(111, 175, 100, 0.1254901961) 1px, transparent 1px);\\n}\\n.testimonialsSection .testimony-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  margin-block-start: 32px;\\n  padding-block: 32px;\\n  gap: 16px;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .testimony {\\n  text-align: center;\\n  font-size: 16px;\\n  font-weight: 500;\\n  opacity: 0.8;\\n  color: #2b4f81;\\n  position: relative;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .testimony::before, .testimonialsSection .testimony-wrapper .testimony-card .testimony::after {\\n  position: absolute;\\n  font-size: 50px;\\n  font-weight: 600;\\n  line-height: 40px;\\n  opacity: 0.2;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .testimony::before {\\n  content: \\"“\\";\\n  top: 0;\\n  left: 0;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .testimony::after {\\n  content: \\"”\\";\\n  bottom: 0;\\n  right: 0;\\n}\\n@media (min-width: 768px) {\\n  .testimonialsSection .testimony-wrapper .testimony-card .testimony {\\n    max-width: 60%;\\n    margin-inline: auto;\\n    font-size: 20px;\\n    line-height: 32px;\\n  }\\n  .testimonialsSection .testimony-wrapper .testimony-card .testimony::before, .testimonialsSection .testimony-wrapper .testimony-card .testimony::after {\\n    font-size: 70px;\\n  }\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .avatar {\\n  width: 150px;\\n  height: 150px;\\n  border-radius: 50%;\\n  position: relative;\\n  display: grid;\\n  place-items: center;\\n}\\n@media (min-width: 768px) {\\n  .testimonialsSection .testimony-wrapper .testimony-card .avatar {\\n    width: 200px;\\n    height: 200px;\\n  }\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .avatar img {\\n  width: 100%;\\n  height: 100%;\\n  border-radius: inherit;\\n  object-fit: cover;\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .avatar .avatar-border {\\n  position: absolute;\\n  width: 110%;\\n  height: 110%;\\n  border-radius: 50%;\\n  border: 4px dashed #6faf64;\\n  animation: rotate 100s linear infinite;\\n}\\n@keyframes rotate {\\n  from {\\n    transform: rotate(0deg);\\n  }\\n  to {\\n    transform: rotate(360deg);\\n  }\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .author-name {\\n  font-size: 16px;\\n  font-weight: 600;\\n  line-height: 32px;\\n}\\n@media (min-width: 768px) {\\n  .testimonialsSection .testimony-wrapper .testimony-card .author-name {\\n    font-size: 18px;\\n  }\\n}\\n.testimonialsSection .testimony-wrapper .testimony-card .author-title {\\n  font-size: 14px;\\n  line-height: 24px;\\n  text-align: center;\\n  opacity: 0.5;\\n}\\n@media (min-width: 768px) {\\n  .testimonialsSection .testimony-wrapper .testimony-card .author-title {\\n    max-width: 40%;\\n    font-size: 16px;\\n  }\\n}</style>\\n"],"names":[],"mappings":"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"}`
+};
 const Testimonials = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `<section${add_attribute("class", styles$1.testimonialsSection, 0)} data-svelte-h="svelte-7k07wv"><h2${add_attribute("class", styles$1.testimony, 0)}>&quot;This organization has transformed my life and the lives of many others. Their support has given
-		us hope and a brighter future.&quot;</h2> <article${add_attribute("class", styles$1.testimonyAuthor, 0)}><div${add_attribute("class", styles$1.authorDP, 0)}><div${add_attribute("class", styles$1.circle, 0)}></div> <img src="https://i.pravatar.cc/300?img=11" alt="testimonial avatar"></div> <h6${add_attribute("class", styles$1.authorsName, 0)}>John Doe</h6> <p${add_attribute("class", styles$1.authorsRole, 0)}>volunteer, NGO partner</p></article></section>`
-})
-const homeRoot = "_homeRoot_1ngrp_6"
-const styles = {
-	homeRoot
-}
+  let { authorName = "Valery Ayuni" } = $$props;
+  let { authorAvatar = "/images/testimony-dp.webp" } = $$props;
+  let { testimonial = "I'm one of the first orphans to be educated and empowered by Berikids International and its partners. I'm grateful for their support and guidance." } = $$props;
+  let { authorTitle = "Chief of post @berikids intl mental health unit Nkapa Souza Douala Cameroon." } = $$props;
+  if ($$props.authorName === void 0 && $$bindings.authorName && authorName !== void 0) $$bindings.authorName(authorName);
+  if ($$props.authorAvatar === void 0 && $$bindings.authorAvatar && authorAvatar !== void 0) $$bindings.authorAvatar(authorAvatar);
+  if ($$props.testimonial === void 0 && $$bindings.testimonial && testimonial !== void 0) $$bindings.testimonial(testimonial);
+  if ($$props.authorTitle === void 0 && $$bindings.authorTitle && authorTitle !== void 0) $$bindings.authorTitle(authorTitle);
+  $$result.css.add(css$1);
+  return `  <section class="testimonialsSection svelte-16xefhu"><div class="testimony-wrapper svelte-16xefhu">${validate_component(Chip, "Chip").$$render(
+    $$result,
+    {
+      chipText: "Testimony",
+      chipIcon: "mic",
+      chipColor: "red"
+    },
+    {},
+    {}
+  )} <article class="testimony-card svelte-16xefhu"><h2 class="testimony svelte-16xefhu">${escape(testimonial)}</h2> <div class="avatar svelte-16xefhu"><div class="avatar-border svelte-16xefhu"></div> <img${add_attribute("src", authorAvatar, 0)} alt="avatar" class="svelte-16xefhu"></div> <h4 class="author-name svelte-16xefhu">${escape(authorName)}</h4> <p class="author-title svelte-16xefhu">${escape(authorTitle)}</p></article></div> </section>`;
+});
+const css = {
+  code: ".contact-details.svelte-429mg9.svelte-429mg9{padding:32px}.contact-details.svelte-429mg9 .contact-details-wrapper.svelte-429mg9{max-width:1440px;margin-inline:auto}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper.svelte-429mg9{display:grid;margin-block-start:64px;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:32px}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card.svelte-429mg9{display:flex;flex-direction:column;align-items:center;gap:16px;border-radius:16px;padding:20px;box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card.svelte-429mg9:nth-child(1){color:rgb(66.9914893617, 114.1063829787, 58.8936170213);background-color:rgb(220.3787234043, 235.7659574468, 217.7340425532)}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card.svelte-429mg9:nth-child(2){color:rgb(36.625, 67.2877906977, 109.875);background-color:rgb(192.75, 210.1220930233, 234.25)}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card.svelte-429mg9:nth-child(3){color:rgb(185.8301886792, 22.1886792453, 10.1698113208);background-color:rgb(253.2617924528, 225.2924528302, 223.2382075472)}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title.svelte-429mg9,.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon.svelte-429mg9{font-size:28px;font-weight:500}@media(min-width: 768px){.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title.svelte-429mg9,.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon.svelte-429mg9{font-size:32px;line-height:64px}}@media(min-width: 1024px){.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title.svelte-429mg9,.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon.svelte-429mg9{font-size:52px}}.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact.svelte-429mg9{font-weight:500}@media(min-width: 768px){.contact-details.svelte-429mg9 .contact-details-wrapper .contact-cards-wrapper .contact-card .contact.svelte-429mg9{font-weight:600}}",
+  map: '{"version":3,"file":"contactDetails.svelte","sources":["contactDetails.svelte"],"sourcesContent":["<script lang=\\"ts\\">import Chip from \\"./chip.svelte\\";\\nconst details = [\\n    { icon: \\"alternate_email\\", label: \\"Mail\\", contact: \\"Berikidsngo@gmx.de\\" },\\n    { label: \\"Office\\", contact: \\"123 office, location\\", icon: \\"apartment\\" },\\n    { icon: \\"add_call\\", label: \\"Phone\\", contact: \\"+237 653 176 545\\" }\\n];\\n<\/script>\\n\\n<section class=\\"contact-details\\">\\n\\t<div class=\\"contact-details-wrapper\\">\\n\\t\\t<Chip chipText=\\"How to reach us\\" chipIcon=\\"thread_unread\\" chipColor=\\"yellow\\" />\\n\\n\\t\\t<div class=\\"contact-cards-wrapper\\">\\n\\t\\t\\t{#each details as detail}\\n\\t\\t\\t\\t<article class=\\"contact-card\\">\\n\\t\\t\\t\\t\\t<span class=\\"material-symbols-sharp contact-icon\\">{detail.icon}</span>\\n\\t\\t\\t\\t\\t<h4 class=\\"contact-title\\">{detail.label}</h4>\\n\\t\\t\\t\\t\\t<span class=\\"contact\\">{detail.contact}</span>\\n\\t\\t\\t\\t</article>\\n\\t\\t\\t{/each}\\n\\t\\t</div>\\n\\t</div>\\n</section>\\n\\n<style lang=\\"scss\\">.contact-details {\\n  padding: 32px;\\n}\\n.contact-details .contact-details-wrapper {\\n  max-width: 1440px;\\n  margin-inline: auto;\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper {\\n  display: grid;\\n  margin-block-start: 64px;\\n  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));\\n  gap: 32px;\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  gap: 16px;\\n  border-radius: 16px;\\n  padding: 20px;\\n  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card:nth-child(1) {\\n  color: rgb(66.9914893617, 114.1063829787, 58.8936170213);\\n  background-color: rgb(220.3787234043, 235.7659574468, 217.7340425532);\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card:nth-child(2) {\\n  color: rgb(36.625, 67.2877906977, 109.875);\\n  background-color: rgb(192.75, 210.1220930233, 234.25);\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card:nth-child(3) {\\n  color: rgb(185.8301886792, 22.1886792453, 10.1698113208);\\n  background-color: rgb(253.2617924528, 225.2924528302, 223.2382075472);\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title,\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon {\\n  font-size: 28px;\\n  font-weight: 500;\\n}\\n@media (min-width: 768px) {\\n  .contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title,\\n  .contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon {\\n    font-size: 32px;\\n    line-height: 64px;\\n  }\\n}\\n@media (min-width: 1024px) {\\n  .contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-title,\\n  .contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact-icon {\\n    font-size: 52px;\\n  }\\n}\\n.contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact {\\n  font-weight: 500;\\n}\\n@media (min-width: 768px) {\\n  .contact-details .contact-details-wrapper .contact-cards-wrapper .contact-card .contact {\\n    font-weight: 600;\\n  }\\n}</style>\\n"],"names":[],"mappings":"AAwBmB,4CAAiB,CAClC,OAAO,CAAE,IACX,CACA,8BAAgB,CAAC,sCAAyB,CACxC,SAAS,CAAE,MAAM,CACjB,aAAa,CAAE,IACjB,CACA,8BAAgB,CAAC,wBAAwB,CAAC,oCAAuB,CAC/D,OAAO,CAAE,IAAI,CACb,kBAAkB,CAAE,IAAI,CACxB,qBAAqB,CAAE,OAAO,QAAQ,CAAC,CAAC,OAAO,KAAK,CAAC,CAAC,GAAG,CAAC,CAAC,CAC3D,GAAG,CAAE,IACP,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,2BAAc,CAC7E,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,WAAW,CAAE,MAAM,CACnB,GAAG,CAAE,IAAI,CACT,aAAa,CAAE,IAAI,CACnB,OAAO,CAAE,IAAI,CACb,UAAU,CAAE,KAAK,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,IAC/C,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,2BAAa,WAAW,CAAC,CAAE,CAC1F,KAAK,CAAE,IAAI,aAAa,CAAC,CAAC,cAAc,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,2BAAa,WAAW,CAAC,CAAE,CAC1F,KAAK,CAAE,IAAI,MAAM,CAAC,CAAC,aAAa,CAAC,CAAC,OAAO,CAAC,CAC1C,gBAAgB,CAAE,IAAI,MAAM,CAAC,CAAC,cAAc,CAAC,CAAC,MAAM,CACtD,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,2BAAa,WAAW,CAAC,CAAE,CAC1F,KAAK,CAAE,IAAI,cAAc,CAAC,CAAC,aAAa,CAAC,CAAC,aAAa,CAAC,CACxD,gBAAgB,CAAE,IAAI,cAAc,CAAC,CAAC,cAAc,CAAC,CAAC,cAAc,CACtE,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,4BAAc,CAC7F,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,2BAAc,CAC3F,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,GACf,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,4BAAc,CAC7F,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,2BAAc,CAC3F,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IACf,CACF,CACA,MAAO,YAAY,MAAM,CAAE,CACzB,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,4BAAc,CAC7F,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,2BAAc,CAC3F,SAAS,CAAE,IACb,CACF,CACA,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,sBAAS,CACtF,WAAW,CAAE,GACf,CACA,MAAO,YAAY,KAAK,CAAE,CACxB,8BAAgB,CAAC,wBAAwB,CAAC,sBAAsB,CAAC,aAAa,CAAC,sBAAS,CACtF,WAAW,CAAE,GACf,CACF"}'
+};
+const ContactDetails = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const details = [
+    {
+      icon: "alternate_email",
+      label: "Mail",
+      contact: "Berikidsngo@gmx.de"
+    },
+    {
+      label: "Office",
+      contact: "123 office, location",
+      icon: "apartment"
+    },
+    {
+      icon: "add_call",
+      label: "Phone",
+      contact: "+237 653 176 545"
+    }
+  ];
+  $$result.css.add(css);
+  return `<section class="contact-details svelte-429mg9"><div class="contact-details-wrapper svelte-429mg9">${validate_component(Chip, "Chip").$$render(
+    $$result,
+    {
+      chipText: "How to reach us",
+      chipIcon: "thread_unread",
+      chipColor: "yellow"
+    },
+    {},
+    {}
+  )} <div class="contact-cards-wrapper svelte-429mg9">${each(details, (detail) => {
+    return `<article class="contact-card svelte-429mg9"><span class="material-symbols-sharp contact-icon svelte-429mg9">${escape(detail.icon)}</span> <h4 class="contact-title svelte-429mg9">${escape(detail.label)}</h4> <span class="contact svelte-429mg9">${escape(detail.contact)}</span> </article>`;
+  })}</div></div> </section>`;
+});
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-	return `<main${add_attribute("class", styles.homeRoot, 0)}>${validate_component(Hero, "Hero").$$render($$result, {}, {}, {})} ${validate_component(HomeSection1, "HomeSection1").$$render($$result, {}, {}, {})} ${validate_component(HomeSection2, "HomeSection2").$$render($$result, {}, {}, {})} ${validate_component(HomeSection3, "HomeSection3").$$render($$result, {}, {}, {})} ${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})} ${validate_component(HomeSection4, "HomeSection4").$$render($$result, {}, {}, {})}</main>`
-})
-export { Page as default }
+  let $homeFaqs, $$unsubscribe_homeFaqs;
+  $$unsubscribe_homeFaqs = subscribe(homeFaqs, (value) => $homeFaqs = value);
+  $$unsubscribe_homeFaqs();
+  return `${$$result.head += `<!-- HEAD_svelte-1anpopb_START -->${$$result.title = `<title>Home</title>`, ""}<!-- HEAD_svelte-1anpopb_END -->`, ""} <main>${validate_component(ContentBlock, "ContentBlock").$$render(
+    $$result,
+    {
+      heroBlock: true,
+      contentChipColor: "blue",
+      contentChipText: "misson",
+      contentChipIcon: "sign_language",
+      contentMedia: "/images/heroImg.webp",
+      contentTitleHighlight: "sustainable development",
+      contentTitle: "empowering lives through sustainable development initiatives",
+      contentDescription: "\n      Our mission is to uplift orphans and vulnerable communities in Cameroon by enhancing their\n      socio-economic conditions and providing essential resources. We focus on education, access to\n      clean water, and spiritual guidance to foster holistic development.\n    "
+    },
+    {},
+    {}
+  )} ${validate_component(ContactDetails, "ContactDetails").$$render($$result, {}, {}, {})} ${validate_component(Testimonials, "Testimonials").$$render($$result, {}, {}, {})}  ${validate_component(Faq, "Faq").$$render(
+    $$result,
+    {
+      faqs: $homeFaqs,
+      desc: "discover how our NGO is making a difference and how you can help"
+    },
+    {},
+    {}
+  )}</main>`;
+});
+export {
+  Page as default
+};

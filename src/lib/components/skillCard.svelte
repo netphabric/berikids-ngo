@@ -1,0 +1,94 @@
+<script lang="ts">
+	import Chip from "./chip.svelte"
+
+	const skillCards = [
+		{ title: "Agriculture", icon: "grocery" },
+		{ title: "Carpentry", icon: "handyman" },
+		{ title: "Tailoring", icon: "conveyor_belt" }
+	]
+</script>
+
+<section class="skill-cards">
+	<div class="section-wrapper">
+		<Chip chipText="our skills" chipIcon="verified" chipColor="yellow" />
+
+		<div class="cards-wrapper">
+			{#each skillCards as skill}
+				<article class="skill-card">
+					<span class="material-symbols-sharp">{skill.icon}</span>
+					<h4 class="title">{skill.title}</h4>
+				</article>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<style lang="scss">
+	@use "sass:color";
+
+	$green: #6faf64;
+	$blue: #2b4f81;
+	$red: #f44336;
+
+	.skill-cards {
+		padding: 32px 20px;
+
+		.section-wrapper {
+			max-width: 1440px;
+			margin-inline: auto;
+
+			.cards-wrapper {
+				display: grid;
+				margin-block-start: 32px;
+				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+				gap: 16px;
+
+				@media (min-width: 768px) {
+					margin-block-start: 64px;
+					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+					gap: 32px;
+				}
+
+				.skill-card {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 16px;
+					border-radius: 16px;
+					padding: 20px;
+					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+					&:nth-child(1) {
+						color: color.adjust($green, $lightness: -20%);
+						background-color: color.adjust($green, $lightness: 35%);
+					}
+
+					&:nth-child(2) {
+						color: color.adjust($blue, $lightness: -5%);
+						background-color: color.adjust($blue, $lightness: 50%);
+					}
+
+					&:nth-child(3) {
+						color: color.adjust($red, $lightness: -20%);
+						background-color: color.adjust($red, $lightness: 35%);
+					}
+
+					.material-symbols-sharp {
+						font-size: 64px;
+						font-weight: 500;
+					}
+
+					.title {
+						font-size: 24px;
+						font-weight: 500;
+
+						@media (min-width: 768px) {
+							font-size: 32px;
+							line-height: 64px;
+						}
+					}
+				}
+			}
+		}
+	}
+</style>
