@@ -16,52 +16,41 @@
 </h4>
 
 <style lang="scss">
-	@use "sass:color";
-
-	$green: #6faf64;
-	$blue: #2b4f81;
-	$yellow: #ffd966;
-	$red: #f44336;
-
 	.content-chip {
 		width: max-content;
 		display: flex;
 		align-items: center;
-		padding: 8px 16px;
-		border-radius: 16px;
-		box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-		gap: 8px;
+		padding: rem(8) rem(16);
+		border-radius: rem(16);
+		box-shadow: $shadow-hard;
+		gap: rem(8);
 
 		&.bgGreen {
-			color: color.adjust($green, $lightness: -20%);
-			background-color: color.adjust($green, $lightness: 35%);
+			@include greenShade;
 		}
 
 		&.bgBlue {
-			color: color.adjust($blue, $lightness: -5%);
-			background-color: color.adjust($blue, $lightness: 55%);
+			@include blueShade;
 		}
 
 		&.bgRed {
-			color: color.adjust($red, $lightness: -20%);
-			background-color: color.adjust($red, $lightness: 35%);
+			@include redShade;
 		}
 
 		&.bgYellow {
-			color: color.adjust($yellow, $lightness: -45%);
-			background-color: color.adjust($yellow, $lightness: 16%);
+			@include yellowShade;
 		}
 
 		.chip-text {
-			font-size: 14px;
-			font-weight: 500;
+			font-size: $tiny;
+			font-weight: $semiBold;
 
-			@media (min-width: 768px) {
-				font-size: 16px;
+			@include minWidth("tablet") {
+				font-size: $small;
 			}
 
-			@media (min-width: 1024px) {
-				font-size: 18px;
+			@include minWidth("desktop") {
+				font-size: $regular;
 			}
 		}
 	}

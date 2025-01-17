@@ -27,8 +27,16 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       contentTitle: "Support our diverse projects",
       contentDescription: "\n      Join us in making a difference through donations,\n      volunteering, or forming valuable partnerships.\n    ",
       ctaButtons: [
-        { label: "Volunteer", icon: "handshake" },
-        { label: "Partnership", icon: "verified" }
+        {
+          label: "Volunteer",
+          icon: "handshake",
+          url: "/contact"
+        },
+        {
+          label: "Partnership",
+          icon: "verified",
+          url: "/contact"
+        }
       ]
     },
     {},

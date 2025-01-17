@@ -56,7 +56,7 @@
 
 <style lang="scss">
 	.contact-Form {
-		padding: 32px 20px;
+		padding: rem(32) rem(20);
 
 		@media (min-width: 768px) {
 			height: calc(70dvh - 48px);
@@ -64,7 +64,7 @@
 
 		.form-wrapper {
 			width: 100%;
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 		}
 
@@ -72,20 +72,20 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-bottom: 32px;
-			gap: 32px;
+			margin-bottom: rem(32);
+			gap: rem(32);
 
 			.form-title {
-				font-size: 28px;
-				font-weight: 600;
+				font-size: $h4;
+				font-weight: $semiBold;
 
-				@media (min-width: 768px) {
-					font-size: 32px;
+				@include minWidth("tablet") {
+					font-size: $h3;
 					line-height: 40px;
 				}
 
-				@media (min-width: 1024px) {
-					font-size: 52px;
+				@include minWidth("desktop") {
+					font-size: $h2;
 				}
 			}
 		}
@@ -94,9 +94,9 @@
 			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 20px;
+			gap: rem(20);
 
-			@media (min-width: 768px) {
+			@include minWidth("tablet") {
 				max-width: 60%;
 			}
 
@@ -105,26 +105,26 @@
 			}
 
 			input {
-				height: 60px;
+				height: rem(60);
 			}
 
 			textarea {
-				height: 150px;
+				height: rem(150);
 				resize: none;
 			}
 
 			input,
 			textarea {
-				padding: 8px 16px;
-				border-radius: 8px;
+				padding: rem(8) rem(16);
+				border-radius: rem(8);
 				border: transparent;
-				font-size: 14px;
-				font-weight: 400;
-				box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+				font-size: $small;
+				font-weight: $normal;
+				box-shadow: $shadow-soft;
 
-				@media (min-width: 768px) {
-					font-size: 16px;
-					line-height: 32px;
+				@include minWidth("tablet") {
+					font-size: $regular;
+					line-height: rem(32);
 				}
 
 				&::placeholder {

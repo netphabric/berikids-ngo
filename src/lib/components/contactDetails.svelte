@@ -25,70 +25,57 @@
 </section>
 
 <style lang="scss">
-	@use "sass:color";
-
-	$green: #6faf64;
-	$blue: #2b4f81;
-	$red: #f44336;
-
 	.contact-details {
-		padding: 32px;
+		padding: rem(32) rem(20);
 
 		.contact-details-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 
 			.contact-cards-wrapper {
 				display: grid;
-				margin-block-start: 64px;
-				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-				gap: 32px;
+				margin-block-start: rem(64);
+				grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+				gap: rem(32);
 
 				.contact-card {
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					gap: 16px;
-					border-radius: 16px;
-					padding: 20px;
-					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+					gap: rem(16);
+					border-radius: rem(16);
+					padding: rem(16);
+					box-shadow: $shadow-soft;
 
 					&:nth-child(1) {
-						color: color.adjust($green, $lightness: -20%);
-						background-color: color.adjust($green, $lightness: 35%);
+						@include blueShade;
 					}
 
 					&:nth-child(2) {
-						color: color.adjust($blue, $lightness: -5%);
-						background-color: color.adjust($blue, $lightness: 50%);
+						@include redShade;
 					}
 
 					&:nth-child(3) {
-						color: color.adjust($red, $lightness: -20%);
-						background-color: color.adjust($red, $lightness: 35%);
+						@include greenShade;
 					}
 
 					.contact-title,
 					.contact-icon {
-						font-size: 28px;
-						font-weight: 500;
+						font-size: $h4;
+						font-weight: $normal;
 
-						@media (min-width: 768px) {
-							font-size: 32px;
-							line-height: 64px;
+						@include minWidth("tablet") {
+							font-size: $h3;
+							line-height: rem(64);
 						}
 
-						@media (min-width: 1024px) {
-							font-size: 52px;
+						@include minWidth("desktop") {
+							font-size: $h2;
 						}
 					}
 
 					.contact {
-						font-weight: 500;
-
-						@media (min-width: 768px) {
-							font-weight: 600;
-						}
+						font-weight: $semiBold;
 					}
 				}
 			}

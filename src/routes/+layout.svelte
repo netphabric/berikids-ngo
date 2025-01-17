@@ -33,8 +33,8 @@
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="berikids" />
-	<meta property="og:url" content="/opengraph.wepb" />
-	<meta property="og:image" content="/opengraph.wepb" />
+	<meta property="og:url" content="/opengraph.webp" />
+	<meta property="og:image" content="/opengraph.webp" />
 
 	<!-- Twitter -->
 	<meta
@@ -43,8 +43,8 @@
 	/>
 	<meta property="twitter:title" content="berikids" />
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:image" content="/opengraph.wepb" />
-	<meta property="twitter:url" content="/opengraph.wepb" />
+	<meta property="twitter:image" content="/opengraph.webp" />
+	<meta property="twitter:url" content="/opengraph.webp" />
 </svelte:head>
 
 <Header />

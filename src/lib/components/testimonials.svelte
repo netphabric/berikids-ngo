@@ -13,137 +13,104 @@
 		<Chip chipText="Testimony" chipIcon="mic" chipColor="red" />
 
 		<article class="testimony-card">
-			<h2 class="testimony">{testimonial}</h2>
-
 			<div class="avatar">
-				<div class="avatar-border"></div>
 				<img src={authorAvatar} alt="avatar" />
 			</div>
 
-			<h4 class="author-name">{authorName}</h4>
-			<p class="author-title">{authorTitle}</p>
+			<h2 class="testimony">
+				<p class="testimony-text">{testimonial}</p>
+
+				<div class="author-details">
+					<h4 class="author-name">{authorName}</h4>
+					<p class="author-title">{authorTitle}</p>
+				</div>
+			</h2>
 		</article>
 	</div>
 </section>
 
 <style lang="scss">
 	.testimonialsSection {
-		padding: 32px 20px;
-		background-size: 30px 30px;
-		background-image: linear-gradient(to right, #6faf6420 1px, transparent 1px);
+		padding: rem(32) rem(20);
 
 		.testimony-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 
 			.testimony-card {
 				display: flex;
 				flex-direction: column;
-				align-items: center;
-				margin-block-start: 32px;
-				padding-block: 32px;
-				gap: 16px;
+				justify-content: space-around;
+				margin-block-start: rem(32);
+				padding-block: rem(32);
+				gap: rem(32);
+
+				@include minWidth("mobile") {
+					flex-direction: row;
+				}
 
 				.testimony {
-					text-align: center;
-					font-size: 16px;
-					font-weight: 500;
-					opacity: 0.8;
-					color: #2b4f81;
-					position: relative;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					gap: rem(16);
 
-					&::before,
-					&::after {
-						position: absolute;
-						font-size: 50px;
-						font-weight: 600;
-						line-height: 40px;
-						opacity: 0.2;
+					@include minWidth("mobile") {
+						max-width: 50%;
 					}
 
-					&::before {
-						content: "“";
-						top: 0;
-						left: 0;
-					}
+					.testimony-text {
+						font-size: $h6;
+						font-weight: $medium;
+						position: relative;
+						text-wrap: auto;
 
-					&::after {
-						content: "”";
-						bottom: 0;
-						right: 0;
-					}
-
-					@media (min-width: 768px) {
-						max-width: 60%;
-						margin-inline: auto;
-						font-size: 20px;
-						line-height: 32px;
-
-						&::before,
-						&::after {
-							font-size: 70px;
+						@include minWidth("tablet") {
+							font-size: $h5;
+							line-height: rem(32);
 						}
+
+						@include minWidth("desktop") {
+							font-size: $h4;
+							line-height: rem(40);
+						}
+					}
+
+					.author-details {
+						display: flex;
+						flex-direction: column;
+						gap: rem(8);
+
+						.author-name,
+						.author-title {
+							font-size: $regular;
+							font-weight: $medium;
+							line-height: rem(24);
+
+							@include minWidth("tablet") {
+								font-size: $large;
+							}
+						}
+					}
+
+					.author-title {
+						opacity: 0.5;
+						font-weight: $normal;
 					}
 				}
 
 				.avatar {
-					width: 150px;
-					height: 150px;
-					border-radius: 50%;
+					max-width: rem(350);
+					border-radius: rem(16);
 					position: relative;
 					display: grid;
 					place-items: center;
-
-					@media (min-width: 768px) {
-						width: 200px;
-						height: 200px;
-					}
+					overflow: hidden;
 
 					img {
 						width: 100%;
 						height: 100%;
-						border-radius: inherit;
 						object-fit: cover;
-					}
-
-					.avatar-border {
-						position: absolute;
-						width: 110%;
-						height: 110%;
-						border-radius: 50%;
-						border: 4px dashed #6faf64;
-						animation: rotate 100s linear infinite;
-
-						@keyframes rotate {
-							from {
-								transform: rotate(0deg);
-							}
-							to {
-								transform: rotate(360deg);
-							}
-						}
-					}
-				}
-
-				.author-name {
-					font-size: 16px;
-					font-weight: 600;
-					line-height: 32px;
-
-					@media (min-width: 768px) {
-						font-size: 18px;
-					}
-				}
-
-				.author-title {
-					font-size: 14px;
-					line-height: 24px;
-					text-align: center;
-					opacity: 0.5;
-
-					@media (min-width: 768px) {
-						max-width: 40%;
-						font-size: 16px;
 					}
 				}
 			}
