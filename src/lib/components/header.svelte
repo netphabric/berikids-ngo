@@ -124,19 +124,20 @@
 			}
 
 			.mobileNav {
-				position: absolute;
-				top: 0;
-				right: 0;
 				width: 100%;
 				height: 100dvh;
-				padding: 32px 20px;
-				backdrop-filter: blur(100px);
-				background-color: #f2f2f2a2;
+				overflow: hidden;
+				background-color: #f2f2f2;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
 				gap: 16px;
+
+				position: fixed;
+				top: 0;
+				right: 0;
+				padding: 32px 20px;
 
 				.navLinks {
 					display: flex;

@@ -114,14 +114,13 @@
 
 						font-size: 16px;
 						color: inherit;
-						padding: 8px 16px;
+						padding: 16px 32px;
 						border: transparent;
 						background: transparent;
 
 						@media (min-width: 768px) {
 							font-size: 18px;
 							line-height: 32px;
-							padding: 16px 32px;
 						}
 
 						.faq-icon {
