@@ -4,7 +4,13 @@
 	const details = [
 		{ icon: "alternate_email", label: "Mail", contact: "Berikidsngo@gmx.de" },
 		{ label: "Office", contact: "123 office, location", icon: "apartment" },
-		{ icon: "add_call", label: "Phone", contact: "+237 653 176 545" }
+		{ icon: "add_call", label: "Phone", contact: "+237 653 176 545" },
+		{
+			icon: "radio",
+			label: "Facebook",
+			contact: "facebook/berikids.org",
+			url: "https://www.facebook.com/berikids.org/"
+		}
 	]
 </script>
 
@@ -17,7 +23,11 @@
 				<article class="contact-card">
 					<span class="material-symbols-sharp contact-icon">{detail.icon}</span>
 					<h4 class="contact-title">{detail.label}</h4>
-					<span class="contact">{detail.contact}</span>
+					{#if detail.url}
+						<a class="contact" href={detail.url}>{detail.contact}</a>
+					{:else}
+						<span class="contact">{detail.contact}</span>
+					{/if}
 				</article>
 			{/each}
 		</div>
@@ -57,6 +67,10 @@
 
 					&:nth-child(3) {
 						@include greenShade;
+					}
+
+					&:nth-child(4) {
+						@include yellowShade;
 					}
 
 					.contact-title,

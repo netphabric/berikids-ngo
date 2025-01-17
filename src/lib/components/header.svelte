@@ -6,7 +6,8 @@
 	const navLinks = [
 		{ label: "about", url: "/about" },
 		{ label: "projects", url: "/projects" },
-		{ label: "Vocation", url: "/vocation" },
+		{ label: "vocation", url: "/vocation" },
+		{ label: "gallery", url: "https://www.facebook.com/berikids.org/photos_by" },
 		{ label: "contact", url: "contact" }
 	]
 
