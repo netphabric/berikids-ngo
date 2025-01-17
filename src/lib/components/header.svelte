@@ -128,7 +128,7 @@
 				top: 0;
 				right: 0;
 				width: 100%;
-				height: 100vh;
+				height: 100dvh;
 				padding: 32px 20px;
 				backdrop-filter: blur(100px);
 				display: flex;
