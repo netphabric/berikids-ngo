@@ -3,7 +3,7 @@
 
 	const details = [
 		{ icon: "alternate_email", label: "Mail", contact: "Berikidsngo@gmx.de" },
-		{ label: "Office", contact: "123 office, location", icon: "apartment" },
+		{ label: "Office", contact: "P.O. Box 52 Kumbo Cameroon", icon: "apartment" },
 		{ icon: "add_call", label: "Phone", contact: "+237 653 176 545" },
 		{
 			icon: "radio",
