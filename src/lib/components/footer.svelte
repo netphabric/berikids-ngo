@@ -8,19 +8,19 @@
 
 <style lang="scss">
 	footer {
-		padding: 64px 20px;
-		background-color: #ffd966;
+		padding: rem(64) rem(20);
+		background-color: $secondary;
 
 		.footer-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 
 			.copyright {
 				text-align: center;
-				font-size: 14px;
+				font-size: $small;
 
-				@media (min-width: 768px) {
-					font-size: 16px;
+				@include minWidth("tablet") {
+					font-size: $regular;
 				}
 			}
 		}

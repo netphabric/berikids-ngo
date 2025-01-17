@@ -34,32 +34,34 @@ $large-desktop: rem(1280);
   }
 }
 
+// Color and background shades
+@mixin greenShade () {
+  color: color.adjust($accent, $lightness: -20%);
+  background-color: color.adjust($accent, $lightness: 35%);
+}
+
+@mixin blueShade () {
+  color: color.adjust($primary, $lightness: -5%);
+  background-color: color.adjust($primary, $lightness: 50%);
+}
+
+@mixin redShade () {
+  color: color.adjust($error, $lightness: -20%);
+  background-color: color.adjust($error, $lightness: 35%);
+}
+
+@mixin yellowShade () {
+  color: color.adjust($secondary, $lightness: -45%);
+  background-color: color.adjust($secondary, $lightness: 16%);
+}
+
+
+// background grid pattern
 @mixin gridbgColor($color: $accent) {
   background-color: color.adjust($color, $hue: 3deg);
   @include gridBackground($color, 3%, "vertical");
 }
 
-@mixin underlineOnHover($color: $secondary) {
-  position: relative;
-
-  &::after {
-    content: "";
-    width: 0;
-    height: 5px;
-
-    position: absolute;
-    left: 0;
-    top: 100%;
-
-    background: linear-gradient(to right, $color 0%, $color 100%);
-    transition: width 0.3s ease-in-out;
-    pointer-events: none;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
 
 @mixin gridBackground($color, $lightenPercentage, $type: "grid") {
   background-size: 30px 30px;
@@ -86,24 +88,47 @@ $large-desktop: rem(1280);
   }
 }
 
-@mixin highlight($color: $accent) {
-  .highlight {
-    color: $color;
-    position: relative;
+// hover action
+@mixin underlineOnHover($color: $secondary) {
+  position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 75%;
-      left: 0;
-      width: 100%;
-      height: 8px;
-      background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
-    }
+  &::after {
+    content: "";
+    width: 0;
+    height: 5px;
+
+    position: absolute;
+    left: 0;
+    top: 100%;
+
+    background: linear-gradient(to right, $color 0%, $color 100%);
+    transition: width 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    width: 100%;
   }
 }
 
+// custom text decoration
+@mixin highlight($color: $accent) {
+  color: $color;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
+  }
+}
+
+// idle animations
 @mixin borderGradient($duration: 10000ms) {
   $color1: rgba(168, 239, 255, 1);
   $color2: rgba(168, 239, 255, 0.1);

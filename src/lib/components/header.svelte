@@ -74,43 +74,40 @@
 	.header {
 		padding: 32px;
 		backdrop-filter: blur(20px);
-		background-color: #f2f2f2a2;
+		background-color: $opaque-white;
 		position: sticky;
 		z-index: 100;
 		top: 0;
 
-		@media (min-width: 768px) {
+		@include minWidth("tablet") {
 			margin-block-end: 64px;
 		}
 
 		.logo {
-			color: #2b4f81;
+			color: $primary;
+			display: flex;
+			align-items: center;
+			gap: rem(4);
 
 			a {
-				font-family: "Aldrich", serif;
-				font-style: normal;
-				font-size: 24px;
-				font-weight: 200;
-				text-decoration: none;
-
-				display: flex;
-				align-items: center;
-				gap: 4px;
+				font-size: $large;
+				font-weight: $light;
+				font-family: $logo-font;
 			}
 		}
 
 		.nav-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 
 			.menu {
-				font-size: 40px;
+				font-size: $h3;
 				cursor: pointer;
 
-				@media (min-width: 768px) {
+				@include minWidth("tablet") {
 					display: none;
 				}
 			}
@@ -118,7 +115,7 @@
 			.nav-right {
 				display: none;
 
-				@media (min-width: 768px) {
+				@include minWidth("tablet") {
 					display: block;
 				}
 			}
@@ -127,28 +124,29 @@
 				width: 100%;
 				height: 100dvh;
 				overflow: hidden;
-				background-color: #f2f2f2;
+
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				gap: 16px;
+				gap: rem(16);
 
-				position: fixed;
 				top: 0;
 				right: 0;
-				padding: 32px 20px;
+				position: fixed;
+				padding: rem(32) rem(16);
+				background-color: $white;
 
 				.navLinks {
 					display: flex;
 					flex-direction: column;
 					align-items: unset;
-					gap: 16px;
+					gap: rem(16);
 
 					.navLink {
 						a {
-							font-size: 22px;
-							font-weight: 600;
+							font-size: $large;
+							font-weight: $semiBold;
 						}
 					}
 				}
@@ -158,22 +156,18 @@
 				display: flex;
 				align-items: center;
 				list-style: none;
-				gap: 32px;
+				gap: rem(32);
 
 				.navLink {
-					cursor: pointer;
+					@include underlineOnHover;
 
 					a {
 						text-decoration: none;
 						text-transform: uppercase;
-						font-weight: 400;
+						font-weight: $normal;
 
-						@media (min-width: 768px) {
-							font-size: 16px;
-						}
-
-						@media (min-width: 1024px) {
-							font-size: 18px;
+						@include minWidth("tablet") {
+							font-size: $regular;
 						}
 					}
 				}

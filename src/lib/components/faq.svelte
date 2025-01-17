@@ -55,43 +55,43 @@
 
 <style lang="scss">
 	.faqs-root {
-		padding: 32px 20px;
+		padding: rem(32) rem(20);
 
 		.faq-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 32px;
+			gap: rem(32);
 
 			.faq-header {
 				display: flex;
 				flex-direction: column;
-				margin-block-start: 32px;
-				gap: 16px;
+				margin-block-start: rem(32);
+				gap: rem(16);
 
 				.faq-title {
-					font-size: 28px;
+					font-size: $h4;
 					font-weight: 500;
 
-					@media (min-width: 768px) {
-						font-size: 32px;
+					@include minWidth("tablet") {
+						font-size: $h3;
 						line-height: 40px;
 					}
 
-					@media (min-width: 1024px) {
-						font-size: 52px;
+					@include minWidth("desktop") {
+						font-size: $h2;
 					}
 				}
 
 				.faq-desc {
-					font-size: 16px;
-					font-weight: 400;
+					font-size: $small;
+					font-weight: $normal;
 					opacity: 0.6;
 
-					@media (min-width: 768px) {
-						line-height: 32px;
-						font-size: 18px;
+					@include minWidth("tablet") {
+						line-height: rem(32);
+						font-size: $regular;
 					}
 				}
 			}
@@ -112,14 +112,15 @@
 						align-items: center;
 						cursor: pointer;
 
-						font-size: 16px;
 						color: inherit;
-						padding: 16px 32px;
+						font-size: $small;
+						font-weight: $semiBold;
+						padding: rem(16) rem(20);
 						border: transparent;
 						background: transparent;
 
-						@media (min-width: 768px) {
-							font-size: 18px;
+						@include minWidth("tablet") {
+							font-size: $regular;
 							line-height: 32px;
 						}
 
@@ -127,24 +128,20 @@
 							display: grid;
 							place-items: center;
 							span {
-								font-size: 16px;
-
-								@media (min-width: 768px) {
-									font-size: 24px;
-								}
+								font-size: $medium;
 							}
 						}
 					}
 
 					.answer {
-						padding: 20px;
-						font-size: 14px;
-						font-weight: 400;
+						padding: rem(16);
+						font-size: $small;
+						font-weight: $normal;
 						opacity: 0.5;
 
-						@media (min-width: 768px) {
-							font-size: 16px;
-							line-height: 32px;
+						@include minWidth("tablet") {
+							font-size: $regular;
+							line-height: rem(32);
 						}
 					}
 				}

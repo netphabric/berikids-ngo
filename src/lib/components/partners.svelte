@@ -14,7 +14,7 @@
 					<h4 class="title">{partner.name}</h4>
 
 					<partner class="text">
-						<span class="material-symbols-sharp">share_location</span>
+						<span class="material-symbols-sharp">pin_drop</span>
 						<span>{partner.location}</span>
 					</partner>
 				</article>
@@ -25,53 +25,63 @@
 
 <style lang="scss">
 	.partners {
-		padding: 32px;
+		padding: rem(32) rem(20);
 	}
 
 	.partners-wrapper {
-		max-width: 1440px;
+		max-width: $max-width;
 		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
-		gap: 32px;
+		gap: rem(32);
 
 		.partner-cards {
 			display: grid;
-			margin-block-start: 32px;
+			margin-block-start: rem(32);
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-			gap: 32px;
+			gap: rem(32);
 
 			.partner-card {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				border-radius: 16px;
-				padding: 20px;
-				gap: 16px;
-				color: white;
-				background-color: #2b4f81;
-				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+				border-radius: rem(16);
+				padding: rem(16);
+				gap: rem(16);
+				color: $white;
+				background-color: $primary;
+				box-shadow: $shadow-hard;
 
 				.verified {
-					font-size: 52px;
-					color: #ffd966;
+					font-size: $h3;
+					color: $secondary;
 				}
 
 				.title {
-					font-size: 18px;
-					font-weight: 500;
-					line-height: 32px;
+					font-size: $small;
+					font-weight: $semiBold;
 					text-transform: uppercase;
+					line-height: rem(24);
+
+					@include minWidth("tablet") {
+						font-size: $regular;
+						line-height: rem(32);
+					}
 				}
 
 				.text {
-					font-size: 16px;
-					font-weight: 400;
-					line-height: 24px;
+					font-size: $small;
+					font-weight: $normal;
+					line-height: rem(24);
 					opacity: 0.6;
 					display: flex;
 					align-items: center;
 					gap: 8px;
+
+					@include minWidth("tablet") {
+						font-size: $regular;
+						line-height: rem(32);
+					}
 				}
 			}
 		}

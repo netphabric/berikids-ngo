@@ -42,59 +42,45 @@
 </div>
 
 <style lang="scss">
-	@use "sass:color";
-
-	$green: #6faf64;
-	$blue: #2b4f81;
-	$yellow: #ffd966;
-	$red: #f44336;
-
 	.toast-container {
-		position: fixed;
-		bottom: 32px;
-		left: 32px;
-		margin-inline: auto;
 		display: flex;
 		flex-direction: column;
+		gap: rem(16);
 		z-index: 1000;
-		gap: 16px;
+		position: fixed;
+		bottom: rem(32);
+		left: rem(32);
+		margin-inline: auto;
 		transition: all 0.3s ease-in-out;
 
 		.toast {
-			min-height: 50px;
+			min-height: rem(50);
 			width: max-content;
 			display: flex;
 			align-items: center;
-			gap: 0.5rem;
-			padding: 8px 16px;
-			border-radius: 16px;
+			gap: rem(8);
+			padding: rem(8) rem(16);
+			border-radius: rem(8);
 			cursor: pointer;
 			border: none;
-			font-size: 24px;
+			font-size: $small;
 			text-transform: capitalize;
 			transition: all 0.3s ease-in-out;
 
-			.material-symbols-sharp {
-				font-size: 24px;
+			@include minWidth("tablet") {
+				font-size: $regular;
 			}
 
 			&.info {
-				color: color.adjust($blue, $lightness: -5%);
-				background-color: color.adjust($blue, $lightness: 55%);
+				@include blueShade;
 			}
 
 			&.success {
-				color: color.adjust($green, $lightness: -20%);
-				background-color: color.adjust($green, $lightness: 35%);
+				@include greenShade;
 			}
 
 			&.error {
-				color: color.adjust($red, $lightness: -20%);
-				background-color: color.adjust($red, $lightness: 35%);
-			}
-
-			span {
-				font-size: 0.9rem;
+				@include redShade;
 			}
 		}
 	}

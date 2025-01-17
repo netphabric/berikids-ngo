@@ -74,13 +74,13 @@
 
 <style lang="scss">
 	.content-render {
-		padding: 32px 20px;
+		padding: rem(32) rem(20);
 
 		.content-wrapper {
 			display: grid;
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
-			gap: 32px;
+			gap: rem(32);
 			grid-template-areas:
 				"a a"
 				"b b";
@@ -90,15 +90,15 @@
 					"b b"
 					"a a";
 
-				@media (min-width: 840px) {
+				@include minWidth("tablet") {
 					gap: 64px;
 					grid-template-areas: "b b b a a";
 				}
 			}
 
-			@media (min-width: 840px) {
+			@include minWidth("tablet") {
 				grid-template-areas: "a a b b b";
-				gap: 64px;
+				gap: rem(64);
 			}
 
 			&.blockLayout {
@@ -109,11 +109,14 @@
 
 				.block-content,
 				.content-cta-container {
-					max-width: 70%;
-					margin-inline: auto;
 					text-align: center;
 					justify-content: center;
 					align-items: center;
+
+					@include minWidth("tablet") {
+						max-width: 70%;
+						margin-inline: auto;
+					}
 				}
 
 				.content-media {
@@ -129,53 +132,58 @@
 				flex-direction: column;
 				justify-content: space-between;
 				align-items: flex-start;
-				gap: 16px;
+				gap: rem(16);
 
 				.content-title {
-					font-size: 28px;
+					font-size: $h5;
 					font-weight: 600;
 					line-height: 1.2;
 
-					@media (min-width: 768px) {
-						font-size: 32px;
+					@include minWidth("mobile") {
+						font-size: $h4;
 					}
 
-					@media (min-width: 1024px) {
-						font-size: 52px;
+					@include minWidth("tablet") {
+						font-size: $h3;
+					}
+
+					@include minWidth("desktop") {
+						font-size: $h2;
 					}
 
 					span {
 						&.highlight {
-							color: #6faf64;
+							@include highlight;
 						}
 					}
 				}
 
 				.content-des {
-					font-size: 16px;
-					line-height: 1.5;
-					opacity: 0.8;
+					font-size: $small;
+					line-height: rem(24);
+					opacity: 0.6;
 
-					@media (min-width: 768px) {
-						font-size: 16px;
-						font-weight: 400;
+					@include minWidth("mobile") {
+						font-size: $regular;
 					}
 
-					@media (min-width: 1024px) {
-						font-size: 18px;
+					@include minWidth("tablet") {
+						font-size: $large;
+						font-weight: $normal;
+						line-height: rem(32);
 					}
 				}
 
 				.content-cta-container {
 					display: flex;
-					gap: 16px;
+					gap: rem(16);
 				}
 			}
 
 			.content-media {
 				grid-area: b;
 				display: grid;
-				border-radius: 8px;
+				border-radius: rem(8);
 				place-items: center;
 				overflow: hidden;
 

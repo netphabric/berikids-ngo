@@ -35,81 +35,86 @@
 
 <style lang="scss">
 	.our-team {
-		padding: 32px 20px;
+		padding: rem(32) rem(20);
 
 		.team-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 16px;
+			gap: rem(16);
 
-			@media (min-width: 768px) {
-				gap: 32px;
+			@include minWidth("tablet") {
+				gap: rem(32);
 			}
 
 			.header {
 				display: flex;
-				margin-block: 32px;
+				margin-block: rem(32);
 				flex-direction: column;
-				gap: 16px;
+				gap: rem(16);
 
 				.title {
-					font-size: 28px;
+					font-size: $h4;
 					font-weight: 500;
 
-					@media (min-width: 768px) {
-						font-size: 32px;
-						line-height: 40px;
+					@include minWidth("tablet") {
+						font-size: $h3;
+						line-height: rem(40);
 					}
 
-					@media (min-width: 1024px) {
-						font-size: 52px;
+					@include minWidth("desktop") {
+						font-size: $h2;
 					}
 				}
 
 				.desc {
-					font-size: 16px;
-					font-weight: 400;
+					font-size: $regular;
+					font-weight: $normal;
 					opacity: 0.6;
 
-					@media (min-width: 768px) {
-						font-size: 18px;
-						line-height: 32px;
+					@include minWidth("tablet") {
+						font-size: $medium;
+						line-height: rem(24);
+					}
+
+					@include minWidth("desktop") {
+						font-size: $large;
+						line-height: rem(32);
 					}
 				}
 			}
 
 			.teams {
 				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-				gap: 20px;
+				grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+				gap: rem(16);
 
-				@media (min-width: 768px) {
-					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-					gap: 32px;
+				@include minWidth("tablet") {
+					grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+					gap: rem(32);
 				}
 
 				.member-card {
-					padding: 5px;
+					padding: rem(5);
 					display: flex;
 					flex-direction: column;
-					border-radius: 16px;
-					gap: 16px;
-					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+					border-radius: rem(8);
+					box-shadow: $shadow-soft;
+					gap: rem(16);
 
-					@media (min-width: 768px) {
-						padding: 10px;
+					@include minWidth("tablet") {
+						padding: rem(16);
 					}
 
 					.imageContainer {
 						width: 100%;
-						height: 150px;
+						height: rem(150);
 						overflow: hidden;
-						border-radius: 16px;
+						border-radius: rem(8);
 
-						@media (min-width: 768px) {
-							height: 250px;
+						@include minWidth("tablet") {
+							height: rem(250);
 						}
 
 						img {
@@ -123,32 +128,31 @@
 						.member-details {
 							display: flex;
 							flex-direction: column;
-							gap: 8px;
 
 							.title {
-								font-size: 14px;
-								font-weight: 500;
+								font-size: $small;
+								font-weight: $semiBold;
 
-								@media (min-width: 768px) {
-									font-size: 16px;
+								@include minWidth("tablet") {
+									font-size: $regular;
 								}
 
-								@media (min-width: 1024px) {
-									font-size: 18px;
+								@include minWidth("desktop") {
+									font-size: $medium;
 								}
 							}
 
 							.sub-title {
-								font-size: 12px;
-								font-weight: 400;
+								font-size: $tiny;
+								font-weight: $normal;
 								opacity: 0.6;
 
-								@media (min-width: 768px) {
-									font-size: 14px;
+								@include minWidth("tablet") {
+									font-size: $small;
 								}
 
-								@media (min-width: 1024px) {
-									font-size: 16px;
+								@include minWidth("desktop") {
+									font-size: $regular;
 								}
 							}
 						}

@@ -24,29 +24,23 @@
 </section>
 
 <style lang="scss">
-	@use "sass:color";
-
-	$green: #6faf64;
-	$blue: #2b4f81;
-	$red: #f44336;
-
 	.skill-cards {
-		padding: 32px 20px;
+		padding: rem(32) rem(20);
 
 		.section-wrapper {
-			max-width: 1440px;
+			max-width: $max-width;
 			margin-inline: auto;
 
 			.cards-wrapper {
 				display: grid;
-				margin-block-start: 32px;
 				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-				gap: 16px;
+				margin-block-start: rem(32);
+				gap: rem(16);
 
-				@media (min-width: 768px) {
-					margin-block-start: 64px;
+				@include minWidth("tablet") {
+					margin-block-start: rem(64);
 					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-					gap: 32px;
+					gap: rem(32);
 				}
 
 				.skill-card {
@@ -56,35 +50,32 @@
 					gap: 16px;
 					border-radius: 16px;
 					padding: 20px;
-					box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+					box-shadow: $shadow-soft;
 
 					&:nth-child(1) {
-						color: color.adjust($green, $lightness: -20%);
-						background-color: color.adjust($green, $lightness: 35%);
+						@include greenShade;
 					}
 
 					&:nth-child(2) {
-						color: color.adjust($blue, $lightness: -5%);
-						background-color: color.adjust($blue, $lightness: 50%);
+						@include blueShade;
 					}
 
 					&:nth-child(3) {
-						color: color.adjust($red, $lightness: -20%);
-						background-color: color.adjust($red, $lightness: 35%);
+						@include redShade;
 					}
 
 					.material-symbols-sharp {
-						font-size: 64px;
-						font-weight: 500;
+						font-size: $h1;
+						font-weight: $medium;
 					}
 
 					.title {
-						font-size: 24px;
-						font-weight: 500;
+						font-size: $h5;
+						font-weight: $medium;
 
-						@media (min-width: 768px) {
-							font-size: 32px;
-							line-height: 64px;
+						@include minWidth("tablet") {
+							font-size: $h4;
+							line-height: rem(64);
 						}
 					}
 				}
