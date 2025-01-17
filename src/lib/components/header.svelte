@@ -131,6 +131,7 @@
 				height: 100dvh;
 				padding: 32px 20px;
 				backdrop-filter: blur(100px);
+				background-color: #f2f2f2a2;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
