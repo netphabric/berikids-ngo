@@ -4,7 +4,8 @@
 	const skillCards = [
 		{ title: "Agriculture", icon: "grocery" },
 		{ title: "Carpentry", icon: "handyman" },
-		{ title: "Tailoring", icon: "conveyor_belt" }
+		{ title: "Tailoring", icon: "conveyor_belt" },
+		{ title: "IT Literacy", icon: "devices" }
 	]
 </script>
 
@@ -62,6 +63,10 @@
 
 					&:nth-child(3) {
 						@include redShade;
+					}
+
+					&:nth-child(4) {
+						@include yellowShade;
 					}
 
 					.material-symbols-sharp {
