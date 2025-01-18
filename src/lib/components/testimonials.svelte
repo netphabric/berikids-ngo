@@ -10,7 +10,7 @@
 
 <section class="testimonialsSection">
 	<div class="testimony-wrapper">
-		<Chip chipText="Testimony" chipIcon="mic" chipColor="red" />
+		<Chip chipText="Success stories" chipIcon="mic" chipColor="red" />
 
 		<article class="testimony-card">
 			<div class="avatar">
