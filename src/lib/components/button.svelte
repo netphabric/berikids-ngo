@@ -14,6 +14,7 @@
 		border: 1px solid transparent;
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		border-radius: rem(8);
 		padding: rem(8) rem(16);
 		gap: rem(8);
@@ -35,6 +36,12 @@
 		&:hover {
 			color: $accent;
 			background-color: transparent;
+		}
+
+		&.secondary {
+			color: $accent;
+			background-color: transparent;
+			border: 1px solid $accent;
 		}
 
 		@include minWidth("tablet") {
