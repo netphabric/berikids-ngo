@@ -7,7 +7,7 @@
 	<div class="donations-wrapper">
 		<div class="banner-left">
 			<Chip chipIcon="help" chipColor="green" chipText="help support our cause" />
-			<span class="material-symbols-sharp org-icon">potted_plant</span>
+			<span class="material-symbols-sharp org-icon">barefoot</span>
 		</div>
 
 		<PaymentForm />
@@ -45,12 +45,17 @@
 				}
 
 				.org-icon {
-					font-size: rem(100);
+					font-size: rem(150);
 					font-weight: 100;
 					color: $accent;
+					margin-block: auto;
 
 					@include minWidth("tablet") {
 						font-size: rem(200);
+					}
+
+					@include minWidth("desktop") {
+						font-size: rem(300);
 					}
 				}
 			}

@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import { PUBLIC_STRIPE_TEST_DONATION_URL } from "$env/static/public"
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
 	import Button from "./button.svelte"
