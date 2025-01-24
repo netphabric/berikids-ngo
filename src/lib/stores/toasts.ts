@@ -1,15 +1,17 @@
 import { writable } from "svelte/store"
 
+type toastType = "error" | "info" | "success"
+
 type Toast = {
 	id: number
 	message: string
 	duration: number
-	type: string
+	type: toastType
 }
 
 export const toasts = writable<Toast[]>([])
 
-export function addToast(type: string, message: string, duration = 4000) {
+export function addToast(type: toastType, message: string, duration = 4000) {
 	toasts.update((toasts) => [
 		...toasts,
 		{

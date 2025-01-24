@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { PUBLIC_STRIPE_TEST_DONATION_URL } from "$env/static/public"
+	// import { PUBLIC_STRIPE_TEST_DONATION_URL } from "$env/static/public"
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
 	import Button from "./button.svelte"
@@ -65,7 +65,7 @@
 		</div>
 
 		<Button>
-			<a href={PUBLIC_STRIPE_TEST_DONATION_URL}>
+			<a href="/donate">
 				<span class="material-symbols-sharp"> account_balance_wallet </span>
 				<span>donate</span>
 			</a>
