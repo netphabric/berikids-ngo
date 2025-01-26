@@ -14,7 +14,7 @@
 					<h4 class="title">{partner.name}</h4>
 
 					<partner class="text">
-						<span class="material-symbols-sharp">pin_drop</span>
+						<span class="material-symbols-sharp location-icon">globe</span>
 						<span>{partner.location}</span>
 					</partner>
 				</article>
@@ -41,6 +41,10 @@
 			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 			gap: rem(32);
 
+			@include minWidth("tablet") {
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+			}
+
 			.partner-card {
 				display: flex;
 				flex-direction: column;
@@ -51,6 +55,9 @@
 				color: $white;
 				background-color: $primary;
 				box-shadow: $shadow-hard;
+				position: relative;
+				overflow: hidden;
+				z-index: 0;
 
 				.verified {
 					font-size: $h3;
@@ -70,17 +77,27 @@
 				}
 
 				.text {
+					width: 100%;
 					font-size: $small;
 					font-weight: $normal;
 					line-height: rem(24);
-					opacity: 0.6;
+					opacity: 0.8;
 					display: flex;
-					align-items: center;
 					gap: 8px;
+
+					.location-icon {
+						color: $secondary;
+						position: absolute;
+						font-size: rem(250);
+						line-height: 0;
+						z-index: 1;
+						opacity: 0.1;
+						left: 60%;
+						top: 50%;
+					}
 
 					@include minWidth("tablet") {
 						font-size: $regular;
-						line-height: rem(32);
 					}
 				}
 			}
