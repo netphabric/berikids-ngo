@@ -14,19 +14,18 @@ export const partners = writable([
 		name: "St.Johannes Nepomuk Church Hohe",
 		location: "Strasse 1 09112 Chemnitz Sachsen - germany"
 	},
-	{ name: "Eye Square GmbH", location: " Schlesische Strasse 29-30D 10997 - berlin, germany" },
+	{ name: "eye Square GmbH", location: " Schlesische Strasse 29-30D 10997 - berlin, germany" },
 	{ name: "Achor e.V", location: "Kirchring 16 14959 Trebbin Brandenburg - germany" },
 	{
 		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
 		location: "Strasse 11 16247 Joachimsthal Brandenburg - germany"
 	},
 	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
-	{ name: "Achorhof retreat center", location: "germany" },
-	{ name: "Freinds of cameroon", location: "frankfurt,germany" },
-	{ name: "Pecten company,cameroon", location: "Douala ,cameroon" },
+	{ name: "Freinds of cameroon", location: "frankfurt, germany" },
+	{ name: "Pecten company", location: "Douala, cameroon" },
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
-	{ name: "The capuchin friary - shisong,cameroon", location: "kumbo,cameroon" },
-	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, Bamenda" },
-	{ name: "St.josephs children and adult home (SAJOCAH)", location: "bafut" },
-	{ name: "Tertiary sisters of shisong", location: "shisong,cameroon" }
+	{ name: "The capuchin friary ", location: "shisong, cameroon" },
+	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },
+	{ name: "St.josephs children and adult home (SAJOCAH)", location: "bafut, cameroon" },
+	{ name: "Tertiary sisters", location: "shisong, cameroon" }
 ])
