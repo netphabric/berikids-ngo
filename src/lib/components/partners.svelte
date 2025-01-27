@@ -67,7 +67,6 @@
 				.title {
 					font-size: $small;
 					font-weight: $semiBold;
-					text-transform: uppercase;
 					line-height: rem(24);
 
 					@include minWidth("tablet") {
