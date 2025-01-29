@@ -2,9 +2,10 @@
 	export let primary = false
 	export let secondary = false
 	export let onWhite = false
+  export let props = {}
 </script>
 
-<button class:primary class:secondary class:onWhite>
+<button class:primary class:secondary class:onWhite {...props}>
 	<slot />
 </button>
 
