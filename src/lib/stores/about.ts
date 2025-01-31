@@ -25,7 +25,7 @@ export const teams = writable([
 		location: "cm",
 		role: "Nurse",
 		name: "Valery Ayuni",
-		profile: "https://i.pravatar.cc/500?img=12"
+		profile: `${teamPath}/valery.webp`
 	},
 	{
 		location: "cm",
