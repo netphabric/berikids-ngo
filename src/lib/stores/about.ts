@@ -1,12 +1,38 @@
 import { writable } from "svelte/store"
 
-// prettier-ignore
+const teamPath = "/images/team/"
+
 export const teams = writable([
-  { name: "Mme Relindis", role: "CEO & Founder", profile: "https://i.pravatar.cc/500?img=10" },
-  { name: "Valery Ayuni", role: "Nurse", profile: "https://i.pravatar.cc/500?img=12" },
-  { name: "Delphine", role: "program director", profile: "https://i.pravatar.cc/500?img=20" },
-  { name: "Stanley Kuwan", role: "project manager", profile: "https://i.pravatar.cc/500?img=18" },
-  { name: "lena Kloske", role: "German volunteer", profile: "https://i.pravatar.cc/500?img=28" },
+	{
+		location: "de",
+		role: "President | DE ",
+		name: "Standley kuwan ",
+		profile: `${teamPath}/stanley.webp`
+	},
+	{
+		location: "cm",
+		name: "Mme Relindis",
+		role: "CEO & Founder",
+		profile: `${teamPath}/mmeBeri.webp`
+	},
+	{
+		location: "de",
+		role: "Secretary | CM ",
+		name: "lena Kloske",
+		profile: `${teamPath}/lena.webp`
+	},
+	{
+		location: "cm",
+		role: "Nurse",
+		name: "Valery Ayuni",
+		profile: "https://i.pravatar.cc/500?img=12"
+	},
+	{
+		location: "cm",
+		name: "Delphine",
+		role: "program director",
+		profile: "https://i.pravatar.cc/500?img=20"
+	}
 ])
 
 export const partners = writable([

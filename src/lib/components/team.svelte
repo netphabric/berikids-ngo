@@ -9,7 +9,12 @@
 
 		<div class="header">
 			<h2 class="title">our team</h2>
-			<p class="desc">dedicated professionals committed to making a difference.</p>
+
+			<!-- prettier-ignore -->
+			<p class="desc">
+				in&nbsp<img src="/images/icons/cm.svg" alt="cm" /> cameroon and &nbsp<img src="/images/icons/de.svg" alt="dutch" />
+        germany The dedicated professionals behind Fördervereins Stiftung Berikids e.V
+			</p>
 		</div>
 
 		<div class="teams">
@@ -20,12 +25,12 @@
 					</div>
 
 					<div class="content">
+						<img src={`/images/icons/${team?.location}.svg`} alt="cm" />
+
 						<div class="member-details">
 							<h3 class="title">{team.name}</h3>
 							<p class="sub-title">{team.role}</p>
 						</div>
-
-						<div class="member-socials"></div>
 					</div>
 				</article>
 			{/each}
@@ -71,6 +76,9 @@
 				.desc {
 					font-size: $regular;
 					font-weight: $normal;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: center;
 					opacity: 0.6;
 
 					@include minWidth("tablet") {
@@ -81,6 +89,12 @@
 					@include minWidth("desktop") {
 						font-size: $large;
 						line-height: rem(32);
+					}
+
+					img {
+						width: rem(24);
+						height: rem(20);
+						display: inline-block;
 					}
 				}
 			}
@@ -96,25 +110,21 @@
 				}
 
 				.member-card {
-					padding: rem(5);
-					display: flex;
-					flex-direction: column;
+					position: relative;
+					display: grid;
+					place-items: center;
 					border-radius: rem(8);
 					box-shadow: $shadow-soft;
-					gap: rem(16);
-
-					@include minWidth("tablet") {
-						padding: rem(16);
-					}
+					overflow: hidden;
 
 					.imageContainer {
 						width: 100%;
-						height: rem(150);
+						height: rem(250);
 						overflow: hidden;
 						border-radius: rem(8);
 
 						@include minWidth("tablet") {
-							height: rem(250);
+							height: rem(350);
 						}
 
 						img {
@@ -125,6 +135,14 @@
 					}
 
 					.content {
+						position: absolute;
+						padding: rem(16);
+						color: $white;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						background: $bottomFade;
+
 						.member-details {
 							display: flex;
 							flex-direction: column;
@@ -134,24 +152,16 @@
 								font-weight: $semiBold;
 
 								@include minWidth("tablet") {
-									font-size: $regular;
-								}
-
-								@include minWidth("desktop") {
-									font-size: $medium;
+									font-size: $large;
 								}
 							}
 
 							.sub-title {
-								font-size: $tiny;
-								font-weight: $normal;
-								opacity: 0.6;
+								color: $secondary;
+								font-size: $small;
+								font-weight: $semiBold;
 
 								@include minWidth("tablet") {
-									font-size: $small;
-								}
-
-								@include minWidth("desktop") {
 									font-size: $regular;
 								}
 							}
