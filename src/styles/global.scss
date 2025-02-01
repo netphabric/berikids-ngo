@@ -90,6 +90,30 @@ h6 {
   font-family: $heading-font;
 }
 
+input,
+textarea {
+  width: 100%;
+  height: rem(60);
+  padding: rem(16) rem(20);
+  border-radius: rem(8);
+  font-size: $medium;
+  border: none;
+  box-shadow: $shadow-soft;
+
+  @include minWidth("tablet") {
+    font-size: $regular;
+    line-height: rem(32);
+  }
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
 #root,
 #__next {
   isolation: isolate;

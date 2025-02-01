@@ -2,10 +2,11 @@
 	export let primary = false
 	export let secondary = false
 	export let onWhite = false
-  export let props = {}
+	export let onClick = () => {}
+	export let props = {}
 </script>
 
-<button class:primary class:secondary class:onWhite {...props}>
+<button class:primary class:secondary class:onWhite {...props} on:click={onClick}>
 	<slot />
 </button>
 
@@ -43,6 +44,11 @@
 			color: $accent;
 			background-color: transparent;
 			border: 1px solid $accent;
+		}
+
+		&.onWhite {
+			color: $primary;
+			background-color: $white;
 		}
 
 		@include minWidth("tablet") {

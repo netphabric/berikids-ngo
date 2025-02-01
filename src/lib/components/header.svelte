@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
-	// import Button from "./button.svelte"
+	import Button from "./button.svelte"
 
 	const navLinks = [
 		{ label: "about", url: "/about" },
@@ -63,12 +63,12 @@
 			</nav>
 		</div>
 
-		<!-- <Button> -->
-		<!-- 	<a href="/donate"> -->
-		<!-- 		<span class="material-symbols-sharp"> account_balance_wallet </span> -->
-		<!-- 		<span>donate</span> -->
-		<!-- 	</a> -->
-		<!-- </Button> -->
+		<Button>
+			<a href="/donate">
+				<span class="material-symbols-sharp"> account_balance_wallet </span>
+				<span>donate</span>
+			</a>
+		</Button>
 	</div>
 </header>
 

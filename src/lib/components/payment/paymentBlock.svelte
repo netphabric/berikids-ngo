@@ -5,13 +5,26 @@
 	export let statusIcon = "barefoot"
 	export let chipText = "help support our cause"
 	export let chipColor: "red" | "green" | "blue" | "yellow" = "blue"
+	export let statusColor: "red" | "green" = "green"
+	export let statusMessage = ""
 </script>
 
 <main class="donate-root">
 	<div class="donations-wrapper">
 		<div class="banner-left">
 			<Chip {chipIcon} {chipColor} {chipText} />
-			<span class="material-symbols-sharp org-icon">{statusIcon}</span>
+			<span
+				class="material-symbols-sharp org-icon"
+				class:statusCheck={statusColor === "green"}
+				class:statusError={statusColor === "red"}>{statusIcon}</span
+			>
+			<p
+				class="success-message"
+				class:success={statusColor === "green"}
+				class:error={statusColor === "red"}
+			>
+				{statusMessage}
+			</p>
 		</div>
 
 		<slot />
@@ -39,6 +52,7 @@
 				justify-content: center;
 			}
 
+			// prettier-ignore
 			.banner-left {
 				width: 100%;
 				display: flex;
@@ -58,13 +72,23 @@
 					color: $accent;
 					margin-block: auto;
 
-					@include minWidth("tablet") {
-						font-size: rem(200);
-					}
+					&.statusCheck { color: $accent; }
+          &.statusError { color: $error; }
 
-					@include minWidth("desktop") {
-						font-size: rem(300);
-					}
+					@include minWidth("tablet") { font-size: rem(200) }
+          @include minWidth("desktop") { font-size: rem(300) }
+				}
+
+				.success-message {
+					font-size: $large;
+					font-family: $logo-font;
+					text-align: center;
+
+          &.error { color: $error; }
+          &.success { color: $accent; }
+
+					@include minWidth("tablet") { font-size: $h4 }
+          @include minWidth("desktop") { font-size: $h3 }
 				}
 			}
 		}

@@ -19,7 +19,7 @@ export const customStripeUI: BaseStripeElementsOptions = {
 			colorTextSecondary: primary,
 			fontFamily: fontFamily,
 			colorDanger: error,
-			spacingUnit: "8px",
+			spacingUnit: "6px",
 			gridRowSpacing: "8px",
 			gridColumnSpacing: "8px"
 		},
