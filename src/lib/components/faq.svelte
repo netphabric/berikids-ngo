@@ -56,6 +56,8 @@
 <style lang="scss">
 	.faqs-root {
 		padding: rem(32) rem(20);
+		margin-block: rem(32);
+		@include lightRedBg();
 
 		.faq-wrapper {
 			max-width: $max-width;

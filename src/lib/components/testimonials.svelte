@@ -32,6 +32,7 @@
 <style lang="scss">
 	.testimonialsSection {
 		padding: rem(32) rem(20);
+		@include lightGreenBg();
 
 		.testimony-wrapper {
 			max-width: $max-width;

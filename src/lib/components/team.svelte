@@ -109,6 +109,11 @@
 					gap: rem(32);
 				}
 
+				@include minWidth("desktop") {
+					grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
+					gap: rem(64);
+				}
+
 				.member-card {
 					position: relative;
 					display: grid;
@@ -125,6 +130,10 @@
 
 						@include minWidth("tablet") {
 							height: rem(350);
+						}
+
+						@include minWidth("desktop") {
+							height: rem(400);
 						}
 
 						img {

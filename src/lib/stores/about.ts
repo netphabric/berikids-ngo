@@ -3,16 +3,16 @@ import { writable } from "svelte/store"
 const teamPath = "/images/team/"
 export const teams = writable([
 	{
-		location: "de",
-		role: "President | DE ",
-		name: "Standley kuwan ",
-		profile: `${teamPath}/stanley.webp`
-	},
-	{
 		location: "cm",
 		name: "Mme Relindis",
 		role: "CEO & Founder",
 		profile: `${teamPath}/mmeBeri.webp`
+	},
+	{
+		location: "de",
+		role: "President | DE ",
+		name: "Standley kuwan ",
+		profile: `${teamPath}/stanley.webp`
 	},
 	{
 		location: "de",
@@ -25,12 +25,6 @@ export const teams = writable([
 		role: "Nurse",
 		name: "Valery Ayuni",
 		profile: `${teamPath}/valery.webp`
-	},
-	{
-		location: "cm",
-		name: "Delphine",
-		role: "program director",
-		profile: "https://i.pravatar.cc/500?img=20"
 	}
 ])
 
