@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "./functions.module" as *;
 
 // colors
@@ -7,7 +8,7 @@ $accent: #6faf64;
 $primary: #2b4f81;
 $secondary: #ffd966;
 $error: #f44336;
-$opaque-white: #f2f2f200;
+$opaque-white: color.adjust($white, $alpha: -0.2);
 
 //Text fonts
 $large: rem(20);
@@ -45,6 +46,9 @@ $shadow-outset: 6px 6px 12px #c5c5c5,
 
 $shadow-inset: inset 4px 4px 12px #c5c5c5,
   inset -4px -4px 12px #ffffff;
+
+// gradients
+$bottomFade: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%);
 
 // font families
 $primary-font: "Poppins", sans-serif;
