@@ -89,6 +89,8 @@
 </svelte:head>
 
 <form id="payment-form" class="payment-form" on:submit|preventDefault={handleDonate}>
+	<span class="test-mode">TEST MODE</span>
+
 	<div class="input-wrapper">
 		<span class="currency">$</span>
 		<input
@@ -159,6 +161,14 @@
 		@include minWidth("tablet") {
 			max-width: rem(500);
 			padding: rem(20);
+		}
+
+		.test-mode {
+			font-size: $tiny;
+			width: fit-content;
+			border-radius: rem(4);
+			padding: rem(2) rem(4);
+			@include yellowShade();
 		}
 
 		.input-wrapper {
