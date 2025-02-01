@@ -16,19 +16,13 @@ export const homeFaqs = writable([
 	{
 		id: 3,
 		question: "How can I volunteer?",
-		ans: "Volunteering with us is easy! Fill out the volunteer application form on our website, and we will get back to you with opportunities that match your skills. Your support makes a difference!",
+		ans: "Volunteering with us is easy! send us an email , and we will get back to you with opportunities that match your skills. Your support makes a difference!",
 		isOpen: false
 	},
 	{
 		id: 4,
 		question: "What programs do you offer?",
-		ans: "We offer various programs focused on education, vocational training, and community development. Our initiatives aim to empower orphans and vulnerable individuals in Cameroon. Visit our vocation-training and IT-education pages for more details.",
-		isOpen: false
-	},
-	{
-		id: 5,
-		question: "How can i volunteer?",
-		ans: "Donating is simple! You can make a one-time or recurring donation through our website's donation page. Every contribution helps us further our mission and support those in need.",
+		ans: "We offer various programs focused on rehabilitation, education, vocational training, and community development. Our initiatives aim to empower orphans and vulnerable individuals in Cameroon. Visit our vocation page for more details.",
 		isOpen: false
 	}
 ])
@@ -82,17 +76,11 @@ export const trainingFaqs = writable([
 	{
 		id: 3,
 		question: "How to apply?",
-		ans: "To apply for our training programs, please fill out the contact form on our website. After submission, our team will review your application and contact you for further steps. We encourage all eligible individuals to apply.",
+		ans: "To apply for our training programs, email your application to Berikidsngo@gmx.de After submission, our team will review your application and contact you for further steps. We encourage all eligible individuals to apply.",
 		isOpen: false
 	},
 	{
 		id: 4,
-		question: "What skills are taught?",
-		ans: "Our programs cover a range of skills, including tailoring, computer literacy, and agricultural practices. We focus on practical skills that can lead to sustainable employment. Each program is tailored to meet the needs of the community.",
-		isOpen: false
-	},
-	{
-		id: 5,
 		question: "Are there any fees?",
 		ans: "Our vocational training programs are offered at no cost to participants. We believe in providing equal opportunities for all, regardless of financial status. Donations and grants support our mission to empower the community.",
 		isOpen: false

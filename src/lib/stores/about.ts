@@ -1,7 +1,6 @@
 import { writable } from "svelte/store"
 
 const teamPath = "/images/team/"
-
 export const teams = writable([
 	{
 		location: "de",
@@ -50,6 +49,7 @@ export const partners = writable([
 	{ name: "Freinds of cameroon", location: "frankfurt, germany" },
 	{ name: "Pecten company", location: "Douala" },
 	{ name: "International Talent Outreach", location: "Douala, cameroon |  Nigeria" },
+	{ name: "Erico metal fabrications", location: "Douala, cameroon |  Nigeria" },
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
 	{ name: "The capuchin friary ", location: "shisong, cameroon" },
 	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },

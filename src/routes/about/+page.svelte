@@ -18,14 +18,29 @@
 		contentTitleHighlight="vision"
 		contentTitle="Our Goals, Vision and Mission."
 		contentDescription=" 
-      We are a Cameroonian NGO founded in 2004,
-      we focus on improving the lives of underprivileged children and orphans in the North West Region.
-      We're currently prioritizing interventions to address the challenges of the ongoing armed conflict there,
-      providing critical assistance and contributing to long-term positive change. 
+      We are a Cameroonian NGO founded in 2004, we focus on improving the lives of
+      underprivileged children, orphans, empowering women and helping the drug hardened
+      individuals through our rehabilitation centers. We're currently prioritizing interventions
+      to address the challenges of the ongoing armed conflict there, providing critical assistance
+      and contributing to long-term positive change. 
     "
 	/>
 
 	<Team />
+
+	<ContentBlock
+		contentChipColor="green"
+		contentChipText="Inline with our values"
+		contentChipIcon="church"
+		contentMedia="/images/christianConnection.webp"
+		contentTitleHighlight="Christian Connections"
+		contentTitle="we establish lasting and rooted christian connections"
+		contentDescription="
+      Our NGO is deeply connected to the Christian faith,
+      providing moral and spritual support to the children and families we serve.
+      as well as ourselves
+    "
+	/>
 
 	<ContentBlock
 		flexReverse
@@ -44,18 +59,4 @@
 	/>
 
 	<Partners />
-
-	<ContentBlock
-		contentChipColor="green"
-		contentChipText="what keeps us going"
-		contentChipIcon="rocket_launch"
-		contentMedia="/images/as2.webp"
-		contentTitleHighlight="committment"
-		contentTitle="Our committment to transforming lives in Cameroon."
-		contentDescription=" 
-      We are dedicated to improving the socio-economic conditions of orphans,
-      providing them with essential skills and resources. Our initiatives also focus on advancing IT education,
-      ensuring access to potable water, and offering Christian counseling to foster holistic development.
-    "
-	/>
 </main>
