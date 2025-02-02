@@ -51,7 +51,7 @@ $large-desktop: rem(1280);
 }
 
 @mixin yellowShade () {
-  color: orangered;
+  color: color.adjust(orangered, $lightness: -20%);
   background-color: color.adjust($secondary, $lightness: 16%);
 }
 

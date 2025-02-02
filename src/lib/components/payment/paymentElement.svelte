@@ -10,6 +10,7 @@
 	let email: string
 	let finalAmount: string = ""
 	let paymentIntentCreated = false
+	let processingPayment = false
 
 	let stripe: Stripe | null
 	let clientSecret: string | undefined
@@ -68,14 +69,19 @@
 	}
 
 	async function handleDonate(): Promise<void> {
+		processingPayment = true
 		if (!stripe || !elements || !name || !email) return
 
-		const { error } = await stripe.confirmPayment({
-			elements: elements,
-			confirmParams: {
-				return_url: `${PUBLIC_BASE_URL}/donate/status`
-			}
-		})
+		const { error } = await stripe
+			.confirmPayment({
+				elements: elements,
+				confirmParams: {
+					return_url: `${PUBLIC_BASE_URL}/donate/status`
+				}
+			})
+			.finally(() => {
+				processingPayment = false
+			})
 
 		if (error) {
 			const msgElement = document.querySelector("#error-message") as HTMLDivElement
@@ -120,6 +126,20 @@
 		{/each}
 	</div>
 
+	{#if !clientSecret}
+		<Button props={{ type: "button" }}>
+			<span>
+				{#if !finalAmount}
+					select amount to donate
+				{:else if !email || !name}
+					enter your billing details
+				{:else}
+					Click to select your payment method
+				{/if}
+			</span>
+		</Button>
+	{/if}
+
 	<input
 		required
 		id="name"
@@ -140,10 +160,17 @@
 
 	<div id="payment-element"></div>
 
-	<Button>
-		<span class="material-symbols-sharp">loyalty</span>
-		<span> Donate </span>
-	</Button>
+	{#if clientSecret}
+		<Button>
+			<span>
+				{#if processingPayment}
+					processing...
+				{:else}
+					Donate ${finalAmount}
+				{/if}
+			</span>
+		</Button>
+	{/if}
 
 	<div id="error-message"></div>
 </form>
@@ -167,7 +194,9 @@
 			font-size: $tiny;
 			width: fit-content;
 			border-radius: rem(4);
-			padding: rem(2) rem(4);
+			padding: rem(4) rem(8);
+			display: grid;
+			place-items: center;
 			@include yellowShade();
 		}
 

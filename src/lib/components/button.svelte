@@ -27,7 +27,6 @@
 		font-weight: $semiBold;
 		text-transform: capitalize;
 		transition: all 0.3s ease-in-out;
-		transition: all 0.3s;
 		background-color: $accent;
 		box-shadow: $shadow-outset;
 

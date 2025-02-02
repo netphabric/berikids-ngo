@@ -19,7 +19,7 @@
 				class:statusError={statusColor === "red"}>{statusIcon}</span
 			>
 			<p
-				class="success-message"
+				class="status-message"
 				class:success={statusColor === "green"}
 				class:error={statusColor === "red"}
 			>
@@ -67,7 +67,7 @@
 				}
 
 				.org-icon {
-					font-size: rem(150);
+					font-size: rem(200);
 					font-weight: 100;
 					color: $accent;
 					margin-block: auto;
@@ -75,11 +75,11 @@
 					&.statusCheck { color: $accent; }
           &.statusError { color: $error; }
 
-					@include minWidth("tablet") { font-size: rem(200) }
-          @include minWidth("desktop") { font-size: rem(300) }
+					@include minWidth("tablet") { font-size: rem(400) }
+          @include minWidth("desktop") { font-size: rem(600) }
 				}
 
-				.success-message {
+				.status-message {
 					font-size: $large;
 					font-family: $logo-font;
 					text-align: center;
