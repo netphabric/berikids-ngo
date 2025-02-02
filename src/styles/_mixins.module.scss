@@ -51,8 +51,44 @@ $large-desktop: rem(1280);
 }
 
 @mixin yellowShade () {
-  color: color.adjust($secondary, $lightness: -45%);
+  color: color.adjust(orangered, $lightness: -20%);
   background-color: color.adjust($secondary, $lightness: 16%);
+}
+
+// backgroundColors
+@mixin commonBgColorStyle($color , $lightness) {
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    margin-inline: auto;
+    border-radius: rem(16);
+    max-width: calc($max-width + rem(100));
+    background-color: color.adjust($color, $lightness: $lightness);
+  }
+}
+
+@mixin lightGreenBg () {
+  @include commonBgColorStyle($accent, 35%);
+}
+
+@mixin lightBlueBg () {
+  @include commonBgColorStyle($primary, 55%);
+}
+
+@mixin lightRedBg () {
+  @include commonBgColorStyle($error, 35%);
+}
+
+@mixin lightYellowBg () {
+  @include commonBgColorStyle($secondary, 22%);
 }
 
 

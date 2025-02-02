@@ -1,5 +1,6 @@
 <script>
-	import PaymentBlock from "$lib/components/paymentBlock.svelte"
+	import PaymentBlock from "$lib/components/payment/paymentBlock.svelte"
+	import PaymentElement from "$lib/components/payment/paymentElement.svelte"
 </script>
 
 <svelte:head>
@@ -7,5 +8,7 @@
 </svelte:head>
 
 <main>
-	<PaymentBlock />
+	<PaymentBlock>
+		<PaymentElement />
+	</PaymentBlock>
 </main>

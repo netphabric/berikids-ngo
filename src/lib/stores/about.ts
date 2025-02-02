@@ -1,12 +1,31 @@
 import { writable } from "svelte/store"
 
-// prettier-ignore
+const teamPath = "/images/team/"
 export const teams = writable([
-  { name: "Mme Relindis", role: "CEO & Founder", profile: "https://i.pravatar.cc/500?img=10" },
-  { name: "Valery Ayuni", role: "Nurse", profile: "https://i.pravatar.cc/500?img=12" },
-  { name: "Delphine", role: "program director", profile: "https://i.pravatar.cc/500?img=20" },
-  { name: "Stanley Kuwan", role: "project manager", profile: "https://i.pravatar.cc/500?img=18" },
-  { name: "lena Kloske", role: "German volunteer", profile: "https://i.pravatar.cc/500?img=28" },
+	{
+		location: "cm",
+		name: "Mme Relindis",
+		role: "CEO & Founder",
+		profile: `${teamPath}/mmeBeri.webp`
+	},
+	{
+		location: "de",
+		role: "President | DE ",
+		name: "Standley kuwan ",
+		profile: `${teamPath}/stanley.webp`
+	},
+	{
+		location: "de",
+		role: "Secretary | CM ",
+		name: "lena Kloske",
+		profile: `${teamPath}/lena.webp`
+	},
+	{
+		location: "cm",
+		role: "Nurse",
+		name: "Valery Ayuni",
+		profile: `${teamPath}/valery.webp`
+	}
 ])
 
 export const partners = writable([
@@ -22,7 +41,9 @@ export const partners = writable([
 	},
 	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
 	{ name: "Freinds of cameroon", location: "frankfurt, germany" },
-	{ name: "Pecten company", location: "Douala, cameroon" },
+	{ name: "Pecten company", location: "Douala" },
+	{ name: "International Talent Outreach", location: "Douala, cameroon |  Nigeria" },
+	{ name: "Erico metal fabrications", location: "Douala, cameroon |  Nigeria" },
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
 	{ name: "The capuchin friary ", location: "shisong, cameroon" },
 	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },

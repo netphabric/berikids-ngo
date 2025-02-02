@@ -4,8 +4,13 @@
 	const skillCards = [
 		{ title: "Agriculture", icon: "grocery" },
 		{ title: "Carpentry", icon: "handyman" },
+		{ title: "IT Literacy", icon: "devices" },
 		{ title: "Tailoring", icon: "conveyor_belt" },
-		{ title: "IT Literacy", icon: "devices" }
+		{ title: "Metal works", icon: "square_foot" },
+		{ title: "Artistry", icon: "palette" },
+		{ title: "Music", icon: "music_note" },
+		{ title: "Shoemaking", icon: "steps" },
+		{ title: "hairdressing", icon: "self_care" }
 	]
 </script>
 
@@ -44,6 +49,12 @@
 					gap: rem(32);
 				}
 
+				@include minWidth("desktop") {
+					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+					gap: rem(64);
+				}
+
+				// prettier-ignore
 				.skill-card {
 					display: flex;
 					flex-direction: column;
@@ -53,21 +64,15 @@
 					padding: 20px;
 					box-shadow: $shadow-soft;
 
-					&:nth-child(1) {
-						@include greenShade;
-					}
-
-					&:nth-child(2) {
-						@include blueShade;
-					}
-
-					&:nth-child(3) {
-						@include redShade;
-					}
-
-					&:nth-child(4) {
-						@include yellowShade;
-					}
+					&:nth-child(1) { @include greenShade }
+					&:nth-child(2) { @include blueShade }
+					&:nth-child(3) { @include redShade }
+					&:nth-child(4) { @include yellowShade }
+					&:nth-child(5) { @include yellowShade }
+					&:nth-child(6) { @include redShade }
+					&:nth-child(7) { @include blueShade }
+					&:nth-child(8) { @include greenShade }
+					&:nth-child(9) { @include redShade }
 
 					.material-symbols-sharp {
 						font-size: $h1;

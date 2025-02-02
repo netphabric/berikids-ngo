@@ -59,7 +59,7 @@
 		padding: rem(32) rem(20);
 
 		@media (min-width: 768px) {
-			height: calc(70dvh - 48px);
+			height: calc(75dvh - 50px);
 		}
 
 		.form-wrapper {
@@ -104,36 +104,9 @@
 				width: fit-content;
 			}
 
-			input {
-				height: rem(60);
-			}
-
 			textarea {
 				height: rem(150);
 				resize: none;
-			}
-
-			input,
-			textarea {
-				padding: rem(8) rem(16);
-				border-radius: rem(8);
-				border: transparent;
-				font-size: $small;
-				font-weight: $normal;
-				box-shadow: $shadow-soft;
-
-				@include minWidth("tablet") {
-					font-size: $regular;
-					line-height: rem(32);
-				}
-
-				&::placeholder {
-					opacity: 0.5;
-				}
-
-				&:focus {
-					outline: none;
-				}
 			}
 		}
 	}
