@@ -1,17 +1,6 @@
 <script lang="ts">
+	import { skills } from "$lib/stores/skills"
 	import Chip from "./chip.svelte"
-
-	const skillCards = [
-		{ title: "Agriculture", icon: "grocery" },
-		{ title: "Carpentry", icon: "handyman" },
-		{ title: "IT Literacy", icon: "devices" },
-		{ title: "Tailoring", icon: "conveyor_belt" },
-		{ title: "Metal works", icon: "square_foot" },
-		{ title: "Artistry", icon: "palette" },
-		{ title: "Music", icon: "music_note" },
-		{ title: "Shoemaking", icon: "steps" },
-		{ title: "hairdressing", icon: "self_care" }
-	]
 </script>
 
 <section class="skill-cards">
@@ -19,7 +8,7 @@
 		<Chip chipText="our skills" chipIcon="verified" chipColor="yellow" />
 
 		<div class="cards-wrapper">
-			{#each skillCards as skill}
+			{#each $skills as skill}
 				<article class="skill-card">
 					<span class="material-symbols-sharp">{skill.icon}</span>
 					<h4 class="title">{skill.title}</h4>
@@ -54,7 +43,6 @@
 					gap: rem(64);
 				}
 
-				// prettier-ignore
 				.skill-card {
 					display: flex;
 					flex-direction: column;
@@ -64,15 +52,22 @@
 					padding: 20px;
 					box-shadow: $shadow-soft;
 
-					&:nth-child(1) { @include greenShade }
-					&:nth-child(2) { @include blueShade }
-					&:nth-child(3) { @include redShade }
-					&:nth-child(4) { @include yellowShade }
-					&:nth-child(5) { @include yellowShade }
-					&:nth-child(6) { @include redShade }
-					&:nth-child(7) { @include blueShade }
-					&:nth-child(8) { @include greenShade }
-					&:nth-child(9) { @include redShade }
+					$colors: greenShade, blueShade, redShade, yellowShade;
+
+					// prettier-ignore
+					@for $i from 1 through 100 {
+						$group: ceil($i / 4);
+						$position: $i % 4;
+						@if $position == 0 { $position: 4 }
+						$color-index: if($group % 2 == 0, 5 - $position, $position);
+
+						&:nth-child(#{$i}) {
+							@if $color-index == 1 { @include greenShade;
+							} @else if $color-index == 2 { @include blueShade;
+							} @else if $color-index == 3 { @include redShade;
+							} @else if $color-index == 4 { @include yellowShade }
+						}
+					}
 
 					.material-symbols-sharp {
 						font-size: $h1;
@@ -80,12 +75,12 @@
 					}
 
 					.title {
-						font-size: $h5;
+						font-size: $h4;
 						font-weight: $medium;
+						text-align: center;
 
 						@include minWidth("tablet") {
-							font-size: $h4;
-							line-height: rem(64);
+							font-size: $h5;
 						}
 					}
 				}

@@ -68,6 +68,7 @@
 					font-size: $small;
 					font-weight: $semiBold;
 					line-height: rem(24);
+					text-transform: none;
 
 					@include minWidth("tablet") {
 						font-size: $regular;
