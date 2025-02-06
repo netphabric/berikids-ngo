@@ -10,13 +10,31 @@
 		<div class="partner-cards">
 			{#each $partners as partner}
 				<article class="partner-card">
-					<span class="material-symbols-sharp verified">verified</span>
-					<h4 class="title">{partner.name}</h4>
+					<h4 class="title">
+						<span class="material-symbols-sharp verified">verified</span>
+						{partner.name}
+					</h4>
 
-					<partner class="text">
-						<span class="material-symbols-sharp location-icon">globe</span>
-						<span>{partner.location}</span>
-					</partner>
+					<div class="text">
+						{#if partner.phone}
+							<span class="phone">
+								<span class="material-symbols-sharp location-icon">perm_phone_msg</span>
+								{partner.phone}</span
+							>
+						{/if}
+
+						{#if partner.web}
+							<span class="web">
+								<span class="material-symbols-sharp location-icon">web_traffic</span>
+								<a href={partner.web} target="_blank">{partner.web}</a></span
+							>
+						{/if}
+
+						<span class="location">
+							<span class="material-symbols-sharp location-icon">signpost</span>
+							{partner.location}</span
+						>
+					</div>
 				</article>
 			{/each}
 		</div>
@@ -48,7 +66,6 @@
 			.partner-card {
 				display: flex;
 				flex-direction: column;
-				justify-content: space-between;
 				border-radius: rem(16);
 				padding: rem(16);
 				gap: rem(16);
@@ -69,6 +86,9 @@
 					font-weight: $semiBold;
 					line-height: rem(24);
 					text-transform: none;
+					display: flex;
+					align-items: center;
+					gap: rem(8);
 
 					@include minWidth("tablet") {
 						font-size: $regular;
@@ -78,26 +98,38 @@
 
 				.text {
 					width: 100%;
-					font-size: $small;
+					min-height: 50px;
+					margin-inline-start: rem(16);
 					font-weight: $normal;
+					font-family: $logo-font;
+					letter-spacing: 1px;
 					line-height: rem(24);
 					opacity: 0.8;
-					display: flex;
-					gap: 8px;
 
-					.location-icon {
-						color: $secondary;
-						position: absolute;
-						font-size: rem(250);
-						line-height: 0;
-						z-index: 1;
-						opacity: 0.1;
-						left: 60%;
-						top: 50%;
-					}
+					gap: rem(16);
+					display: flex;
+					flex-direction: column;
+					padding-left: rem(16);
+					border-left: rem(4) solid $secondary;
 
 					@include minWidth("tablet") {
-						font-size: $regular;
+						font-size: $medium;
+					}
+
+					.web,
+					.location,
+					.phone {
+						display: flex;
+						padding-inline-end: rem(16);
+						gap: rem(8);
+					}
+
+					.web {
+						color: $secondary;
+					}
+
+					.location-icon {
+						color: color.adjust($accent, $lightness: 10%);
 					}
 				}
 			}
