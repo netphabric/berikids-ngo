@@ -1,10 +1,6 @@
 <footer>
 	<div class="footer-wrapper">
-		<a
-			target="_blank"
-			href="https://www.linkedin.com/in/abanseka-sylvester/"
-			rel="noopener noreferrer"
-		>
+		<a target="_blank" href="https://abanseka.vercel.app" rel="noopener noreferrer">
 			<span class="material-symbols-sharp">fingerprint</span>
 			built by abanseka</a
 		>

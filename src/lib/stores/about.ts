@@ -30,20 +30,25 @@ export const teams = writable([
 
 export const partners = writable([
 	{
+		name: "Freunde Kameruns e.V.",
+		web: "https://www.Freunde-Kameruns.de/",
+		phone: "06053 3530",
+		location: "wilhelm-Leuschner-Straße 23, E 63128 Dietzenbach - Frankfurt, germany"
+	},
+	{
 		name: "St.Johannes Nepomuk Church Hohe",
 		location: "Strasse 1 09112 Chemnitz Sachsen - germany"
 	},
-	{ name: "eye Square GmbH", location: " Schlesische Strasse 29-30D 10997 - berlin, germany" },
-	{ name: "Achor e.V", location: "Kirchring 16 14959 Trebbin Brandenburg - germany" },
+	{ name: "Eye Square GmbH", location: "Schlesische Strasse 29-30D 10997 - Berlin, Germany" },
+	{ name: "Achor e.V.", location: "Kirchring 16 14959 Trebbin Brandenburg - Germany" },
 	{
 		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
 		location: "Strasse 11 16247 Joachimsthal Brandenburg - germany"
 	},
 	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
-	{ name: "Freinds of cameroon", location: "frankfurt, germany" },
 	{ name: "Pecten company", location: "Douala" },
-	{ name: "International Talent Outreach", location: "Douala, cameroon |  Nigeria" },
-	{ name: "Erico metal fabrications", location: "Douala, cameroon |  Nigeria" },
+	{ name: "International Talent Outreach", location: "Douala, cameroon" },
+	{ name: "Erico metal fabrications", location: "Douala, cameroon " },
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
 	{ name: "The capuchin friary ", location: "shisong, cameroon" },
 	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },
