@@ -5,6 +5,7 @@
 	import Faq from "./faq.svelte"
 	import Team from "./team.svelte"
 	import Partners from "./partners.svelte"
+	import SkillCards from "./skillCards.svelte"
 
 	export let pageData
 	export let pageMetaData
@@ -20,8 +21,9 @@
 	{#each pageData as section}
 		{#if section.type === "contentBlock"} <ContentBlock {...section.props} />
 		{:else if section.type === "faq"} <Faq {...section.props} />
+		{:else if section.type === "testimonials"} <Testimonials {...section.props} />
 		{:else if section.type === "contactDetails"} <ContactDetails />
-		{:else if section.type === "testimonials"} <Testimonials />
+		{:else if section.type === "skillCards"} <SkillCards />
 		{:else if section.type === "partners"} <Partners />
 		{:else if section.type === "team"} <Team />
 		{/if}
