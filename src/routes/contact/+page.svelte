@@ -4,6 +4,7 @@
 
 <svelte:head>
 	<title>Contact</title>
+	<meta name="description" content="Contact Beri Kids" />
 </svelte:head>
 
 <main>

@@ -2,22 +2,25 @@
 	import { slide } from "svelte/transition"
 	import { cubicOut } from "svelte/easing"
 	import Chip from "$lib/components/chip.svelte"
+	import type { Writable } from "svelte/store"
 
 	export let desc = ""
-	export let faqs: {
-		id: number
-		ans: string
-		isOpen: boolean
-		question: string
-	}[] = []
+	export let faqs: Writable<
+		{
+			id: number
+			ans: string
+			isOpen: boolean
+			question: string
+		}[]
+	>
 
 	const handleShowFaqAns = (id: number) => {
-		faqs.forEach((faq) => {
-			if (faq.id !== id) faq.isOpen = false
-		})
-
-		const faq = faqs.findIndex((faq) => faq.id === id)
-		faqs[faq].isOpen = !faqs[faq].isOpen
+		faqs.update((faqs) =>
+			faqs.map((faq) => ({
+				...faq,
+				isOpen: faq.id === id ? !faq.isOpen : false
+			}))
+		)
 	}
 </script>
 
@@ -30,7 +33,7 @@
 		</div>
 
 		<div class="faq-container">
-			{#each faqs as faq}
+			{#each $faqs as faq}
 				<article class="faq">
 					<button class="faq-question" on:click={() => handleShowFaqAns(faq.id)}>
 						<span>{faq.question}</span>

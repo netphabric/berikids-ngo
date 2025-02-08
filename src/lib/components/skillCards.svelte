@@ -56,7 +56,7 @@
 
 					// prettier-ignore
 					@for $i from 1 through 100 {
-						$group: ceil($i / 4);
+						$group: math.div($i , 4);
 						$position: $i % 4;
 						@if $position == 0 { $position: 4 }
 						$color-index: if($group % 2 == 0, 5 - $position, $position);
@@ -75,7 +75,7 @@
 					}
 
 					.title {
-						font-size: $h4;
+						font-size: $h6;
 						font-weight: $medium;
 						text-align: center;
 
