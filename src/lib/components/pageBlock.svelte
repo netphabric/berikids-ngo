@@ -7,7 +7,13 @@
 	import Partners from "./partners.svelte"
 
 	export let pageData
+	export let pageMetaData
 </script>
+
+<svelte:head>
+	<title>{pageMetaData.title}</title>
+	<meta name="description" content={pageMetaData.description} />
+</svelte:head>
 
 <!-- prettier-ignore -->
 <main>
