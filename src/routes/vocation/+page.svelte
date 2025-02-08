@@ -49,7 +49,7 @@
 	/>
 
 	<Faq
-		faqs={$trainingFaqs}
+		faqs={trainingFaqs}
 		desc="Find answers to your questions about our training programs and how to get involved."
 	/>
 </main>
