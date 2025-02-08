@@ -23,6 +23,13 @@
 							>
 						{/if}
 
+						{#if partner.email}
+							<span class="email">
+								<span class="material-symbols-sharp location-icon">alternate_email</span>
+								{partner.email}</span
+							>
+						{/if}
+
 						{#if partner.web}
 							<span class="web">
 								<span class="material-symbols-sharp location-icon">web_traffic</span>
@@ -118,6 +125,7 @@
 
 					.web,
 					.location,
+					.email,
 					.phone {
 						display: flex;
 						padding-inline-end: rem(16);

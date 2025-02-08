@@ -75,7 +75,7 @@
 					}
 
 					.title {
-						font-size: $h4;
+						font-size: $h6;
 						font-weight: $medium;
 						text-align: center;
 

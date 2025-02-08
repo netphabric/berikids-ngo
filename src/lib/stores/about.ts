@@ -30,6 +30,13 @@ export const teams = writable([
 
 export const partners = writable([
 	{
+		name: "Eye Square GmbH",
+		email: "eye@eye-square.com",
+		phone: "+49 (0)30 69 81 44 - 0",
+		web: "https://www.eye-square.com/",
+		location: "Schlesische Strasse 29-30D 10997 - Berlin, Germany"
+	},
+	{
 		name: "Freunde Kameruns e.V.",
 		web: "https://www.Freunde-Kameruns.de/",
 		phone: "06053 3530",
@@ -39,7 +46,6 @@ export const partners = writable([
 		name: "St.Johannes Nepomuk Church Hohe",
 		location: "Strasse 1 09112 Chemnitz Sachsen - germany"
 	},
-	{ name: "Eye Square GmbH", location: "Schlesische Strasse 29-30D 10997 - Berlin, Germany" },
 	{ name: "Achor e.V.", location: "Kirchring 16 14959 Trebbin Brandenburg - Germany" },
 	{
 		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
@@ -47,8 +53,22 @@ export const partners = writable([
 	},
 	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
 	{ name: "Pecten company", location: "Douala" },
-	{ name: "International Talent Outreach", location: "Douala, cameroon" },
-	{ name: "Erico metal fabrications", location: "Douala, cameroon " },
+	{
+		name: "International Talent Outreach",
+		web: "https://www.talentoutreach.org",
+		location: "Douala, cameroon & nigeria"
+	},
+	{
+		name: "Erico metal fabrications",
+		phone: "+237 677 192 872",
+		email: "ericometalone@gmail.com",
+		location: "Douala, cameroon "
+	},
+	{
+		name: "ETS Sun City",
+		email: "suncityushenil@yahoo.com",
+		location: "Bp:1477 Bafoussam, cameroon"
+	},
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
 	{ name: "The capuchin friary ", location: "shisong, cameroon" },
 	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },
