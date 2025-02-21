@@ -1,36 +1,61 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
-		<meta charset="UTF-8" />
-	</head>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+  </head>
+  <body style="margin: 0; padding: 0; text-align: center;">
+    <section
+      style="
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        display: block;
+        text-align: left;
+      "
+    >
+      <a href="https://berikids.org" style="text-decoration: none; color: #2b4f81;">
+        <img
+          src="https://berikids.org/images/icons/beachAccess.png"
+          alt=""
+          width="32"
+          height="32"
+          style="display: inline-block; vertical-align: middle; border: 0; margin: 0; padding: 0;"
+        />
+        <span
+          style="font-size: 32px; font-weight: bold; display: inline-block; vertical-align: middle;"
+        >
+          BERIKIDS
+        </span>
+      </a>
 
-	<body style="margin: 0; padding: 0; color: #4e2c14">
-		<section style="max-width: 600px; margin-inline: auto; padding: 20px">
-			<a href="https://berikids.org" style="text-decoration: none; color: #2b4f81">
-				<img
-					src="https://berikids.org/images/icons/beachAccess.png"
-					alt=""
-					width="32"
-					height="32"
-					style="display: inline-block; vertical-align: middle; border: 0; margin: 0; padding: 0"
-				/>
-				<span
-					style="font-size: 32px; font-weight: bold; display: inline-block; vertical-align: middle"
-				>
-					BERIKIDS
-				</span>
-			</a>
+      <div style="padding: 10px; height: 200px; width: 100%; border-radius: 10px; overflow: hidden;">
+        <img
+          src="https://berikids.org/opengraph.webp"
+          alt=""
+          style="
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 8px;
+          "
+        />
+      </div>
 
-			<h1 style="padding: 10px">
-				<p style="margin: 0; padding: 0">You have a message from</p>
-				<p style="margin: 0; padding: 0"><span style="color: #6faf64">{{name}}</span></p>
-			</h1>
+      <h1 style="padding: 10px; margin: 0;">
+        <p style="margin: 0; padding: 0;">You have a message from</p>
+        <p style="margin: 0; padding: 0;">
+          <span>{{name}}</span>
+        </p>
+      </h1>
 
-			<p style="padding: 10px; font-size: 18px">{{message}}</p>
-			<p style="padding: 10px; font-size: 18px; align-self: flex-start">{{email}}</p>
-		</section>
-	</body>
+      <p style="padding: 10px; font-size: 18px;">{{message}}</p>
+      <p style="padding: 10px; font-size: 18px; margin: 0;">{{email}}</p>
+    </section>
+  </body>
 </html>
