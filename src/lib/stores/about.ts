@@ -44,8 +44,14 @@ export const partners = writable([
 	},
 	{
 		name: "St.Johannes Nepomuk Church Hohe",
-		location: "Strasse 1 09112 Chemnitz Sachsen - germany"
-	},
+    email: "ursula.haemmerer@web.de",
+		location: "Walter Meusel Str. 51 09114 Chemnitz - germany" 
+  },
+	{ name: "St. Clemens kirche",
+    web: "https://www.stclemens.berlin/",
+    phone: "030 26 36 76 98",
+    location: "Stresemannstr. 66, 10963 Berlin - Germany" 
+  },
 	{ name: "Achor e.V.", location: "Kirchring 16 14959 Trebbin Brandenburg - Germany" },
 	{
 		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
