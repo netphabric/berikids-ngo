@@ -10,6 +10,9 @@ export async function POST({ request }: RequestEvent) {
 	let recipientHtmlOutput
 	let replyHtmlOutput
 
+	// keep line breaks
+	const formatMessage = (m: string) => m.replace(/\\n/g, "<br />")
+
 	try {
 		const recipeintTemplatePath = path.join(
 			process.cwd(),
@@ -35,11 +38,13 @@ export async function POST({ request }: RequestEvent) {
 		const recipientTemplate = Handlebars.compile(recipientTempSource)
 		const replyTemplate = Handlebars.compile(replyTempSource)
 
-		recipientHtmlOutput = recipientTemplate({ name, email, message })
+		recipientHtmlOutput = recipientTemplate({ name, email, message: formatMessage(message) })
 		replyHtmlOutput = replyTemplate({
 			name,
 			email: "abansekasly98@gmail.com",
-			message: "We acknowledge receiving your message and will get back to you as soon as possible."
+			message: formatMessage(
+				"This email is an acknowledgement that we have received your message, and will get back to you as soon as possible. "
+			)
 		})
 	} catch (error) {
 		console.error("Error processing template:", error)
