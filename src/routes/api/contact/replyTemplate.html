@@ -7,64 +7,32 @@
 		<meta charset="UTF-8" />
 	</head>
 
-	<!-- prettier-ignore -->
+	<body style="margin: 0; padding: 0; color: #2b4f81">
+		<section style="max-width: 600px; margin-inline: auto; padding: 20px">
+			<h1 style="font-size: 32px; color: #2b4f81; cursor: pointer">
+				<a
+					href="https://berikids.org"
+					style="
+          text-decoration: none;
+          color: #2b4f81
+					display: flex;
+					align-items: center;
+					text-align: center;
+					gap: 8px;
+        "
+				>
+					<img src="https://berikids.org/images/icons/beachAccess.png" alt="icon" />
+					<span style="font-family: monospace"> BERIKIDS </span>
+				</a>
+			</h1>
 
-	<body style="
-    margin: 0;
-    padding: 0;
-    color: #2b4f81;
-    background-color: #2b4f81
-    ">
+			<h2 style="padding: 10px; color: #2b4f81">
+				Hi <span style="color: #6faf64">{{name}}</span>
+				Thank you for reaching out to us
+			</h2>
 
-  <section style="
-				max-width: 600px;
-				margin-inline: auto;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				border-radius: 16px;
-				background-color: #f2f2f2;
-				padding: 20px;
-			">
-
-    <h1 style="
-        font-size: 32px;
-        color: #2b4f81;
-        display: flex;
-        align-items: center;
-        gap: 8px
-        ">
-
-      <img src="https://berikids.org/images/icons/beachAccess.svg" alt="icon" />
-      <span style="
-        font-family: monospace
-        "> BERIKIDS
-      </span>
-    </h1>
-
-    <h2 style=" padding: 10px; color: #2b4f81 ">
-     Hi <span style=" color: #6faf64">{{name}}</span>
-        Thank you for reaching out to us
-    </h2>
-
-    <p style="
-        padding: 10px;
-        font-size: 18px
-        ">{{message}}
-    </p>
-
-
-    <p style="
-        padding: 10px;
-        font-size: 18px;
-        margin: 0;
-        text-decoration: none;
-        align-self: flex-start;
-        color: #2b4f81;
-        ">
-        {{email}}
-    </p>
-  </section>
-</body>
+			<p style="padding: 10px; font-size: 18px">{{message}}</p>
+			<p style="padding: 10px; font-size: 18px; align-self: flex-start">{{email}}</p>
+		</section>
+	</body>
 </html>
