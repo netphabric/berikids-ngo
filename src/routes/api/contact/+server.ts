@@ -38,8 +38,6 @@ export async function POST({ request }: RequestEvent) {
 		const recipientTemplate = Handlebars.compile(recipientTempSource)
 		const replyTemplate = Handlebars.compile(replyTempSource)
 
-		console.log(formatMessage(message))
-
 		recipientHtmlOutput = recipientTemplate({ name, email, message: formatMessage(message) })
 		replyHtmlOutput = replyTemplate({
 			name,
