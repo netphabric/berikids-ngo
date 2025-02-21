@@ -43,7 +43,7 @@ export async function POST({ request }: RequestEvent) {
 			name,
 			email: "abansekasly98@gmail.com",
 			message: formatMessage(
-				"We acknowledge receiving your message and will get back to you as soon as possible."
+				"This email is an acknowledgement that we have received your message, and will get back to you as soon as possible. "
 			)
 		})
 	} catch (error) {
