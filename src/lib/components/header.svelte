@@ -22,8 +22,10 @@
 			on:keypress={toggleNav}
 			on:click={toggleNav}
 			class:menu={!navOpen}
-			class="material-symbols-sharp">filter_list</span
 		>
+			<span class="material-symbols-sharp">style</span>
+			<span>menu</span>
+		</span>
 
 		{#if navOpen}
 			<nav
@@ -74,7 +76,7 @@
 
 <style lang="scss">
 	.header {
-		padding: 32px;
+		padding: 20px;
 		backdrop-filter: blur(20px);
 		background-color: $opaque-white;
 		position: sticky;
@@ -83,6 +85,7 @@
 
 		@include minWidth("tablet") {
 			margin-block-end: 64px;
+			padding: 32px;
 		}
 
 		.logo {
@@ -106,8 +109,17 @@
 			align-items: center;
 
 			.menu {
-				font-size: $h3;
+				min-width: rem(118);
 				cursor: pointer;
+				display: flex;
+				align-items: center;
+				gap: rem(8);
+				color: $secondary;
+				font-size: $medium;
+				font-weight: $semiBold;
+				border-radius: rem(8);
+				padding: rem(8) rem(16);
+				background-color: $primary;
 
 				@include minWidth("tablet") {
 					display: none;
