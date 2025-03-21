@@ -1,40 +1,26 @@
-import { get } from "svelte/store"
-import { homeData } from "$lib/stores/pages/home"
-import { aboutData } from "$lib/stores/pages/about"
-import { projectsData } from "$lib/stores/pages/projects"
-import { vocationsData } from "$lib/stores/pages/vocations"
 import { PUBLIC_BASE_URL } from "$env/static/public"
 
 const siteUrl = PUBLIC_BASE_URL
-
-const extractData = <T>(data: T) => {
-	if (!data) return { title: "", description: "" }
-
-	const pageData = Array.isArray(data) ? data[0] : data
-
-	return {
-		title: pageData?.props?.contentTitle || "",
-		description: pageData?.props?.contentDescription || ""
-	}
-}
-
 const pages = [
-	{ path: "/", data: extractData(get(homeData)) },
-	{ path: "/about", data: extractData(get(aboutData)) },
-	{ path: "/projects", data: extractData(get(projectsData)) },
-	{ path: "/vocations", data: extractData(get(vocationsData)) }
+	{ path: "/", priority: 1.0 },
+	{ path: "/about", priority: 0.8 },
+	{ path: "/projects", priority: 0.9 },
+	{ path: "/vocations", priority: 0.7 }
 ]
 
-const generateSitemapXML = () => {
+const generateSitemapXML = (): string => {
+	const lastmod = new Date().toISOString()
+
 	return `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${pages
 			.map(
-				({ path, data }) => `
+				({ path, priority }) => `
       <url>
         <loc>${siteUrl}${path}</loc>
-        <title>${data.title}</title>
-        <description>${data.description}</description>
+        <lastmod>${lastmod}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>${priority}</priority>
       </url>`
 			)
 			.join("\n")}
