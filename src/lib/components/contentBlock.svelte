@@ -161,7 +161,7 @@
 				.content-des {
 					font-size: $small;
 					line-height: rem(24);
-					opacity: 0.6;
+					opacity: 0.9;
 
 					@include minWidth("mobile") {
 						font-size: $regular;
