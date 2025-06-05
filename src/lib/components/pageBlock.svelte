@@ -7,8 +7,13 @@
 	import Partners from "./partners.svelte"
 	import SkillCards from "./skillCards.svelte"
 
-	export let pageData
-	export let pageMetaData
+	type PageMetaProps = {
+		title: string
+		description: string
+	}
+
+	export let pageData: any
+	export let pageMetaData: PageMetaProps
 </script>
 
 <svelte:head>

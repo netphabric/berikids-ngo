@@ -43,26 +43,10 @@ export const partners = writable([
 		location: "wilhelm-Leuschner-Straße 23, E 63128 Dietzenbach - Frankfurt, germany"
 	},
 	{
-		name: "St.Johannes Nepomuk Church Hohe",
-    email: "ursula.haemmerer@web.de",
-		location: "Walter Meusel Str. 51 09114 Chemnitz - germany" 
-  },
-	{ name: "St. Clemens kirche",
-    web: "https://www.stclemens.berlin/",
-    phone: "030 26 36 76 98",
-    location: "Stresemannstr. 66, 10963 Berlin - Germany" 
-  },
-	{ name: "Achor e.V.", location: "Kirchring 16 14959 Trebbin Brandenburg - Germany" },
-	{
-		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
-		location: "Strasse 11 16247 Joachimsthal Brandenburg - germany"
-	},
-	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
-	{ name: "Pecten company", location: "Douala" },
-	{
-		name: "International Talent Outreach",
-		web: "https://www.talentoutreach.org",
-		location: "Douala, cameroon & nigeria"
+		name: "St. Clemens kirche",
+		web: "https://www.stclemens.berlin/",
+		phone: "030 26 36 76 98",
+		location: "Stresemannstr. 66, 10963 Berlin - Germany"
 	},
 	{
 		name: "Erico metal fabrications",
@@ -71,10 +55,27 @@ export const partners = writable([
 		location: "Douala, cameroon "
 	},
 	{
+		name: "St.Johannes Nepomuk Church Hohe",
+		email: "ursula.haemmerer@web.de",
+		location: "Walter Meusel Str. 51 09114 Chemnitz - germany"
+	},
+	{
+		name: "International Talent Outreach",
+		web: "https://www.talentoutreach.org",
+		location: "Douala, cameroon & nigeria"
+	},
+	{
 		name: "ETS Sun City",
 		email: "suncityushenil@yahoo.com",
 		location: "Bp:1477 Bafoussam, cameroon"
 	},
+	{ name: "Achor e.V.", location: "Kirchring 16 14959 Trebbin Brandenburg - Germany" },
+	{
+		name: "Kommunitaet Grimnitz e.V. Grimnitzer ",
+		location: "Strasse 11 16247 Joachimsthal Brandenburg - germany"
+	},
+	{ name: "Ethos Maria (a marian prayer group)", location: "germany" },
+	{ name: "Pecten company", location: "Douala" },
 	{ name: "Afoni children of hope foundation", location: "cameroon" },
 	{ name: "The capuchin friary ", location: "shisong, cameroon" },
 	{ name: "Strategic humanitarian services,(SHUMAS)", location: "Nkwen, cameroon" },
