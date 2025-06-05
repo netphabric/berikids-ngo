@@ -1,4 +1,5 @@
-@use "styles/functions.module" as *;
+@use "sass:color";
+@use "./functions.module" as *;
 
 // colors
 $black: #4e2c14;
@@ -7,6 +8,7 @@ $accent: #6faf64;
 $primary: #2b4f81;
 $secondary: #ffd966;
 $error: #f44336;
+$opaque-white: color.adjust($white, $alpha: -0.2);
 
 //Text fonts
 $large: rem(20);
@@ -15,6 +17,9 @@ $regular: rem(16);
 $small: rem(14);
 $tiny: rem(12);
 $icon: rem(32);
+
+// max-width
+$max-width: 1440px;
 
 // Title Fonts
 $h1: rem(56);
@@ -32,7 +37,21 @@ $semiBold: 600;
 $bold: 700;
 $extraBold: 800;
 
+// box shadows
+$shadow-soft: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$shadow-hard: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+$shadow-outset: 6px 6px 12px #c5c5c5,
+  -6px -6px 12px #ffffff;
+
+$shadow-inset: inset 4px 4px 12px #c5c5c5,
+  inset -4px -4px 12px #ffffff;
+
+// gradients
+$bottomFade: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%);
+
 // font families
 $primary-font: "Poppins", sans-serif;
 $heading-font: "Montserrat", sans-serif;
+$logo-font: "Aldrich", serif;
 $icon-font: "Material Symbols Outlined", sans-serif;
