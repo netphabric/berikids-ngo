@@ -17,9 +17,7 @@
 
 <svelte:head>
 	<!-- Primary Meta Tags -->
-	<title>berikids</title>
 	<meta name="title" content="berikids" />
-	<meta name="description" content="empowering lives through sustainable development initiatives" />
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />

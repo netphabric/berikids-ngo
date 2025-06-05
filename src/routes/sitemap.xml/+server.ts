@@ -5,7 +5,10 @@ const pages = [
 	{ path: "/", priority: 1.0 },
 	{ path: "/about", priority: 0.8 },
 	{ path: "/projects", priority: 0.9 },
-	{ path: "/vocations", priority: 0.7 }
+	{ path: "/vocation", priority: 0.7 },
+	{ path: "/donate", priority: 0.6 },
+	{ path: "/contact", priority: 0.5 },
+	{ path: "/sitemap", priority: 0.4 }
 ]
 
 const generateSitemapXML = (): string => {

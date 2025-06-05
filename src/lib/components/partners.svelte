@@ -33,7 +33,9 @@
 						{#if partner.web}
 							<span class="web">
 								<span class="material-symbols-sharp location-icon">web_traffic</span>
-								<a href={partner.web} target="_blank">{partner.web}</a></span
+								<a href={partner.web} target="_blank"
+									>{partner.name.split(" ").slice(0, 2).join(" ")}'s website</a
+								></span
 							>
 						{/if}
 
@@ -67,7 +69,7 @@
 			gap: rem(32);
 
 			@include minWidth("tablet") {
-				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
 			}
 
 			.partner-card {
@@ -106,7 +108,6 @@
 				.text {
 					width: 100%;
 					min-height: 50px;
-					margin-inline-start: rem(16);
 					font-weight: $normal;
 					font-family: $logo-font;
 					letter-spacing: 1px;
@@ -116,8 +117,6 @@
 					gap: rem(16);
 					display: flex;
 					flex-direction: column;
-					padding-left: rem(16);
-					border-left: rem(4) solid $secondary;
 
 					@include minWidth("tablet") {
 						font-size: $medium;
@@ -130,6 +129,7 @@
 						display: flex;
 						padding-inline-end: rem(16);
 						gap: rem(8);
+						border-bottom: 1px solid color.adjust($primary, $lightness: 10%);
 					}
 
 					.web {
