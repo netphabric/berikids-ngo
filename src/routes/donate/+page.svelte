@@ -5,6 +5,7 @@
 
 <svelte:head>
 	<title>Donate</title>
+	<meta name="description" content="Support our cause by donating to us" />
 </svelte:head>
 
 <main>

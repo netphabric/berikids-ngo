@@ -3,7 +3,8 @@ import { trainingFaqs } from "../faqs"
 
 export const vocationsMetaData = writable({
 	title: "Vocations",
-	description: "Learn about our vocational training programs."
+	description:
+		"Learn about our vocational training programs. Discover practical skills for independence and growth. how we drive change through proffessional training"
 })
 
 export const vocationsData = writable([

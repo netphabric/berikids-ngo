@@ -1,5 +1,4 @@
 <script lang="ts">
-	import ContactDetails from "./contactDetails.svelte"
 	import ContentBlock from "./contentBlock.svelte"
 	import Testimonials from "./testimonials.svelte"
 	import Faq from "./faq.svelte"
@@ -27,7 +26,6 @@
 		{#if section.type === "contentBlock"} <ContentBlock {...section.props} />
 		{:else if section.type === "faq"} <Faq {...section.props} />
 		{:else if section.type === "testimonials"} <Testimonials {...section.props} />
-		{:else if section.type === "contactDetails"} <ContactDetails />
 		{:else if section.type === "skillCards"} <SkillCards />
 		{:else if section.type === "partners"} <Partners />
 		{:else if section.type === "team"} <Team />

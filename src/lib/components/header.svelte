@@ -4,6 +4,7 @@
 	import Button from "./button.svelte"
 
 	const navLinks = [
+		{ label: "home", url: "/" },
 		{ label: "about", url: "/about" },
 		{ label: "projects", url: "/projects" },
 		{ label: "vocation", url: "/vocation" },
@@ -105,6 +106,7 @@
 			max-width: $max-width;
 			margin-inline: auto;
 			display: flex;
+			gap: rem(16);
 			justify-content: space-between;
 			align-items: center;
 
@@ -172,6 +174,10 @@
 				list-style: none;
 				gap: rem(32);
 
+				@include minWidth("tablet") {
+					gap: rem(16);
+				}
+
 				.navLink {
 					@include underlineOnHover;
 
@@ -181,6 +187,10 @@
 						font-weight: $normal;
 
 						@include minWidth("tablet") {
+							font-size: $medium;
+						}
+
+						@include minWidth("desktop") {
 							font-size: $regular;
 						}
 					}

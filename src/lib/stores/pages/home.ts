@@ -17,12 +17,11 @@ export const homeData = writable([
 			contentChipIcon: "sign_language",
 			contentMedia: "/images/heroImg.webp",
 			contentTitleHighlight: "Cameroon's Vulnerable",
-			contentTitle: "Empowering Cameroon's Vulnerable Children: Education & Holistic Support",
+			contentTitle: "Empowering Cameroon's Vulnerable community",
 			contentDescription:
-				"BeriKids provides life-changing support for orphans and at-risk children in Cameroon. Through quality education, trauma recovery programs, and community outreach, we foster sustainable socioeconomic development and spiritual growth."
+				"Through quality education, trauma recovery programs, and community outreach, we foster sustainable socioeconomic development and spiritual growth. for orphans, mentally ill and at-risk children in Cameroon. "
 		}
 	},
-	{ type: "contactDetails" },
 	{
 		type: "contentBlock",
 		props: {
@@ -31,9 +30,8 @@ export const homeData = writable([
 			contentChipText: "at the core",
 			contentChipIcon: "digital_wellbeing",
 			contentMedia: "/images/as2.webp",
-			contentTitleHighlight: "Building Sustainable Futures",
-			contentTitle:
-				"Rehabilitation and Vocational Training: Building Sustainable Futures in Cameroon",
+			contentTitleHighlight: "Sustainable Futures",
+			contentTitle: "Building Sustainable Futures in Cameroon",
 			ctaButtons: [
 				{
 					url: "/vocation",
@@ -53,8 +51,8 @@ export const homeData = writable([
 			contentChipText: "gender development",
 			contentChipIcon: "female",
 			contentMedia: "/images/womenEmpowerment.webp",
-			contentTitleHighlight: "Economic Opportunity",
-			contentTitle: "Empowering Women in Cameroon: Gender Equality and Economic Opportunity",
+			contentTitleHighlight: "Economic Opportunity for Women",
+			contentTitle: "Gender Equality And Economic Opportunity For Women In Cameroon",
 			contentDescription:
 				"We are committed to fostering gender equality and women's economic empowerment through targeted initiatives. By providing skills training and access to resources, we enable women to overcome poverty and become leaders in their communities."
 		}
