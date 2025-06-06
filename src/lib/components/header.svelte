@@ -4,6 +4,7 @@
 	import Button from "./button.svelte"
 
 	const navLinks = [
+		{ label: "home", url: "/" },
 		{ label: "about", url: "/about" },
 		{ label: "projects", url: "/projects" },
 		{ label: "vocation", url: "/vocation" },

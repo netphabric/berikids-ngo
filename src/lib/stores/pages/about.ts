@@ -2,7 +2,8 @@ import { writable } from "svelte/store"
 
 export const aboutMetaData = writable({
 	title: "About Berikids",
-	description: "Who we are and what we do."
+	description:
+		"this is all about who we are, what we do and how we do it. especially the people behind us"
 })
 
 export const aboutData = writable([
