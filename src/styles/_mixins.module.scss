@@ -9,183 +9,187 @@ $desktop: rem(1024);
 $large-desktop: rem(1280);
 
 @mixin minWidth($breakpoint) {
-  @if $breakpoint =="mobile" {
-    @media (min-width: #{$mobile}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="tablet" {
-    @media (min-width: #{$tablet}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="desktop" {
-    @media (min-width: #{$desktop}) {
-      @content;
-    }
-  }
-
-  @else if $breakpoint =="large-desktop" {
-    @media (min-width: #{$large-desktop}) {
-      @content;
-    }
-  }
+	@if $breakpoint == "mobile" {
+		@media (min-width: #{$mobile}) {
+			@content;
+		}
+	} @else if $breakpoint == "tablet" {
+		@media (min-width: #{$tablet}) {
+			@content;
+		}
+	} @else if $breakpoint == "desktop" {
+		@media (min-width: #{$desktop}) {
+			@content;
+		}
+	} @else if $breakpoint == "large-desktop" {
+		@media (min-width: #{$large-desktop}) {
+			@content;
+		}
+	}
 }
 
 // Color and background shades
-@mixin greenShade () {
-  color: color.adjust($accent, $lightness: -20%);
-  background-color: color.adjust($accent, $lightness: 35%);
+@mixin greenShade() {
+	color: color.adjust($accent, $lightness: -20%);
+	background-color: color.adjust($accent, $lightness: 35%);
 }
 
-@mixin blueShade () {
-  color: color.adjust($primary, $lightness: -5%);
-  background-color: color.adjust($primary, $lightness: 50%);
+@mixin blueShade() {
+	color: color.adjust($primary, $lightness: -5%);
+	background-color: color.adjust($primary, $lightness: 50%);
 }
 
-@mixin redShade () {
-  color: color.adjust($error, $lightness: -20%);
-  background-color: color.adjust($error, $lightness: 35%);
+@mixin redShade() {
+	color: color.adjust($error, $lightness: -20%);
+	background-color: color.adjust($error, $lightness: 35%);
 }
 
-@mixin yellowShade () {
-  color: color.adjust(orangered, $lightness: -20%);
-  background-color: color.adjust($secondary, $lightness: 16%);
+@mixin yellowShade() {
+	color: color.adjust(orangered, $lightness: -20%);
+	background-color: color.adjust($secondary, $lightness: 16%);
 }
 
 // backgroundColors
-@mixin commonBgColorStyle($color , $lightness) {
-  position: relative;
-  z-index: 0;
+@mixin commonBgColorStyle($color, $lightness, $bgImg: null) {
+	position: relative;
+	z-index: 0;
 
-  &::before {
-    content: "";
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+	&::before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		inset: 0;
+		z-index: -1;
 
-    margin-inline: auto;
-    border-radius: rem(16);
-    max-width: calc($max-width + rem(100));
-    background-color: color.adjust($color, $lightness: $lightness);
-  }
+		margin-inline: auto;
+		border-radius: rem(16);
+		max-width: calc($max-width + rem(100));
+		background-color: color.adjust($color, $lightness: $lightness);
+		background-image: $bgImg;
+	}
 }
 
-@mixin lightGreenBg () {
-  @include commonBgColorStyle($accent, 35%);
+@mixin lightGreenBg() {
+	$bg: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox='0 0 32 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0v3.994C14 7.864 10.858 11 7 11c-3.866 0-7-3.138-7-7.006V0h2v4.005C2 6.765 4.24 9 7 9c2.756 0 5-2.236 5-4.995V0h2zm0 26v-5.994C14 16.138 10.866 13 7 13c-3.858 0-7 3.137-7 7.006V26h2v-6.005C2 17.235 4.244 15 7 15c2.76 0 5 2.236 5 4.995V26h2zm2-18.994C16 3.136 19.142 0 23 0c3.866 0 7 3.138 7 7.006v9.988C30 20.864 26.858 24 23 24c-3.866 0-7-3.138-7-7.006V7.006zm2-.01C18 4.235 20.244 2 23 2c2.76 0 5 2.236 5 4.995v10.01C28 19.765 25.756 22 23 22c-2.76 0-5-2.236-5-4.995V6.995z' fill='%236faf64' fill-opacity='0.14' fill-rule='evenodd'/%3E%3C/svg%3E");
+	@include commonBgColorStyle($accent, 35%, $bg);
 }
 
-@mixin lightBlueBg () {
-  @include commonBgColorStyle($primary, 55%);
+@mixin lightBlueBg() {
+	$bg: url("data:image/svg+xml,%3Csvg width='32' height='26' viewBox='0 0 32 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 0v3.994C14 7.864 10.858 11 7 11c-3.866 0-7-3.138-7-7.006V0h2v4.005C2 6.765 4.24 9 7 9c2.756 0 5-2.236 5-4.995V0h2zm0 26v-5.994C14 16.138 10.866 13 7 13c-3.858 0-7 3.137-7 7.006V26h2v-6.005C2 17.235 4.244 15 7 15c2.76 0 5 2.236 5 4.995V26h2zm2-18.994C16 3.136 19.142 0 23 0c3.866 0 7 3.138 7 7.006v9.988C30 20.864 26.858 24 23 24c-3.866 0-7-3.138-7-7.006V7.006zm2-.01C18 4.235 20.244 2 23 2c2.76 0 5 2.236 5 4.995v10.01C28 19.765 25.756 22 23 22c-2.76 0-5-2.236-5-4.995V6.995z' fill='%236faf64' fill-opacity='0.13' fill-rule='evenodd'/%3E%3C/svg%3E");
+	@include commonBgColorStyle($primary, 55%, $bg);
 }
 
-@mixin lightRedBg () {
-  @include commonBgColorStyle($error, 35%);
+@mixin lightRedBg() {
+	$bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23f44336' fill-opacity='0.05' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
+	@include commonBgColorStyle($error, 35%, $bg);
 }
 
-@mixin lightYellowBg () {
-  @include commonBgColorStyle($secondary, 22%);
+@mixin lightYellowBg() {
+	@include commonBgColorStyle($secondary, 22%);
 }
-
 
 // background grid pattern
 @mixin gridbgColor($color: $accent) {
-  background-color: color.adjust($color, $hue: 3deg);
-  @include gridBackground($color, 3%, "vertical");
+	background-color: color.adjust($color, $hue: 3deg);
+	@include gridBackground($color, 3%, "vertical");
 }
 
-
 @mixin gridBackground($color, $lightenPercentage, $type: "grid") {
-  background-size: 30px 30px;
+	background-size: 30px 30px;
 
-  @if $type =="horizontal" {
-    background-image: linear-gradient(to bottom,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
-
-  @else if $type =="vertical" {
-    background-image: linear-gradient(to right,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
-
-  @else if $type =="grid" {
-    background-image: linear-gradient(to right,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px),
-      linear-gradient(to bottom,
-        color.adjust($color, $lightness: $lightenPercentage) 1px,
-        transparent 1px);
-  }
+	@if $type == "horizontal" {
+		background-image: linear-gradient(
+			to bottom,
+			color.adjust($color, $lightness: $lightenPercentage) 1px,
+			transparent 1px
+		);
+	} @else if $type == "vertical" {
+		background-image: linear-gradient(
+			to right,
+			color.adjust($color, $lightness: $lightenPercentage) 1px,
+			transparent 1px
+		);
+	} @else if $type == "grid" {
+		background-image:
+			linear-gradient(
+				to right,
+				color.adjust($color, $lightness: $lightenPercentage) 1px,
+				transparent 1px
+			),
+			linear-gradient(
+				to bottom,
+				color.adjust($color, $lightness: $lightenPercentage) 1px,
+				transparent 1px
+			);
+	}
 }
 
 // hover action
 @mixin underlineOnHover($color: $secondary) {
-  position: relative;
+	position: relative;
 
-  &::after {
-    content: "";
-    width: 0;
-    height: 5px;
+	&::after {
+		content: "";
+		width: 0;
+		height: 5px;
 
-    position: absolute;
-    left: 0;
-    top: 100%;
+		position: absolute;
+		left: 0;
+		top: 100%;
 
-    background: linear-gradient(to right, $color 0%, $color 100%);
-    transition: width 0.3s ease-in-out;
-    pointer-events: none;
-  }
+		background: linear-gradient(to right, $color 0%, $color 100%);
+		transition: width 0.3s ease-in-out;
+		pointer-events: none;
+	}
 
-  &:hover::after {
-    width: 100%;
-  }
+	&:hover::after {
+		width: 100%;
+	}
 }
 
 // custom text decoration
 @mixin highlight($color: $accent) {
-  color: $color;
-  position: relative;
+	color: $color;
+	position: relative;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 75%;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
-  }
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 75%;
+		left: 0;
+		width: 100%;
+		height: 8px;
+		background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
+	}
 }
 
 // idle animations
 @mixin borderGradient($duration: 10000ms) {
-  $color1: rgba(168, 239, 255, 1);
-  $color2: rgba(168, 239, 255, 0.1);
+	$color1: rgba(168, 239, 255, 1);
+	$color2: rgba(168, 239, 255, 0.1);
 
-  border: 1px solid transparent;
-  border-image: conic-gradient(from var(--angle),
-      $color2,
-      $color1 0.1turn,
-      $color1 0.15turn,
-      $color2 0.25turn) 30;
-  animation: borderRotate $duration cubic-bezier(0.78, -0.02, 0.11, 1.04) infinite;
+	border: 1px solid transparent;
+	border-image: conic-gradient(
+			from var(--angle),
+			$color2,
+			$color1 0.1turn,
+			$color1 0.15turn,
+			$color2 0.25turn
+		)
+		30;
+	animation: borderRotate $duration cubic-bezier(0.78, -0.02, 0.11, 1.04) infinite;
 
-  @keyframes borderRotate {
-    100% {
-      --angle: 420deg;
-    }
-  }
+	@keyframes borderRotate {
+		100% {
+			--angle: 420deg;
+		}
+	}
 }
 
 @property --angle {
-  syntax: "<angle>";
-  initial-value: 90deg;
-  inherits: true;
+	syntax: "<angle>";
+	initial-value: 90deg;
+	inherits: true;
 }

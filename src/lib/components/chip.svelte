@@ -20,12 +20,13 @@
 		width: max-content;
 		display: flex;
 		align-items: center;
-		padding: rem(8) rem(16);
-		border-radius: rem(16);
+		padding: rem(8);
+		border-radius: 0 rem(4) rem(4) 0;
 		box-shadow: $shadow-hard;
 		gap: rem(8);
 
 		&.bgGreen {
+			border: 1px solid $accent;
 			@include greenShade;
 		}
 

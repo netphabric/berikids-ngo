@@ -2,14 +2,14 @@
 	import Chip from "./chip.svelte"
 
 	const details = [
-		{ icon: "alternate_email", label: "Mail", contact: "Berikidsngo@gmx.de" },
+		{ icon: "alternate_email", label: "Mail", contact: "berryrelindis@gmail.com" },
 		{ label: "Office", contact: "P.O. Box 52 Kumbo Cameroon", icon: "apartment" },
 		{ icon: "add_call", label: "Phone", contact: "+237 653 176 545" },
 		{
 			icon: "radio",
 			label: "Facebook",
 			contact: "facebook/berikids.org",
-			url: "https://www.facebook.com/berikids.org/"
+			url: "https://www.facebook.com/profile.php?id=61580255473996"
 		}
 	]
 </script>

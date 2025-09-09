@@ -1,6 +1,6 @@
 import { writable } from "svelte/store"
 
-type toastType = "error" | "info" | "success"
+type toastType = "error" | "info" | "success" | "warning"
 
 type Toast = {
 	id: number
