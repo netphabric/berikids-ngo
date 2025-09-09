@@ -4,7 +4,7 @@ export const homeFaqs = writable([
 	{
 		id: 1,
 		question: "How can I contact you?",
-		ans: "You can reach us via email at Berikidsngo@gmx.de or call us at +237 653 176 545. Our office hours are Monday to Friday, 9 AM to 5 PM. We look forward to hearing from you!",
+		ans: "You can reach us via email at berryrelindis@gmail.com or call us at +237 653 176 545. Our office hours are Monday to Friday, 9 AM to 5 PM. We look forward to hearing from you!",
 		isOpen: true
 	},
 	{
@@ -76,7 +76,7 @@ export const trainingFaqs = writable([
 	{
 		id: 3,
 		question: "How to apply?",
-		ans: "To apply for our training programs, email your application to Berikidsngo@gmx.de After submission, our team will review your application and contact you for further steps. We encourage all eligible individuals to apply.",
+		ans: "To apply for our training programs, email your application to berryrelindis@gmail.com After submission, our team will review your application and contact you for further steps. We encourage all eligible individuals to apply.",
 		isOpen: false
 	},
 	{

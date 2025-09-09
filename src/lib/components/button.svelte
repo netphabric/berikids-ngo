@@ -18,7 +18,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: rem(8);
-		padding: rem(8) rem(16);
+		padding: rem(4) rem(8);
 		gap: rem(8);
 
 		color: $white;

@@ -105,6 +105,7 @@
 				display: flex;
 				flex-direction: column;
 				border-radius: 16px;
+				background-color: $white;
 
 				.faq {
 					display: flex;

@@ -3,7 +3,7 @@
 
 // colors
 $black: #4e2c14;
-$white: #f2f2f2;
+$white: #ffffff;
 $accent: #6faf64;
 $primary: #2b4f81;
 $secondary: #ffd966;
@@ -11,23 +11,23 @@ $error: #f44336;
 $opaque-white: color.adjust($white, $alpha: -0.2);
 
 //Text fonts
-$large: rem(20);
-$medium: rem(18);
-$regular: rem(16);
-$small: rem(14);
-$tiny: rem(12);
-$icon: rem(32);
+$large: rem(18);
+$medium: rem(16);
+$regular: rem(14);
+$small: rem(12);
+$tiny: rem(10);
+$icon: rem(24);
 
 // max-width
 $max-width: 1440px;
 
 // Title Fonts
-$h1: rem(56);
-$h2: rem(48);
-$h3: rem(40);
-$h4: rem(32);
-$h5: rem(24);
-$h6: rem(20);
+$h1: rem(48);
+$h2: rem(40);
+$h3: rem(32);
+$h4: rem(24);
+$h5: rem(22);
+$h6: rem(18);
 
 // font weights
 $light: 300;
@@ -41,11 +41,13 @@ $extraBold: 800;
 $shadow-soft: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 $shadow-hard: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 
-$shadow-outset: 6px 6px 12px #c5c5c5,
-  -6px -6px 12px #ffffff;
+$shadow-outset:
+	6px 6px 12px #c5c5c5,
+	-6px -6px 12px #ffffff;
 
-$shadow-inset: inset 4px 4px 12px #c5c5c5,
-  inset -4px -4px 12px #ffffff;
+$shadow-inset:
+	inset 4px 4px 12px #c5c5c5,
+	inset -4px -4px 12px #ffffff;
 
 // gradients
 $bottomFade: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 100%);
