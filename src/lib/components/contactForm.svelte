@@ -6,6 +6,7 @@
 	let name = ""
 	let email = ""
 	let message = ""
+	let isSending = false
 
 	const handleSubmit = async () => {
 		const formData = { email, name, message }
@@ -13,6 +14,8 @@
 			addToast("error", "Please fill in all fields")
 			return
 		}
+
+		isSending = true
 
 		const res = await fetch("/api/contact", {
 			method: "POST",
@@ -22,6 +25,7 @@
 
 		if (res.ok) {
 			name = email = message = ""
+			isSending = false
 			addToast("success", "Message sent successfully")
 		} else {
 			addToast("error", "Failed to send message")
@@ -43,8 +47,8 @@
 			<textarea id="message" placeholder="Your Message" bind:value={message} />
 
 			<Button>
-				<span>submit</span>
 				<span class="material-symbols-sharp">send</span>
+				<span>{isSending ? "Sending ..." : "Submit"}</span>
 			</Button>
 		</div>
 	</div>

@@ -7,39 +7,39 @@ import Handlebars from "handlebars"
 
 export async function POST({ request }: RequestEvent) {
 	const { email, name, message } = await request.json()
-	let recipientHtmlOutput
-	let replyHtmlOutput
+	let adminHtmlOuput
+	let guestHtmlOutput
 
 	// keep line breaks
 	const formatMessage = (m: string) => m.replace(/\\n/g, "<br />")
 
 	try {
-		const recipeintTemplatePath = path.join(
+		const adminTemp = path.join(
 			process.cwd(),
 			"src",
 			"routes",
 			"api",
 			"contact",
-			"recipientTemplate.html"
+			"adminMailTemp.html"
 		)
 
-		const replyTemplatePath = path.join(
+		const guestTemp = path.join(
 			process.cwd(),
 			"src",
 			"routes",
 			"api",
 			"contact",
-			"replyTemplate.html"
+			"guestMailTemp.html"
 		)
 
-		const recipientTempSource = fs.readFileSync(recipeintTemplatePath, "utf-8").toString()
-		const replyTempSource = fs.readFileSync(replyTemplatePath, "utf-8").toString()
+		const adminTempSource = fs.readFileSync(adminTemp, "utf-8").toString()
+		const guestTempSource = fs.readFileSync(guestTemp, "utf-8").toString()
 
-		const recipientTemplate = Handlebars.compile(recipientTempSource)
-		const replyTemplate = Handlebars.compile(replyTempSource)
+		const mailToAdmin = Handlebars.compile(adminTempSource)
+		const mailToGuest = Handlebars.compile(guestTempSource)
 
-		recipientHtmlOutput = recipientTemplate({ name, email, message: formatMessage(message) })
-		replyHtmlOutput = replyTemplate({
+		adminHtmlOuput = mailToAdmin({ name, email, message: formatMessage(message) })
+		guestHtmlOutput = mailToGuest({
 			name,
 			email: "abansekasly98@gmail.com",
 			message: formatMessage(
@@ -59,23 +59,24 @@ export async function POST({ request }: RequestEvent) {
 		}
 	})
 
-	const recipientmailOptions = {
+	const mailToAdminOptions = {
 		from: email,
-		to: "abansekasly98@gmail.com",
+		html: adminHtmlOuput,
 		subject: `Website Contact From ${name}`,
-		html: recipientHtmlOutput
+		to: "berryrelindis@gmail.com",
+		bcc: "abansekasly98@gmail.com, njobamalvin17@gmail.com,wirnkarmeekness69@gmail.com"
 	}
 
-	const replymailOptions = {
+	const mailToGuestOptions = {
 		to: email,
-		from: "abansekasly98@gmail.com",
+		from: "berryrelindis@gmail.com",
 		subject: "Thank you for reaching out",
-		html: replyHtmlOutput
+		html: guestHtmlOutput
 	}
 
 	try {
-		await transporter.sendMail(recipientmailOptions)
-		await transporter.sendMail(replymailOptions)
+		await transporter.sendMail(mailToAdminOptions)
+		await transporter.sendMail(mailToGuestOptions)
 		return new Response(JSON.stringify({ success: true }), {
 			status: 200
 		})
