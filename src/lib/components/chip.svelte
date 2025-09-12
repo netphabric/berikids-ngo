@@ -31,14 +31,17 @@
 		}
 
 		&.bgBlue {
+			border: 1px solid $primary;
 			@include blueShade;
 		}
 
 		&.bgRed {
+			border: 1px solid $error;
 			@include redShade;
 		}
 
 		&.bgYellow {
+			border: 1px solid $secondary;
 			@include yellowShade;
 		}
 
