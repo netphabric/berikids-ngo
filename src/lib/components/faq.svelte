@@ -16,10 +16,19 @@
 
 	const handleShowFaqAns = (id: number) => {
 		faqs.update((faqs) =>
-			faqs.map((faq) => ({
-				...faq,
-				isOpen: faq.id === id ? !faq.isOpen : false
-			}))
+			faqs.map((faq) => {
+				if (faq.id === id && faq.isOpen) {
+					return {
+						...faq,
+						isOpen: true
+					}
+				}
+
+				return {
+					...faq,
+					isOpen: faq.id === id ? !faq.isOpen : false
+				}
+			})
 		)
 	}
 </script>
@@ -60,7 +69,6 @@
 	.faqs-root {
 		padding: rem(32) rem(20);
 		margin-block: rem(32);
-		@include lightRedBg();
 
 		.faq-wrapper {
 			max-width: $max-width;
@@ -71,6 +79,7 @@
 
 			.faq-header {
 				display: flex;
+				max-width: $tablet-width;
 				flex-direction: column;
 				margin-block-start: rem(32);
 				gap: rem(16);
@@ -102,6 +111,7 @@
 			}
 
 			.faq-container {
+				max-width: $tablet-width;
 				display: flex;
 				flex-direction: column;
 				border-radius: 16px;

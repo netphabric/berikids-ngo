@@ -172,10 +172,10 @@
 				display: flex;
 				align-items: center;
 				list-style: none;
-				gap: rem(32);
+				gap: rem(48);
 
 				@include minWidth("tablet") {
-					gap: rem(16);
+					gap: rem(32);
 				}
 
 				.navLink {

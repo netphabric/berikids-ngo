@@ -34,12 +34,11 @@
 
 				@include minWidth("tablet") {
 					margin-block-start: rem(64);
-					grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+					grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 					gap: rem(32);
 				}
 
 				@include minWidth("desktop") {
-					grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 					gap: rem(64);
 				}
 
@@ -70,7 +69,7 @@
 					}
 
 					.material-symbols-sharp {
-						font-size: $h1;
+						font-size: $h3;
 						font-weight: $medium;
 					}
 
@@ -78,10 +77,6 @@
 						font-size: $h6;
 						font-weight: $medium;
 						text-align: center;
-
-						@include minWidth("tablet") {
-							font-size: $h5;
-						}
 					}
 				}
 			}

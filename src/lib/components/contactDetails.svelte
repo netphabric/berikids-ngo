@@ -2,7 +2,7 @@
 	import Chip from "./chip.svelte"
 
 	const details = [
-		{ icon: "alternate_email", label: "Mail", contact: "berryrelindis@gmail.com" },
+		{ icon: "alternate_email", label: "Mail", contact: "contact@berikids.org" },
 		{ label: "Office", contact: "P.O. Box 52 Kumbo Cameroon", icon: "apartment" },
 		{ icon: "add_call", label: "Phone", contact: "+237 653 176 545" },
 		{

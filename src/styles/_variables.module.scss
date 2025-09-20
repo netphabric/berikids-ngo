@@ -19,7 +19,8 @@ $tiny: rem(10);
 $icon: rem(24);
 
 // max-width
-$max-width: 1440px;
+$max-width: rem(1440);
+$tablet-width: rem(768);
 
 // Title Fonts
 $h1: rem(48);

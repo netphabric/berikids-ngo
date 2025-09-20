@@ -5,7 +5,7 @@
 
 <section class="partners">
 	<div class="partners-wrapper">
-		<Chip chipText="our partners" chipIcon="verified" chipColor="red" />
+		<Chip chipText="our partners" chipIcon="verified" chipColor="green" />
 
 		<div class="partner-cards">
 			{#each $partners as partner}

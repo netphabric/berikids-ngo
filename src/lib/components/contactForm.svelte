@@ -25,11 +25,12 @@
 
 		if (res.ok) {
 			name = email = message = ""
-			isSending = false
 			addToast("success", "Message sent successfully")
 		} else {
 			addToast("error", "Failed to send message")
 		}
+
+		isSending = false
 	}
 </script>
 
@@ -57,7 +58,6 @@
 <style lang="scss">
 	.contact-Form {
 		padding: rem(32) rem(20);
-		background-color: #ffffff;
 		background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h16v2h-6v6h6v8H8v-6H2v6H0V0zm4 4h2v2H4V4zm8 8h2v2h-2v-2zm-8 0h2v2H4v-2zm8-8h2v2h-2V4z' fill='%23d6d6d6' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
 
 		@media (min-width: 768px) {
@@ -109,6 +109,16 @@
 			textarea {
 				height: rem(150);
 				resize: none;
+			}
+
+			input,
+			textarea {
+				transition: all 3ms ease-in-out;
+
+				&:active,
+				&:focus-visible {
+					outline: 2px solid $accent;
+				}
 			}
 		}
 	}

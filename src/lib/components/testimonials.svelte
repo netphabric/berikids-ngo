@@ -1,28 +1,30 @@
-<!-- prettier-ignore -->
 <script lang="ts">
 	import Chip from "./chip.svelte"
 
-	export let authorName = "Valery Ayuni"
-	export let authorAvatar = "/images/testimony-dp.webp"
-	export let testimonial = "I'm one of the first orphans to be educated and empowered by Berikids International and its partners. I'm grateful for their support and guidance."
-	export let authorTitle = "Chief of post @berikids intl mental health unit Nkapa Souza Douala Cameroon."
+	// prettier-ignore
+	let testimony = {
+		authorName: "Valery Ayuni",
+		authorAvatar: "/images/testimony-dp.webp",
+		authorTitle: "Chief of post @berikids intl mental health unit Nkapa Souza Douala Cameroon.",
+		testimonial: "I'm one of the first orphans to be educated and empowered by Berikids International and its partners. I'm grateful for their support and guidance."
+	}
 </script>
 
 <section class="testimonialsSection">
 	<div class="testimony-wrapper">
-		<Chip chipText="Success stories" chipIcon="mic" chipColor="yellow" />
+		<Chip chipText="Success stories" chipIcon="mic" chipColor="blue" />
 
 		<article class="testimony-card">
 			<div class="avatar">
-				<img src={authorAvatar} alt="avatar" />
+				<img src={testimony.authorAvatar} alt="avatar" />
 			</div>
 
 			<h2 class="testimony">
-				<p class="testimony-text">{testimonial}</p>
+				<p class="testimony-text">{testimony.testimonial}</p>
 
 				<div class="author-details">
-					<h4 class="author-name">{authorName}</h4>
-					<p class="author-title">{authorTitle}</p>
+					<h4 class="author-name">{testimony.authorName}</h4>
+					<p class="author-title">{testimony.authorTitle}</p>
 				</div>
 			</h2>
 		</article>
