@@ -25,11 +25,12 @@
 
 		if (res.ok) {
 			name = email = message = ""
-			isSending = false
 			addToast("success", "Message sent successfully")
 		} else {
 			addToast("error", "Failed to send message")
 		}
+
+		isSending = false
 	}
 </script>
 

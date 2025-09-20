@@ -1,5 +1,5 @@
 import type { RequestEvent } from "@sveltejs/kit"
-import { CONTACT_EMAIL_PASSWORD } from "$env/static/private"
+import { CONTACT_EMAIL_ADDRESS, CONTACT_EMAIL_PASSWORD } from "$env/static/private"
 import nodemailer from "nodemailer"
 import fs from "fs"
 import path from "path"
@@ -54,7 +54,7 @@ export async function POST({ request }: RequestEvent) {
 	const transporter = nodemailer.createTransport({
 		service: "gmail",
 		auth: {
-			user: "abanyseka98@gmail.com",
+			user: CONTACT_EMAIL_ADDRESS,
 			pass: CONTACT_EMAIL_PASSWORD
 		}
 	})
@@ -63,13 +63,13 @@ export async function POST({ request }: RequestEvent) {
 		from: email,
 		html: adminHtmlOuput,
 		subject: `Website Contact From ${name}`,
-		to: "berryrelindis@gmail.com",
-		bcc: "abansekasly98@gmail.com, njobamalvin17@gmail.com,wirnkarmeekness69@gmail.com"
+		to: "wirnkarmeekness69@gmail.com",
+		bcc: "abansekasly98@gmail.com,berryrelindis@gmail.com"
 	}
 
 	const mailToGuestOptions = {
 		to: email,
-		from: "berryrelindis@gmail.com",
+		from: "contact@berikids.org",
 		subject: "Thank you for reaching out",
 		html: guestHtmlOutput
 	}
