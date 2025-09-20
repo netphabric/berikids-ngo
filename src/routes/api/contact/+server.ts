@@ -64,7 +64,7 @@ export async function POST({ request }: RequestEvent) {
 		html: adminHtmlOuput,
 		subject: `Website Contact From ${name}`,
 		to: "wirnkarmeekness69@gmail.com",
-		bcc: "abansekasly98@gmail.com,berryrelindis@gmail.com"
+		bcc: "abansekasly98@gmail.com,contact@berikids.org"
 	}
 
 	const mailToGuestOptions = {
