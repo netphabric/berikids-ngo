@@ -121,9 +121,13 @@
 				}
 
 				.content-media {
-					max-width: 70%;
+					width: 100%;
 					max-height: 600px;
 					margin-inline: auto;
+
+					@include minWidth("tablet") {
+						max-width: 70%;
+					}
 				}
 			}
 
