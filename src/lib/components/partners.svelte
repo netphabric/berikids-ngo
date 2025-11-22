@@ -12,38 +12,46 @@
 				<article class="partner-card">
 					<h4 class="title">
 						<span class="material-symbols-sharp verified">verified</span>
-						{partner.name}
+
+						<a
+							href={partner.web}
+							target="_blank"
+							rel="noopener noreferrer"
+							style:color={partner.web ? "#ffd966" : "inherit"}
+						>
+							{partner.name}
+						</a>
 					</h4>
 
-					<div class="text">
-						{#if partner.phone}
-							<span class="phone">
-								<span class="material-symbols-sharp location-icon">perm_phone_msg</span>
-								{partner.phone}</span
-							>
-						{/if}
-
-						{#if partner.email}
-							<span class="email">
-								<span class="material-symbols-sharp location-icon">alternate_email</span>
-								{partner.email}</span
-							>
-						{/if}
-
-						{#if partner.web}
-							<span class="web">
-								<span class="material-symbols-sharp location-icon">web_traffic</span>
-								<a href={partner.web} target="_blank"
-									>{partner.name.split(" ").slice(0, 2).join(" ")}'s website</a
-								></span
-							>
-						{/if}
-
-						<span class="location">
-							<span class="material-symbols-sharp location-icon">signpost</span>
-							{partner.location}</span
-						>
-					</div>
+					<!-- <div class="text"> -->
+					<!-- 	{#if partner.phone} -->
+					<!-- 		<span class="phone"> -->
+					<!-- 			<span class="material-symbols-sharp location-icon">perm_phone_msg</span> -->
+					<!-- 			{partner.phone}</span -->
+					<!-- 		> -->
+					<!-- 	{/if} -->
+					<!---->
+					<!-- 	{#if partner.email} -->
+					<!-- 		<span class="email"> -->
+					<!-- 			<span class="material-symbols-sharp location-icon">alternate_email</span> -->
+					<!-- 			{partner.email}</span -->
+					<!-- 		> -->
+					<!-- 	{/if} -->
+					<!---->
+					<!-- 	{#if partner.web} -->
+					<!-- 		<span class="web"> -->
+					<!-- 			<span class="material-symbols-sharp location-icon">web_traffic</span> -->
+					<!-- 			<a href={partner.web} target="_blank" -->
+					<!-- 				>{partner.name.split(" ").slice(0, 2).join(" ")}'s website</a -->
+					<!-- 			></span -->
+					<!-- 		> -->
+					<!-- 	{/if} -->
+					<!---->
+					<!-- 	<span class="location"> -->
+					<!-- 		<span class="material-symbols-sharp location-icon">signpost</span> -->
+					<!-- 		{partner.location}</span -->
+					<!-- 	> -->
+					<!-- </div> -->
 				</article>
 			{/each}
 		</div>

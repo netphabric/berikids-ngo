@@ -21,40 +21,17 @@
 		display: flex;
 		align-items: center;
 		padding: rem(8);
-		border-radius: 0 rem(4) rem(4) 0;
+		border-radius: rem(4);
 		box-shadow: $shadow-hard;
+		border: rem(1) solid $gray;
 		gap: rem(8);
-
-		&.bgGreen {
-			border: 1px solid $accent;
-			@include greenShade;
-		}
-
-		&.bgBlue {
-			border: 1px solid $primary;
-			@include blueShade;
-		}
-
-		&.bgRed {
-			border: 1px solid $error;
-			@include redShade;
-		}
-
-		&.bgYellow {
-			border: 1px solid $secondary;
-			@include yellowShade;
-		}
 
 		.chip-text {
 			font-size: $tiny;
-			font-weight: $semiBold;
+			font-weight: $normal;
 
 			@include minWidth("tablet") {
 				font-size: $small;
-			}
-
-			@include minWidth("desktop") {
-				font-size: $regular;
 			}
 		}
 	}
