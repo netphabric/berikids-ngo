@@ -114,41 +114,41 @@
 					}
 				}
 
-				.text {
-					width: 100%;
-					min-height: 50px;
-					font-weight: $normal;
-					font-family: $logo-font;
-					letter-spacing: 1px;
-					line-height: rem(24);
-					opacity: 0.8;
-
-					gap: rem(16);
-					display: flex;
-					flex-direction: column;
-
-					@include minWidth("tablet") {
-						font-size: $medium;
-					}
-
-					.web,
-					.location,
-					.email,
-					.phone {
-						display: flex;
-						padding-inline-end: rem(16);
-						gap: rem(8);
-						border-bottom: 1px solid color.adjust($primary, $lightness: 10%);
-					}
-
-					.web {
-						color: $secondary;
-					}
-
-					.location-icon {
-						color: color.adjust($accent, $lightness: 10%);
-					}
-				}
+				// .text {
+				// 	width: 100%;
+				// 	min-height: 50px;
+				// 	font-weight: $normal;
+				// 	font-family: $logo-font;
+				// 	letter-spacing: 1px;
+				// 	line-height: rem(24);
+				// 	opacity: 0.8;
+				//
+				// 	gap: rem(16);
+				// 	display: flex;
+				// 	flex-direction: column;
+				//
+				// 	@include minWidth("tablet") {
+				// 		font-size: $medium;
+				// 	}
+				//
+				// 	.web,
+				// 	.location,
+				// 	.email,
+				// 	.phone {
+				// 		display: flex;
+				// 		padding-inline-end: rem(16);
+				// 		gap: rem(8);
+				// 		border-bottom: 1px solid color.adjust($primary, $lightness: 10%);
+				// 	}
+				//
+				// 	.web {
+				// 		color: $secondary;
+				// 	}
+				//
+				// 	.location-icon {
+				// 		color: color.adjust($accent, $lightness: 10%);
+				// 	}
+				// }
 			}
 		}
 	}

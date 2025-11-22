@@ -40,13 +40,14 @@
 				flex-direction: column;
 				justify-content: space-around;
 				margin-block-start: rem(32);
-				padding-block: rem(32);
-				border: 1px solid $gray;
 				gap: rem(32);
-				@include borderGradient();
 
 				@include minWidth("mobile") {
 					flex-direction: row;
+				}
+
+				@include minWidth("tablet") {
+					@include borderGradient();
 				}
 
 				.testimony {
