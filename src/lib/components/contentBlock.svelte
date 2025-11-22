@@ -75,6 +75,7 @@
 <style lang="scss">
 	.content-render {
 		padding: rem(32) rem(20);
+		border-bottom: 1px solid $gray;
 
 		.content-wrapper {
 			display: grid;

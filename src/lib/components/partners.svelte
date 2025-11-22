@@ -54,7 +54,6 @@
 	.partners {
 		padding: rem(32) rem(20);
 		margin-block-end: rem(32);
-		@include lightBlueBg();
 	}
 
 	.partners-wrapper {

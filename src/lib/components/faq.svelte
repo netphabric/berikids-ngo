@@ -115,12 +115,12 @@
 				display: flex;
 				flex-direction: column;
 				border-radius: 16px;
+				border: 1px solid $gray;
 				background-color: $white;
 
 				.faq {
 					display: flex;
 					flex-direction: column;
-					box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
 					.faq-question {
 						display: flex;

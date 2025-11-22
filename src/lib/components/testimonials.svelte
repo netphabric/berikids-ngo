@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Chip from "./chip.svelte"
-
 	// prettier-ignore
 	let testimony = {
 		authorName: "Valery Ayuni",
@@ -12,8 +10,6 @@
 
 <section class="testimonialsSection">
 	<div class="testimony-wrapper">
-		<Chip chipText="Success stories" chipIcon="mic" chipColor="blue" />
-
 		<article class="testimony-card">
 			<div class="avatar">
 				<img src={testimony.authorAvatar} alt="avatar" />
@@ -34,7 +30,6 @@
 <style lang="scss">
 	.testimonialsSection {
 		padding: rem(32) rem(20);
-		@include lightGreenBg();
 
 		.testimony-wrapper {
 			max-width: $max-width;
@@ -46,7 +41,9 @@
 				justify-content: space-around;
 				margin-block-start: rem(32);
 				padding-block: rem(32);
+				border: 1px solid $gray;
 				gap: rem(32);
+				@include borderGradient();
 
 				@include minWidth("mobile") {
 					flex-direction: row;

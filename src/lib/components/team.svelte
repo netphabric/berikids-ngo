@@ -41,6 +41,7 @@
 <style lang="scss">
 	.our-team {
 		padding: rem(32) rem(20);
+		border-bottom: 1px solid $gray;
 
 		.team-wrapper {
 			max-width: $max-width;
