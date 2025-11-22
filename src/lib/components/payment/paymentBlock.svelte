@@ -13,6 +13,7 @@
 	<div class="donations-wrapper">
 		<div class="banner-left">
 			<Chip {chipIcon} {chipColor} {chipText} />
+
 			<span
 				class="material-symbols-sharp org-icon"
 				class:statusCheck={statusColor === "green"}
@@ -33,50 +34,57 @@
 
 <style lang="scss">
 	.donate-root {
+		min-height: calc(100vh - rem(260));
 		padding-inline: rem(20);
-		min-height: 85vh;
 
 		.donations-wrapper {
-			width: 100%;
+			flex-grow: 1;
 			max-width: $max-width;
-			margin-inline: auto;
 			display: flex;
 			flex-direction: column;
 			padding-block: rem(20);
-			gap: rem(32);
 
 			@include minWidth("tablet") {
+				margin-inline: auto;
 				padding-block: 0;
 				flex-direction: row;
-				align-items: flex-start;
+				align-items: center;
 				justify-content: center;
+				gap: rem(32);
 			}
 
-			// prettier-ignore
 			.banner-left {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				grid-area: banner-left;
-				gap: rem(32);
 
 				@include minWidth("tablet") {
+					gap: rem(32);
 					padding: rem(20);
 					width: 40%;
 				}
 
 				.org-icon {
-					font-size: rem(200);
+					width: 100%;
 					font-weight: 100;
+					font-size: rem(200);
+					display: grid;
+					place-content: center;
 					color: $accent;
-					margin-block: auto;
 
-					&.statusCheck { color: $accent; }
-          &.statusError { color: $error; }
+					&.statusCheck {
+						color: $accent;
+					}
 
-					@include minWidth("tablet") { font-size: rem(400) }
-          @include minWidth("desktop") { font-size: rem(600) }
+					&.statusError {
+						color: $error;
+					}
+
+					@include minWidth("tablet") {
+						font-size: rem(400);
+					}
 				}
 
 				.status-message {
@@ -84,11 +92,19 @@
 					font-family: $logo-font;
 					text-align: center;
 
-          &.error { color: $error; }
-          &.success { color: $accent; }
+					&.error {
+						color: $error;
+					}
+					&.success {
+						color: $accent;
+					}
 
-					@include minWidth("tablet") { font-size: $h4 }
-          @include minWidth("desktop") { font-size: $h3 }
+					@include minWidth("tablet") {
+						font-size: $h4;
+					}
+					@include minWidth("desktop") {
+						font-size: $h3;
+					}
 				}
 			}
 		}

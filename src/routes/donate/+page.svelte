@@ -1,5 +1,5 @@
 <script>
-	import NoDonations from "$lib/components/noDonations.svelte"
+	import Ecobank from "$lib/components/ecobank.svelte"
 	import PaymentBlock from "$lib/components/payment/paymentBlock.svelte"
 </script>
 
@@ -10,7 +10,6 @@
 
 <main>
 	<PaymentBlock>
-		<!-- <PaymentElement /> -->
-		<NoDonations />
+		<Ecobank />
 	</PaymentBlock>
 </main>

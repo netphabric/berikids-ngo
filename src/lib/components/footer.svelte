@@ -2,7 +2,7 @@
 	<div class="footer-wrapper">
 		<div>
 			<p class="developers">
-				<span> Developed by the folks at </span>
+				<span class="devs"> Developed by the folks at </span>
 				<a
 					target="_blank"
 					href="https://www.linkedin.com/company/netphabric"
@@ -47,7 +47,11 @@
 				gap: rem(12);
 
 				img {
-					max-width: 150px;
+					max-width: 80px;
+
+					@include minWidth("tablet") {
+						max-width: 150px;
+					}
 				}
 
 				@include minWidth("mobile") {
@@ -55,6 +59,7 @@
 				}
 			}
 
+			.devs,
 			.copyright {
 				text-align: center;
 				font-size: $small;
