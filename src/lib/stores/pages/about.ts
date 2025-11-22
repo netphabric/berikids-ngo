@@ -31,7 +31,7 @@ export const aboutData = writable([
 			contentChipText: "Inline with our values",
 			contentChipIcon: "church",
 			contentMedia: "/images/christianConnection.webp",
-			contentTitleHighlight: "Christian Connections",
+			contentTitleHighlight: "rooted",
 			contentTitle: "we establish lasting and rooted Christian connections",
 			contentDescription:
 				"Our NGO is deeply connected to the Christian faith, providing moral and spiritual support to the children and families we serve, as well as ourselves."
@@ -45,7 +45,7 @@ export const aboutData = writable([
 			contentChipText: "what we do",
 			contentChipIcon: "potted_plant",
 			contentMedia: "/images/Hs1-img.webp",
-			contentTitleHighlight: "vulnerable communities",
+			contentTitleHighlight: "sustainability",
 			contentTitle: "supporting vulnerable communities via sustainability programs.",
 			contentDescription:
 				"Founded with a vision to uplift the socio-economic conditions of orphans in Cameroon, our NGO has grown significantly since its inception. Key milestones include the launch of vocational training programs and successful partnerships with local and international organizations to enhance community development."

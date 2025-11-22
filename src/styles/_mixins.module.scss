@@ -131,19 +131,22 @@ $large-desktop: rem(1280);
 
 // custom text decoration
 @mixin highlight($color: $accent) {
-	color: $color;
+	color: $white;
 	position: relative;
+	border-radius: rem(4);
+	padding-inline-start: rem(4);
+	background: $color;
 
-	&::before,
-	&::after {
-		content: "";
-		position: absolute;
-		top: 75%;
-		left: 0;
-		width: 100%;
-		height: 8px;
-		background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
-	}
+	// &::before,
+	// &::after {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 75%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	height: 8px;
+	// 	background-image: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 215, 0, 0));
+	// }
 }
 
 // idle animations

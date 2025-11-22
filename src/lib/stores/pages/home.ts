@@ -12,11 +12,12 @@ export const homeData = writable([
 		type: "contentBlock",
 		props: {
 			heroBlock: true,
+			blockLayout: true,
 			contentChipColor: "blue",
 			contentChipText: "misson",
 			contentChipIcon: "sign_language",
 			contentMedia: "/images/heroImg.webp",
-			contentTitleHighlight: "Cameroon's Vulnerable",
+			contentTitleHighlight: "Empowering",
 			contentTitle: "Empowering Cameroon's Vulnerable community",
 			contentDescription:
 				"Through quality education, trauma recovery programs, and community outreach, we foster sustainable socioeconomic development and spiritual growth. for orphans, mentally ill and at-risk children in Cameroon. "
@@ -30,7 +31,7 @@ export const homeData = writable([
 			contentChipText: "at the core",
 			contentChipIcon: "digital_wellbeing",
 			contentMedia: "/images/as2.webp",
-			contentTitleHighlight: "Sustainable Futures",
+			contentTitleHighlight: "Building",
 			contentTitle: "Building Sustainable Futures in Cameroon",
 			ctaButtons: [
 				{
@@ -51,7 +52,7 @@ export const homeData = writable([
 			contentChipText: "gender development",
 			contentChipIcon: "female",
 			contentMedia: "/images/womenEmpowerment.webp",
-			contentTitleHighlight: "Economic Opportunity for Women",
+			contentTitleHighlight: "Opportunity",
 			contentTitle: "Gender Equality And Economic Opportunity For Women In Cameroon",
 			contentDescription:
 				"We are committed to fostering gender equality and women's economic empowerment through targeted initiatives. By providing skills training and access to resources, we enable women to overcome poverty and become leaders in their communities."

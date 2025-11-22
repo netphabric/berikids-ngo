@@ -33,7 +33,7 @@ export const vocationsData = writable([
 			contentChipText: "Our Process",
 			contentChipIcon: "garden_cart",
 			contentMedia: "",
-			contentTitleHighlight: "programs structure",
+			contentTitleHighlight: "training programs",
 			contentTitle: "How are our vocational training programs structured?",
 			contentDescription:
 				"First, we begin by identifying the needs and goals of the individuals we serve. After rehabilitation, we identify their skills and interests. We then develop training plans together with some of our partners like the 'International Talent Outreach' that address their specific needs and goals.",

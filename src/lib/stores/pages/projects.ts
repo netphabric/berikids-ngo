@@ -29,7 +29,7 @@ export const projectsData = writable([
 			contentChipColor: "red",
 			contentChipText: "How you can help",
 			contentChipIcon: "mountain_flag",
-			contentTitleHighlight: "diverse projects",
+			contentTitleHighlight: "Support",
 			contentTitle: "Support our diverse projects",
 			contentDescription:
 				"Join us in making a difference through donations, volunteering, or forming valuable partnerships.",

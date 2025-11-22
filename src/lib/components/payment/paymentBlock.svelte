@@ -63,6 +63,7 @@
 				@include minWidth("tablet") {
 					gap: rem(32);
 					padding: rem(20);
+					border-right: rem(1) solid $gray;
 					width: 40%;
 				}
 
