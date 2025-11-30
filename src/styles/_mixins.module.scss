@@ -153,6 +153,7 @@ $large-desktop: rem(1280);
 @mixin borderGradient($duration: 15000ms, $fullborder: true) {
 	$color1: $primary;
 	$color2: rgba(168, 239, 255, 0.1);
+	padding: rem(32);
 
 	@if $fullborder {
 		border: rem(1) solid transparent;

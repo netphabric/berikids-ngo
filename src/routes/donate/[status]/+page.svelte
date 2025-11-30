@@ -8,6 +8,7 @@
 <main>
 	{#if status === "succeeded"}
 		<PaymentBlock
+			status="succeeded"
 			chipColor="green"
 			chipIcon="check_circle"
 			statusColor="green"
@@ -17,6 +18,7 @@
 		></PaymentBlock>
 	{:else}
 		<PaymentBlock
+			status="failed"
 			chipColor="red"
 			chipIcon="error"
 			statusColor="red"
