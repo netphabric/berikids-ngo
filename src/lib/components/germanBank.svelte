@@ -1,16 +1,14 @@
 <script lang="ts">
 	const bankingDetails = [
-		{ label: "name", value: "ecobank" },
-		{ label: "account number", value: "30830055087" },
-		{ label: "account name", value: "Beri Kindness" },
-		{ label: "swift code", value: "ECOCCMCX" },
-		{ label: "iban", value: "CM 21 10029 26011 30830055087 44" }
+		{ label: "name", value: "Wiesbadener Volksbank" },
+		{ label: "account name", value: "Förderverein Stiftung Berikids in Cameroon e.V." },
+		{ label: "iban", value: "DE19 5109 0000 0052 1525 00" }
 	]
 </script>
 
-<div class="ecobank-root">
+<div class="bank-root">
 	<div class="logo-container">
-		<img src="/images/icons/ecobank.png" alt="ecobank-logo" />
+		<img src="/images/icons/german-bank.png" alt="Wiesbadener Volksbank logo" />
 	</div>
 
 	<div class="details-container">
@@ -24,7 +22,7 @@
 </div>
 
 <style lang="scss">
-	.ecobank-root {
+	.bank-root {
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
@@ -40,10 +38,10 @@
 		.logo-container {
 			display: grid;
 			place-items: center;
-			max-width: rem(100);
+			max-width: rem(200);
 
 			@include minWidth("tablet") {
-				max-width: rem(150);
+				max-width: rem(350);
 			}
 		}
 
@@ -64,9 +62,9 @@
 
 				.detail-label,
 				.detail-value {
-				color: $primary;
-  			font-size: $small;
-  			font-family: $logo-font;
+					color: $primary;
+					font-size: $small;
+					font-family: $logo-font;
 
 					@include minWidth("tablet") {
 						font-size: $medium;

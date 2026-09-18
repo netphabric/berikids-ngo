@@ -5,7 +5,7 @@
 				<span class="devs"> Developed by the folks at </span>
 				<a
 					target="_blank"
-					href="https://www.linkedin.com/company/netphabric"
+					href="https://netphabric.com"
 					rel="noopener noreferrer"
 				>
 					<img src="/images/icons/netphabric.png" alt="netphabric-logo" />

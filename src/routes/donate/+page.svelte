@@ -1,5 +1,6 @@
 <script>
 	import Ecobank from "$lib/components/ecobank.svelte"
+	import GermanBank from "$lib/components/germanBank.svelte"
 	import PaymentBlock from "$lib/components/payment/paymentBlock.svelte"
 	// import PaymentElement from "$lib/components/payment/paymentElement.svelte"
 </script>
@@ -11,7 +12,18 @@
 
 <main>
 	<PaymentBlock status={null}>
-		<Ecobank />
+		<div class="payments-container">
+			<Ecobank />
+			<GermanBank />
+		</div>
 		<!-- <PaymentElement /> -->
 	</PaymentBlock>
 </main>
+
+<style lang="scss">
+	.payments-container {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24)
+	}
+</style>
